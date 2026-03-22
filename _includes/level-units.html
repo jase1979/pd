@@ -1,0 +1,14 @@
+{% assign _units = site.data.nav | where: "level", include.level %}
+<div class="units-grid">
+  {% for unit in _units %}
+  <div class="unit-card">
+    <h2><a href="{{ unit.url | relative_url }}">{{ unit.label }}</a></h2>
+    <p class="unit-desc">{{ unit.description }}</p>
+    <ul class="topic-list">
+      {% for topic in unit.topics %}
+      <li><a href="{{ topic.url | relative_url }}">{{ forloop.index }}. {{ topic.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

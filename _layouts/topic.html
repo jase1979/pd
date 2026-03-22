@@ -1,0 +1,160 @@
+---
+layout: default
+---
+<div class="topic-page">
+  <div class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep">/</span>
+    <a href="{{ page.level_url | relative_url }}">{{ page.level }}</a>
+    <span class="sep">/</span>
+    <a href="{{ page.unit_url | relative_url }}">{{ page.unit_name }}</a>
+    <span class="sep">/</span>
+    <span>{{ page.title }}</span>
+  </div>
+
+  <div class="topic-header">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.level }} — {{ page.unit_name }}</p>
+  </div>
+
+  {% assign stripped = content | strip %}
+  {% if stripped == "" %}
+  {% if page.subtopics %}
+  <nav class="section-nav">
+    <h2>Sections</h2>
+    <ol>
+      {% for item in page.subtopics %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+  <div class="content-placeholder">
+    <h2>Content Coming Soon</h2>
+    <p>Detailed revision notes for each section above will be added here.</p>
+  </div>
+  {% else %}
+  <div class="topic-layout">
+    <nav class="toc" id="toc">
+      <div class="toc-sticky">
+        <div class="toc-toggle" id="toc-toggle" role="button" aria-expanded="false" aria-controls="toc-list">
+          <span>On this page</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <ul class="toc-list" id="toc-list"></ul>
+      </div>
+    </nav>
+    <div class="topic-content">
+      {{ content }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% comment %}Flatten site.data.nav into a single ordered topic list{% endcomment %}
+  {% assign _flat = "" | split: "" %}
+  {% for _unit in site.data.nav %}
+    {% for _t in _unit.topics %}
+      {% assign _flat = _flat | push: _t %}
+    {% endfor %}
+  {% endfor %}
+
+  {% comment %}Find current page position{% endcomment %}
+  {% assign _found = false %}
+  {% assign _curr_idx = 0 %}
+  {% for _t in _flat %}
+    {% if _t.url == page.url %}
+      {% assign _found = true %}
+      {% assign _curr_idx = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %}Resolve prev/next{% endcomment %}
+  {% assign _nav_prev = nil %}
+  {% assign _nav_next = nil %}
+  {% if _found %}
+    {% if _curr_idx > 0 %}
+      {% assign _nav_prev = _flat[_curr_idx | minus: 1] %}
+    {% endif %}
+    {% assign _next_idx = _curr_idx | plus: 1 %}
+    {% if _next_idx < _flat.size %}
+      {% assign _nav_next = _flat[_next_idx] %}
+    {% endif %}
+  {% endif %}
+
+  <div class="nav-links">
+    {% if _nav_prev %}
+    <a href="{{ _nav_prev.url | relative_url }}">&larr; {{ _nav_prev.title }}</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    {% if _nav_next %}
+    <a href="{{ _nav_next.url | relative_url }}">{{ _nav_next.title }} &rarr;</a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+(function() {
+  var toc = document.getElementById('toc-list');
+  var toggle = document.getElementById('toc-toggle');
+  if (!toc) return;
+
+  // Build TOC from h2 headings
+  var headings = document.querySelectorAll('.topic-content h2');
+  if (headings.length < 2) {
+    var tocEl = document.getElementById('toc');
+    if (tocEl) tocEl.style.display = 'none';
+    var layout = document.querySelector('.topic-layout');
+    if (layout) layout.style.gridTemplateColumns = '1fr';
+    return;
+  }
+
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'section-' + i;
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + h.id);
+      toc.classList.remove('open');
+    });
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+
+  // Scroll spy
+  var links = toc.querySelectorAll('a');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        var active = toc.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(function(h) { observer.observe(h); });
+
+  // Mobile toggle
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var isOpen = toc.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // Wrap tables
+  document.querySelectorAll('.topic-content table').forEach(function(table) {
+    if (!table.parentElement.classList.contains('table-wrap')) {
+      var wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    }
+  });
+})();
+</script>

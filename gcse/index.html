@@ -1,0 +1,17 @@
+---
+layout: default
+title: GCSE Product Design
+---
+{% assign _level = site.data.levels | where: "id", "gcse" | first %}
+<div class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <span class="sep">/</span>
+  <span>{{ _level.display }}</span>
+</div>
+
+<div class="level-header">
+  <h1>{{ _level.display }} Product Design</h1>
+  <p>{{ _level.subtitle }}</p>
+</div>
+
+{% include level-units.html level="gcse" %}

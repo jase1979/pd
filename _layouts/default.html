@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer>
+    <p>WJEC Product Design Revision Guide</p>
+  </footer>
+  <script>
+    // Wrap tables
+    document.querySelectorAll('.topic-content table').forEach(function(table) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrap';
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+  </script>
+  <script>
+    // Glossary definitions for tooltips
+    var glossaryDefs = {
+      {% for entry in site.data.glossary %}
+        "{{ entry.term | downcase | replace: '(', '' | replace: ')', '' | replace: '/', '-' | replace: ' ', '-' }}": {{ entry.definition | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+
+    // Link key-term bold text to glossary entries
+    document.querySelectorAll('.key-term').forEach(function(el) {
+      var bold = el.querySelector('strong');
+      if (!bold) return;
+      var term = bold.textContent.trim();
+      var slug = term.toLowerCase().replace(/[()]/g, '').replace(/[\/\s]+/g, '-');
+      var link = document.createElement('a');
+      link.href = '{{ "/glossary/" | relative_url }}#term-' + slug;
+      link.className = 'key-term-link';
+      if (glossaryDefs[slug]) {
+        link.setAttribute('data-tooltip', glossaryDefs[slug]);
+      }
+      link.innerHTML = bold.innerHTML;
+      bold.innerHTML = '';
+      bold.appendChild(link);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+- term: "Market Pull"
+  definition: "When consumer demand drives the development of a new product or technology."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "Technology Push"
+  definition: "When new technology drives the creation of products that consumers did not previously know they needed."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "Product Life Cycle"
+  definition: "The stages a product goes through from introduction to decline: Introduction, Growth, Maturity, Decline."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "BSI"
+  definition: "British Standards Institute — sets standards for products to ensure safety and quality."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "ISO"
+  definition: "International Standards Organisation — sets internationally agreed standards for products and processes."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "Sustainability"
+  definition: "Meeting today's needs without compromising the ability of future generations to meet their own needs."
+  level: "GCSE"
+  source: "/gcse/unit1/ecological-footprint/"
+
+- term: "Six Rs"
+  definition: "The six principles of sustainability: Rethink, Reuse, Recycle, Repair, Reduce, Refuse."
+  level: "GCSE"
+  source: "/gcse/unit1/ecological-footprint/"
+
+- term: "Life Cycle Analysis"
+  definition: "A method to determine the environmental impact of a product from cradle to grave — from raw material extraction through to disposal."
+  level: "GCSE"
+  source: "/gcse/unit1/critical-evaluation/"
+
+- term: "Carbon Footprint"
+  definition: "The total amount of greenhouse gases produced to support human activities, expressed as carbon dioxide equivalent."
+  level: "GCSE"
+  source: "/gcse/unit1/critical-evaluation/"
+
+- term: "Design Obsolescence"
+  definition: "When a product is intentionally designed to become outdated or unfashionable after a period of time, encouraging consumers to buy a replacement."
+  level: "GCSE"
+  source: "/gcse/unit1/critical-evaluation/"
+
+- term: "CAD"
+  definition: "Computer Aided Design — using computer software to create 2D or 3D designs of products."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "CAM"
+  definition: "Computer Aided Manufacture — using computer-controlled machines to manufacture products."
+  level: "GCSE"
+  source: "/gcse/unit1/new-and-emerging-technologies/"
+
+- term: "Shape Memory Alloy"
+  definition: "A metal alloy (e.g. Nitinol) that returns to its original shape when heated after being deformed."
+  level: "GCSE"
+  source: "/gcse/unit1/modern-smart-materials/"
+
+- term: "Thermochromic"
+  definition: "A material that changes colour in response to changes in temperature."
+  level: "GCSE"
+  source: "/gcse/unit1/modern-smart-materials/"
+
+- term: "Photochromic"
+  definition: "A material that changes colour in response to changes in light intensity."
+  level: "GCSE"
+  source: "/gcse/unit1/modern-smart-materials/"
+
+- term: "Polymorph"
+  definition: "A thermoplastic material that becomes mouldable at low temperatures (around 62°C) and can be reshaped many times."
+  level: "GCSE"
+  source: "/gcse/unit1/modern-smart-materials/"
+
+- term: "Ferrous Metal"
+  definition: "A metal that contains iron, such as mild steel, medium carbon steel, and high carbon steel. Ferrous metals are generally magnetic and prone to rust."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Non-Ferrous Metal"
+  definition: "A metal that does not contain iron, such as aluminium, copper, and brass. Non-ferrous metals are generally non-magnetic and more resistant to corrosion."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Alloy"
+  definition: "A mixture of two or more metals, or a metal and another element, to improve properties. Examples: brass (copper + zinc), steel (iron + carbon)."
+  level: "GCSE"
+  source: "/gcse/unit2/material-properties/"
+
+- term: "Thermoforming Polymer"
+  definition: "A plastic that can be repeatedly softened by heating and reshaped, e.g. acrylic, polypropylene, ABS, PVC."
+  level: "GCSE"
+  source: "/gcse/unit2/polymers/"
+
+- term: "Thermosetting Polymer"
+  definition: "A plastic that is permanently set during manufacture and cannot be re-melted or reshaped, e.g. urea formaldehyde, melamine, epoxy resin."
+  level: "GCSE"
+  source: "/gcse/unit2/polymers/"
+
+- term: "Injection Moulding"
+  definition: "A manufacturing process where molten plastic is injected under pressure into a mould. Used for high volume production of complex shapes."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Vacuum Forming"
+  definition: "A process where a heated thermoplastic sheet is stretched over a mould and air is removed to form the shape."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Hardwood"
+  definition: "Timber from broad-leaved, deciduous trees (e.g. oak, beech). Generally harder and more durable but slower growing."
+  level: "GCSE"
+  source: "/gcse/unit2/timber/"
+
+- term: "Softwood"
+  definition: "Timber from coniferous, evergreen trees (e.g. Scots pine, western red cedar). Generally easier to work and cheaper than hardwood."
+  level: "GCSE"
+  source: "/gcse/unit2/timber/"
+
+- term: "MDF"
+  definition: "Medium Density Fibreboard — a manufactured timber board made from compressed wood fibres and resin. Smooth surface, no grain, easy to cut."
+  level: "GCSE"
+  source: "/gcse/unit2/timber/"
+
+- term: "GSM"
+  definition: "Grams per square metre — the unit used to measure the weight/thickness of paper and board."
+  level: "GCSE"
+  source: "/gcse/unit2/papers-and-boards/"
+
+- term: "Batch Production"
+  definition: "Manufacturing a set quantity of identical products. Each batch goes through each stage of production before the next batch begins."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "One-Off Production"
+  definition: "Manufacturing a single unique product to a customer's individual requirements. Also called bespoke or job production."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "High Volume Production"
+  definition: "Continuous manufacture of large quantities of identical products using automated machinery. Also called mass production."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Jig"
+  definition: "A device that holds a workpiece in position and guides a cutting tool to ensure accuracy and repeatability in production."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Quantum Tunnelling Composite"
+  definition: "QTC — a smart material whose electrical resistance decreases significantly when compressed, used in switches and sensors."
+  level: "GCSE"
+  source: "/gcse/unit2/smart-materials/"
+
+- term: "Nitinol"
+  definition: "A shape memory alloy made from nickel and titanium that returns to a predetermined shape when heated."
+  level: "GCSE"
+  source: "/gcse/unit2/smart-materials/"
+
+- term: "Fair Trade"
+  definition: "A trading partnership that aims to achieve greater equity in international trade, ensuring fair wages and good working conditions for producers in developing countries."
+  level: "GCSE"
+  source: "/gcse/unit1/ecological-footprint/"

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% assign _unit  = site.data.nav    | where: "url", page.url | first %}
+{% assign _level = site.data.levels | where: "id",  _unit.level | first %}
+
+<div class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <span class="sep">/</span>
+  <a href="{{ _level.url | relative_url }}">{{ _level.display }}</a>
+  <span class="sep">/</span>
+  <span>{{ page.title }}</span>
+</div>
+
+<div class="unit-header">
+  <h1>{{ page.title }}</h1>
+  <p>{{ _unit.description }}</p>
+</div>
+
+<div class="topic-grid">
+  {% for topic in _unit.topics %}
+  <a href="{{ topic.url | relative_url }}" class="topic-card">
+    <h3>{{ topic.title }}</h3>
+  </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,18 @@
+title: WJEC Product Design Revision
+description: GCSE Product Design revision topics
+baseurl: "/pd"
+url: "https://pd.pages.dev"
+theme: null
+remote_theme: null
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: none
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

@@ -1,0 +1,47 @@
+- id: gcse_core
+  label: "2.1.1 Core Knowledge"
+  url: /gcse/unit1/
+  level: gcse
+  description: "Knowledge and understanding of design and technology and its impact on daily life"
+  topics:
+    - url: /gcse/unit1/new-and-emerging-technologies/
+      title: New & Emerging Technologies
+    - url: /gcse/unit1/critical-evaluation/
+      title: Critical Evaluation of Technologies
+    - url: /gcse/unit1/energy/
+      title: Energy Generation & Storage
+    - url: /gcse/unit1/modern-smart-materials/
+      title: Modern & Smart Materials
+    - url: /gcse/unit1/ecological-footprint/
+      title: Ecological & Social Footprint
+    - url: /gcse/unit1/designers-and-companies/
+      title: Designers & Companies
+
+- id: gcse_product
+  label: "Product Design"
+  url: /gcse/unit2/
+  level: gcse
+  description: "Materials, manufacturing processes, and techniques for product design"
+  topics:
+    - url: /gcse/unit2/papers-and-boards/
+      title: Papers & Boards
+    - url: /gcse/unit2/timber/
+      title: Natural & Manufactured Timber
+    - url: /gcse/unit2/metals/
+      title: Ferrous & Non-Ferrous Metals
+    - url: /gcse/unit2/polymers/
+      title: Thermoforming & Thermosetting Polymers
+    - url: /gcse/unit2/smart-materials/
+      title: Modern & Smart Materials
+    - url: /gcse/unit2/material-properties/
+      title: Material Sources & Properties
+    - url: /gcse/unit2/material-selection/
+      title: Material Selection Factors
+    - url: /gcse/unit2/stock-forms/
+      title: Stock Forms, Types & Sizes
+    - url: /gcse/unit2/scales-of-production/
+      title: Scales of Production
+    - url: /gcse/unit2/specialist-techniques/
+      title: Specialist Techniques & Processes
+    - url: /gcse/unit2/surface-treatments/
+      title: Surface Treatments & Finishes

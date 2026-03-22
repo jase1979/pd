@@ -1,0 +1,121 @@
+.glossary-page {
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .glossary-subtitle {
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.glossary-controls {
+  margin-bottom: 2rem;
+}
+
+.glossary-search {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  outline: none;
+  margin-bottom: 1rem;
+
+  &:focus { border-color: var(--accent); }
+  &::placeholder { color: var(--text-muted); }
+}
+
+.glossary-alpha-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+
+  .alpha-link {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text-muted);
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+  }
+}
+
+.glossary-section {
+  margin-bottom: 2rem;
+}
+
+.glossary-letter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 1rem;
+}
+
+.glossary-entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.glossary-term-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.glossary-term-name {
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+.glossary-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+
+  &--gcse { background: rgba(78,205,196,0.15); color: var(--gcse); }
+}
+
+.glossary-definition {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.glossary-source-link {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+
+  &:hover { color: var(--accent); }
+}
+
+.glossary-no-results {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+  font-size: 1.1rem;
+}

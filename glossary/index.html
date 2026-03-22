@@ -1,0 +1,76 @@
+---
+layout: default
+title: Glossary
+---
+
+<div class="glossary-page">
+  <h1>Glossary</h1>
+  <p class="glossary-subtitle">Key terms for GCSE Product Design.</p>
+
+  <div class="glossary-controls">
+    <input type="text" id="glossary-search" class="glossary-search" placeholder="Search terms…" autocomplete="off">
+    <div class="glossary-alpha-bar">
+      {% assign letters = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" | split: " " %}
+      {% for letter in letters %}
+        <a href="#letter-{{ letter }}" class="alpha-link">{{ letter }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="glossary-list">
+    {% assign sorted = site.data.glossary | sort_natural: "term" %}
+    {% assign current_letter = "" %}
+    {% for entry in sorted %}
+      {% assign first = entry.term | slice: 0 | upcase %}
+      {% if first != current_letter %}
+        {% if current_letter != "" %}
+          </div>
+        {% endif %}
+        {% assign current_letter = first %}
+        <div class="glossary-section" id="letter-{{ current_letter }}">
+          <h2 class="glossary-letter">{{ current_letter }}</h2>
+      {% endif %}
+      {% assign slug = entry.term | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' | replace: '/', '-' %}
+      <div class="glossary-entry" id="term-{{ slug }}" data-term="{{ entry.term | downcase }}" data-definition="{{ entry.definition | downcase }}">
+        <div class="glossary-term-row">
+          <strong class="glossary-term-name">{{ entry.term }}</strong>
+          <span class="glossary-badge glossary-badge--{{ entry.level | downcase }}">{{ entry.level }}</span>
+        </div>
+        <p class="glossary-definition">{{ entry.definition | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <a href="{{ entry.source | relative_url }}" class="glossary-source-link">View topic →</a>
+      </div>
+    {% endfor %}
+    {% if current_letter != "" %}
+      </div>
+    {% endif %}
+  </div>
+
+  <p id="glossary-no-results" class="glossary-no-results" style="display:none;">No matching terms found.</p>
+</div>
+
+<script>
+(function() {
+  const search = document.getElementById('glossary-search');
+  const entries = document.querySelectorAll('.glossary-entry');
+  const sections = document.querySelectorAll('.glossary-section');
+  const noResults = document.getElementById('glossary-no-results');
+
+  search.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    let visible = 0;
+
+    entries.forEach(function(el) {
+      const match = !q || el.dataset.term.includes(q) || el.dataset.definition.includes(q);
+      el.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    sections.forEach(function(sec) {
+      const hasVisible = sec.querySelector('.glossary-entry:not([style*="display: none"])');
+      sec.style.display = hasVisible ? '' : 'none';
+    });
+
+    noResults.style.display = visible === 0 ? '' : 'none';
+  });
+})();
+</script>
