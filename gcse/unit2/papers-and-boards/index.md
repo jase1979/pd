@@ -3,7 +3,7 @@ layout: topic
 title: "Papers & Boards"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Aesthetic and functional properties of cartridge paper, photocopy paper, bleed proof paper"

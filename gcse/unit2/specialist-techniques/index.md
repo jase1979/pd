@@ -3,7 +3,7 @@ layout: topic
 title: "Specialist Techniques & Processes"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Wastage/Addition — cutting, marking out, pillar drill, jigs and formers, hole types"

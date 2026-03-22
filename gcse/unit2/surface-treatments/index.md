@@ -3,7 +3,7 @@ layout: topic
 title: "Surface Treatments & Finishes"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Metal finishes — plastic coating, enamelling, oil finishing, black steel, paint and primer"

@@ -3,7 +3,7 @@ layout: topic
 title: "Stock Forms, Types & Sizes"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Natural timber — sectional forms, standard sizes, sawn or planed finish"

@@ -3,7 +3,7 @@ layout: topic
 title: "Material Sources & Properties"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Metals — sourced from ores; alloys are base metals mixed with other metals/non-metals"

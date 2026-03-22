@@ -18,10 +18,10 @@
       title: Designers & Companies
 
 - id: gcse_product
-  label: "Product Design"
+  label: "2.1.2 In-depth Knowledge: Product Design"
   url: /gcse/unit2/
   level: gcse
-  description: "Materials, manufacturing processes, and techniques for product design"
+  description: "In-depth knowledge and understanding of materials, manufacturing processes, and techniques for product design"
   topics:
     - url: /gcse/unit2/papers-and-boards/
       title: Papers & Boards

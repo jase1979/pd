@@ -3,7 +3,7 @@ layout: topic
 title: "Material Selection Factors"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "Product Design"
+unit_name: "2.1.2 In-depth Knowledge: Product Design"
 unit_url: "/gcse/unit2/"
 subtopics:
   - "Functional and aesthetic factors in material selection"
