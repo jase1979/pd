@@ -486,9 +486,9 @@ def copy_images(year_str: str, meta: dict):
     copied = []
     for idx, (qnum, desc) in sorted(meta["images"].items()):
         # Find source file
-        src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.jpg"
+        src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.png"
         if not src.exists():
-            src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.ppm"
+            src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.jpg"
         if not src.exists():
             print(f"    Warning: image {idx} not found for {year_str}")
             continue
@@ -497,9 +497,8 @@ def copy_images(year_str: str, meta: dict):
         dest_name = f"{prefix}-q{safe_q}-{idx:03d}.jpg"
         dest = IMG_DEST / dest_name
 
-        from PIL import Image, ImageOps
+        from PIL import Image
         img = Image.open(src).convert('RGB')
-        img = ImageOps.invert(img)
         img.save(dest, 'JPEG', quality=85)
         copied.append((idx, f"/assets/img/papers/{dest_name}", qnum, desc))
         print(f"    Copied img {idx:03d} → {dest_name}")
