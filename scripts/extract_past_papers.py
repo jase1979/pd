@@ -52,16 +52,16 @@ PAPER_META = {
             1:  ("1",    "Auxiliary handle fitted onto garden tool in use"),
             2:  ("2",    "Bicycle carrier mounted to roof of vehicle"),
             3:  ("2",    "ABS clamp component of bicycle carrier"),
-            6:  ("3",    "'Power & Play' product — power bank with 3-in-1 cable and earphones"),
-            7:  ("3",    "Bicycle carrier lock mechanism (Lock 1 and Lock 2)"),
-            8:  ("3",    "Roof bar fitted to vehicle"),
-            10: ("4ai",  "White opaque insert for 'power & play' casing"),
-            11: ("4b",   "Two-part transparent polycarbonate outer shell"),
-            12: ("4b",   "Power bank with LED charge indicator and RoHS symbol"),
-            15: ("5",    "Portable self-assembly hockey goals"),
-            16: ("5",    "Hockey goal assembly detail"),
-            17: ("6",    "Flat-pack furniture or designer product for analysis"),
-            25: ("6a",   "Product range for analysis question"),
+            6:  ("2",    "Bicycle carrier lock mechanism detail"),
+            7:  ("2",    "Bicycle carrier lock mechanism close-up"),
+            8:  ("2",    "Roof bar fitted to vehicle"),
+            10: ("3",    "'Power & Play' product — power bank with 3-in-1 cable and earphones"),
+            11: ("3",    "Power bank components — earphones and 3-in-1 cable"),
+            12: ("3",    "Power bank with 3-in-1 cable connector detail"),
+            15: ("4b",   "Two-part transparent polycarbonate outer shell"),
+            16: ("4b",   "Power bank with LED charge indicator and RoHS symbol"),
+            17: ("5",    "Portable self-assembly hockey goals"),
+            25: ("6",    "Eco menu holder — final prototype"),
         },
     },
     "2022": {
@@ -75,16 +75,15 @@ PAPER_META = {
             2:  ("1",    "Game controller — final prototype"),
             3:  ("2",    "New solar bicycle light"),
             5:  ("2",    "Solar bicycle light mounting detail"),
-            6:  ("3",    "Range of pewter jewellery items"),
-            7:  ("3",    "Pewter jewellery stand (transparent thermoplastic)"),
-            9:  ("4",    "New kitchen products designed for young children"),
-            10: ("4",    "Kitchen products — injection moulded HDPE with rubberised handle"),
-            11: ("4c",   "Concept model of handheld torch in blue modelling foam"),
-            14: ("5",    "Flat-packed stools and chairs made from corrugated cardboard"),
-            15: ("5",    "Corrugated cardboard lighting product — innovative use"),
-            17: ("5b",   "Range of concept bicycle racks in mild steel"),
-            18: ("6",    "Portable tennis game for 3–5 year olds"),
-            19: ("6",    "Tennis game components — spinner, base, clips"),
+            6:  ("2",    "Solar bicycle light with mounting bracket"),
+            7:  ("3",    "Range of pewter jewellery items"),
+            9:  ("3",    "Pewter jewellery necklace detail"),
+            10: ("4",    "Designer products for analysis"),
+            11: ("4",    "Designer products for analysis — detail"),
+            14: ("5",    "New garden pruning tool"),
+            15: ("5",    "Garden tool — detail view"),
+            18: ("6",    "New swimming aid"),
+            19: ("6",    "Swimming aid in use"),
         },
     },
     "2019": {
@@ -572,10 +571,13 @@ def process_paper(year_str: str, meta: dict) -> list[dict]:
 
         answer_text = ans or "ANSWER NOT FOUND — needs manual entry"
 
-        # Find image: exact match or prefix match
+        # Find image: exact match, then progressively strip suffixes
         img_path = qnum_to_img.get(qkey)
+        if not img_path and "_" in qkey:
+            # "4b_i" → try "4b"
+            img_path = qnum_to_img.get(qkey.split("_")[0])
         if not img_path:
-            # Try matching by question number prefix (e.g. "3a" matches Q3 image)
+            # "4b_i" or "4b" → try "4" (number only)
             num_prefix = re.match(r'(\d+)', qkey)
             if num_prefix:
                 img_path = qnum_to_img.get(num_prefix.group(1))
