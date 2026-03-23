@@ -34,12 +34,12 @@ PAPER_META = {
             8:  ("3",    "Space-saving wall-mounted clothes dryer (open position)"),
             9:  ("3",    "Steel wings with U-shaped feature holding aluminium bar"),
             10: ("3",    "Clothes dryer U-shaped feature — enlarged view"),
-            12: ("3e",   "Aluminium roof bar (extruded cross-section)"),
+            12: ("3",    "Aluminium roof bar (extruded cross-section)"),
             15: ("4",    "Portable self-assembly hockey goals for primary school"),
             20: ("5",    "Bluetooth speaker product (top view)"),
             21: ("5",    "Bluetooth speaker (side view with USB port)"),
             25: ("6",    "Wooden lap tray with handle cut-out"),
-            29: ("6c",   "Lap tray in use on sofa — showing ergonomic placement"),
+            29: ("6",    "Lap tray in use on sofa — showing ergonomic placement"),
         },
     },
     "2023": {
@@ -115,8 +115,8 @@ PAPER_META = {
             11: ("5",    "Corrugated cardboard cube packaging"),
             12: ("5",    "Corrugated cardboard box with product"),
             13: ("5",    "Corrugated cardboard pendant lamp"),
-            14: ("5b",   "Bicycle rack in mild steel — concept A"),
-            15: ("5b",   "Bicycle rack in mild steel — concept B"),
+            14: ("5",    "Bicycle rack in mild steel — concept A"),
+            15: ("5",    "Bicycle rack in mild steel — concept B"),
             16: ("6",    "Portable tennis game for 3–5 year olds"),
             17: ("6",    "Tennis game — paddles"),
             18: ("6",    "Tennis game — base/spinner component"),
@@ -237,8 +237,8 @@ def extract_marks(text: str) -> int:
     return sum(marks) if marks else 0
 
 
-def guess_topic(q: str, a: str = "") -> str:
-    combined = (q + " " + a).lower()
+def guess_topic(text: str) -> str:
+    combined = text.lower()
     scores = {}
     for topic, kws in TOPIC_KEYWORDS.items():
         scores[topic] = sum(1 for kw in kws if kw in combined)
@@ -256,42 +256,18 @@ def guess_type(q: str, marks: int) -> str:
         return "matching"
     if "complete the table" in ql or "fill in" in ql:
         return "fill-blank"
-    if "state" in ql and marks <= 2:
-        return "short-answer"
     return "short-answer"
 
 
-def parse_qp(text: str) -> list[dict]:
-    """Parse question paper into list of question dicts."""
-    # Trim to questions section
-    m = re.search(r'Answer all questions\.', text)
-    if m:
-        text = text[m.end():]
-    m = re.search(r'END OF PAPER', text)
-    if m:
-        text = text[:m.start()]
-
-    # Find first question
-    m = re.search(r'^\s{0,5}1\.\s+', text, flags=re.MULTILINE)
-    if m:
-        text = text[m.start():]
-
-    # Split on top-level questions (number + period at left margin)
-    chunks = re.split(r'\n(?=\s{0,5}\d{1,2}\.\s+)', text)
-
-    questions = []
-    for chunk in chunks:
-        chunk = chunk.strip()
-        if not chunk:
-            continue
-        m = re.match(r'(\d{1,2})\.\s+', chunk)
-        if not m or len(chunk) < 20:
-            continue
-        qnum = m.group(1)
-        body = chunk[m.end():]
-        questions.extend(_parse_sub(qnum, body, chunk))
-
-    return questions
+def make_part_label(part_key: str, qnum: str) -> str:
+    """Convert "3a_i" → "(a)(i)", "3b" → "(b)", "3_i" → "(i)", "3" → ""."""
+    suffix = part_key[len(qnum):]
+    if suffix.startswith("_"):
+        suffix = suffix[1:]
+    if not suffix:
+        return ""
+    segments = suffix.split("_")
+    return "".join(f"({s})" for s in segments if s)
 
 
 def _clean_qtext(t: str) -> str:
@@ -299,7 +275,6 @@ def _clean_qtext(t: str) -> str:
     lines = []
     for ln in t.split('\n'):
         s = ln.strip()
-        # Skip answer lines (dotted lines)
         if re.match(r'^\.{5,}', s):
             continue
         if s:
@@ -309,8 +284,8 @@ def _clean_qtext(t: str) -> str:
     return '\n'.join(lines).strip()
 
 
-def _parse_sub(qnum: str, body: str, full: str) -> list[dict]:
-    results = []
+def _parse_sub_grouped(qnum: str, body: str, full: str) -> dict:
+    """Parse sub-questions, returning {"context": str, "parts": [...]}."""
     body_nl = "\n" + body
 
     # Try to split on (a), (b), (c)... first
@@ -323,30 +298,33 @@ def _parse_sub(qnum: str, body: str, full: str) -> list[dict]:
         rparts = re.split(roman_pat, body_nl)
 
         if len(rparts) > 1:
-            # Direct (i),(ii),(iii) without letter prefix (2022-style)
             preamble = rparts[0].strip()
+            result_parts = []
             j = 1
             while j < len(rparts):
                 rnum  = rparts[j]
                 rbody = rparts[j+1] if j+1 < len(rparts) else ""
                 j += 2
                 marks = extract_marks(rbody)
-                qt = f"{preamble}\n\n({rnum}) {rbody}" if preamble else f"({rnum}) {rbody}"
-                results.append({
+                result_parts.append({
                     "question_number": f"{qnum}_{rnum}",
-                    "question_text": _clean_qtext(qt),
-                    "marks": marks,
+                    "question_text":   _clean_qtext(f"({rnum}) {rbody}"),
+                    "marks":           marks,
                 })
+            return {"context": _clean_qtext(preamble), "parts": result_parts}
         else:
             marks = extract_marks(body)
-            results.append({
-                "question_number": qnum,
-                "question_text": _clean_qtext(full),
-                "marks": marks,
-            })
-        return results
+            return {
+                "context": "",
+                "parts": [{
+                    "question_number": qnum,
+                    "question_text":   _clean_qtext(full),
+                    "marks":           marks,
+                }]
+            }
 
-    preamble = parts[0].strip()
+    context = _clean_qtext(parts[0])
+    result_parts = []
 
     i = 1
     while i < len(parts):
@@ -359,11 +337,10 @@ def _parse_sub(qnum: str, body: str, full: str) -> list[dict]:
 
         if len(rparts) <= 1:
             marks = extract_marks(sbody)
-            qt = f"{preamble}\n\n({letter}) {sbody}" if preamble else f"({letter}) {sbody}"
-            results.append({
+            result_parts.append({
                 "question_number": f"{qnum}{letter}",
-                "question_text": _clean_qtext(qt),
-                "marks": marks,
+                "question_text":   _clean_qtext(f"({letter}) {sbody}"),
+                "marks":           marks,
             })
         else:
             sub_pre   = rparts[0].strip()
@@ -372,11 +349,10 @@ def _parse_sub(qnum: str, body: str, full: str) -> list[dict]:
 
             if not has_marks:
                 marks = extract_marks(sbody)
-                qt = f"{preamble}\n\n({letter}) {sbody}" if preamble else f"({letter}) {sbody}"
-                results.append({
+                result_parts.append({
                     "question_number": f"{qnum}{letter}",
-                    "question_text": _clean_qtext(qt),
-                    "marks": marks,
+                    "question_text":   _clean_qtext(f"({letter}) {sbody}"),
+                    "marks":           marks,
                 })
             else:
                 j = 1
@@ -385,18 +361,52 @@ def _parse_sub(qnum: str, body: str, full: str) -> list[dict]:
                     rbody = rparts[j+1] if j+1 < len(rparts) else ""
                     j += 2
                     marks = extract_marks(rbody)
-                    qt = f"{preamble}\n\n({letter}) {sub_pre}\n\n({rnum}) {rbody}"
-                    results.append({
+                    if sub_pre:
+                        qt = f"({letter}) {sub_pre}\n\n({rnum}) {rbody}"
+                    else:
+                        qt = f"({letter})({rnum}) {rbody}"
+                    result_parts.append({
                         "question_number": f"{qnum}{letter}_{rnum}",
-                        "question_text": _clean_qtext(qt),
-                        "marks": marks,
+                        "question_text":   _clean_qtext(qt),
+                        "marks":           marks,
                     })
 
-    return results
+    return {"context": context, "parts": result_parts}
+
+
+def parse_qp_grouped(text: str) -> list[dict]:
+    """Parse question paper into grouped list, one entry per top-level question."""
+    m = re.search(r'Answer all questions\.', text)
+    if m:
+        text = text[m.end():]
+    m = re.search(r'END OF PAPER', text)
+    if m:
+        text = text[:m.start()]
+    m = re.search(r'^\s{0,5}1\.\s+', text, flags=re.MULTILINE)
+    if m:
+        text = text[m.start():]
+
+    chunks = re.split(r'\n(?=\s{0,5}\d{1,2}\.\s+)', text)
+    groups = []
+    for chunk in chunks:
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        m = re.match(r'(\d{1,2})\.\s+', chunk)
+        if not m or len(chunk) < 20:
+            continue
+        qnum = m.group(1)
+        body = chunk[m.end():]
+        result = _parse_sub_grouped(qnum, body, chunk)
+        groups.append({
+            "question_number": qnum,
+            "context":         result["context"],
+            "parts":           result["parts"],
+        })
+    return groups
 
 
 def _clean_ms_answer(text: str) -> str:
-    # Remove AO columns and mark numbers at line ends
     text = re.sub(r'\s+AO\d\s+AO\d\s+Mark\s*', '\n', text)
     text = re.sub(r'\s+✓\s+\d+\s*$', '', text, flags=re.MULTILINE)
     text = re.sub(r'\s+✓\s*$', '', text, flags=re.MULTILINE)
@@ -407,34 +417,23 @@ def _clean_ms_answer(text: str) -> str:
 
 
 def parse_ms(text: str) -> dict[str, str]:
-    """Parse mark scheme into {question_key: answer_text} dict.
-
-    Handles formats:
-    - "Question N" header, then "(a) (i)  text" entries (2024, 2023)
-    - "Question N" header, then "(i)  text" entries directly (2022)
-    - "Question N" header, then "(a)  text" entries (2019)
-    """
+    """Parse mark scheme into {question_key: answer_text} dict."""
     answers = {}
 
     m = re.search(r'Question\s+1\b', text)
     if m:
         text = text[m.start():]
 
-    # Remove banded sections
     text = re.sub(r'Band\s+\d+.*?(?=\n\s*(?:Question|\Z))', '', text, flags=re.DOTALL)
 
     current_q      = ""
-    current_letter = ""   # tracks last seen letter e.g. "a"
+    current_letter = ""
     current_key    = None
     body_lines: list[str] = []
 
-    # Pattern: "Question 3" line
-    q_header = re.compile(r'^\s*Question\s+(\d{1,2})\s*$')
-    # "(a) (i)  text" — letter + roman on same line
+    q_header     = re.compile(r'^\s*Question\s+(\d{1,2})\s*$')
     letter_roman = re.compile(r'^\s{0,6}\(([a-hj-uw-z])\)\s+\(([ivx]+)\)\s{2,}(.+)')
-    # "(a)  text" — letter only (exclude i, v, x which are roman numeral chars)
     letter_only  = re.compile(r'^\s{0,6}\(([a-hj-uw-z])\)\s{2,}(.+)')
-    # "(ii)  text" — roman only (continuation of current letter, or top-level)
     roman_only   = re.compile(r'^\s{0,6}\(([ivx]+)\)\s{2,}(.+)')
 
     def flush():
@@ -446,7 +445,6 @@ def parse_ms(text: str) -> dict[str, str]:
         body_lines = []
 
     for line in text.split('\n'):
-        # Question header: "Question 3"
         hm = q_header.match(line)
         if hm:
             flush()
@@ -455,7 +453,6 @@ def parse_ms(text: str) -> dict[str, str]:
             current_key    = None
             continue
 
-        # "(a) (i)  text"
         mm = letter_roman.match(line)
         if mm:
             flush()
@@ -464,7 +461,6 @@ def parse_ms(text: str) -> dict[str, str]:
             body_lines     = [mm.group(3)]
             continue
 
-        # "(a)  text"
         mm = letter_only.match(line)
         if mm:
             flush()
@@ -473,7 +469,6 @@ def parse_ms(text: str) -> dict[str, str]:
             body_lines     = [mm.group(2)]
             continue
 
-        # "(ii)  text" — roman only
         mm = roman_only.match(line)
         if mm:
             flush()
@@ -492,16 +487,40 @@ def parse_ms(text: str) -> dict[str, str]:
     return answers
 
 
-def copy_images(year_str: str, meta: dict):
+def find_answer(answers: dict, pkey: str) -> str | None:
+    """Look up mark scheme answer with progressive fallbacks."""
+    ans = answers.get(pkey)
+    if not ans and "_" in pkey:
+        # "6a_i" → try "6a"
+        ans = answers.get(pkey.split("_")[0])
+    if not ans and "_" in pkey:
+        # "6_i" → try "6a_i" (MS has spurious letter from split (a)/(i) lines)
+        num_m = re.match(r'(\d+)_(.+)', pkey)
+        if num_m:
+            ans = answers.get(f"{num_m.group(1)}a_{num_m.group(2)}")
+    if not ans and len(pkey) > 1:
+        # "6b" → try "6"
+        num_only = re.match(r'(\d+)', pkey)
+        if num_only:
+            ans = answers.get(num_only.group(1))
+    if not ans and "_" not in pkey:
+        # "6b" → try combining "6b_i", "6b_ii", etc.
+        for roman in ["i", "ii", "iii"]:
+            k = f"{pkey}_{roman}"
+            if k in answers:
+                combined = [answers[f"{pkey}_{r}"] for r in ["i", "ii", "iii", "iv"] if f"{pkey}_{r}" in answers]
+                ans = "\n\n".join(combined)
+                break
+    return ans
+
+
+def copy_images(year_str: str, meta: dict) -> dict:
     """Copy relevant images to assets/img/papers/ with descriptive names."""
     IMG_DEST.mkdir(parents=True, exist_ok=True)
-    code_lower = meta["code"].lower().replace("-", "")[:3] + meta["code"][-8:-5].lower()
-    # e.g. "s243603" — use shorter prefix like "s24pd"
     prefix = f"{meta['session'].lower()[:1]}{str(meta['year'])[2:]}pd"
 
-    copied = []
+    copied = {}
     for idx, (qnum, desc) in sorted(meta["images"].items()):
-        # Find source file
         src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.png"
         if not src.exists():
             src = IMG_SRC_DIR / f"{year_str}-{idx:03d}.jpg"
@@ -516,10 +535,10 @@ def copy_images(year_str: str, meta: dict):
         from PIL import Image
         img = Image.open(src).convert('RGB')
         img.save(dest, 'JPEG', quality=85)
-        copied.append((idx, f"/assets/img/papers/{dest_name}", qnum, desc))
+        copied[idx] = f"/assets/img/papers/{dest_name}"
         print(f"    Copied img {idx:03d} → {dest_name}")
 
-    return {idx: path for idx, path, _, _ in copied}
+    return copied
 
 
 def process_paper(year_str: str, meta: dict) -> list[dict]:
@@ -540,8 +559,9 @@ def process_paper(year_str: str, meta: dict) -> list[dict]:
     ms_text = clean(run(["pdftotext", "-layout", str(ms_path), "-"]))
 
     print("  Parsing questions…")
-    questions = parse_qp(qp_text)
-    print(f"  Found {len(questions)} question parts")
+    groups = parse_qp_grouped(qp_text)
+    total_parts = sum(len(g["parts"]) for g in groups)
+    print(f"  Found {len(groups)} questions ({total_parts} parts)")
 
     print("  Parsing mark scheme…")
     answers = parse_ms(ms_text)
@@ -549,79 +569,71 @@ def process_paper(year_str: str, meta: dict) -> list[dict]:
 
     print("  Copying images…")
     img_map = copy_images(year_str, meta)
-    # Build question→image lookup: first image whose question number prefix matches
-    qnum_to_img = {}
-    for idx, path in img_map.items():
-        q = meta["images"][idx][0]
-        if q not in qnum_to_img:
-            qnum_to_img[q] = path
+
+    # All images for a question grouped by main question number
+    qnum_to_imgs: dict[str, list[str]] = {}
+    for idx, path in sorted(img_map.items()):
+        qkey = meta["images"][idx][0]
+        main_qnum = re.match(r'(\d+)', qkey).group(1)
+        qnum_to_imgs.setdefault(main_qnum, []).append(path)
 
     results = []
     prefix = f"{meta['session'].lower()[:1]}{str(meta['year'])[2:]}"
 
-    for q in questions:
-        qkey = q["question_number"]
+    for group_data in groups:
+        qnum    = group_data["question_number"]
+        context = group_data["context"]
+        images  = qnum_to_imgs.get(qnum, [])
 
-        # Try to find answer with various key fallbacks
-        ans = answers.get(qkey)
-        if not ans and "_" in qkey:
-            # e.g. "6_i" → "6" (parent key)
-            ans = answers.get(qkey.split("_")[0])
-        if not ans and "_" in qkey:
-            # e.g. "6_i" → "6a_i" (MS has spurious letter from split (a)/(i) lines)
-            num_m = re.match(r'(\d+)_(.+)', qkey)
-            if num_m:
-                ans = answers.get(f"{num_m.group(1)}a_{num_m.group(2)}")
-        if not ans and len(qkey) > 1:
-            num_only = re.match(r'(\d+)', qkey)
-            if num_only:
-                ans = answers.get(num_only.group(1))
-        if not ans and "_" not in qkey:
-            for roman in ["i", "ii", "iii"]:
-                k = f"{qkey}_{roman}"
-                if k in answers:
-                    parts = [answers[f"{qkey}_{r}"] for r in ["i","ii","iii","iv"] if f"{qkey}_{r}" in answers]
-                    ans = "\n\n".join(parts)
-                    break
+        parts = []
+        for p in group_data["parts"]:
+            pkey  = p["question_number"]
+            ans   = find_answer(answers, pkey)
+            label = make_part_label(pkey, qnum)
 
-        answer_text = ans or "ANSWER NOT FOUND — needs manual entry"
+            part_entry = {
+                "part":         pkey,
+                "label":        label,
+                "marks":        p["marks"],
+                "type":         guess_type(p["question_text"], p["marks"]),
+                "question":     p["question_text"],
+                "answer":       ans or "ANSWER NOT FOUND — needs manual entry",
+                "needs_review": ans is None or p["marks"] == 0,
+            }
+            parts.append(part_entry)
 
-        # Find image: exact match, then progressively strip suffixes
-        img_path = qnum_to_img.get(qkey)
-        if not img_path and "_" in qkey:
-            # "4b_i" → try "4b"
-            img_path = qnum_to_img.get(qkey.split("_")[0])
-        if not img_path:
-            # "4b_i" or "4b" → try "4" (number only)
-            num_prefix = re.match(r'(\d+)', qkey)
-            if num_prefix:
-                img_path = qnum_to_img.get(num_prefix.group(1))
+            matched = "✓" if ans else "✗"
+            img_ind = "📷" if images else "  "
+            print(f"    {matched}{img_ind} Q{pkey:8s} ({p['marks']}m)")
 
-        entry = {
-            "id":              f"{prefix}-q{qkey.replace('_', '')}",
+        total_marks = sum(p["marks"] for p in parts)
+        all_types   = [p["type"] for p in parts]
+        dom_type    = max(set(all_types), key=all_types.count) if all_types else "short-answer"
+
+        all_text = context + " " + " ".join(p["question"] + " " + p["answer"] for p in parts)
+        topic    = guess_topic(all_text)
+
+        group_entry = {
+            "id":              f"{prefix}-q{qnum}",
             "paper":           meta["code"],
             "year":            meta["year"],
             "session":         meta["session"],
-            "question_number": qkey,
-            "marks":           q["marks"],
-            "topic":           guess_topic(q["question_text"], answer_text),
-            "type":            guess_type(q["question_text"], q["marks"]),
-            "question":        q["question_text"],
-            "answer":          answer_text,
-            "needs_review":    ans is None or q["marks"] == 0,
+            "question_number": qnum,
+            "topic":           topic,
+            "total_marks":     total_marks,
+            "type":            dom_type,
+            "images":          images,
+            "context":         context,
+            "parts":           parts,
         }
-        if img_path:
-            entry["image"] = img_path
+        results.append(group_entry)
 
-        results.append(entry)
-        matched = "✓" if ans else "✗"
-        img_ind = "📷" if img_path else "  "
-        print(f"    {matched}{img_ind} Q{qkey:6s} ({q['marks']}m) — {entry['topic']}")
-
-    unmatched = set(answers.keys()) - {q["question_number"] for q in questions}
+    part_keys   = {p["part"] for g in results for p in g["parts"]}
+    unmatched   = set(answers.keys()) - part_keys
     if unmatched:
         print(f"  Unmatched MS keys: {sorted(unmatched)}")
 
+    print(f"  Wrote {len(results)} question groups → {year_str}.json")
     return results
 
 
@@ -631,36 +643,38 @@ def main():
         target = sys.argv[2]
 
     OUTPUT_DIR.mkdir(exist_ok=True)
-    all_qs = []
+    all_groups = []
 
     for year_str, meta in PAPER_META.items():
         if target and year_str != target:
             continue
-        qs = process_paper(year_str, meta)
-        all_qs.extend(qs)
+        groups = process_paper(year_str, meta)
+        all_groups.extend(groups)
 
         out = OUTPUT_DIR / f"{year_str}.json"
-        out.write_text(json.dumps(qs, indent=2, ensure_ascii=False))
-        print(f"  Wrote {len(qs)} questions → {out.name}")
+        out.write_text(json.dumps(groups, indent=2, ensure_ascii=False))
 
     if not target:
         combined = OUTPUT_DIR / "all_questions.json"
-        combined.write_text(json.dumps(all_qs, indent=2, ensure_ascii=False))
-        print(f"\nTotal: {len(all_qs)} questions across all papers")
+        combined.write_text(json.dumps(all_groups, indent=2, ensure_ascii=False))
 
     # Summary
     topics  = {}
     matched = 0
+    total_p = 0
     imgs    = 0
-    for q in all_qs:
-        topics[q["topic"]] = topics.get(q["topic"], 0) + 1
-        if "NOT FOUND" not in q["answer"]:
-            matched += 1
-        if "image" in q:
+    for g in all_groups:
+        topics[g["topic"]] = topics.get(g["topic"], 0) + 1
+        if g["images"]:
             imgs += 1
+        for p in g["parts"]:
+            total_p += 1
+            if "NOT FOUND" not in p["answer"]:
+                matched += 1
 
-    print(f"\nAnswers matched: {matched}/{len(all_qs)}")
-    print(f"Questions with images: {imgs}")
+    print(f"\nTotal: {len(all_groups)} question groups, {total_p} parts across all papers")
+    print(f"Answers matched: {matched}/{total_p}")
+    print(f"Questions with images: {imgs}/{len(all_groups)}")
     print("\nTopic breakdown:")
     for t, c in sorted(topics.items(), key=lambda x: -x[1]):
         print(f"  {t}: {c}")

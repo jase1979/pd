@@ -1,156 +1,53 @@
   <div class="pp-questions" id="pp-questions">
     {% for q in pp_data %}
-    <div class="pp-card" data-paper="{{ q.paper }}" data-topic="{{ q.topic }}" data-marks="{{ q.marks }}" data-year="{{ q.year }}" data-type="{{ q.type }}" data-unit="{{ q.unit }}">
+    <div class="pp-card"
+         data-paper="{{ q.paper }}"
+         data-topic="{{ q.topic }}"
+         data-marks="{{ q.total_marks }}"
+         data-year="{{ q.year }}"
+         data-type="{{ q.type }}">
       <div class="pp-card-header" onclick="this.parentElement.classList.toggle('open')">
         <div class="pp-card-meta">
-          {% if q.unit %}<span class="pp-badge pp-badge--unit">Unit {{ q.unit }}</span>{% endif %}
           <span class="pp-badge pp-badge--paper">{{ q.session }} {{ q.year }}</span>
           <span class="pp-badge pp-badge--topic">{{ q.topic | replace: '-', ' ' }}</span>
-          <span class="pp-badge pp-badge--marks">{{ q.marks }}m</span>
-          <span class="pp-badge pp-badge--type">{{ q.type | replace: '-', ' ' }}</span>
+          <span class="pp-badge pp-badge--marks">{{ q.total_marks }}m</span>
           <span class="pp-qnum">Q{{ q.question_number }}</span>
         </div>
         <svg class="pp-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
       <div class="pp-card-body">
 
-        {% comment %} === TRUE / FALSE === {% endcomment %}
-        {% if q.type == "true-false" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-          <table class="pp-table pp-interactive-table">
-            <tr><th>Statement</th><th>True</th><th>False</th></tr>
-            {% for s in q.statements %}
-            <tr data-correct="{{ s.answer }}">
-              <td>{{ s.text }}</td>
-              <td class="pp-radio-cell"><input type="radio" name="{{ q.id }}-r{{ forloop.index0 }}" value="true"></td>
-              <td class="pp-radio-cell"><input type="radio" name="{{ q.id }}-r{{ forloop.index0 }}" value="false"></td>
-            </tr>
-            {% endfor %}
-          </table>
-          <button class="pp-check-btn" onclick="checkTrueFalse(this)">Check answers</button>
-          <div class="pp-result"></div>
+        {% if q.images.size > 0 %}
+        <div class="pp-images">
+          {% for img in q.images %}
+          <img src="{{ img | relative_url }}" alt="Q{{ q.question_number }} image" class="pp-question-img">
+          {% endfor %}
         </div>
-
-        {% comment %} === MATCHING === {% endcomment %}
-        {% elsif q.type == "matching" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-          <table class="pp-table pp-interactive-table">
-            <tr>
-              <th>Description</th>
-              {% for opt in q.options %}<th>{{ opt }}</th>{% endfor %}
-            </tr>
-            {% for item in q.items %}
-            <tr data-correct="{{ item.answer }}">
-              <td>{{ item.description }}</td>
-              {% for opt in q.options %}
-              <td class="pp-radio-cell"><input type="radio" name="{{ q.id }}-r{{ forloop.index0 }}" value="{{ opt }}"></td>
-              {% endfor %}
-            </tr>
-            {% endfor %}
-          </table>
-          <button class="pp-check-btn" onclick="checkMatching(this)">Check answers</button>
-          <div class="pp-result"></div>
-        </div>
-
-        {% comment %} === FILL IN THE BLANK === {% endcomment %}
-        {% elsif q.type == "fill-blank" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-          <div class="pp-word-bank">
-            {% for word in q.word_bank %}
-            <span class="pp-word-chip" draggable="false">{{ word }}</span>
-            {% endfor %}
-          </div>
-          <div class="pp-fill-sentences">
-            {% for s in q.sentences %}
-            <div class="pp-fill-row" data-answer="{{ s.answer }}">
-              <span class="pp-fill-text">{{ s.text | replace: '________', '<select class="pp-fill-select"><option value="">-- select --</option></select>' }}</span>
-            </div>
-            {% endfor %}
-          </div>
-          <button class="pp-check-btn" onclick="checkFillBlank(this)">Check answers</button>
-          <div class="pp-result"></div>
-        </div>
-
-        {% comment %} === MULTIPLE CHOICE === {% endcomment %}
-        {% elsif q.type == "multiple-choice" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-          <div class="pp-mc-options" data-correct="{{ q.answer }}">
-            {% for opt in q.options %}
-            <label class="pp-mc-label">
-              <input type="radio" name="{{ q.id }}" value="{{ opt }}">
-              <span>{{ opt }}</span>
-            </label>
-            {% endfor %}
-          </div>
-          <button class="pp-check-btn" onclick="checkMultipleChoice(this)">Check answer</button>
-          <div class="pp-result"></div>
-        </div>
-
-        {% comment %} === CODE ERROR === {% endcomment %}
-        {% elsif q.type == "code-error" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-          <pre class="pp-code"><code class="language-{{ q.language }}">{{ q.code | xml_escape }}</code></pre>
-        </div>
-        <div class="pp-card-answer">
-          <button class="pp-reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
-          <div class="pp-answer-content" style="display:none">
-            <div class="pp-answer-label">Errors</div>
-            {% for e in q.errors %}
-            <div class="pp-error-item">
-              <strong>{{ e.type }}:</strong> <code>{{ e.line }}</code><br>
-              <strong>Correction:</strong> {{ e.correction }}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-
-        {% comment %} === TRUTH TABLE === {% endcomment %}
-        {% elsif q.type == "truth-table" %}
-        <div class="pp-card-question">
-          <div class="pp-question-text">{{ q.question | markdownify }}<strong>{{ q.expression }}</strong></div>
-          <table class="pp-table pp-truth-table" data-given="{{ q.given_columns }}">
-            <tr>
-              {% for h in q.headers %}<th>{{ h }}</th>{% endfor %}
-            </tr>
-            {% for row in q.rows %}
-            <tr>
-              {% for cell in row %}
-              {% assign col_index = forloop.index0 %}
-              {% if col_index < q.given_columns %}
-              <td>{{ cell }}</td>
-              {% else %}
-              <td class="pp-tt-input" data-correct="{{ cell }}">
-                <input type="text" maxlength="1" class="pp-tt-cell">
-              </td>
-              {% endif %}
-              {% endfor %}
-            </tr>
-            {% endfor %}
-          </table>
-          <button class="pp-check-btn" onclick="checkTruthTable(this)">Check answers</button>
-          <div class="pp-result"></div>
-        </div>
-
-        {% comment %} === SHORT ANSWER / WRITTEN === {% endcomment %}
-        {% elsif q.type == "short-answer" or q.type == "written" %}
-        <div class="pp-card-question">
-          {% if q.image %}<img src="{{ q.image | relative_url }}" alt="Question photograph" class="pp-question-img">{% endif %}
-          <div class="pp-question-text">{{ q.question | markdownify }}</div>
-        </div>
-        <div class="pp-card-answer">
-          <button class="pp-reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
-          <div class="pp-answer-content" style="display:none">
-            <div class="pp-answer-label">Answer / Mark Scheme</div>
-            <div class="pp-answer-text">{{ q.answer | markdownify }}</div>
-          </div>
-        </div>
-
         {% endif %}
+
+        {% if q.context and q.context != "" %}
+        <div class="pp-context">{{ q.context | markdownify }}</div>
+        {% endif %}
+
+        <div class="pp-parts">
+          {% for part in q.parts %}
+          <div class="pp-part">
+            <div class="pp-part-q">
+              {% if part.label != "" %}<span class="pp-part-label">{{ part.label }}</span>{% endif %}
+              <div class="pp-part-text">{{ part.question | markdownify }}</div>
+              <span class="pp-part-marks">[{{ part.marks }}]</span>
+            </div>
+            <div class="pp-part-ms">
+              <button class="pp-reveal-btn" onclick="revealAnswer(this)">Reveal mark scheme</button>
+              <div class="pp-answer-content" style="display:none">
+                <div class="pp-answer-label">Mark Scheme</div>
+                <div class="pp-answer-text">{{ part.answer | markdownify }}</div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
       </div>
     </div>
     {% endfor %}
@@ -159,36 +56,19 @@
 <script>
 (function() {
   var cards = document.querySelectorAll('.pp-card');
-  var filterUnit = document.getElementById('filter-unit');
   var filterPaper = document.getElementById('filter-paper');
   var filterTopic = document.getElementById('filter-topic');
   var filterMarks = document.getElementById('filter-marks');
-  var filterType = document.getElementById('filter-type');
-  var countEl = document.getElementById('pp-count');
+  var filterType  = document.getElementById('filter-type');
+  var countEl     = document.getElementById('pp-count');
 
   function populateDropdowns() {
-    var unit = filterUnit ? filterUnit.value : 'all';
     var papers = new Set();
     var topics = new Set();
-    var units = new Set();
     cards.forEach(function(c) {
-      if (c.dataset.unit) units.add(c.dataset.unit);
-      if (unit !== 'all' && c.dataset.unit !== unit) return;
       papers.add(c.dataset.year + '|' + c.dataset.paper);
       topics.add(c.dataset.topic);
     });
-
-    if (filterUnit) {
-      var prevUnit = filterUnit.value;
-      filterUnit.innerHTML = '<option value="all">All units</option>';
-      Array.from(units).sort().forEach(function(u) {
-        var opt = document.createElement('option');
-        opt.value = u;
-        opt.textContent = 'Unit ' + u;
-        filterUnit.appendChild(opt);
-      });
-      filterUnit.value = filterUnit.querySelector('option[value="' + prevUnit + '"]') ? prevUnit : 'all';
-    }
 
     var prevPaper = filterPaper.value;
     var prevTopic = filterTopic.value;
@@ -196,10 +76,10 @@
     filterTopic.innerHTML = '<option value="all">All topics</option>';
 
     Array.from(papers).sort().reverse().forEach(function(p) {
-      var parts = p.split('|');
+      var pts = p.split('|');
       var opt = document.createElement('option');
-      opt.value = parts[1];
-      opt.textContent = parts[0] + ' \u2014 ' + parts[1];
+      opt.value = pts[1];
+      opt.textContent = pts[0] + ' \u2014 ' + pts[1];
       filterPaper.appendChild(opt);
     });
 
@@ -217,25 +97,22 @@
   populateDropdowns();
 
   function applyFilters() {
-    var unit = filterUnit ? filterUnit.value : 'all';
     var paper = filterPaper.value;
     var topic = filterTopic.value;
     var marks = filterMarks.value;
-    var type = filterType.value;
+    var type  = filterType.value;
     var shown = 0;
 
     cards.forEach(function(c) {
       var show = true;
-      if (unit !== 'all' && c.dataset.unit !== unit) show = false;
       if (paper !== 'all' && c.dataset.paper !== paper) show = false;
       if (topic !== 'all' && c.dataset.topic !== topic) show = false;
-      if (type !== 'all' && c.dataset.type !== type) show = false;
+      if (type  !== 'all' && c.dataset.type  !== type)  show = false;
       if (marks !== 'all') {
         var m = parseInt(c.dataset.marks);
-        if (marks === '1-2' && (m < 1 || m > 2)) show = false;
-        if (marks === '3-4' && (m < 3 || m > 4)) show = false;
-        if (marks === '5-6' && (m < 5 || m > 6)) show = false;
-        if (marks === '7+' && m < 7) show = false;
+        if (marks === '1-10'  && (m < 1  || m > 10))  show = false;
+        if (marks === '11-20' && (m < 11 || m > 20))  show = false;
+        if (marks === '21+'   && m < 21)               show = false;
       }
       c.style.display = show ? '' : 'none';
       if (show) shown++;
@@ -244,11 +121,10 @@
     countEl.textContent = shown + ' question' + (shown !== 1 ? 's' : '');
   }
 
-  if (filterUnit) filterUnit.addEventListener('change', function() { populateDropdowns(); applyFilters(); });
   filterPaper.addEventListener('change', applyFilters);
   filterTopic.addEventListener('change', applyFilters);
   filterMarks.addEventListener('change', applyFilters);
-  filterType.addEventListener('change', applyFilters);
+  filterType.addEventListener('change',  applyFilters);
 
   document.getElementById('expand-all').addEventListener('click', function() {
     cards.forEach(function(c) { if (c.style.display !== 'none') c.classList.add('open'); });
@@ -258,109 +134,16 @@
   });
 
   applyFilters();
-
-  document.querySelectorAll('.pp-card').forEach(function(card) {
-    var wordBank = card.querySelectorAll('.pp-word-chip');
-    var selects = card.querySelectorAll('.pp-fill-select');
-    if (wordBank.length && selects.length) {
-      var words = Array.from(wordBank).map(function(w) { return w.textContent; });
-      selects.forEach(function(sel) {
-        words.forEach(function(w) {
-          var opt = document.createElement('option');
-          opt.value = w;
-          opt.textContent = w;
-          sel.appendChild(opt);
-        });
-      });
-    }
-  });
-
-  if (typeof Prism !== 'undefined') { Prism.highlightAll(); }
 })();
-
-function checkTrueFalse(btn) {
-  var table = btn.previousElementSibling;
-  var rows = table.querySelectorAll('tr[data-correct]');
-  var correct = 0, total = rows.length;
-  rows.forEach(function(row) {
-    var expected = row.dataset.correct;
-    var selected = row.querySelector('input:checked');
-    row.classList.remove('pp-correct', 'pp-incorrect');
-    if (selected && selected.value === expected) { row.classList.add('pp-correct'); correct++; }
-    else { row.classList.add('pp-incorrect'); }
-  });
-  showResult(btn, correct, total);
-}
-
-function checkMatching(btn) {
-  var table = btn.previousElementSibling;
-  var rows = table.querySelectorAll('tr[data-correct]');
-  var correct = 0, total = rows.length;
-  rows.forEach(function(row) {
-    var expected = row.dataset.correct;
-    var selected = row.querySelector('input:checked');
-    row.classList.remove('pp-correct', 'pp-incorrect');
-    if (selected && selected.value === expected) { row.classList.add('pp-correct'); correct++; }
-    else { row.classList.add('pp-incorrect'); }
-  });
-  showResult(btn, correct, total);
-}
-
-function checkFillBlank(btn) {
-  var container = btn.closest('.pp-card-question');
-  var rows = container.querySelectorAll('.pp-fill-row');
-  var correct = 0, total = rows.length;
-  rows.forEach(function(row) {
-    var expected = row.dataset.answer;
-    var select = row.querySelector('.pp-fill-select');
-    row.classList.remove('pp-correct', 'pp-incorrect');
-    if (select && select.value === expected) { row.classList.add('pp-correct'); correct++; }
-    else { row.classList.add('pp-incorrect'); }
-  });
-  showResult(btn, correct, total);
-}
-
-function checkMultipleChoice(btn) {
-  var container = btn.closest('.pp-card-question');
-  var optDiv = container.querySelector('.pp-mc-options');
-  var expected = optDiv.dataset.correct;
-  var selected = optDiv.querySelector('input:checked');
-  var labels = optDiv.querySelectorAll('.pp-mc-label');
-  labels.forEach(function(l) { l.classList.remove('pp-correct', 'pp-incorrect'); });
-  if (selected) {
-    var label = selected.closest('.pp-mc-label');
-    if (selected.value === expected) { label.classList.add('pp-correct'); showResult(btn, 1, 1); }
-    else {
-      label.classList.add('pp-incorrect');
-      labels.forEach(function(l) { if (l.querySelector('input').value === expected) l.classList.add('pp-correct'); });
-      showResult(btn, 0, 1);
-    }
-  } else { showResult(btn, 0, 1); }
-}
-
-function checkTruthTable(btn) {
-  var table = btn.previousElementSibling;
-  var cells = table.querySelectorAll('.pp-tt-input');
-  var correct = 0, total = cells.length;
-  cells.forEach(function(td) {
-    var input = td.querySelector('input');
-    var expected = td.dataset.correct;
-    td.classList.remove('pp-correct', 'pp-incorrect');
-    if (input.value.trim() === String(expected)) { td.classList.add('pp-correct'); correct++; }
-    else { td.classList.add('pp-incorrect'); }
-  });
-  showResult(btn, correct, total);
-}
-
-function showResult(btn, correct, total) {
-  var resultEl = btn.nextElementSibling;
-  if (correct === total) { resultEl.textContent = 'All correct! ' + correct + '/' + total; resultEl.className = 'pp-result pp-result--correct'; }
-  else { resultEl.textContent = correct + '/' + total + ' correct'; resultEl.className = 'pp-result pp-result--partial'; }
-}
 
 function revealAnswer(btn) {
   var content = btn.nextElementSibling;
-  if (content.style.display === 'none') { content.style.display = ''; btn.textContent = 'Hide Answer'; }
-  else { content.style.display = 'none'; btn.textContent = 'Reveal Answer'; }
+  if (content.style.display === 'none') {
+    content.style.display = '';
+    btn.textContent = 'Hide mark scheme';
+  } else {
+    content.style.display = 'none';
+    btn.textContent = 'Reveal mark scheme';
+  }
 }
 </script>
