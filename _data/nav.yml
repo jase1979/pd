@@ -1,3 +1,20 @@
+- id: gcse_nea
+  label: "2.2.1 NEA Guide"
+  url: /gcse/nea/
+  level: gcse
+  description: "A page-by-page guide to completing the Non-Exam Assessment (NEA) — the sustained design and make project"
+  topics:
+    - url: /gcse/nea/section-a/
+      title: "Section A: Identifying Design Possibilities (10 marks)"
+    - url: /gcse/nea/section-b/
+      title: "Section B: Design Brief & Specification (10 marks)"
+    - url: /gcse/nea/section-c/
+      title: "Section C: Generating & Developing Ideas (30 marks)"
+    - url: /gcse/nea/section-d/
+      title: "Section D: Making a Prototype (30 marks)"
+    - url: /gcse/nea/section-e/
+      title: "Section E: Evaluating Fitness for Purpose (20 marks)"
+
 - id: gcse_core
   label: "2.1.1 Core Knowledge"
   url: /gcse/unit1/
