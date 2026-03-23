@@ -498,12 +498,10 @@ def copy_images(year_str: str, meta: dict):
         dest_name = f"{prefix}-q{safe_q}-{idx:03d}.jpg"
         dest = IMG_DEST / dest_name
 
-        if src.suffix == '.ppm':
-            from PIL import Image
-            Image.open(src).convert('RGB').save(dest, 'JPEG', quality=85)
-        else:
-            import shutil
-            shutil.copy2(src, dest)
+        from PIL import Image, ImageOps
+        img = Image.open(src).convert('RGB')
+        img = ImageOps.invert(img)
+        img.save(dest, 'JPEG', quality=85)
         copied.append((idx, f"/assets/img/papers/{dest_name}", qnum, desc))
         print(f"    Copied img {idx:03d} → {dest_name}")
 
