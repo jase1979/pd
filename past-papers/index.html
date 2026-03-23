@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Past Paper Questions"
+---
+<div class="past-papers-page">
+  <div class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep">/</span>
+    <span>Past Papers</span>
+  </div>
+
+  <div class="pp-header">
+    <h1>Past Paper Questions</h1>
+    <p>WJEC GCSE Design and Technology – Product Design (Unit 1: 3603U10-1)</p>
+  </div>
+
+  <div class="pp-controls">
+    <div class="pp-filters">
+      <div class="pp-filter-group">
+        <label>Paper</label>
+        <select id="filter-paper">
+          <option value="all">All papers</option>
+        </select>
+      </div>
+      <div class="pp-filter-group">
+        <label>Topic</label>
+        <select id="filter-topic">
+          <option value="all">All topics</option>
+        </select>
+      </div>
+      <div class="pp-filter-group">
+        <label>Marks</label>
+        <select id="filter-marks">
+          <option value="all">Any</option>
+          <option value="1-2">1-2 marks</option>
+          <option value="3-4">3-4 marks</option>
+          <option value="5-6">5-6 marks</option>
+          <option value="7+">7+ marks</option>
+        </select>
+      </div>
+      <div class="pp-filter-group">
+        <label>Type</label>
+        <select id="filter-type">
+          <option value="all">All types</option>
+          <option value="true-false">True / False</option>
+          <option value="matching">Matching</option>
+          <option value="fill-blank">Fill in the blank</option>
+          <option value="multiple-choice">Multiple choice</option>
+          <option value="short-answer">Short answer</option>
+          <option value="written">Written</option>
+        </select>
+      </div>
+    </div>
+    <div class="pp-actions">
+      <button class="pp-btn" id="expand-all">Show all answers</button>
+      <button class="pp-btn" id="collapse-all">Hide all answers</button>
+    </div>
+  </div>
+
+  <div class="pp-count" id="pp-count"></div>
+
+  {% assign pp_data = site.data.past_papers %}
+  {% include pp-questions.html %}
+</div>
