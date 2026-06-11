@@ -28,11 +28,60 @@ Start by unpacking the context (theme) given to you by WJEC.
 
 > **Tip:** Do not jump straight to a product idea. Show you have explored the full breadth of the context first.
 
-### Page 2: Primary research
+### Page 2: Primary research — designing your survey
 
 Primary research is data you collect yourself, directly from users or the real world.
 
-- **User survey or questionnaire** — ask potential users about their needs, habits, and opinions (aim for 5–10 respondents and present results as graphs or charts with analysis)
+> **You don't have a product yet — and that's the point.** Your survey is a tool for *discovery*, not confirmation. You are researching the **context and your users** so you can work out *what* to design. Never ask "would you buy my product?" — instead, explore people's needs, habits and frustrations within the context.
+
+> **A note for the *Inspiration from nature* context:** Your survey researches the **problem and the user** — *not* nature itself. Don't ask people about plants or animals. Pin down a real user problem first; the inspiration from nature comes *later*, during ideation, when you look at how the natural world has solved a similar problem (e.g. burrs → Velcro, honeycomb → lightweight strength).
+
+Aim for **5–10 respondents**. Mix **closed questions** (tick-box, scale or ranking — easy to turn into graphs) with one or two **open questions** (richer detail you can quote and analyse). Present your results as charts *and* comment on what they mean for your design.
+
+#### A question template for any context
+
+Adapt these four types to whatever context WJEC has given you:
+
+- **Screening — who is your user?**
+  - Establish who they are and whether they experience a relevant problem. *(e.g. "Which activities do you do outdoors regularly?", "Do you experience any recurring problem the natural world might help solve?")*
+- **Behaviour — what do they currently do?**
+  - Find out their habits and the solutions they already use. *(e.g. "What product do you currently use for [task]?", "How well does it work for you?")*
+- **Frustrations — where is the opportunity?**
+  - Surface the problems your design could solve — these feed your design opportunities. *(e.g. "What frustrates you most about that product or task?", "When does it fail or let you down?")*
+- **Priorities — what matters to them?**
+  - Understand what they value — this starts to shape your specification. *(e.g. "Rank these by importance: durability / weight / cost / sustainability", "How important is it that a product is made from eco-friendly materials?")*
+
+> **Tip:** Behaviour and frustration questions reveal your *design opportunities* (Page 4). Priority and preference questions begin to inform your *specification* (Section B). Good questions do double duty.
+
+#### Example questions for each context
+
+**Inspiration from nature** *(identify a problem; let nature inspire the solution)*
+- *Screening:* "Which everyday tasks or activities cause you the most difficulty?"
+- *Behaviour:* "What product do you currently use for that task, and how does it perform?"
+- *Frustration:* "When does that product fail, break or let you down?"
+- *Priority:* "Rank by importance: durability / weight / cost / sustainability."
+
+**Responding to climate change** *(a solution for emerging environmental conditions)*
+- *Screening:* "Which changing weather conditions affect your daily life most? (heat / flooding / storms / drought)"
+- *Behaviour:* "What do you currently do to cope with those conditions?"
+- *Frustration:* "What doesn't work well about your current approach?"
+- *Priority:* "Rank by importance: cost / effectiveness / portability / environmental impact."
+
+**Designing for future generations** *(ethical, multifunctional, inspiring products)*
+- *Screening:* "Which everyday products do you feel are wasteful or short-lived?"
+- *Behaviour:* "How long do you typically keep this kind of product before replacing it?"
+- *Frustration:* "What makes you throw a product away — and could it have lasted longer?"
+- *Priority:* "Rank by importance: ethical sourcing / multifunctionality / repairability / appeal."
+
+#### Common mistakes to avoid
+
+- **Leading questions** that push a particular answer *(e.g. "Don't you agree storage is a problem?")* — they bias your results and examiners spot them.
+- **Asking about a product you haven't designed** — there is no product yet.
+- **Presenting data without analysis** — every chart needs a sentence on what it tells you about your design.
+- **Too many open questions** — they're hard to graph; keep most questions closed.
+
+#### Other primary research methods
+
 - **Interview notes** — speak to a potential client or user and record key findings
 - **Observations** — observe how people interact with existing products or environments
 - **Measurements** — record any relevant anthropometric data (e.g. hand sizes, reach distances)
