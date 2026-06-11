@@ -88,18 +88,45 @@ Adapt these four types to whatever context WJEC has given you:
 
 Analyse what your primary research tells you — do not just present data, comment on what it means for your design.
 
-### Page 3: Secondary research
+### Page 3: Secondary research — ACCESS FM product analysis
 
 Secondary research is data already collected by others that you find and use.
 
-- **Existing product analysis** — study 2–3 similar or related products in detail. Comment on:
-  - Materials, construction and manufacturing methods
-  - Aesthetics, ergonomics and usability
-  - Price, target market and sustainability
-  - What works well and what could be improved
+#### Existing product analysis using ACCESS FM
+
+Analyse **4 existing products** that are related to your context using the ACCESS FM framework. For each product, work through all seven headings and annotate an image or photograph of the product.
+
+| Letter | Stands for | What to consider |
+|---|---|---|
+| **A** | Aesthetics | How does it look? Shape, colour, texture, style — does it appeal to the target user? |
+| **C** | Cost | How much does it cost? Is it good value? Who can afford it? |
+| **C** | Customer | Who is it designed for? Age, lifestyle, needs — is it right for its user? |
+| **E** | Environment | Where is it used? How is it disposed of? Is it sustainable? |
+| **S** | Size | What are the dimensions? Is the scale appropriate for its purpose and user? |
+| **S** | Safety | Are there any hazards? Does it meet safety standards? |
+| **F** | Function | What does it do? Does it do it well? What are its limitations? |
+| **M** | Materials | What is it made from? Why were those materials chosen? How is it manufactured? |
+
+> **Tip:** Don't just describe — **evaluate**. Say whether each aspect is successful or not, and explain why. The examiner wants your judgement, not just a list of facts.
+
+For each product, end with a short **"What this tells me"** sentence — link what you found to your own design direction.
+
+#### Other secondary research to include
+
 - **Relevant designers or companies** — research a professional whose work relates to your context (link to the Designers content from Unit 1)
 - **Standards and legislation** — note any relevant BSI/ISO standards or safety requirements
 - **Materials research** — begin exploring what materials might be appropriate
+
+#### Concluding your research
+
+After your product analyses, write a short **research conclusion** that draws everything together — your survey findings (Page 2) and your product analyses. Answer these questions:
+
+- What have you learned about what users **need**?
+- What do existing products do **well** that you should keep in mind?
+- What do existing products do **poorly** — where is the gap your design could fill?
+- What **materials, sizes or features** are you starting to consider as a result?
+
+This conclusion bridges your research and your design opportunities (Page 4). It shows the examiner that your design decisions will be evidence-based, not guesswork.
 
 > **Tip:** Relate everything back to your context. Ask yourself: "What does this tell me about what I should design?"
 
@@ -129,7 +156,9 @@ Pull your research together into clear conclusions.
 
 - [ ] Context explored from multiple angles — not just one idea
 - [ ] Primary research collected, presented visually and **analysed**
-- [ ] At least 2–3 existing products analysed in detail
+- [ ] 4 existing products analysed using ACCESS FM with annotations
+- [ ] Each product analysis ends with a "What this tells me" sentence
+- [ ] Research conclusion written — linking survey findings and product analyses
 - [ ] Reference made to relevant designers or companies
 - [ ] User needs and wants clearly identified
 - [ ] At least three design problems or opportunities stated
