@@ -28,6 +28,7 @@
     transition: background 0.2s;
 
     &:hover { background: var(--surface-hover); }
+    &.dt2026  { color: var(--dt2026); }
     &.gcse    { color: var(--gcse); }
     &.glossary { color: var(--accent); }
   }

@@ -1,0 +1,13 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# Resolved locally by `bundle install`; the deploy resolves its own.
+# Track this instead if you want gem versions pinned across environments.
+Gemfile.lock

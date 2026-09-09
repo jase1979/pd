@@ -1,6 +1,13 @@
+- id: dt2026
+  display: "D&T 2026"
+  tag: "NEW SPEC"
+  url: /gcse-2026/
+  subtitle: "WJEC GCSE Design & Technology — teaching from 2026, first award 2028"
+  home_desc: "New Made-for-Wales specification — Unit 1 exam (30%) and Unit 2 Design Project (70%), Product Design pathway"
+
 - id: gcse
   display: GCSE
-  tag: GCSE
+  tag: LEGACY
   url: /gcse/
   subtitle: "WJEC GCSE — Unit 1: Design & Technology"
   home_desc: "Unit 1 — Core Knowledge & Product Design"

@@ -96,7 +96,8 @@
   padding: 0.1rem 0.45rem;
   border-radius: 4px;
 
-  &--gcse { background: rgba(78,205,196,0.15); color: var(--gcse); }
+  &--gcse   { background: rgba(78,205,196,0.15); color: var(--gcse); }
+  &--dt2026 { background: rgba(167,139,250,0.15); color: var(--dt2026); }
 }
 
 .glossary-definition {
