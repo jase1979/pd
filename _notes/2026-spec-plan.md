@@ -240,11 +240,10 @@ Proposed level record for `_data/levels.yml`:
      "Additive processes", "Self-finishing". Fix by adding entries.
 
    Worth adding a build-time check that every `.key-term` resolves, so this cannot recur.
-3. **"What's changed" comparison page** — legacy → 2026 mapping. Directly useful for teachers
-   running both cohorts simultaneously (legacy cohorts sit exams in 2026 and 2027 while the new
-   spec is being taught).
+3. ~~**"What's changed" comparison page**~~ — **dropped.** Teacher admin rather than student
+   revision of unit knowledge and skills.
 4. **Designer case studies** — Frank Lloyd Wright and Alessi & Co. Both are *named, assessable*
-   content and neither exists on the site.
+   content under 1.1.5, so these stay in scope.
 5. **Exam-style practice questions** — there are no real past papers and there will not be any
    until 2028. Anything written must be labelled **practice questions written to the new spec**,
    never presented as past papers. The legacy past papers stay useful for the overlapping
@@ -254,6 +253,30 @@ Proposed level record for `_data/levels.yml`:
    six-area structure. See the caveat in §6.
 
 ---
+
+## 5a. Scope: unit knowledge and skills only
+
+Confirmed scope is the **assessed unit content** — 1.1.x and 2.1.x knowledge and skills — and
+nothing else from the specification. Deliberately **out of scope**:
+
+- Section 1 in full: aims, Curriculum for Wales, prior learning and progression, guided learning
+  hours, use of language, equality and fair access.
+- "Opportunities for integration of learning experiences" (p. 42). The specification states these
+  **will not be directly assessed**. This is also the only place careers appear, so there is no
+  assessed careers content to build resources for.
+- Sections 4 and 5: malpractice, making entries, grading and awarding.
+- Appendix A: mapping to Curriculum for Wales cross-curricular themes and integral skills.
+
+Note that **"pathway" is an assessment route, not a careers route**. It determines which in-depth
+Unit 1 content a learner studies and which specialist skills Unit 2 assesses, and the only rule
+attached to it is that the same pathway must be used in both units. It does not commit a learner
+to a career, and progression to AS/A level is open whichever pathway was taken.
+
+The assessment overview page at `/gcse-2026/assessment/` is trimmed to what supports revision:
+unit format, marks and weightings, the assessment objectives, the amplification stems and the
+"including" vs "for example" distinction, and the note that the Unit 2 mark breakdown is
+unpublished. Regulatory and administrative material (Qualifications Wales, availability, linear
+and untiered, entry timing) has been removed.
 
 ## 6. Open questions and things not to invent
 
