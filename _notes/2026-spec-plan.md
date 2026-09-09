@@ -225,8 +225,21 @@ Proposed level record for `_data/levels.yml`:
    never drift from the content.
 2. **Glossary expansion** — roughly 40 new terms (4D printing, AR, VR, PCM, conductive polymer,
    IoT, biopolymer, tolerance, quality assurance, datum, Vee block, continuous flow, KDF,
-   circular economy, design fixation, systems thinking, contextual challenge…), tagged to the
-   new spec so both specs can share one glossary.
+   design fixation, systems thinking, contextual challenge…), tagged to the new spec so both
+   specs can share one glossary. Phase 2 added the first 16.
+
+   **Also fix the legacy pages' dead key-term links while here.** A `.key-term` box links its
+   bold text to `/glossary/#term-<slug>` whether or not an entry exists, and **10 of the 14
+   legacy key terms point at anchors that are not there** — verified as pre-existing, not caused
+   by this project. Two causes:
+
+   - *Wording mismatch:* "Ferrous metals" vs the entry "Ferrous Metal", "Non-ferrous metals",
+     "Manufactured boards", "Thermoforming (thermoplastic)", "Thermosetting polymer (thermoset)".
+     Fix by aligning the bold text with the glossary term.
+   - *No entry at all:* "Aesthetic properties", "Functional properties", "Wastage",
+     "Additive processes", "Self-finishing". Fix by adding entries.
+
+   Worth adding a build-time check that every `.key-term` resolves, so this cannot recur.
 3. **"What's changed" comparison page** — legacy → 2026 mapping. Directly useful for teachers
    running both cohorts simultaneously (legacy cohorts sit exams in 2026 and 2027 while the new
    spec is being taught).
@@ -269,7 +282,7 @@ Proposed level record for `_data/levels.yml`:
 | Phase | Deliverable | Verification |
 |---|---|---|
 | 1 ✅ | Scaffolding: level data, nav records, four unit hubs, level index, assessment page, 23 placeholder topic pages, colour tokens, header link, **prev/next level-scoping fix**, **prev-link bug fix**, glossary `slugify` fix, legacy past-paper labelling | Done — build clean (22 Liquid warnings gone), all 29 new URLs resolve, prev/next verified at both spec boundaries |
-| 2 | Unit 1 core content — 5 pages (1.1.1–1.1.5) | Each page checked line-by-line against §2 |
+| 2 ✅ | Unit 1 core content — 5 pages (1.1.1–1.1.5), plus the 16 glossary terms they introduce | Done — every "including" item in §2 verified present on its page; all 27 key-term links resolve to a glossary entry |
 | 3 | Unit 1 Product Design pathway — 8 pages (1.1.22–1.1.29) | As above |
 | 4 | Unit 2 core + Product Design — 10 pages (2.1.1–2.1.6, 2.1.15–2.1.18) | As above; no invented mark allocations |
 | 5 | Resources: spec checklist, glossary terms, comparison page, designer case studies, practice questions | Checklist covers every spec ref in `dt2026_spec.yml` |
