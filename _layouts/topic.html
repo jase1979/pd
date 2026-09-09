@@ -50,13 +50,26 @@ layout: default
   </div>
   {% endif %}
 
-  {% comment %}Flatten site.data.nav into a single ordered topic list{% endcomment %}
-  {% assign _flat = "" | split: "" %}
+  {% comment %}Find which unit — and so which level — this page belongs to{% endcomment %}
+  {% assign _page_level = nil %}
   {% for _unit in site.data.nav %}
     {% for _t in _unit.topics %}
-      {% assign _flat = _flat | push: _t %}
+      {% if _t.url == page.url %}
+        {% assign _page_level = _unit.level %}
+      {% endif %}
     {% endfor %}
   {% endfor %}
+
+  {% comment %}Flatten only this level's units, so prev/next never crosses specifications{% endcomment %}
+  {% assign _flat = "" | split: "" %}
+  {% if _page_level %}
+    {% assign _level_units = site.data.nav | where: "level", _page_level %}
+    {% for _unit in _level_units %}
+      {% for _t in _unit.topics %}
+        {% assign _flat = _flat | push: _t %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
 
   {% comment %}Find current page position{% endcomment %}
   {% assign _found = false %}
@@ -73,7 +86,8 @@ layout: default
   {% assign _nav_next = nil %}
   {% if _found %}
     {% if _curr_idx > 0 %}
-      {% assign _nav_prev = _flat[_curr_idx | minus: 1] %}
+      {% assign _prev_idx = _curr_idx | minus: 1 %}
+      {% assign _nav_prev = _flat[_prev_idx] %}
     {% endif %}
     {% assign _next_idx = _curr_idx | plus: 1 %}
     {% if _next_idx < _flat.size %}

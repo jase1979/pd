@@ -62,3 +62,80 @@
       title: Specialist Techniques & Processes
     - url: /gcse/unit2/surface-treatments/
       title: Surface Treatments & Finishes
+
+# ── WJEC GCSE Design & Technology (2026 specification) ──────────────────────
+# Teaching from 2026, first award 2028. Product Design pathway.
+
+- id: dt2026_u1_core
+  label: "1.1 Core Knowledge & Understanding"
+  url: /gcse-2026/unit1/core/
+  level: dt2026
+  description: "Unit 1 content studied by all learners, whichever pathway they follow"
+  topics:
+    - url: /gcse-2026/unit1/core/new-and-emerging-technologies/
+      title: "1.1.1 New & Emerging Technologies"
+    - url: /gcse-2026/unit1/core/modern-smart-materials/
+      title: "1.1.2 Modern & Smart Materials"
+    - url: /gcse-2026/unit1/core/sustainable-design/
+      title: "1.1.3 Sustainable Design"
+    - url: /gcse-2026/unit1/core/energy/
+      title: "1.1.4 Energy Storage & Renewability"
+    - url: /gcse-2026/unit1/core/design-thinking/
+      title: "1.1.5 Contemporary Design Thinking"
+
+- id: dt2026_u1_pd
+  label: "1.1(c) Product Design Pathway"
+  url: /gcse-2026/unit1/product-design/
+  level: dt2026
+  description: "Unit 1 in-depth content for learners who have chosen the Product Design pathway"
+  topics:
+    - url: /gcse-2026/unit1/product-design/metals/
+      title: "1.1.22 Ferrous & Non-Ferrous Metals"
+    - url: /gcse-2026/unit1/product-design/timbers/
+      title: "1.1.23 Natural & Manufactured Timbers"
+    - url: /gcse-2026/unit1/product-design/polymers/
+      title: "1.1.24 Thermoforming & Thermosetting Plastics"
+    - url: /gcse-2026/unit1/product-design/smart-materials/
+      title: "1.1.25 Modern, Smart & Emerging Materials"
+    - url: /gcse-2026/unit1/product-design/specialist-techniques/
+      title: "1.1.26 Specialist Techniques & Processes"
+    - url: /gcse-2026/unit1/product-design/surface-finishes/
+      title: "1.1.27 Surface Finishes & Treatments"
+    - url: /gcse-2026/unit1/product-design/stock-forms/
+      title: "1.1.28 Stock Forms of Materials & Components"
+    - url: /gcse-2026/unit1/product-design/manufacture-and-industry/
+      title: "1.1.29 Product Manufacture & Industry"
+
+- id: dt2026_u2_core
+  label: "2.1 Design Project — Core"
+  url: /gcse-2026/unit2/core/
+  level: dt2026
+  description: "The non-exam assessment content studied by all learners — 70% of the qualification"
+  topics:
+    - url: /gcse-2026/unit2/core/contextual-challenges/
+      title: "2.1.1 Contextual Challenges & User-Centred Design"
+    - url: /gcse-2026/unit2/core/research-and-investigation/
+      title: "2.1.2 Research & Investigation"
+    - url: /gcse-2026/unit2/core/briefs-and-specifications/
+      title: "2.1.3 Design Briefs & Specifications"
+    - url: /gcse-2026/unit2/core/iterative-design/
+      title: "2.1.4 Iterative Design"
+    - url: /gcse-2026/unit2/core/manufacturing-prototypes/
+      title: "2.1.5 Manufacturing Prototypes"
+    - url: /gcse-2026/unit2/core/analysing-and-evaluating/
+      title: "2.1.6 Analysing & Evaluating"
+
+- id: dt2026_u2_pd
+  label: "2.1(c) Design Project — Product Design"
+  url: /gcse-2026/unit2/product-design/
+  level: dt2026
+  description: "Design Project skills specific to the Product Design pathway"
+  topics:
+    - url: /gcse-2026/unit2/product-design/materials-and-components/
+      title: "2.1.15 Materials & Components"
+    - url: /gcse-2026/unit2/product-design/marking-out/
+      title: "2.1.16 Marking Out Methods"
+    - url: /gcse-2026/unit2/product-design/specialist-techniques/
+      title: "2.1.17 Specialist Techniques & Processes"
+    - url: /gcse-2026/unit2/product-design/surface-treatments/
+      title: "2.1.18 Surface Treatments & Finishes"

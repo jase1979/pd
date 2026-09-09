@@ -254,13 +254,13 @@ Proposed level record for `_data/levels.yml`:
   papers do not contain.
 - **Guidance for Teaching** is referenced repeatedly for depth and breadth, particularly on
   "learners should be aware of" content. It is a separate document and is not in this PDF.
-- **Two decisions to confirm before Phase 2:**
-  1. *Pathway coverage* — recommendation is **Product Design only**, matching the site's identity,
-     with the URL and data structure (`unit1/product-design/`) leaving room to add Engineering
-     Design and Fashion & Textiles later without restructuring. The core content (1.1.1–1.1.5,
-     2.1.1–2.1.6) is shared by all three pathways, so it is written once regardless.
-  2. *Legacy section's future* — recommendation is **keep both, clearly labelled**. Legacy cohorts
-     are still sitting exams while the new spec is being taught, so removal would be premature.
+- **Two decisions, both now settled:**
+  1. *Pathway coverage* — **Product Design only**. The URL and data structure
+     (`unit1/product-design/`) leaves room to add Engineering Design and Fashion & Textiles later
+     without restructuring. The core content (1.1.1–1.1.5, 2.1.1–2.1.6) is shared by all three
+     pathways, so it is written once regardless.
+  2. *Legacy section's future* — **keep both, clearly labelled**. Legacy cohorts are still sitting
+     exams while the new spec is being taught.
 
 ---
 
@@ -268,7 +268,7 @@ Proposed level record for `_data/levels.yml`:
 
 | Phase | Deliverable | Verification |
 |---|---|---|
-| 1 | Scaffolding: level data, nav records, four unit hubs, level index, 23 placeholder topic pages, colour tokens, header link, **prev/next level-scoping fix**, glossary `slugify` fix | `bundle exec jekyll build` clean; every new URL reachable; legacy prev/next chain unchanged |
+| 1 ✅ | Scaffolding: level data, nav records, four unit hubs, level index, assessment page, 23 placeholder topic pages, colour tokens, header link, **prev/next level-scoping fix**, **prev-link bug fix**, glossary `slugify` fix, legacy past-paper labelling | Done — build clean (22 Liquid warnings gone), all 29 new URLs resolve, prev/next verified at both spec boundaries |
 | 2 | Unit 1 core content — 5 pages (1.1.1–1.1.5) | Each page checked line-by-line against §2 |
 | 3 | Unit 1 Product Design pathway — 8 pages (1.1.22–1.1.29) | As above |
 | 4 | Unit 2 core + Product Design — 10 pages (2.1.1–2.1.6, 2.1.15–2.1.18) | As above; no invented mark allocations |

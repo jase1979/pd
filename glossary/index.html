@@ -34,7 +34,7 @@ title: Glossary
       <div class="glossary-entry" id="term-{{ slug }}" data-term="{{ entry.term | downcase }}" data-definition="{{ entry.definition | downcase }}">
         <div class="glossary-term-row">
           <strong class="glossary-term-name">{{ entry.term }}</strong>
-          <span class="glossary-badge glossary-badge--{{ entry.level | downcase }}">{{ entry.level }}</span>
+          <span class="glossary-badge glossary-badge--{{ entry.level_id | default: entry.level | slugify }}">{{ entry.level }}</span>
         </div>
         <p class="glossary-definition">{{ entry.definition | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         <a href="{{ entry.source | relative_url }}" class="glossary-source-link">View topic →</a>
