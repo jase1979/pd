@@ -220,6 +220,20 @@ Proposed level record for `_data/levels.yml`:
 
 ## 5. Resources to go with the section
 
+0. **Drag-and-drop activities** — the `drag-puzzle` component ported from the comp-sci site
+   (`_includes/drag-puzzle.html`, `_sass/_puzzles.scss`, definitions in `_data/puzzles.yml`).
+   Two types: `order` for sequencing and `match` for term-to-definition. Phase 2 added ten
+   across the Unit 1 core pages, and **every content page from Phase 3 onwards gets at least
+   one**, placed so it is answerable from content on the same page.
+
+   Two things to keep in mind when authoring them. Terms become chips and do not wrap, so keep
+   them short. And do not build an `order` puzzle for a process the page describes as cyclic —
+   the commercial development process is a `match` for exactly that reason.
+
+   Known limitation, inherited from the source site: the shuffle runs in JavaScript on load, so
+   if the SortableJS CDN fails the items render in their correct order. Shuffling server-side in
+   Liquid would remove both the CDN dependency and the giveaway.
+
 1. **Interactive spec checklist** — driven by `_data/dt2026_spec.yml`, one row per spec point,
    ticked off with `localStorage`. The same data file feeds the unit hubs, so the checklist can
    never drift from the content.
@@ -306,9 +320,9 @@ and untiered, entry timing) has been removed.
 |---|---|---|
 | 1 ✅ | Scaffolding: level data, nav records, four unit hubs, level index, assessment page, 23 placeholder topic pages, colour tokens, header link, **prev/next level-scoping fix**, **prev-link bug fix**, glossary `slugify` fix, legacy past-paper labelling | Done — build clean (22 Liquid warnings gone), all 29 new URLs resolve, prev/next verified at both spec boundaries |
 | 2 ✅ | Unit 1 core content — 5 pages (1.1.1–1.1.5), plus the 16 glossary terms they introduce | Done — every "including" item in §2 verified present on its page; all 27 key-term links resolve to a glossary entry |
-| 3 | Unit 1 Product Design pathway — 8 pages (1.1.22–1.1.29) | As above |
-| 4 | Unit 2 core + Product Design — 10 pages (2.1.1–2.1.6, 2.1.15–2.1.18) | As above; no invented mark allocations |
-| 5 | Resources: spec checklist, glossary terms, comparison page, designer case studies, practice questions | Checklist covers every spec ref in `dt2026_spec.yml` |
+| 3 | Unit 1 Product Design pathway — 8 pages (1.1.22–1.1.29), each with drag-and-drop activities | As above; every activity answerable from content on its own page |
+| 4 | Unit 2 core + Product Design — 10 pages (2.1.1–2.1.6, 2.1.15–2.1.18), each with drag-and-drop activities | As above; no invented mark allocations |
+| 5 | Resources: spec checklist, glossary terms, designer case studies, practice questions | Checklist covers every spec ref in `dt2026_spec.yml` |
 
 Phase 1 is self-contained and low-risk — it makes the section navigable without committing to any
 content decisions, so it can proceed while the §6 questions are settled.
