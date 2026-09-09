@@ -56,6 +56,8 @@ If goods do not meet these standards the consumer is entitled to a repair, repla
 
 Standards matter to designers because they set the safety requirements a product must meet — flammability of furniture, small parts in toys, electrical safety — and because a recognised mark reassures buyers that a product has been tested.
 
+{% include drag-puzzle.html key="standards_legislation" id="sd-standards" %}
+
 ## Life cycle analysis
 
 <div class="key-term" markdown="1">
@@ -78,6 +80,8 @@ An LCA rarely gives one clean answer, because improving one stage often worsens 
 ### Cradle to cradle
 
 **Cradle to cradle** goes further than cradle to grave. The product is designed from the start so that at the end of its life every material can be recovered and fed into a new product, and nothing becomes waste.
+
+{% include drag-puzzle.html key="lca_stages" id="sd-lca-stages" %}
 
 ## The circular economy
 
@@ -104,6 +108,8 @@ A checklist for improving a design. Work through them in order — the ones near
 | **Repair** | Can it be maintained, serviced and fixed rather than replaced? |
 | **Reduce** | Can it use less material, less energy or fewer components? |
 | **Refuse** | Should a harmful material, unnecessary feature or unsustainable process be rejected outright? |
+
+{% include drag-puzzle.html key="six_rs" id="sd-six-rs" %}
 
 ## Carbon footprint
 
@@ -162,3 +168,5 @@ Sustainable design pushes the other way: durable construction, standard fixings 
 Manufacturers use the cycle to judge when to increase production, when to invest in marketing and when to replace a product with a new version.
 
 > **Do not confuse the two life cycles.** The **Product Life Cycle** is about *sales* — how a product performs commercially over time. **Life cycle analysis** is about *the environment* — the impact of a product from raw material to disposal.
+
+{% include drag-puzzle.html key="product_life_cycle_order" id="sd-plc-order" %}

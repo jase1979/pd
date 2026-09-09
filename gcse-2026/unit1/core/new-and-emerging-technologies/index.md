@@ -129,3 +129,5 @@ Also called **additive manufacturing**, because the product is built up in layer
 | Complex shapes are repeated accurately every time | Requires trained programmers and technicians |
 | Quick to switch production to a different design | A programming error is repeated across the whole batch |
 | Efficient use of material reduces waste and cost | Small production runs may not justify the set-up time |
+
+{% include drag-puzzle.html key="cad_cam_technologies" id="net-cad-cam" %}

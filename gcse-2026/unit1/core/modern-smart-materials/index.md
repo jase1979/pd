@@ -101,3 +101,5 @@ Smart properties can be built into textiles at fibre, yarn or finish stage.
 - **Thermochromic and photochromic dyes** change the colour of a garment with temperature or sunlight.
 - **Shape memory fibres** allow a fabric to tighten, loosen or change texture in response to heat or moisture.
 - **Micro-encapsulated finishes** add fragrance, insect repellent or temperature regulation to an ordinary fabric.
+
+{% include drag-puzzle.html key="smart_material_stimulus" id="msm-stimulus" %}

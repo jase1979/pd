@@ -1,0 +1,215 @@
+// ── Drag Puzzle ───────────────────────────────────────────────────────────
+// Ported from the comp-sci site. Adapted for this site's palette, and the
+// action-button styles are scoped inside .drag-puzzle because the .pp-*
+// originals live nested inside .past-papers-page and would not apply here.
+
+.drag-puzzle {
+  margin: 1.5rem 0;
+  padding: 1.2rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  &__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 0.25rem;
+  }
+
+  &__hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+  }
+
+  // ── Ordering ──────────────────────────────────────────────
+
+  &__order-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+  }
+
+  &__order-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.55rem 0.9rem;
+    margin-bottom: 0.35rem;
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.88rem;
+    color: var(--text);
+    user-select: none;
+    transition: border-color 0.15s, background 0.15s;
+
+    &:hover { border-color: var(--border-hover); }
+
+    &.dp-ghost  { opacity: 0.35; }
+    &.dp-chosen { border-color: var(--accent); background: var(--surface-raised); }
+
+    &.dp-correct   { background: rgba(78,205,196,0.1);  border-color: var(--correct); }
+    &.dp-incorrect { background: rgba(255,107,107,0.08); border-color: var(--incorrect); }
+  }
+
+  &__handle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: grab;
+    flex-shrink: 0;
+    line-height: 1;
+    letter-spacing: -2px;
+
+    &:active { cursor: grabbing; }
+  }
+
+  // ── Matching ──────────────────────────────────────────────
+
+  &__bank-wrap { margin-bottom: 0.9rem; }
+
+  &__bank-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  &__bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    min-height: 2.6rem;
+    padding: 0.4rem;
+    background: var(--bg);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,140,66,0.1);
+    border: 1px solid rgba(255,140,66,0.3);
+    color: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: grab;
+    user-select: none;
+    white-space: nowrap;
+    transition: background 0.15s, border-color 0.15s;
+
+    &:hover     { background: rgba(255,140,66,0.18); }
+    &.dp-ghost  { opacity: 0.35; }
+    &.dp-chosen { background: rgba(255,140,66,0.25); border-color: var(--accent); }
+  }
+
+  &__pairs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 0.8rem;
+  }
+
+  // Wider term column than the source site — design and technology terms
+  // ("Micro-encapsulation", "Shape memory alloy") are far longer than the
+  // register abbreviations the original was built for, and chips do not wrap.
+  &__pair {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 0.7rem;
+    align-items: center;
+
+    @media (max-width: 620px) { grid-template-columns: 1fr; }
+  }
+
+  &__slot {
+    min-height: 2.1rem;
+    padding: 0.2rem 0.4rem;
+    border: 1.5px dashed var(--border);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.15s, background 0.15s;
+
+    &.dp-correct {
+      border-color: var(--correct);
+      background: rgba(78,205,196,0.08);
+
+      .drag-puzzle__chip {
+        background: rgba(78,205,196,0.12);
+        border-color: var(--correct);
+        color: var(--correct);
+      }
+    }
+
+    &.dp-incorrect {
+      border-color: var(--incorrect);
+      background: rgba(255,107,107,0.06);
+
+      .drag-puzzle__chip {
+        background: rgba(255,107,107,0.1);
+        border-color: var(--incorrect);
+        color: var(--incorrect);
+      }
+    }
+  }
+
+  &__slot-hint {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-style: italic;
+    pointer-events: none;
+  }
+
+  &__def {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  // ── Shared ────────────────────────────────────────────────
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+
+  .pp-check-btn, .pp-reveal-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: opacity 0.15s;
+
+    &:hover { opacity: 0.85; }
+  }
+
+  .pp-reveal-btn {
+    background: var(--surface);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .pp-result {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    min-height: 1.2em;
+
+    &--correct { color: var(--correct); }
+    &--partial { color: var(--partial); }
+  }
+}
