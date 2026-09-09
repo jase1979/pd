@@ -106,6 +106,8 @@ The manufacturing specification tells the factory exactly how to make the produc
 
 Checks are made at set points using gauges, jigs and templates, and faults are caught before more value is added to a defective item. Quality control identifies faulty products; **quality assurance** designs the process so faults are less likely in the first place.
 
+{% include drag-puzzle.html key="development_documents" id="dt-dev-docs" %}
+
 ## Factors that influence design
 
 ### Ergonomics
@@ -140,3 +142,5 @@ Cost runs through every decision. Designers balance material and manufacturing c
 - **Kingfisher beaks** inspired the nose profile of high-speed trains to reduce the noise made when entering a tunnel.
 
 Nature is a useful model because its solutions are efficient with material and energy — the same pressures a sustainable designer works under.
+
+{% include drag-puzzle.html key="design_factors" id="dt-factors" %}

@@ -60,6 +60,8 @@ Coal, oil and gas still supply much of the world's energy, but their use brings 
 | **Wood and biomass** | Uses waste material; can be regrown; existing power stations can be converted | Burning still releases carbon dioxide and particulates; land used for fuel crops cannot grow food |
 | **Wave and tidal** | Tides are entirely predictable, unlike wind and sun; high energy density | Very high set-up cost; salt water corrodes equipment; can disturb coastal habitats |
 
+{% include drag-puzzle.html key="energy_sources" id="en-sources" %}
+
 ## Renewable energy in manufacturing
 
 Manufacturing uses a great deal of energy, and most of it still comes from fossil fuels. Moving production onto renewable sources matters because of the scale involved.
@@ -87,6 +89,8 @@ Generating energy is only half the problem. Renewable sources produce power when
 - **Alkaline (single use)** — cheap and widely available, but discarded after one use.
 - **Rechargeable (NiMH, lithium-ion)** — higher initial cost but used hundreds of times, so cheaper and greener overall. Lithium-ion holds more energy for its weight, which is why it dominates in phones and electric cars.
 - Batteries contain valuable and hazardous materials, so they must be **recycled**, never put in general waste.
+
+{% include drag-puzzle.html key="energy_storage" id="en-storage" %}
 
 ## Energy in motor vehicles
 

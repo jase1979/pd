@@ -1,0 +1,114 @@
+# Drag-and-drop activity definitions.
+# Used by _includes/drag-puzzle.html:
+#   {% include drag-puzzle.html key="lca_stages" id="unique-id" %}
+# type: order  → items are listed in the CORRECT order; the component shuffles them.
+# type: match  → pairs are "TERM::Definition". Keep terms short; they render as chips.
+
+# ── 1.1.1 New and emerging technologies ───────────────────────────────────
+
+cad_cam_technologies:
+  type: match
+  title: "Match each technology to what it does"
+  pairs:
+    - "Augmented reality::Overlays computer-generated images onto a view of the real world, which stays visible"
+    - "Virtual reality::Replaces the real world entirely with a computer-generated environment"
+    - "Generative design::The designer enters constraints and the software produces many optimised solutions"
+    - "Laser cutting::A focused beam cuts or engraves flat sheet material by burning, melting or vaporising"
+    - "3D printing::Builds a product up in layers rather than cutting it away from a block"
+    - "4D printing::Prints in smart materials so the object changes shape over time when triggered"
+
+# ── 1.1.2 Modern and smart materials ──────────────────────────────────────
+
+smart_material_stimulus:
+  type: match
+  title: "Match each smart material to how it responds"
+  pairs:
+    - "Photochromic::Changes colour in ultraviolet light, reversing in the dark"
+    - "Thermochromic::Changes colour as temperature rises, reversing on cooling"
+    - "Shape memory alloy::Returns to a pre-set shape when heated after being deformed"
+    - "Polymorph::Softens and becomes mouldable at around 62°C, then sets rigid"
+    - "Micro-encapsulation::Tiny capsules burst under pressure, friction or heat to release their contents"
+    - "Biometrics::Identifies a person from a unique biological characteristic"
+
+# ── 1.1.3 Sustainable design ──────────────────────────────────────────────
+
+lca_stages:
+  type: order
+  title: "Put the four stages of a life cycle analysis in order"
+  items:
+    - "Raw material extraction — where the material comes from and the damage caused by obtaining it"
+    - "Manufacture — the energy, water, waste and emissions involved in processing"
+    - "Use — the energy the product consumes in service, and how long it lasts"
+    - "Disposal — whether it can be repaired, reused or recycled at the end of its life"
+
+product_life_cycle_order:
+  type: order
+  title: "Put the four stages of the Product Life Cycle in order"
+  items:
+    - "Introduction — the product is launched, sales are low and costs are high"
+    - "Growth — sales rise quickly as the product becomes known"
+    - "Maturity — sales peak and level off, and the market is crowded"
+    - "Decline — sales fall as tastes change or better products arrive"
+
+six_rs:
+  type: match
+  title: "Match each of the 6 Rs to the question it asks"
+  pairs:
+    - "Rethink::Is this product needed at all, or could the need be met a completely different way?"
+    - "Reuse::Can the product, or its parts, be used again for the same or another purpose?"
+    - "Recycle::Can the materials be reprocessed into something new at the end of life?"
+    - "Repair::Can it be maintained, serviced and fixed rather than replaced?"
+    - "Reduce::Can it use less material, less energy or fewer components?"
+    - "Refuse::Should a harmful material or unsustainable process be rejected outright?"
+
+standards_legislation:
+  type: match
+  title: "Match each standard or law to what it does"
+  pairs:
+    - "BSI::Sets UK standards; products meeting them can carry the Kitemark"
+    - "ISO::Sets internationally agreed standards so products and processes are consistent between countries"
+    - "Trade Descriptions Act::Makes it illegal to describe goods falsely or misleadingly"
+    - "Consumer Rights Act::Requires goods to be of satisfactory quality, fit for purpose and as described"
+
+# ── 1.1.4 Energy storage and renewability ─────────────────────────────────
+
+energy_sources:
+  type: match
+  title: "Match each energy source to how it generates energy"
+  pairs:
+    - "Wind::Moving air turns turbine blades, which drive a generator"
+    - "Photovoltaic::Cells convert light directly into electricity"
+    - "Hydrogen fuel cell::Hydrogen reacts with oxygen to produce electricity, emitting only water"
+    - "Geothermal::Heat from hot rocks below the surface heats water to drive turbines"
+    - "Hydroelectric::Water held behind a dam is released through turbines as it falls"
+    - "Biomass::Organic material such as wood, crops or waste is burned or converted to biogas"
+
+energy_storage:
+  type: match
+  title: "Match each storage method to how it works"
+  pairs:
+    - "Battery::Chemical energy is converted to electrical energy, reversed on recharge"
+    - "Wind-up::Turning a handle winds a spring or drives a small generator"
+    - "Pumped storage::Surplus electricity pumps water uphill, released through turbines on demand"
+    - "Hydrogen::Surplus electricity splits water, storing hydrogen to convert back later"
+
+# ── 1.1.5 Contemporary design thinking ────────────────────────────────────
+
+design_factors:
+  type: match
+  title: "Match each factor influencing design to its meaning"
+  pairs:
+    - "Ergonomics::Designing so a product fits its users and is comfortable, safe and efficient"
+    - "Anthropometrics::Using measurement data about the human body to make design decisions"
+    - "Economic::Balancing material and manufacturing costs against the price the market accepts"
+    - "Biomimicry::Designing by imitating forms and systems found in nature"
+
+development_documents:
+  type: match
+  title: "Match each stage of commercial development to its purpose"
+  pairs:
+    - "Design brief::States what is to be designed, for whom and why, without dictating the solution"
+    - "Design specification::Lists measurable criteria the design must meet, written from research"
+    - "Working drawing::Gives dimensioned technical information needed to make the product"
+    - "Manufacturing specification::Tells the factory the processes, settings and sequence to use"
+    - "Quality control::Checks and tests products during and after manufacture against the specification"

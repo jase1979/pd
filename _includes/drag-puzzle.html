@@ -1,0 +1,248 @@
+{% comment %}
+  Drag-and-drop puzzle component.
+
+  Preferred — reference a shared definition from _data/puzzles.yml:
+  {% include drag-puzzle.html key="fde_registers" id="gcse-fde-registers" %}
+
+  Inline — for one-off puzzles not shared across pages:
+  {% include drag-puzzle.html type="order" id="my-order"
+     title="Put these in order" items="Step one|Step two|Step three" %}
+  {% include drag-puzzle.html type="match" id="my-match"
+     title="Match each term" pairs="TERM::Definition|TERM2::Definition two" %}
+{% endcomment %}
+
+{% assign puzzle_id = include.id | default: "drag-puzzle" %}
+
+{% comment %} Resolve puzzle data: key= loads from _data/puzzles.yml, otherwise use inline params {% endcomment %}
+{% if include.key %}
+  {% assign _pd     = site.data.puzzles[include.key] %}
+  {% assign _type   = _pd.type %}
+  {% assign _title  = _pd.title %}
+  {% assign _items  = _pd.items %}
+  {% assign _pairs  = _pd.pairs %}
+{% else %}
+  {% assign _type   = include.type %}
+  {% assign _title  = include.title %}
+  {% assign _items  = include.items | split: "|" %}
+  {% assign _pairs  = include.pairs | split: "|" %}
+{% endif %}
+
+<div class="drag-puzzle drag-puzzle--{{ _type }}" id="{{ puzzle_id }}">
+  <p class="drag-puzzle__title">{{ _title }}</p>
+
+  {% if _type == "order" %}
+
+    <p class="drag-puzzle__hint">Drag the items into the correct order, then click Check.</p>
+    <ol class="drag-puzzle__order-list" id="{{ puzzle_id }}-list">
+      {% for item in _items %}
+      <li class="drag-puzzle__order-item" data-correct="{{ forloop.index0 }}">
+        <span class="drag-puzzle__handle" aria-hidden="true">&#8942;&#8942;</span>
+        {{ item }}
+      </li>
+      {% endfor %}
+    </ol>
+
+  {% elsif _type == "match" %}
+
+    <p class="drag-puzzle__hint">Drag each term from the bank into the correct slot, then click Check.</p>
+
+    <div class="drag-puzzle__bank-wrap">
+      <div class="drag-puzzle__bank-label">Terms</div>
+      <div class="drag-puzzle__bank" id="{{ puzzle_id }}-bank">
+        {% for pair in _pairs %}
+          {% assign kv = pair | split: "::" %}
+          <div class="drag-puzzle__chip" data-term="{{ kv[0] }}">{{ kv[0] }}</div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="drag-puzzle__pairs">
+      {% for pair in _pairs %}
+        {% assign kv = pair | split: "::" %}
+        <div class="drag-puzzle__pair">
+          <div class="drag-puzzle__slot" id="{{ puzzle_id }}-slot-{{ forloop.index0 }}" data-answer="{{ kv[0] }}">
+            <span class="drag-puzzle__slot-hint">drop here</span>
+          </div>
+          <div class="drag-puzzle__def">{{ kv[1] }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+  {% endif %}
+
+  <div class="drag-puzzle__actions">
+    <button class="pp-check-btn" onclick="dpCheck('{{ puzzle_id }}')">Check answers</button>
+    <button class="pp-reveal-btn" onclick="dpReset('{{ puzzle_id }}')">Reset</button>
+  </div>
+  <div class="pp-result" id="{{ puzzle_id }}-result"></div>
+</div>
+
+<script>
+(function() {
+  var id   = '{{ puzzle_id }}';
+  var type = '{{ _type }}';
+
+  function shuffle(list) {
+    var items = Array.from(list.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      list.appendChild(items[j]);
+      items = Array.from(list.children);
+    }
+  }
+
+  function init() {
+    if (type === 'order') {
+      var list = document.getElementById(id + '-list');
+      if (!list) return;
+      shuffle(list);
+      Sortable.create(list, {
+        animation: 150,
+        handle: '.drag-puzzle__handle',
+        ghostClass: 'dp-ghost',
+        chosenClass: 'dp-chosen',
+        onEnd: function() {
+          Array.from(list.children).forEach(function(li) {
+            li.classList.remove('dp-correct', 'dp-incorrect');
+          });
+          var r = document.getElementById(id + '-result');
+          r.textContent = ''; r.className = 'pp-result';
+        }
+      });
+    }
+
+    if (type === 'match') {
+      var bank = document.getElementById(id + '-bank');
+      if (!bank) return;
+      shuffle(bank);
+
+      Sortable.create(bank, {
+        group: { name: id, pull: true, put: true },
+        animation: 150,
+        ghostClass: 'dp-ghost',
+        chosenClass: 'dp-chosen'
+      });
+
+      document.querySelectorAll('#' + id + ' .drag-puzzle__slot').forEach(function(slot) {
+        Sortable.create(slot, {
+          group: { name: id, pull: true, put: true },
+          animation: 150,
+          ghostClass: 'dp-ghost',
+          chosenClass: 'dp-chosen',
+          onAdd: function() {
+            var chips = slot.querySelectorAll('.drag-puzzle__chip');
+            if (chips.length > 1) bank.appendChild(chips[0]);
+            var hint = slot.querySelector('.drag-puzzle__slot-hint');
+            if (hint) hint.style.display = 'none';
+            dpClearState(id);
+          },
+          onRemove: function() {
+            if (!slot.querySelector('.drag-puzzle__chip')) {
+              var hint = slot.querySelector('.drag-puzzle__slot-hint');
+              if (hint) hint.style.display = '';
+            }
+            dpClearState(id);
+          }
+        });
+      });
+    }
+  }
+
+  if (window.Sortable) {
+    init();
+  } else if (window._dpLoading) {
+    document.addEventListener('dp-ready', init, { once: true });
+  } else {
+    window._dpLoading = true;
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js';
+    s.onload = function() {
+      window._dpLoading = false;
+      document.dispatchEvent(new Event('dp-ready'));
+      init();
+    };
+    document.head.appendChild(s);
+  }
+})();
+
+function dpClearState(pid) {
+  document.querySelectorAll('#' + pid + ' .dp-correct, #' + pid + ' .dp-incorrect')
+    .forEach(function(el) { el.classList.remove('dp-correct', 'dp-incorrect'); });
+  var r = document.getElementById(pid + '-result');
+  if (r) { r.textContent = ''; r.className = 'pp-result'; }
+}
+
+function dpCheck(pid) {
+  var el = document.getElementById(pid);
+  var isOrder = el.classList.contains('drag-puzzle--order');
+  var result = document.getElementById(pid + '-result');
+  var correct = 0;
+
+  if (isOrder) {
+    var items = Array.from(document.getElementById(pid + '-list').children);
+    items.forEach(function(li, i) {
+      li.classList.remove('dp-correct', 'dp-incorrect');
+      if (parseInt(li.dataset.correct) === i) { li.classList.add('dp-correct'); correct++; }
+      else li.classList.add('dp-incorrect');
+    });
+    var n = items.length;
+    result.textContent = correct === n
+      ? 'Correct! All ' + n + ' steps in the right order.'
+      : correct + ' of ' + n + ' in the correct position.';
+    result.className = 'pp-result' + (correct === n ? ' pp-result--correct' : ' pp-result--partial');
+
+  } else {
+    var slots = Array.from(document.querySelectorAll('#' + pid + ' .drag-puzzle__slot'));
+    var filled = 0;
+    slots.forEach(function(slot) {
+      slot.classList.remove('dp-correct', 'dp-incorrect');
+      var chip = slot.querySelector('.drag-puzzle__chip');
+      if (!chip) return;
+      filled++;
+      if (chip.dataset.term === slot.dataset.answer) { slot.classList.add('dp-correct'); correct++; }
+      else slot.classList.add('dp-incorrect');
+    });
+    var n = slots.length;
+    if (filled < n) {
+      result.textContent = 'Place all ' + n + ' terms before checking.';
+      result.className = 'pp-result pp-result--partial';
+    } else {
+      result.textContent = correct === n
+        ? 'Correct! All ' + n + ' terms matched.'
+        : correct + ' of ' + n + ' correct.';
+      result.className = 'pp-result' + (correct === n ? ' pp-result--correct' : ' pp-result--partial');
+    }
+  }
+}
+
+function dpReset(pid) {
+  dpClearState(pid);
+  var el = document.getElementById(pid);
+  var isOrder = el.classList.contains('drag-puzzle--order');
+
+  if (isOrder) {
+    var list = document.getElementById(pid + '-list');
+    var items = Array.from(list.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      list.appendChild(items[j]);
+      items = Array.from(list.children);
+    }
+  } else {
+    var bank = document.getElementById(pid + '-bank');
+    document.querySelectorAll('#' + pid + ' .drag-puzzle__chip').forEach(function(chip) {
+      bank.appendChild(chip);
+    });
+    document.querySelectorAll('#' + pid + ' .drag-puzzle__slot').forEach(function(slot) {
+      var hint = slot.querySelector('.drag-puzzle__slot-hint');
+      if (hint) hint.style.display = '';
+    });
+    var chips = Array.from(bank.children);
+    for (var i = chips.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      bank.appendChild(chips[j]);
+      chips = Array.from(bank.children);
+    }
+  }
+}
+</script>
