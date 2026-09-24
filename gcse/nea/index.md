@@ -5,6 +5,8 @@ level: gcse
 level_url: "/gcse/"
 ---
 
+> **Legacy specification only.** This guide is for the current WJEC GCSE Design and Technology NEA. If you are on the new specification (teaching from 2026), the Design Project is different. See the [D&T 2026 assessment overview](/gcse-2026/assessment/).
+
 ## How the NEA works
 
 - **50% of your GCSE** — the Non-Exam Assessment (NEA) is a design and make task, worth **100 marks**
