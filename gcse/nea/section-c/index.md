@@ -19,15 +19,20 @@ This is the largest section and the heart of your NEA. You must show an **iterat
 
 ### Page 7: Design strategy
 
-Before generating ideas, briefly explain the design approach you will use.
+Start this section with a short explanation of **how** you are going to design. In this NEA you will use two main strategies, working side by side:
 
-Choose one or more of the following and explain how you will apply it:
+- **Sketching multiple designs** — quick, freehand sketches of lots of different ideas so you explore the problem widely before settling on anything
+- **Cardboard modelling** — building quick, rough models from card to test size, shape, proportion and how parts fit or move
 
-- **Collaboration** (Double Diamond): Discover → Define → Develop → Deliver
-- **User-centred design**: Contexts → Requirements → Design Solutions → Evaluate → Iteration
-- **Systems thinking**: considering how all parts of a design interact as a whole
+Explain briefly why these strategies suit your project. For example, card models let you check ergonomics and scale against your user in a way a sketch cannot, and sketching lots of ideas stops you getting stuck on the first one (**design fixation**).
 
-Explain why this strategy suits your project and how it will help you avoid **design fixation** (getting stuck on one idea too early).
+**Recording your models:**
+- **Photograph every cardboard model** — take clear shots from several angles, with and without a user handling it where relevant
+- **Add the photos to your NEA folio or sketchbook** alongside the sketches they relate to
+- **Annotate the photos** — what works, what doesn't, what you will change
+- You can **sketch over the photos** (print them out, or use a tablet) to show modifications and next ideas directly on the model
+
+> **Tip:** Cardboard models are meant to be quick and rough. A model that took ten minutes and taught you something is worth more than a neat one that took a lesson. The model itself is not assessed — the photos and your comments about them are.
 
 ### Pages 8–10: Initial ideas
 
@@ -45,6 +50,7 @@ Use a range of techniques:
 - Freehand annotated sketches
 - Exploded diagrams
 - System or schematic diagrams (for products with mechanisms or electronics)
+- Photos of quick cardboard models, annotated or sketched over
 - Notes and written commentary
 
 At the end of this section, compare your initial ideas against your specification and **select one (or elements of several) to develop further**. Justify your choice.
@@ -56,7 +62,7 @@ Take your chosen idea and develop it through **at least two or three iterations*
 Each iteration should:
 - Show a refined version of the previous design
 - Explain what changed and **why** (based on testing, user feedback, or specification check)
-- Include **modelling evidence** — photos of card or foam models, or 3D printed test pieces
+- Include **modelling evidence** — photos of cardboard models (or foam / 3D printed test pieces), annotated or sketched over to show changes
 - Show user or peer feedback and how you responded to it
 
 > **The iterative process:** Design → Make a quick model → Test → Get feedback → Refine → Repeat.
@@ -102,12 +108,12 @@ Your final proposal must give enough information for someone else to make your p
 
 ## Checklist for Band 4
 
-- [ ] Design strategy named and explained
+- [ ] Design strategy explained — sketching multiple designs and cardboard modelling
 - [ ] At least 6–8 genuinely different initial ideas, all annotated
 - [ ] Ideas include 2D and 3D sketches, exploded or schematic diagrams
 - [ ] Social, moral and economic factors identified and **applied to design decisions**
 - [ ] At least 2–3 iterations of the chosen design, with evidence of testing and feedback
-- [ ] Modelling evidence photographed and included
+- [ ] Cardboard models photographed, added to the folio or sketchbook and annotated
 - [ ] Final proposal includes working drawings with dimensions
 - [ ] Materials, finishes and manufacturing methods all specified
 - [ ] Final proposal checked against all specification points
