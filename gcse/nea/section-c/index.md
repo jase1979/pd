@@ -13,25 +13,41 @@ unit_url: "/gcse/nea/"
 
 This is the largest section and the heart of your NEA. You must show an **iterative design process** — generating ideas, testing and evaluating them, and refining towards a final detailed proposal. Aim for **8–10 pages**.
 
+**Where it goes:** strategy, initial ideas, models and development go in your **informal sketchbook**. The final detailed proposal (pictorial drawing, working drawings and manufacturing specification) goes in your **formal presentation folio**.
+
+> **Think → model → test → reflect.** This section is not a straight line. You will go round this loop many times, and every model and test should lead to a decision.
+
 ---
 
 ## What to include — page by page
 
+*Page numbers are a suggested order. WJEC sets no fixed format — see [sketchbook and folio](/gcse/nea/#sketchbook-and-folio).*
+
 ### Page 7: Design strategy
 
-Before generating ideas, briefly explain the design approach you will use.
+Start this section with a short explanation of **how** you are going to design. In this NEA you will use two main strategies, working side by side:
 
-Choose one or more of the following and explain how you will apply it:
+- **Sketching multiple designs** — quick, freehand sketches of lots of different ideas so you explore the problem widely before settling on anything
+- **Cardboard modelling** — building quick, rough models from card to test size, shape, proportion and how parts fit or move
 
-- **Collaboration** (Double Diamond): Discover → Define → Develop → Deliver
-- **User-centred design**: Contexts → Requirements → Design Solutions → Evaluate → Iteration
-- **Systems thinking**: considering how all parts of a design interact as a whole
+Explain briefly why these strategies suit your project. For example, card models let you check ergonomics and scale against your user in a way a sketch cannot, and sketching lots of ideas stops you getting stuck on the first one (**design fixation**).
 
-Explain why this strategy suits your project and how it will help you avoid **design fixation** (getting stuck on one idea too early).
+**Recording your models:**
+- **Photograph every cardboard model** — take clear shots from several angles, with and without a user handling it where relevant
+- **Add the photos to your NEA folio or sketchbook** alongside the sketches they relate to
+- **Annotate the photos** — what works, what doesn't, what you will change
+- You can **sketch over the photos** (print them out, or use a tablet) to show modifications and next ideas directly on the model
+
+> **Tip:** Cardboard models are meant to be quick and rough. A model that took ten minutes and taught you something is worth more than a neat one that took a lesson. The model itself is not assessed — the photos and your comments about them are.
 
 ### Pages 8–10: Initial ideas
 
 Generate a **broad, diverse range** of initial ideas — aim for at least **6–8 different concepts**.
+
+- Ideas can come from **any starting point**: your research, existing products, nature, a material, a mechanism
+- Use your **specification** to guide ideas. Check each one against your critical factors
+- **Engage with users**. Show them early sketches or card models and record what they say
+- **Many ideas will be rejected**, and that's expected. Say *why* each one is rejected; this is evidence of decision making
 
 For each idea:
 - Sketch it in **2D and/or 3D** (freehand annotated sketches are expected here)
@@ -45,6 +61,7 @@ Use a range of techniques:
 - Freehand annotated sketches
 - Exploded diagrams
 - System or schematic diagrams (for products with mechanisms or electronics)
+- Photos of quick cardboard models, annotated or sketched over
 - Notes and written commentary
 
 At the end of this section, compare your initial ideas against your specification and **select one (or elements of several) to develop further**. Justify your choice.
@@ -56,8 +73,24 @@ Take your chosen idea and develop it through **at least two or three iterations*
 Each iteration should:
 - Show a refined version of the previous design
 - Explain what changed and **why** (based on testing, user feedback, or specification check)
-- Include **modelling evidence** — photos of card or foam models, or 3D printed test pieces
+- Include **modelling evidence** — photos of cardboard models (or foam / 3D printed test pieces), annotated or sketched over to show changes
+- Include **testing**: test against your specification, and do functional or performance testing (does the mechanism work, does it take the load, does it fit the user's hand?)
 - Show user or peer feedback and how you responded to it
+
+> **Testing leads the way.** Every change in your development should be explained by a test result, user feedback or a specification check, not just "I thought it looked better".
+
+#### Low fidelity to high fidelity modelling
+
+Your models should become **more detailed and refined** as your design develops:
+
+| Low fidelity (early, quick, rough) | High fidelity (later, refined, detailed) |
+|---|---|
+| Quick generation sketches | Detailed sketches and rendered drawings |
+| Cardboard models and simple mock-ups (joining, combining) | Block models or foam models |
+| **Empathy modelling**: simulating the user's experience (e.g. gloves to simulate reduced grip) and recording it | CAD models and simulations |
+| | 3D printing / rapid prototyping of parts |
+
+> **Keep everything.** Keep your test pieces and models, or photograph them. Analyse what each one showed you and record the commentary in your sketchbook. Test pieces are also practical evidence your teacher can show the moderator.
 
 > **The iterative process:** Design → Make a quick model → Test → Get feedback → Refine → Repeat.
 
@@ -78,12 +111,18 @@ Link these considerations to changes you have made (or would make) to your desig
 
 Your final proposal must give enough information for someone else to make your product. Include:
 
+- **Pictorial drawing** — a detailed, high-quality 3D drawing of the final prototype showing all appropriate views. It can be hand drawn or CAD
 - **Working drawings** — orthographic (front, side, top) with all dimensions clearly labelled
 - **Exploded diagram** or assembly diagram showing how parts fit together
 - **Materials list** — specify exact materials, sizes/thicknesses, and quantities
 - **Finishes and surface treatments** — specify what finish will be applied, where and why
 - **Manufacturing method** — explain how each part will be made
+- **Tools and equipment** — what will be used for each part
+- **Specialist processes and materials** — e.g. vacuum forming, laser cutting, line bending, smart or modern materials
+- **CNC / CAD-CAM details** — file names, machine settings (e.g. laser power and speed, 3D print layer height and infill)
 - **Justification** — explain how your final proposal meets every point on your specification
+
+> **The third-party test:** Could someone else, such as a manufacturer, make your prototype from the information you have given? If not, add more detail.
 
 > **Tip:** Your final proposal should address **all** points in your specification. If any are not fully met, explain what further development would be needed.
 
@@ -91,7 +130,9 @@ Your final proposal must give enough information for someone else to make your p
 
 ## Marking criteria
 
-| Band | Marks | What the examiner is looking for |
+Your teacher picks the band that best fits your work. A mark at the top of a band needs **all** of its descriptors met; missing evidence means a lower mark within the band. See [how the marks are awarded](/gcse/nea/#how-the-marks-are-awarded).
+
+| Band | Marks | What your work needs to show |
 |---|---|---|
 | **4** | 24–30 | Range of design strategies applied; iterative process used; broad, complex and diverse initial ideas; social/moral/economic factors considered and applied; clear testing and refinement; comprehensive final proposal with materials, dimensions, finishes and processes; sophisticated communication |
 | **3** | 16–23 | Range of strategies and iterative process; broad initial ideas; factors considered; effective testing and refinement; proposal with relevant detail addressing main spec points; good communication |
@@ -102,12 +143,17 @@ Your final proposal must give enough information for someone else to make your p
 
 ## Checklist for Band 4
 
-- [ ] Design strategy named and explained
+- [ ] Design strategy explained — sketching multiple designs and cardboard modelling
 - [ ] At least 6–8 genuinely different initial ideas, all annotated
 - [ ] Ideas include 2D and 3D sketches, exploded or schematic diagrams
+- [ ] Reasons given for rejecting ideas, and users involved in choosing
 - [ ] Social, moral and economic factors identified and **applied to design decisions**
 - [ ] At least 2–3 iterations of the chosen design, with evidence of testing and feedback
-- [ ] Modelling evidence photographed and included
+- [ ] Cardboard models photographed, added to the folio or sketchbook and annotated
+- [ ] Modelling moves from low fidelity (card, sketches) to high fidelity (CAD, 3D print, foam)
+- [ ] Development changes explained by testing against the specification or functional tests
+- [ ] Final proposal includes a high-quality pictorial drawing (hand or CAD)
 - [ ] Final proposal includes working drawings with dimensions
-- [ ] Materials, finishes and manufacturing methods all specified
+- [ ] Materials, finishes, tools, specialist processes and CAD/CAM settings all specified
+- [ ] Passes the third-party test: someone else could make it from your proposal
 - [ ] Final proposal checked against all specification points

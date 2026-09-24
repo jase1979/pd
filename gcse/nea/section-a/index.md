@@ -13,20 +13,25 @@ unit_url: "/gcse/nea/"
 
 This section is your starting point. You need to show that you have thoroughly explored the context, researched existing products and users, and identified a clear design opportunity. Aim for **3–4 pages**.
 
+**Where it goes:** your **informal sketchbook**. This section is exploratory, so it can be rough, as long as it is clear.
+
 ---
 
 ## What to include — page by page
 
+*Page numbers are a suggested order. WJEC sets no fixed format — see [sketchbook and folio](/gcse/nea/#sketchbook-and-folio).*
+
 ### Page 1: Context analysis
 
-Start by unpacking the context (theme) given to you by WJEC.
+WJEC sets **three contexts** each year. Start by analysing **all three** before choosing one.
 
-- Annotate or mind-map the context — what does it mean? What areas does it cover?
-- Identify **at least three possible directions** you could take
+- Annotate or mind-map each context — what does it mean? What areas does it cover? Who might it affect?
+- Identify **possible design tasks** within each context, then pick the context that gives you the strongest opportunities
+- For your chosen context, identify **at least three possible directions** you could take
 - Explain why the context is relevant and what kinds of products could come from it
 - Show you understand that design takes place within real-world situations that shape outcomes
 
-> **Tip:** Do not jump straight to a product idea. Show you have explored the full breadth of the context first.
+> **Tip:** Explore the full breadth of the context before committing to a product. That doesn't mean waiting to sketch: quick sketches and rough card models of early thoughts are encouraged from day one. They help you work out what you need to research.
 
 ### Page 2: Primary research — designing your survey
 
@@ -75,7 +80,7 @@ Adapt these four types to whatever context WJEC has given you:
 
 #### Common mistakes to avoid
 
-- **Leading questions** that push a particular answer *(e.g. "Don't you agree storage is a problem?")* — they bias your results and examiners spot them.
+- **Leading questions** that push a particular answer *(e.g. "Don't you agree storage is a problem?")* — they bias your results and moderators spot them.
 - **Asking about a product you haven't designed** — there is no product yet.
 - **Presenting data without analysis** — every chart needs a sentence on what it tells you about your design.
 - **Too many open questions** — they're hard to graph; keep most questions closed.
@@ -107,15 +112,15 @@ Analyse **4 existing products** that are related to your context using the ACCES
 | **F** | Function | What does it do? Does it do it well? What are its limitations? |
 | **M** | Materials | What is it made from? Why were those materials chosen? How is it manufactured? |
 
-> **Tip:** Don't just describe — **evaluate**. Say whether each aspect is successful or not, and explain why. The examiner wants your judgement, not just a list of facts.
+> **Tip:** Don't just describe — **evaluate**. Say whether each aspect is successful or not, and explain why. Your teacher and the moderator want your judgement, not just a list of facts.
 
 For each product, end with a short **"What this tells me"** sentence — link what you found to your own design direction.
 
 #### Other secondary research to include
 
-- **Relevant designers or companies** — research a professional whose work relates to your context (link to the Designers content from Unit 1)
+- **Past and present professionals and companies** — research designers or companies whose work relates to your context (link to the Designers content from Unit 1). This is named in the mark scheme, so don't skip it
 - **Standards and legislation** — note any relevant BSI/ISO standards or safety requirements
-- **Materials research** — begin exploring what materials might be appropriate
+- **New materials, processes and techniques** — explore materials and making methods that could be appropriate, including modern and smart materials
 
 #### Concluding your research
 
@@ -126,24 +131,30 @@ After your product analyses, write a short **research conclusion** that draws ev
 - What do existing products do **poorly** — where is the gap your design could fill?
 - What **materials, sizes or features** are you starting to consider as a result?
 
-This conclusion bridges your research and your design opportunities (Page 4). It shows the examiner that your design decisions will be evidence-based, not guesswork.
+This conclusion bridges your research and your design opportunities (Page 4). It shows that your design decisions will be evidence-based, not guesswork.
 
 > **Tip:** Relate everything back to your context. Ask yourself: "What does this tell me about what I should design?"
 
-### Page 4: Analysis and design opportunities
+### Page 4: Analysis, design opportunities and possible briefs
 
 Pull your research together into clear conclusions.
 
 - Summarise the **key needs and wants** of your target user
 - Identify **at least three design problems or opportunities** arising from your research
+- Turn them into **2–3 possible design briefs**, each a sentence or two, and list the advantages and disadvantages of each
+- **Model and test some initial ideas** for your possible briefs, such as quick sketches or a rough card model, to see which has the most potential
 - Explain which opportunity you will pursue and why
 - Show how your chosen direction responds to real user needs, not just your personal preference
+
+> **Why possible briefs?** The Band 4 descriptor asks for a broad range of problems/opportunities that "inform the development of possible design briefs". Showing several briefs, then choosing one, is the clearest evidence of this. You finalise your chosen brief in Section B.
 
 ---
 
 ## Marking criteria
 
-| Band | Marks | What the examiner is looking for |
+Your teacher picks the band that best fits your work. A mark at the top of a band needs **all** of its descriptors met; missing evidence means a lower mark within the band. See [how the marks are awarded](/gcse/nea/#how-the-marks-are-awarded).
+
+| Band | Marks | What your work needs to show |
 |---|---|---|
 | **4** | 9–10 | Thorough research clearly linked to context and professionals; detailed analysis of user needs; broad range of problems/opportunities identified |
 | **3** | 6–8 | Effective research linked to context; good analysis of user needs; a range of problems/opportunities identified |
@@ -154,12 +165,15 @@ Pull your research together into clear conclusions.
 
 ## Checklist for Band 4
 
-- [ ] Context explored from multiple angles — not just one idea
+- [ ] All three WJEC contexts analysed, and the chosen one explored from multiple angles
 - [ ] Primary research collected, presented visually and **analysed**
 - [ ] 4 existing products analysed using ACCESS FM with annotations
 - [ ] Each product analysis ends with a "What this tells me" sentence
 - [ ] Research conclusion written — linking survey findings and product analyses
-- [ ] Reference made to relevant designers or companies
+- [ ] Reference made to relevant past/present professionals or companies
+- [ ] New materials, processes or techniques researched
 - [ ] User needs and wants clearly identified
 - [ ] At least three design problems or opportunities stated
+- [ ] 2–3 possible design briefs written and compared
+- [ ] Some initial ideas sketched, modelled and tested
 - [ ] Everything is linked back to the context
