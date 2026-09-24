@@ -11,22 +11,30 @@ unit_url: "/gcse/nea/"
 
 **30 marks** — AO2 (Assessment Objective 2: Design, make, evaluate and communicate)
 
-This section is about planning and making your prototype. The examiner wants to see that you can work with materials accurately and safely, follow a logical sequence, and produce a high-quality outcome. Aim for **4–5 pages**.
+This section is about planning and making your prototype. Your teacher and the moderator want to see that you can work with materials accurately and safely, follow a logical sequence, and produce a high-quality outcome. Aim for **4–5 pages**.
+
+**Where it goes:** your production plan (sequence of production) and final prototype photographs go in your **formal presentation folio**. Your making diary can go in either.
+
+> **Supervised making:** Your final prototype **must be made in school under supervised conditions**. Your teacher has to be able to confirm that the work is your own.
+
+> **Practical evidence:** Keep any **jigs, formers, patterns, templates, test pieces and trials** you make along the way, or photograph them. They count as supporting practical evidence and show your making skills.
 
 ---
 
 ## What to include — page by page
 
+*Page numbers are a suggested order. WJEC sets no fixed format — see [sketchbook and folio](/gcse/nea/#sketchbook-and-folio).*
+
 ### Page 17: Production plan
 
-Before you start making, produce a detailed production plan. This shows the examiner you have thought through the entire making process.
+Before you start making, produce a detailed production plan. This shows you have thought through the entire making process.
 
 A strong production plan includes:
 
 - **Sequence of production** — numbered steps in the correct logical order (e.g. cut parts before assembling them)
 - **Timeline / schedule** — estimated time for each stage, with dates if possible
 - **Materials and tools** — what you will use at each stage
-- **Quality checks** — when and how you will check accuracy and quality throughout making
+- **Quality control checks** — when and how you will check accuracy and quality throughout making (e.g. check against the working drawing, test fit before gluing)
 - **Testing stages** — when you will test functionality (not just at the end)
 
 > **Format:** A table works well here. Columns could be: Step | Task | Tools/Materials | Time | Quality check.
@@ -67,9 +75,9 @@ Add brief annotations pointing out key features, materials and finishes used.
 
 ---
 
-## What the examiner is assessing
+## What is being assessed
 
-The examiner will look at your **physical prototype** as well as your documentation. The prototype itself is assessed against:
+Your teacher (and the moderator) will look at your **physical prototype** as well as your documentation. The prototype itself is assessed against:
 
 | Criteria | What to aim for |
 |---|---|
@@ -86,7 +94,9 @@ The examiner will look at your **physical prototype** as well as your documentat
 
 ## Marking criteria
 
-| Band | Marks | What the examiner is looking for |
+Your teacher picks the band that best fits your work. A mark at the top of a band needs **all** of its descriptors met; missing evidence means a lower mark within the band. See [how the marks are awarded](/gcse/nea/#how-the-marks-are-awarded).
+
+| Band | Marks | What your work needs to show |
 |---|---|---|
 | **4** | 24–30 | Comprehensive production plan with logical sequence and timeline; appropriate materials used successfully; range of making skills produce a high-quality functioning prototype meeting the spec; excellent material knowledge; surface treatments applied; specialist tools used with high accuracy and precision |
 | **3** | 16–23 | Logical plan with timeline; appropriate materials; good quality functioning prototype generally meeting the spec; good material knowledge; surface treatments considered; tools used accurately |
@@ -107,3 +117,5 @@ The examiner will look at your **physical prototype** as well as your documentat
 - [ ] Final prototype is fully functional and meets the design brief
 - [ ] Multiple high-quality photographs of the completed prototype included
 - [ ] Innovation or use of smart/technical materials noted if present
+- [ ] Prototype made in school under supervision
+- [ ] Jigs, templates, test pieces and trials kept or photographed

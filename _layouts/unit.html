@@ -24,3 +24,12 @@ layout: default
   </a>
   {% endfor %}
 </div>
+
+{% assign _stripped = content | strip %}
+{% if _stripped != "" %}
+<div class="topic-page">
+  <div class="topic-content unit-intro">
+    {{ content }}
+  </div>
+</div>
+{% endif %}

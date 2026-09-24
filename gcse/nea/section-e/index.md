@@ -13,13 +13,19 @@ unit_url: "/gcse/nea/"
 
 This is your final section. You need to critically evaluate your prototype honestly and objectively, gather user feedback, and suggest realistic further developments. Aim for **2–3 pages**.
 
+**Where it goes:** your final evaluation, written as a **report**, goes in your **formal presentation folio**. Evaluation *during* the project (of ideas, models and development) is recorded as you go in your **informal sketchbook**.
+
 ---
 
 ## What to include — page by page
 
+*Page numbers are a suggested order. WJEC sets no fixed format — see [sketchbook and folio](/gcse/nea/#sketchbook-and-folio).*
+
 ### Page 21: Testing against the specification
 
 Go back to your specification from Section B and test your prototype against **every single point**.
+
+Wherever possible, test the prototype **in situ**, where it would really be used and by the person it was designed for. Photograph the testing.
 
 Present this as a table for clarity:
 
@@ -46,7 +52,7 @@ Alongside the specification check, also evaluate:
 
 Gather feedback from at least one other person — ideally a potential user or your client.
 
-- **User testing** — ask them to use or interact with the prototype and observe what happens
+- **User testing** — ideally in situ, ask them to use or interact with the prototype and observe what happens
 - **Feedback form or interview** — ask specific questions linked to your specification points
 - Present the feedback clearly (quotes, summary, or ratings)
 - **Respond to the feedback** — explain what it tells you and how it would inform further development
@@ -57,7 +63,7 @@ Gather feedback from at least one other person — ideally a potential user or y
 
 Conclude with a thoughtful section on how the prototype could be developed further.
 
-For each area of improvement, be specific:
+For each area of improvement, be specific. You can write it out, or show it as **annotated sketches**, which are often clearer:
 
 - **What** would you change?
 - **Why** (link to testing results or user feedback)?
@@ -73,9 +79,9 @@ Also consider:
 
 ## Iterative evaluation throughout the NEA
 
-The examiner also looks for evidence of evaluation **throughout your design process** — not just at the end. This means:
+Your teacher and the moderator also look for evidence of evaluation **throughout your design process** — not just at the end. This means:
 
-- Evaluating initial ideas before developing them (Section C)
+- Evaluating initial ideas before developing them (Section C), recorded in your sketchbook
 - Evaluating development iterations and explaining changes
 - Evaluating making decisions as they happen (Section D)
 - This final evaluation of the completed prototype
@@ -86,7 +92,9 @@ The examiner also looks for evidence of evaluation **throughout your design proc
 
 ## Marking criteria
 
-| Band | Marks | What the examiner is looking for |
+Your teacher picks the band that best fits your work. A mark at the top of a band needs **all** of its descriptors met; missing evidence means a lower mark within the band. See [how the marks are awarded](/gcse/nea/#how-the-marks-are-awarded).
+
+| Band | Marks | What your work needs to show |
 |---|---|---|
 | **4** | 16–20 | Critical, objective analysis and testing of ideas throughout the iterative process; critical and objective evaluation of final prototype taking into account user views; clear identification of further development with detailed modification suggestions |
 | **3** | 11–15 | Objective analysis and testing throughout; objective evaluation of final prototype with some user consideration; potential for further development identified with suggestions for modifications |
@@ -99,9 +107,11 @@ The examiner also looks for evidence of evaluation **throughout your design proc
 
 - [ ] **Every** specification point tested with a clear method and result recorded
 - [ ] Honest assessment of what was and was not achieved
+- [ ] Prototype tested in situ where possible, with photos
+- [ ] Final evaluation written up as a report in the formal folio
 - [ ] User testing carried out and feedback recorded
 - [ ] Response to feedback clearly explained
-- [ ] Further development suggestions are specific (what, why and how)
+- [ ] Further development suggestions are specific (what, why and how), using annotated sketches where helpful
 - [ ] Modifications linked directly to test results or user feedback
 - [ ] Marketability and potential for production considered
 - [ ] Evidence of evaluation throughout the whole portfolio, not just this section
