@@ -10,11 +10,11 @@ Usage:
 import subprocess, re, json, sys
 from pathlib import Path
 
-PAPERS_DIR  = Path(__file__).parent.parent / "assets" / "past-papers"
+PAPERS_DIR  = Path(__file__).parent.parent / "static" / "assets" / "past-papers"
 SCRIPTS_DIR = Path(__file__).parent
 OUTPUT_DIR  = SCRIPTS_DIR / "extracted"
 IMG_SRC_DIR = Path("/tmp/pd-imgs")
-IMG_DEST    = Path(__file__).parent.parent / "assets" / "img" / "papers"
+IMG_DEST    = Path(__file__).parent.parent / "static" / "assets" / "img" / "papers"
 
 # ── paper metadata ──────────────────────────────────────────────────────────
 PAPER_META = {
