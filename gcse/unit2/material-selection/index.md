@@ -21,6 +21,7 @@ unit_url: "/gcse/unit2/"
 | Pewter | Like silver, can be polished very shiny, but tarnishes easily |
 | Oak | Mid-brown with prominent grain |
 | Pine | Soft pale white or yellow with straight grain |
+| Papers and boards | Can be printed, embossed, coloured and given gloss or matt finishes |
 
 ## Function
 
@@ -37,6 +38,16 @@ unit_url: "/gcse/unit2/"
 | Pewter | Soft alloy, very low melting point, perfect for casting |
 | Plywood | Strong and rigid — layers at 90° increase strength; edges can look unsightly |
 | MDF | Cheap, no grain, versatile — requires a finish |
+| Papers and boards | Lightweight, cheap, easily cut, folded, creased and glued; can be waxed or laminated for water resistance; highly recyclable |
+
+## Other factors influencing material selection
+
+- **Availability** — is the material easy to get in the stock form and size needed? Rare materials cause delays and increase cost.
+- **Cost** — the material must suit the product's price point and scale of production.
+- **Social** — is the product safe and suitable for everyone who will use it? Will it affect people around them?
+- **Cultural** — are the material, colour or symbols acceptable to the target market? Some may cause offence in certain cultures.
+- **Ethical** — was the material sourced and processed fairly, without exploiting workers or damaging communities?
+- **Environmental** — is the material renewable, recycled or recyclable? What is its carbon footprint?
 
 ## Materials and the environment
 
@@ -61,6 +72,8 @@ Designers and manufacturers have a **moral, ethical and sometimes legal responsi
 - Benefits: cheaper labour, investing in poorer countries' economies
 - Risks: child exploitation, unfair working conditions
 - **Fair Trade** tries to ensure everyone benefits fairly
+
+Low labour costs in some countries can mean poverty wages, long hours and **exploitation of employees**. Designers and manufacturers have a responsibility to check working conditions in their supply chains.
 
 ## Cost of a prototype
 
