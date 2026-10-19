@@ -50,13 +50,14 @@ Screws come with different head types:
 ## Joining and reforming metals
 
 **Permanent joining:**
-- Welding — melting metals together
-- Brazing — joining using a filler metal at high temperature
-- Soldering — joining using a lower temperature filler metal
+- Welding — melting the edges of the metals so they fuse together, usually with a filler rod
+- Brazing — joining with a brass filler (spelter) at bright red heat, without melting the parent metal
+- Soldering — joining with a lower-temperature filler metal (soft solder or silver solder)
+- Riveting — a rivet is deformed to clamp the parts together; it must be drilled out to remove it
 - Epoxy resin adhesives
 
 **Temporary joining:**
-- Nuts and bolts, hinges, screws, rivets
+- Nuts, bolts and washers, machine screws, self-tapping screws, hinges and catches
 
 **Machines:**
 - **Lathe** — turns a piece of metal to create differently shaped round pieces
