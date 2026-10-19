@@ -1,0 +1,416 @@
+# Designers & Companies (legacy GCSE, 2.1.1 Core Knowledge).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-designers-and-companies
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "Designers & Companies"
+page: /gcse/unit1/designers-and-companies/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: eco-fashion
+    text: "A student is designing a fashion collection with a much-reduced environmental impact, and is researching designers for inspiration."
+  - id: new-gadget
+    text: "A start-up is developing a new handheld games console and wants it to be instantly recognisable and easy to control."
+
+questions:
+
+  - id: design1-001
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: dyson-iteration
+    command: state
+    context: true
+    see: "#james-dyson"
+    text: "How many iterations did James Dyson's DC01 vacuum cleaner go through before success?"
+    options:
+      - text: "5,127"
+      - text: "12"
+        why_wrong: "Far more: the DC01 went through 5,127 iterations over about 10 years."
+      - text: "500"
+        why_wrong: "Far more: 5,127."
+      - text: "51,270"
+        why_wrong: "Ten times too many: it was 5,127."
+    answer: 0
+    explanation: "The DC01 went through 5,127 iterations with rigorous testing over 10 years before it gained market approval."
+
+  - id: design1-002
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: dyson-cyclone
+    command: identify
+    context: true
+    see: "#james-dyson"
+    text: "What technology did Dyson introduce to vacuum cleaners?"
+    options:
+      - text: "Cyclonic technology that collects dust without a bag"
+      - text: "A graphical user interface"
+        why_wrong: "That was popularised by Apple."
+      - text: "Lightweight composite wings"
+        why_wrong: "That's Airbus."
+      - text: "A thumb-operated joystick"
+        why_wrong: "That's Shigeru Miyamoto's N64 controller."
+    answer: 0
+    explanation: "Dyson replaced the dust bag with cyclonic technology that spins dust out of the air."
+
+  - id: design1-003
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: ball-barrow
+    command: describe
+    context: true
+    see: "#james-dyson"
+    text: "Why did Dyson's ball barrow move more easily over soft ground than a normal wheelbarrow?"
+    options:
+      - text: "The ball spread the load, so it didn't sink in"
+      - text: "It had an electric motor"
+        why_wrong: "It wasn't motorised. The ball spread the load."
+      - text: "It was made from titanium"
+        why_wrong: "Material wasn't the innovation. The ball shape was."
+      - text: "It had two wheels"
+        why_wrong: "It had a single ball in place of a wheel."
+    answer: 0
+    explanation: "Replacing the narrow wheel with a ball spread the load, so the barrow didn't dig into soft ground."
+
+  - id: design1-004
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: biomimicry
+    command: explain
+    context: true
+    see: "#airbus"
+    text: "The A380's wing design is based on eagles' wings. What is this an example of?"
+    options:
+      - text: "Biomimicry"
+      - text: "Planned obsolescence"
+        why_wrong: "Planned obsolescence is designing a product to last a set time."
+      - text: "Biometrics"
+        why_wrong: "Biometrics identify people from biological features. Biomimicry copies nature's solutions."
+      - text: "Incremental development"
+        why_wrong: "Incremental development is small improvements between models."
+    answer: 0
+    reason:
+      text: "What does it mean?"
+      options:
+        - text: "Copying nature to solve design problems"
+        - text: "Identifying people from their biological features"
+          why_wrong: "That's biometrics."
+        - text: "Designing products to wear out"
+          why_wrong: "That's planned obsolescence."
+        - text: "Making products from natural materials"
+          why_wrong: "Biomimicry copies nature's forms and structures. It isn't about natural materials."
+      answer: 0
+    explanation: "Biomimicry is nature solving design problems: the A380's wing shape copies the structure of eagles' wings."
+
+  - id: design1-005
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: airbus-materials
+    command: describe
+    context: true
+    see: "#airbus"
+    text: "Why is titanium used for some 3D-printed Airbus parts?"
+    options:
+      - text: "It has an excellent strength to weight ratio"
+      - text: "It is the cheapest metal"
+        why_wrong: "Titanium is expensive. It's chosen for strength to weight."
+      - text: "It changes colour in sunlight"
+        why_wrong: "That's a photochromic material."
+      - text: "It is very soft and easy to bend"
+        why_wrong: "Titanium is strong, not soft."
+    answer: 0
+    explanation: "Aircraft need to be strong but light, and titanium has an excellent strength to weight ratio."
+
+  - id: design1-006
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: airbus-composites
+    command: state
+    context: true
+    see: "#airbus"
+    text: "How did Airbus overcome the weight issues of the A380?"
+    options:
+      - text: "By using lightweight composite materials"
+      - text: "By carrying fewer passengers"
+        why_wrong: "It still carries up to 800 passengers."
+      - text: "By making the wings shorter"
+        why_wrong: "Wing tips were added to limit the wingspan for airports, not to cut weight."
+      - text: "By using solid steel throughout"
+        why_wrong: "Steel is heavy. Composites were used to save weight."
+    answer: 0
+    explanation: "The A380 was built using lightweight composite materials to overcome weight issues."
+
+  - id: design1-007
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: bethan-gray
+    command: describe
+    see: "#bethan-gray"
+    text: "Which statement best describes Bethan Gray's furniture design?"
+    options:
+      - text: "Luxurious materials, combining traditional craft skills with modern manufacturing"
+      - text: "Bold repeating prints inspired by the countryside"
+        why_wrong: "That's Orla Kiely."
+      - text: "Cyclonic technology"
+        why_wrong: "That's James Dyson."
+      - text: "Video game characters"
+        why_wrong: "That's Shigeru Miyamoto."
+    answer: 0
+    explanation: "Bethan Gray uses brass, marble, solid wood and leather, mixing traditional craft with modern techniques."
+
+  - id: design1-008
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: ruby-tree
+    command: identify
+    see: "#bethan-gray"
+    text: "The Ruby Tree Collection, which Bethan Gray helped found, aims to do what?"
+    options:
+      - text: "Support traditional Islamic craft skills"
+      - text: "Recycle old furniture"
+        why_wrong: "Its aim is supporting traditional craft skills."
+      - text: "Develop new composite materials"
+        why_wrong: "It's about traditional craft, not new materials."
+      - text: "Design video game controllers"
+        why_wrong: "That's Shigeru Miyamoto."
+    answer: 0
+    explanation: "Bethan Gray is a founder-member of the Ruby Tree Collection, which supports traditional Islamic craft skills."
+
+  - id: design1-009
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: apple-gui
+    command: identify
+    context: true
+    see: "#apple"
+    text: "Which development did Apple bring to the mass market with the Lisa and Macintosh?"
+    options:
+      - text: "The graphical user interface (GUI), with icons and a mouse-controlled cursor"
+      - text: "The thumb-operated joystick"
+        why_wrong: "That was Shigeru Miyamoto's N64 controller."
+      - text: "Cyclonic vacuum technology"
+        why_wrong: "That was James Dyson."
+      - text: "The first touchscreen"
+        why_wrong: "The notes credit Apple with popularising the GUI on the Lisa and Macintosh."
+    answer: 0
+    explanation: "The GUI was developed at Xerox PARC, but Apple's Lisa and Macintosh brought icons, folders and a mouse-controlled cursor to the mass market."
+
+  - id: design1-010
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: jony-ive
+    command: identify
+    context: true
+    see: "#apple"
+    text: "Which designer was responsible for styling the first iPod and iMac?"
+    options:
+      - text: "Jony Ive"
+      - text: "James Dyson"
+        why_wrong: "Dyson is known for vacuum cleaners and the ball barrow."
+      - text: "Shigeru Miyamoto"
+        why_wrong: "Miyamoto worked on Nintendo games and controllers."
+      - text: "Bethan Gray"
+        why_wrong: "Bethan Gray designs furniture."
+    answer: 0
+    explanation: "Jonathan (Jony) Ive styled the first iPod and iMac."
+
+  - id: design1-011
+    type: multi
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: apple-identity
+    command: identify
+    scenario: new-gadget
+    see: "#apple"
+    text: "The start-up wants a design identity like Apple's. Select TWO features of Apple's design approach."
+    options:
+      - text: "Consistent colours, shapes and materials"
+      - text: "Sleek styling where aesthetics matter"
+      - text: "Bold hand-painted floral prints"
+        why_wrong: "That's closer to Orla Kiely or Laura Ashley."
+      - text: "Rough, unfinished surfaces"
+        why_wrong: "Apple's designs are sleek and refined."
+    answer: [0, 1]
+    explanation: "Apple products are sleek, with consistent colours, shapes and materials that make them easily recognisable."
+
+  - id: design1-012
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: miyamoto
+    command: identify
+    scenario: new-gadget
+    see: "#shigeru-miyamoto"
+    text: "Which designer would be most useful to research for ideas on game controls?"
+    options:
+      - text: "Shigeru Miyamoto"
+      - text: "Laura Ashley"
+        why_wrong: "Laura Ashley is known for prints and dresses."
+      - text: "Stella McCartney"
+        why_wrong: "Stella McCartney is a sustainable fashion designer."
+      - text: "Bethan Gray"
+        why_wrong: "Bethan Gray designs furniture."
+    answer: 0
+    explanation: "Miyamoto developed the SNES shoulder buttons and the N64's thumb-operated joystick, and gave players greater control over characters."
+
+  - id: design1-013
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: mccartney
+    command: explain
+    scenario: eco-fashion
+    see: "#stella-mccartney"
+    text: "Which designer is the best inspiration for the student's collection?"
+    options:
+      - text: "Stella McCartney"
+      - text: "Laura Ashley"
+        why_wrong: "Laura Ashley is known for Victorian-inspired prints, not low-impact fashion."
+      - text: "Orla Kiely"
+        why_wrong: "Orla Kiely is known for prints, not for sustainability."
+      - text: "Jony Ive"
+        why_wrong: "Jony Ive designs electronics, not fashion."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "She uses no fur or leather, and recycled materials where possible"
+        - text: "She designs long Victorian-style dresses"
+          why_wrong: "That's Laura Ashley."
+        - text: "Her prints are hand painted in gouache"
+          why_wrong: "That's Orla Kiely."
+        - text: "She uses brass and marble"
+          why_wrong: "That's Bethan Gray."
+      answer: 0
+    explanation: "Stella McCartney has shown high fashion is possible with much-reduced environmental impact: no fur or leather, and recycled materials."
+
+  - id: design1-014
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: kiely
+    command: identify
+    see: "#orla-kiely"
+    text: "What is Orla Kiely's most iconic print?"
+    options:
+      - text: "Stem"
+      - text: "The Laura Ashley look"
+        why_wrong: "That's Laura Ashley's Victorian-inspired dress style."
+      - text: "Ruby Tree"
+        why_wrong: "The Ruby Tree Collection is linked to Bethan Gray."
+      - text: "DC01"
+        why_wrong: "DC01 is Dyson's vacuum cleaner."
+    answer: 0
+    explanation: "'Stem' is Kiely's most iconic print: simple, clean, measured and bold."
+
+  - id: design1-015
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: kiely-cad
+    command: describe
+    see: "#orla-kiely"
+    text: "Why does Orla Kiely's work lend itself to CAD?"
+    options:
+      - text: "Her prints use a repetitive style"
+      - text: "She works only in metal"
+        why_wrong: "She's a print designer, working with textiles."
+      - text: "Her designs are all three-dimensional"
+        why_wrong: "Her work is mainly flat prints."
+      - text: "She never reworks her designs"
+        why_wrong: "She believes her work is never finished and reworks it several times."
+    answer: 0
+    explanation: "Repeating patterns are easy to create and edit with CAD, though her original work was hand painted in gouache."
+
+  - id: design1-016
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: laura-ashley
+    command: identify
+    see: "#laura-ashley"
+    text: "How did the Laura Ashley brand first start?"
+    options:
+      - text: "Laura Ashley printing her own designs for head scarves"
+      - text: "Designing furniture from brass and marble"
+        why_wrong: "That's Bethan Gray."
+      - text: "Making sustainable clothes with no leather"
+        why_wrong: "That's Stella McCartney."
+      - text: "Making vacuum cleaners"
+        why_wrong: "That's Dyson."
+    answer: 0
+    explanation: "The brand began with Laura Ashley printing her own head scarf designs, then grew into Victorian-inspired dresses and furnishings."
+
+  - id: design1-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: iteration-technique
+    command: explain
+    see: "#james-dyson"
+    exam_question:
+      text: "Explain why James Dyson made so many prototypes of the DC01."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "He liked making things."
+        marks_awarded: 0
+        why_wrong: "Not a design reason."
+      - text: "To test his design."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it doesn't say why testing mattered."
+      - text: "Each prototype was tested and improved, so the final product worked reliably and was good enough to succeed on the market."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: testing and improving, linked to the outcome, a product that succeeded."
+
+  - id: design1-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: biomimicry-technique
+    command: describe
+    see: "#airbus"
+    exam_question:
+      text: "Describe how Airbus used biomimicry in the A380."
+      marks: 2
+    sample_answer: "The wings were copied from nature."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that the wing shape and structure was based on eagles' wings"
+      - text: "Adding that it carries 800 passengers"
+        why_wrong: "Capacity isn't biomimicry."
+      - text: "Adding that parts were 3D printed in titanium"
+        why_wrong: "That's CAD/CAM, not biomimicry."
+      - text: "Adding that it is made by Airbus"
+        why_wrong: "The question already says so."
+    answer: 0
+    explanation: "The specific example, eagles' wings, turns a general point into a full description."
+
+  - id: design1-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 designers and companies"
+    concept: discuss-technique
+    command: discuss
+    see: "#apple"
+    exam_question:
+      text: "Discuss Apple's approach to product design."
+      marks: 4
+    text: "Which answer actually discusses the approach?"
+    options:
+      - text: "Apple makes iPods and iMacs."
+        why_wrong: "Listing products isn't a discussion."
+      - text: "Its sleek, consistent designs make products recognisable and desirable, but it's criticised for planned obsolescence, as updates stop working on older devices."
+      - text: "Jony Ive designed the iPod."
+        why_wrong: "A single fact isn't a discussion."
+      - text: "Apple is the best design company."
+        why_wrong: "An opinion without reasons isn't a discussion."
+    answer: 1
+    explanation: "Discuss means look at more than one side: here the strengths of Apple's design identity against the criticism of planned obsolescence."

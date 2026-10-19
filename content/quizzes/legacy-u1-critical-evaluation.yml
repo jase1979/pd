@@ -1,0 +1,396 @@
+# Critical Evaluation of Technologies (legacy GCSE, 2.1.1).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-critical-evaluation
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "Critical Evaluation of Technologies"
+page: /gcse/unit1/critical-evaluation/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: smartphone
+    text: "A company designs a smartphone with a sealed battery that can't be replaced, and releases a new model every year."
+  - id: electric-kettle
+    text: "An electric kettle is made in a factory overseas and shipped to the UK. Over its life, most of its energy is used every time it boils water."
+
+questions:
+
+  - id: crit-001
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: sustainability-definition
+    command: state
+    see: "#sustainability-in-designing-and-making"
+    text: "What does sustainability mean?"
+    options:
+      - text: "Meeting today's needs without stopping future generations meeting theirs"
+      - text: "Only ever using recycled materials"
+        why_wrong: "Recycled materials help, but sustainability covers materials, manufacture, product life and end of life."
+      - text: "Making products that last forever"
+        why_wrong: "Longer life helps, but sustainability is about not compromising future generations' needs."
+      - text: "Choosing the cheapest materials"
+        why_wrong: "Cost has nothing to do with sustainability. Cheap materials can be very unsustainable."
+    answer: 0
+    explanation: "Sustainability means meeting the needs of the present without compromising the ability of future generations to meet their own."
+
+  - id: crit-002
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: six-rs
+    command: identify
+    context: true
+    see: "#the-six-rs"
+    text: "A designer decides not to use a toxic finish on a product at all. Which of the six Rs is this?"
+    options:
+      - text: "Refuse"
+      - text: "Reduce"
+        why_wrong: "Reduce means using less. Avoiding the finish altogether is refuse."
+      - text: "Rethink"
+        why_wrong: "Rethink asks whether there's a fundamentally better way to solve the problem."
+      - text: "Reuse"
+        why_wrong: "Reuse means using a product or its parts again."
+    answer: 0
+    explanation: "Refuse: avoid harmful or unsustainable materials altogether."
+
+  - id: crit-003
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: six-rs
+    command: identify
+    see: "#the-six-rs"
+    text: "A product is designed so that it can be easily serviced and fixed. Which of the six Rs is this?"
+    options:
+      - text: "Repair"
+      - text: "Recycle"
+        why_wrong: "Recycle is about materials being recyclable at the end of the product's life."
+      - text: "Reuse"
+        why_wrong: "Reuse means using the product or its parts again for something."
+      - text: "Reduce"
+        why_wrong: "Reduce means using less material or energy."
+    answer: 0
+    explanation: "Repair: is the product designed to be easily serviced and fixed, so it lasts longer?"
+
+  - id: crit-004
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: lca-purpose
+    command: state
+    see: "#life-cycle-analysis-lca"
+    text: "What does a Life Cycle Analysis (LCA) evaluate?"
+    options:
+      - text: "A product's total environmental impact, from extracting raw materials to disposal"
+      - text: "How much a product costs to make"
+        why_wrong: "LCA is about environmental impact, not cost."
+      - text: "How long a product keeps selling"
+        why_wrong: "That's the product life cycle, a marketing tool. LCA measures environmental impact."
+      - text: "How attractive a product looks"
+        why_wrong: "Appearance isn't part of an LCA."
+    answer: 0
+    explanation: "An LCA evaluates a product's total environmental impact from cradle to grave, so designers can target the worst stage."
+
+  - id: crit-005
+    type: multi
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: lca-stages
+    command: identify
+    see: "#life-cycle-analysis-lca"
+    text: "Select TWO stages of a Life Cycle Analysis."
+    options:
+      - text: "Use"
+      - text: "Disposal"
+      - text: "Growth"
+        why_wrong: "Growth is a stage of the product life cycle (sales), not a Life Cycle Analysis."
+      - text: "Maturity"
+        why_wrong: "Maturity is a product life cycle stage, when sales peak. Don't mix the two up."
+    answer: [0, 1]
+    explanation: "The four LCA stages are raw material extraction, manufacturing, use and disposal."
+
+  - id: crit-006
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: lca-biggest-stage
+    command: explain
+    scenario: electric-kettle
+    see: "#life-cycle-analysis-lca"
+    text: "Which LCA stage is likely to have the greatest environmental impact for the kettle?"
+    options:
+      - text: "Use"
+      - text: "Raw material extraction"
+        why_wrong: "Extraction has an impact, but the scenario says most of the kettle's energy is used during its life."
+      - text: "Manufacturing"
+        why_wrong: "Making the kettle is a one-off. Boiling water happens thousands of times."
+      - text: "Disposal"
+        why_wrong: "Disposal matters, but the kettle's biggest impact here comes from the energy it uses."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It uses electricity every time it boils, over many years"
+        - text: "It is made from rare materials"
+          why_wrong: "Nothing suggests that, and it's about extraction, not use."
+        - text: "It can never be recycled"
+          why_wrong: "That would be about disposal, and the scenario doesn't say so."
+        - text: "It looks unattractive"
+          why_wrong: "Appearance isn't part of an LCA."
+      answer: 0
+    explanation: "LCA helps designers find the stage with the greatest impact. For a kettle, that's the electricity it uses, again and again, in use."
+
+  - id: crit-007
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: carbon-reduction
+    command: describe
+    scenario: electric-kettle
+    see: "#carbon-footprint"
+    text: "How could the kettle's carbon footprint from distribution be reduced?"
+    options:
+      - text: "Make it closer to where it's sold, cutting transport emissions"
+      - text: "Use more packaging"
+        why_wrong: "More packaging adds material and weight, increasing the footprint."
+      - text: "Make it heavier and sturdier"
+        why_wrong: "Heavier products take more energy to transport."
+      - text: "Release a new model every year"
+        why_wrong: "More frequent replacement increases the overall footprint."
+    answer: 0
+    explanation: "Distribution adds to a carbon footprint. Sourcing and making things locally reduces transport emissions."
+
+  - id: crit-008
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: carbon-footprint-definition
+    command: state
+    see: "#carbon-footprint"
+    text: "What is a product's carbon footprint?"
+    options:
+      - text: "The total greenhouse gases, especially CO₂, it produces directly and indirectly"
+      - text: "The amount of carbon in its materials"
+        why_wrong: "It's about greenhouse gases produced across the product's life, not carbon contained in it."
+      - text: "The size of the factory that makes it"
+        why_wrong: "Factory size isn't the measure. Emissions at every stage are."
+      - text: "Only the energy it uses when switched on"
+        why_wrong: "Use is only one stage. Materials, manufacture, distribution and disposal all count."
+    answer: 0
+    explanation: "A carbon footprint is the total greenhouse gases produced directly and indirectly, at every stage from raw materials to disposal."
+
+  - id: crit-009
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: cradle-to-cradle
+    command: describe
+    see: "#cradle-to-cradle"
+    text: "How is 'cradle to cradle' different from 'cradle to grave'?"
+    options:
+      - text: "All the materials are recovered and used again in new products, instead of ending as waste"
+      - text: "Cradle to cradle ends with the product in landfill"
+        why_wrong: "That's cradle to grave. Cradle to cradle means nothing is wasted."
+      - text: "Cradle to cradle just means the product lasts longer"
+        why_wrong: "Longevity helps, but cradle to cradle is about recovering every material for new products."
+      - text: "There is no difference"
+        why_wrong: "Cradle to grave ends in waste; cradle to cradle ends in new products."
+    answer: 0
+    explanation: "Cradle to cradle extends LCA thinking: products are designed so that all materials can be recovered and used again."
+
+  - id: crit-010
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: obsolescence-types
+    command: identify
+    scenario: smartphone
+    see: "#design-obsolescence"
+    text: "The phone's sealed battery, which can't be replaced, is an example of what?"
+    options:
+      - text: "Planned obsolescence"
+      - text: "Technological obsolescence"
+        why_wrong: "Technological obsolescence is when newer technology replaces a product. This is a deliberate design choice."
+      - text: "Market pull"
+        why_wrong: "Market pull is product development driven by consumer demand."
+      - text: "Cradle to cradle"
+        why_wrong: "A sealed battery makes the phone harder to repair and recover: the opposite of cradle to cradle."
+    answer: 0
+    explanation: "Planned obsolescence is a deliberate strategy to give a product a limited useful life, so people buy a replacement."
+
+  - id: crit-011
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: obsolescence-types
+    command: identify
+    context: true
+    see: "#design-obsolescence"
+    text: "DVD players stopped selling once people switched to streaming, even though the players still worked. What is this?"
+    options:
+      - text: "Technological obsolescence"
+      - text: "Planned obsolescence"
+        why_wrong: "Nobody designed DVD players to fail. Newer technology replaced them."
+      - text: "The maturity stage"
+        why_wrong: "Maturity is when sales peak, not when a product is replaced."
+      - text: "Refuse"
+        why_wrong: "Refuse is one of the six Rs: avoiding harmful materials."
+    answer: 0
+    explanation: "Technological obsolescence is when newer technology replaces a product, even though it still works."
+
+  - id: crit-012
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: obsolescence-who-benefits
+    command: explain
+    scenario: smartphone
+    see: "#design-obsolescence"
+    text: "Who benefits most from the phone's planned obsolescence?"
+    options:
+      - text: "The manufacturer"
+      - text: "The consumer"
+        why_wrong: "Consumers pay more, replacing phones sooner than they need to."
+      - text: "The environment"
+        why_wrong: "Planned obsolescence increases waste, so the environment loses out."
+      - text: "Nobody: it has no effect"
+        why_wrong: "It has real effects: repeat sales for the maker, and more cost and waste for everyone else."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It ensures repeat sales and funds ongoing research and development"
+        - text: "Users save money"
+          why_wrong: "Users pay more, because they replace phones sooner."
+        - text: "It produces less waste"
+          why_wrong: "It produces more waste."
+        - text: "The phones last longer"
+          why_wrong: "Planned obsolescence deliberately limits how long the phone is useful."
+      answer: 0
+    explanation: "Manufacturers gain repeat sales and money for research; consumers and the environment pay with higher costs and more waste."
+
+  - id: crit-013
+    type: multi
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: obsolescence-disadvantages
+    command: state
+    see: "#design-obsolescence"
+    text: "Select TWO disadvantages of planned obsolescence."
+    options:
+      - text: "It increases waste"
+      - text: "It encourages a throwaway culture"
+      - text: "It ensures repeat sales"
+        why_wrong: "Repeat sales are an advantage for the manufacturer."
+      - text: "It funds research and development"
+        why_wrong: "That's an advantage for the manufacturer."
+    answer: [0, 1]
+    explanation: "For consumers and the environment, planned obsolescence means more waste, higher costs and a throwaway culture."
+
+  - id: crit-014
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: carbon-reduction
+    command: describe
+    context: true
+    see: "#carbon-footprint"
+    text: "A designer reduces the weight of a garden chair. Why does this reduce its carbon footprint?"
+    options:
+      - text: "Less material needs producing, and less energy is used to transport it"
+      - text: "Lighter products always last longer"
+        why_wrong: "Weight doesn't decide how long a product lasts."
+      - text: "It makes the chair more expensive"
+        why_wrong: "Price doesn't affect carbon footprint."
+      - text: "Lighter materials are always recycled"
+        why_wrong: "Being light doesn't mean recycled. The saving comes from using less material and transport energy."
+    answer: 0
+    explanation: "Less material means less energy to produce, and a lighter product takes less energy to transport."
+
+  - id: crit-015
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: responsibilities
+    command: identify
+    see: "#social-cultural-economic-and-environmental-responsibilities"
+    text: "Checking whether a product is affordable for its market, and whether its supply chain is fair, is which responsibility?"
+    options:
+      - text: "Economic"
+      - text: "Social"
+        why_wrong: "Social is about effects on people and communities, and quality of life."
+      - text: "Cultural"
+        why_wrong: "Cultural is about being appropriate and not offensive across cultures."
+      - text: "Environmental"
+        why_wrong: "Environmental is about ecological impact and carbon footprint."
+    answer: 0
+    explanation: "Economic responsibility asks whether a product is affordable, whether the true costs are counted, and whether supply chains are fair."
+
+  - id: crit-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: obsolescence-technique
+    command: explain
+    scenario: smartphone
+    see: "#design-obsolescence"
+    exam_question:
+      text: "Explain one disadvantage of the phone's planned obsolescence for the environment."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is bad for the planet."
+        marks_awarded: 0
+        why_wrong: "Too vague: it doesn't say what the problem is."
+      - text: "It increases waste."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't explained or linked to the phone."
+      - text: "When the battery fails, people throw the phone away rather than repair it, so more electronic waste ends up in landfill."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: the point, explained through what actually happens to this product."
+
+  - id: crit-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: lca-use-technique
+    command: describe
+    see: "#life-cycle-analysis-lca"
+    exam_question:
+      text: "Describe the 'use' stage of a Life Cycle Analysis."
+      marks: 2
+    sample_answer: "It is the stage when the product is being used."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it considers how much energy the product uses, and any emissions, over its working life"
+      - text: "Adding where the materials come from"
+        why_wrong: "That's the raw material extraction stage."
+      - text: "Adding whether it goes to landfill"
+        why_wrong: "That's the disposal stage."
+      - text: "Adding how many units it sells"
+        why_wrong: "Sales belong to the product life cycle, not an LCA."
+    answer: 0
+    explanation: "The 'use' stage is about energy consumed and emissions produced during the product's working life."
+
+  - id: crit-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 critical evaluation"
+    concept: evaluate-technique
+    command: evaluate
+    scenario: electric-kettle
+    see: "#life-cycle-analysis-lca"
+    exam_question:
+      text: "Evaluate the environmental impact of the kettle."
+      marks: 4
+    text: "Which answer actually evaluates?"
+    options:
+      - text: "Kettles use electricity."
+        why_wrong: "A single fact, with nothing weighed up."
+      - text: "Kettles are made of polymers and metals."
+        why_wrong: "This describes the kettle but makes no judgement about its impact."
+      - text: "Making and shipping it adds to its footprint, but use matters most: it uses electricity every time it boils, so an efficient design would help most."
+      - text: "Kettles are bad for the environment."
+        why_wrong: "A judgement with no reasons isn't an evaluation."
+    answer: 2
+    explanation: "Evaluate means weigh up the different impacts and reach a justified judgement."

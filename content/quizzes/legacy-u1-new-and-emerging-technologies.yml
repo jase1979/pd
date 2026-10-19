@@ -1,0 +1,421 @@
+# New & Emerging Technologies (legacy GCSE, 2.1.1).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-new-and-emerging-technologies
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "New & Emerging Technologies"
+page: /gcse/unit1/new-and-emerging-technologies/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: fitness-tracker
+    text: "A company is launching a wrist-worn fitness tracker, made possible by smaller, cheaper electronic components. Its design team works in three different countries."
+  - id: faulty-headphones
+    text: "A customer buys wireless headphones online. A week after they arrive, one earpiece stops working."
+
+questions:
+
+  - id: tech1-001
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: push-vs-pull
+    command: identify
+    scenario: fitness-tracker
+    see: "#market-pull-and-technology-push"
+    text: "The fitness tracker exists because electronic components became small enough to wear. What is this an example of?"
+    options:
+      - text: "Technology push"
+      - text: "Market pull"
+        why_wrong: "Market pull is when consumer demand leads to a product. Here, new technology made the product possible."
+      - text: "Obsolescence"
+        why_wrong: "Obsolescence is when a product stops selling. It isn't about why a product was developed."
+      - text: "Maturity"
+        why_wrong: "Maturity is a stage of the product life cycle, when sales peak."
+    answer: 0
+    explanation: "Technology push: developments in technology, such as smaller components, lead to new products like wearable tech."
+
+  - id: tech1-002
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: push-vs-pull
+    command: identify
+    context: true
+    see: "#market-pull-and-technology-push"
+    text: "Customers keep asking for a phone with a longer battery life, so a manufacturer develops one. What is this?"
+    options:
+      - text: "Market pull"
+      - text: "Technology push"
+        why_wrong: "Technology push starts with a new technology. Here, customer demand started it."
+      - text: "Planned obsolescence"
+        why_wrong: "Planned obsolescence is replacing products on purpose in a set time frame."
+      - text: "Globalisation"
+        why_wrong: "Globalisation is about manufacturing and trade across the world."
+    answer: 0
+    explanation: "Market pull: a new or improved product is developed because consumers demand it."
+
+  - id: tech1-003
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: life-cycle-stages
+    command: state
+    see: "#product-life-cycle"
+    text: "In which stage of the product life cycle do sales reach their peak?"
+    options:
+      - text: "Maturity"
+      - text: "Growth"
+        why_wrong: "In growth, sales are still increasing. They peak at maturity."
+      - text: "Introduction"
+        why_wrong: "Introduction is the launch, when sales are just starting."
+      - text: "Decline"
+        why_wrong: "In decline, sales drop off."
+    answer: 0
+    explanation: "The four stages: introduction (launch), growth (sales rise), maturity (sales peak), decline (sales drop)."
+
+  - id: tech1-004
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: life-cycle-stages
+    command: identify
+    scenario: fitness-tracker
+    see: "#product-life-cycle"
+    text: "Six months after launch, sales of the tracker are rising steadily each month. Which stage is it in?"
+    options:
+      - text: "Growth"
+      - text: "Introduction"
+        why_wrong: "Introduction is the launch itself. Steadily rising sales mean growth."
+      - text: "Maturity"
+        why_wrong: "At maturity, sales have reached their peak rather than still rising."
+      - text: "Decline"
+        why_wrong: "In decline, sales fall."
+    answer: 0
+    explanation: "In the growth stage, sales steadily increase after the launch."
+
+  - id: tech1-005
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: planned-obsolescence
+    command: describe
+    see: "#product-life-cycle"
+    text: "What is planned (built-in) obsolescence?"
+    options:
+      - text: "When a manufacturer intends to replace a product with an upgraded one within a set time"
+      - text: "When a product is designed to last forever"
+        why_wrong: "Planned obsolescence is the opposite: products aren't meant to last."
+      - text: "When a product's price is lowered to sell more"
+        why_wrong: "Selling at a discount can be a sign of obsolescence, but planning it means deliberately replacing the product."
+      - text: "When the government bans a product"
+        why_wrong: "Obsolescence here is a manufacturer's decision, not a ban."
+    answer: 0
+    explanation: "Manufacturers can build in obsolescence: they intend to replace a product with an upgraded or new one in a set time frame."
+
+  - id: tech1-006
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: life-cycle-purpose
+    command: describe
+    see: "#product-life-cycle"
+    text: "What do manufacturers use the product life cycle for?"
+    options:
+      - text: "To judge when to increase or stop manufacture, or replace a product with a new one"
+      - text: "To set the legal price of a product"
+        why_wrong: "The life cycle is a marketing tool, not a legal pricing rule."
+      - text: "To test whether a product is safe"
+        why_wrong: "Safety testing is about standards such as BSI and ISO."
+      - text: "To decide which materials to use"
+        why_wrong: "Material choice is a design decision. The life cycle tracks sales over time."
+    answer: 0
+    explanation: "The product life cycle is a marketing tool for deciding when to make more, stop, or bring out a new or revitalised product."
+
+  - id: tech1-007
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: consumer-rights
+    command: state
+    scenario: faulty-headphones
+    see: "#consumer-rights-and-protection"
+    text: "Under the Consumer Rights Act 2015, what is the customer normally entitled to?"
+    options:
+      - text: "To reject the faulty headphones for a full refund within 30 days"
+      - text: "Nothing, because they were bought online"
+        why_wrong: "The Act covers online purchases too, including digital downloads."
+      - text: "Only a store voucher"
+        why_wrong: "For faulty goods, the law entitles you to a refund or repair, not just a voucher."
+      - text: "A repair, but they must pay for it"
+        why_wrong: "If goods are faulty, the seller must put it right. The customer doesn't pay."
+    answer: 0
+    explanation: "Goods must be of satisfactory quality and fit for purpose. You normally have 30 days to reject faulty goods for a full refund."
+
+  - id: tech1-008
+    type: multi
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: consumer-rights-requirements
+    command: state
+    see: "#consumer-rights-and-protection"
+    text: "Select TWO things the Consumer Rights Act 2015 says goods must be."
+    options:
+      - text: "Fit for purpose"
+      - text: "As described"
+      - text: "Made in the UK"
+        why_wrong: "The Act applies wherever goods are made. It's about quality and description."
+      - text: "The cheapest available"
+        why_wrong: "Price isn't covered. Goods must be satisfactory, as described and fit for purpose."
+    answer: [0, 1]
+    explanation: "Goods must be of a satisfactory standard, as described and seen when purchased, and fit for purpose."
+
+  - id: tech1-009
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: trade-descriptions
+    command: identify
+    context: true
+    see: "#consumer-rights-and-protection"
+    text: "An advert says a jacket is 'waterproof', but it lets rain through. Which law does this break?"
+    options:
+      - text: "The Trade Descriptions Act"
+      - text: "ISO 14001"
+        why_wrong: "ISO 14001 is an environmental management standard, not a law about false descriptions."
+      - text: "The BSI Kitemark"
+        why_wrong: "The Kitemark is a mark showing a product meets BSI standards. It isn't a law."
+      - text: "The ban on CFCs"
+        why_wrong: "CFCs were banned for damaging the ozone layer. That has nothing to do with false advertising."
+    answer: 0
+    explanation: "The Trade Descriptions Act makes it illegal to apply a false description to goods that misleads consumers."
+
+  - id: tech1-010
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: bsi-iso
+    command: identify
+    see: "#legislation--bsi-and-iso-standards"
+    text: "Which mark shows that a product meets British Standards Institution (BSI) standards?"
+    options:
+      - text: "The Kitemark"
+      - text: "ISO 14001"
+        why_wrong: "ISO 14001 is an international environmental management standard."
+      - text: "The Fairtrade mark"
+        why_wrong: "The Fairtrade mark is about fair treatment of producers, not BSI safety standards."
+      - text: "The FSC logo"
+        why_wrong: "The FSC logo shows timber comes from sustainably managed forests."
+    answer: 0
+    explanation: "Products meeting BSI standards carry the Kitemark, giving consumers confidence they've been independently tested."
+
+  - id: tech1-011
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: bsi-iso
+    command: state
+    see: "#legislation--bsi-and-iso-standards"
+    text: "What is ISO 14001 a standard for?"
+    options:
+      - text: "Environmental management"
+      - text: "Quality management"
+        why_wrong: "Quality management is ISO 9001."
+      - text: "Product safety in the UK only"
+        why_wrong: "ISO standards are international. UK product standards come from the BSI."
+      - text: "Fair pay for workers"
+        why_wrong: "ISO 14001 is about managing environmental impact."
+    answer: 0
+    explanation: "ISO sets international standards: ISO 9001 for quality management and ISO 14001 for environmental management."
+
+  - id: tech1-012
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: cad-collaboration
+    command: explain
+    scenario: fitness-tracker
+    see: "#cadcam--advantages-and-disadvantages"
+    text: "Which tool should the design team use to develop the tracker's casing together?"
+    options:
+      - text: "Cloud-based CAD"
+      - text: "Hand sketching only"
+        why_wrong: "Sketching is great for early ideas, but a team in three countries can't develop one model together that way."
+      - text: "A CAM milling machine"
+        why_wrong: "CAM is for manufacturing parts, not developing a design."
+      - text: "A template"
+        why_wrong: "A template is for marking out shapes repeatedly in a workshop."
+    answer: 0
+    reason:
+      text: "Why does it suit this team?"
+      options:
+        - text: "Designers in different places can work on the same 3D model"
+        - text: "It needs no training"
+          why_wrong: "Designers do need training to use CAD, which is one of its disadvantages."
+        - text: "The software is always cheap"
+          why_wrong: "CAD software can be expensive."
+        - text: "It manufactures the product automatically"
+          why_wrong: "That's CAM. CAD is for designing."
+      answer: 0
+    explanation: "Cloud-based CAD lets a team collaborate on the same model wherever they are, with 3D views and professional presentations."
+
+  - id: tech1-013
+    type: multi
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: cam-disadvantages
+    command: state
+    see: "#cadcam--advantages-and-disadvantages"
+    text: "Select TWO disadvantages of CAM."
+    options:
+      - text: "The machinery can be expensive"
+      - text: "It can lead to job losses"
+      - text: "The quality is inconsistent"
+        why_wrong: "The opposite: consistent quality is one of CAM's advantages."
+      - text: "It can't produce identical products"
+        why_wrong: "Producing large volumes of identical products is exactly what CAM is good at."
+    answer: [0, 1]
+    explanation: "CAM machinery is expensive, needs regular maintenance and can lead to job losses, but it gives consistent, efficient production."
+
+  - id: tech1-014
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: globalisation
+    command: describe
+    see: "#global-production--effects-on-culture-and-people"
+    text: "What is a negative effect of global manufacturing?"
+    options:
+      - text: "It can lead to exploitation of workers in developing countries"
+      - text: "Consumers have less choice"
+        why_wrong: "Global manufacturing gives consumers more choice."
+      - text: "Products cost more"
+        why_wrong: "Globalisation tends to drive prices down."
+      - text: "People are less connected"
+        why_wrong: "Communication technology and globalisation connect people more."
+    answer: 0
+    explanation: "Globalisation drives prices down and widens choice, but it can lead to exploitation abroad and job losses in Western countries."
+
+  - id: tech1-015
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: cfcs
+    command: state
+    see: "#sustainability"
+    text: "CFCs were once used in fridges and aerosols. Why are they now banned?"
+    options:
+      - text: "They damage the ozone layer"
+      - text: "They were too expensive"
+        why_wrong: "Cost isn't the reason. CFCs were banned for the harm they do to the ozone layer."
+      - text: "They made fridges too heavy"
+        why_wrong: "CFCs were gases. They were banned for environmental damage."
+      - text: "They were made from recycled materials"
+        why_wrong: "Being recycled isn't harmful. CFCs damaged the ozone layer."
+    answer: 0
+    explanation: "CFCs (chlorofluorocarbons) damage the ozone layer, so they've been banned. Avoiding harmful substances is part of sustainability."
+
+  - id: tech1-016
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: self-repairing
+    command: identify
+    context: true
+    see: "#sustainability"
+    text: "A bicycle inner tube contains a sticky liquid that hardens when it meets air, sealing punctures. What kind of material is this?"
+    options:
+      - text: "A self-repairing material"
+      - text: "A thermochromic material"
+        why_wrong: "Thermochromic materials change colour with temperature."
+      - text: "A photochromic material"
+        why_wrong: "Photochromic materials change colour in UV light."
+      - text: "QTC"
+        why_wrong: "QTC conducts electricity when squeezed."
+    answer: 0
+    explanation: "It's a self-repairing material: the liquid hardens on contact with air, repairing the puncture and extending the product's life."
+
+  - id: tech1-017
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: responsibilities
+    command: identify
+    context: true
+    see: "#moral-and-ethical-factors-in-manufacturing"
+    text: "A manufacturer must cut its CO₂ emissions to meet legal targets. Which of its responsibilities is this?"
+    options:
+      - text: "Environmental"
+      - text: "Social"
+        why_wrong: "Social responsibility is making sure products don't harm a group of people."
+      - text: "Cultural"
+        why_wrong: "Cultural responsibility is making sure products aren't offensive to a group."
+      - text: "Economic"
+        why_wrong: "Economic responsibility is about sound financial decisions, such as costs and profit."
+    answer: 0
+    explanation: "Environmental laws now require many manufacturers to meet targets on lowering CO₂ emissions."
+
+  - id: tech1-018
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: consumer-rights-technique
+    command: explain
+    scenario: faulty-headphones
+    see: "#consumer-rights-and-protection"
+    exam_question:
+      text: "Explain one way the Consumer Rights Act 2015 protects the customer who bought the headphones."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "The customer can complain to the shop."
+        marks_awarded: 0
+        why_wrong: "Anyone can complain. This doesn't say what the Act actually gives the customer."
+      - text: "Goods must be fit for purpose."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't applied to these headphones."
+      - text: "Goods must be fit for purpose, so because the earpiece failed after a week the customer can reject them for a full refund."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: state what the law says, then apply it to the situation in the question."
+
+  - id: tech1-019
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: decline-technique
+    command: describe
+    see: "#product-life-cycle"
+    exam_question:
+      text: "Describe the decline stage of the product life cycle."
+      marks: 2
+    sample_answer: "Sales drop off."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that the product is no longer desired, so the maker may stop it or replace it with a new version"
+      - text: "Adding that sales reach their peak"
+        why_wrong: "That's the maturity stage, so it would contradict the answer."
+      - text: "Adding that the product is launched onto the market"
+        why_wrong: "That's the introduction stage."
+      - text: "Adding that sales steadily increase"
+        why_wrong: "That's the growth stage."
+    answer: 0
+    explanation: "A describe answer needs detail: why sales drop and what the manufacturer does about it."
+
+  - id: tech1-020
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 new and emerging technologies"
+    concept: explain-technique
+    command: explain
+    context: true
+    see: "#cadcam--advantages-and-disadvantages"
+    exam_question:
+      text: "Explain why a company might choose CAM to make 10,000 identical parts."
+      marks: 2
+    text: "Which of these answers explains, rather than just describes?"
+    options:
+      - text: "CAM stands for computer-aided manufacture."
+        why_wrong: "A definition isn't a reason."
+      - text: "CAM machines need regular maintenance."
+        why_wrong: "This is a disadvantage, not a reason to choose CAM."
+      - text: "CAM gives consistent quality, so all 10,000 parts will come out identical."
+      - text: "CAM is used in factories."
+        why_wrong: "This describes where CAM is used, not why it suits this job."
+    answer: 2
+    explanation: "Explain means give a reason: a feature of CAM, and what it means for this job."

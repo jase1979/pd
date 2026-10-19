@@ -1,0 +1,396 @@
+# Ecological Footprint (legacy GCSE, 2.1.1 Core Knowledge).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-ecological-footprint
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "Ecological Footprint"
+page: /gcse/unit1/ecological-footprint/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: wind-up-radio
+    text: "A designer is developing a portable radio for festival-goers. It should work without mains power and leave as small an ecological footprint as possible."
+  - id: phone-maker
+    text: "A phone manufacturer releases a new smartphone model every year, and most customers replace their phone within two years."
+
+questions:
+
+  - id: eco1-001
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: circular-economy
+    command: describe
+    see: "#the-circular-economy"
+    text: "What is the circular economy?"
+    options:
+      - text: "Putting materials and products back into use at the end of their life, so fewer new materials are needed"
+      - text: "Making products, using them, then sending them to landfill"
+        why_wrong: "That's the linear 'take, make, dispose' model the circular economy replaces."
+      - text: "Selling products in every country around the world"
+        why_wrong: "That's global trade, not the circular economy."
+      - text: "Paying fair prices to producers in developing countries"
+        why_wrong: "That's fair trade."
+    answer: 0
+    explanation: "In the circular economy, waste is put back to good use and the cycle continues, saving resources and reducing waste."
+
+  - id: eco1-002
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: product-footprint
+    command: state
+    see: "#ecological-footprint"
+    text: "What does the ecological footprint of a product measure?"
+    options:
+      - text: "Its environmental impact from cradle to grave"
+      - text: "How much it costs to manufacture"
+        why_wrong: "Cost is economic. The footprint measures environmental impact."
+      - text: "How many units are sold"
+        why_wrong: "Sales figures don't measure environmental impact."
+      - text: "Its physical size"
+        why_wrong: "'Footprint' here means environmental impact, not physical size."
+    answer: 0
+    explanation: "A product's footprint measures its environmental impact across its whole life, from cradle to grave."
+
+  - id: eco1-003
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: eco-efficiency
+    command: describe
+    see: "#ecological-footprint"
+    text: "What does eco-efficiency mean?"
+    options:
+      - text: "Meeting users' needs while reducing ecological impact and the use of resources"
+      - text: "Making products as cheaply as possible"
+        why_wrong: "Cheapness can increase environmental damage. Eco-efficiency is about reducing impact."
+      - text: "Using only recycled materials"
+        why_wrong: "Recycled materials can help, but eco-efficiency is wider: meeting needs with less impact overall."
+      - text: "Making products that last a set time"
+        why_wrong: "That's planned obsolescence."
+    answer: 0
+    explanation: "Eco-efficiency is creating goods and services that satisfy needs and wants while reducing ecological impacts and resource depletion."
+
+  - id: eco1-004
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: cradle-to-cradle
+    command: describe
+    see: "#cradle-to-cradle"
+    text: "What does 'cradle to cradle' design mean?"
+    options:
+      - text: "Designing a product so that its materials go into a new product at the end of its life"
+      - text: "Designing a product for babies"
+        why_wrong: "'Cradle' here is a metaphor for a product's beginning, not baby products."
+      - text: "Measuring a product's impact from manufacture to landfill"
+        why_wrong: "That's cradle to grave."
+      - text: "Designing a product to fail after a set time"
+        why_wrong: "That's planned obsolescence."
+    answer: 0
+    explanation: "Cradle to cradle means the end of one product's life becomes the start of another's, so materials are never wasted."
+
+  - id: eco1-005
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: recycling-statistics
+    command: state
+    see: "#recycling"
+    text: "Roughly how much of the world's waste is recycled?"
+    options:
+      - text: "About 13.5%"
+      - text: "About 50%"
+        why_wrong: "Far less than half is recycled worldwide."
+      - text: "About 90%"
+        why_wrong: "About 90% of waste is dumped or burned, not recycled."
+      - text: "About 1%"
+        why_wrong: "It's low, but more than 1%: about 13.5%."
+    answer: 0
+    explanation: "Only about 13.5% of global waste is recycled and 5.5% composted. Most is dumped or burned."
+
+  - id: eco1-006
+    type: multi
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: waste-problems
+    command: identify
+    see: "#societys-view-on-waste"
+    text: "Select TWO problems caused by poorly managed waste."
+    options:
+      - text: "Contaminated oceans"
+      - text: "Blocked drains and flooding"
+      - text: "Lower product prices"
+        why_wrong: "That isn't a problem caused by waste."
+      - text: "Better worker rights"
+        why_wrong: "Worker rights are linked to fair trade, not waste."
+    answer: [0, 1]
+    explanation: "Poorly managed waste contaminates the oceans, clogs drains, causes flooding, spreads disease and harms wildlife."
+
+  - id: eco1-007
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: fair-trade
+    command: describe
+    context: true
+    see: "#fair-trade"
+    text: "A furniture brand buys its cotton cushion covers through fair trade. What does this mean?"
+    options:
+      - text: "Producers in developing countries get better trading conditions and workers' rights are protected"
+      - text: "The covers are made from recycled cotton"
+        why_wrong: "Fair trade is about how producers are treated, not recycled materials."
+      - text: "The covers are cheaper than other brands'"
+        why_wrong: "Fair trade usually means paying producers more, not less."
+      - text: "The covers can be returned for a refund"
+        why_wrong: "That's a consumer right, not fair trade."
+    answer: 0
+    explanation: "Fair trade helps producers in developing countries by improving trading conditions, including workers' rights."
+
+  - id: eco1-008
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: greener-power
+    command: explain
+    scenario: wind-up-radio
+    see: "#products-using-greener-power-supplies"
+    text: "Which power supply would best suit the radio?"
+    options:
+      - text: "Wind-up mechanism with a small PV cell"
+      - text: "Mains power lead"
+        why_wrong: "There's no mains power at a festival, and the brief rules it out."
+      - text: "Disposable batteries"
+        why_wrong: "Disposable batteries create waste, which increases the footprint."
+      - text: "A petrol generator"
+        why_wrong: "Burning fossil fuel gives a large footprint."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It uses free human and solar energy, with no batteries to throw away"
+        - text: "It's the cheapest option to manufacture"
+          why_wrong: "The brief is about footprint and no mains power, not cost."
+        - text: "It makes the radio louder"
+          why_wrong: "The power source doesn't decide the volume."
+        - text: "It looks more modern"
+          why_wrong: "Appearance isn't the reason for choosing it."
+      answer: 0
+    explanation: "Wind-up and PV power use free energy and need no disposable batteries, so the radio is independent of mains power and lower impact."
+
+  - id: eco1-009
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: pv-cells
+    command: describe
+    context: true
+    see: "#products-using-greener-power-supplies"
+    text: "A solar garden light has a photovoltaic (PV) cell on top. What does the PV cell do?"
+    options:
+      - text: "Converts sunlight into electricity"
+      - text: "Stores energy from turning a handle"
+        why_wrong: "That's wind-up technology."
+      - text: "Changes colour in sunlight"
+        why_wrong: "That's a photochromic material."
+      - text: "Converts heat into movement"
+        why_wrong: "PV cells convert light, not heat, and produce electricity, not movement."
+    answer: 0
+    explanation: "PV cells turn free sunlight into electricity and can be used as power supplies or trickle chargers."
+
+  - id: eco1-010
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: incremental-development
+    command: identify
+    scenario: phone-maker
+    see: "#average-life-of-a-mobile-phone"
+    text: "Releasing a slightly improved phone model every year is known as what?"
+    options:
+      - text: "Incremental development"
+      - text: "Cradle to cradle design"
+        why_wrong: "Cradle to cradle is about reusing materials at the end of a product's life."
+      - text: "Fair trade"
+        why_wrong: "Fair trade is about producers' trading conditions."
+      - text: "Eco-efficiency"
+        why_wrong: "Frequent new models usually increase impact, not reduce it."
+    answer: 0
+    explanation: "Frequent small improvements to new models are incremental development, which helps keep sales consistent."
+
+  - id: eco1-011
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: planned-obsolescence
+    command: explain
+    scenario: phone-maker
+    see: "#planned-obsolescence"
+    text: "What is the main environmental effect of customers replacing their phones so often?"
+    options:
+      - text: "More waste and more resources used"
+      - text: "Less waste, because new phones are more efficient"
+        why_wrong: "Each new phone uses fresh materials and energy, and the old one becomes waste."
+      - text: "No effect, because phones are small"
+        why_wrong: "Millions of small phones add up to a lot of waste and resources."
+      - text: "Lower energy use in factories"
+        why_wrong: "Making more phones uses more energy, not less."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Each replacement needs new materials and energy, and the old phone is often discarded"
+        - text: "Old phones are always recycled"
+          why_wrong: "Many aren't, and recycling still uses energy."
+        - text: "New phones use less packaging"
+          why_wrong: "Packaging is a small part of the impact, and isn't the reason."
+        - text: "Phones contain no valuable materials"
+          why_wrong: "Phones contain valuable, finite metals. That's part of the problem."
+      answer: 0
+    explanation: "Short product lives mean more manufacturing, more resource use and more waste, which increases the ecological footprint."
+
+  - id: eco1-012
+    type: multi
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: greener-living
+    command: identify
+    see: "#living-in-a-greener-world"
+    text: "Select TWO ways people can live in a greener world."
+    options:
+      - text: "Repairing a product instead of upgrading it"
+      - text: "Cutting down on packaging"
+      - text: "Driving short journeys instead of cycling"
+        why_wrong: "Cycling or car sharing is greener than driving."
+      - text: "Raising the central heating thermostat"
+        why_wrong: "Lowering the thermostat saves energy."
+    answer: [0, 1]
+    explanation: "Repairing instead of upgrading and cutting packaging both reduce waste and the use of new resources."
+
+  - id: eco1-013
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: six-rs
+    command: identify
+    context: true
+    see: "#the-six-rs-of-sustainability"
+    text: "A shopper says no to a free plastic bag they don't need. Which of the Six Rs is this?"
+    options:
+      - text: "Refuse"
+      - text: "Recycle"
+        why_wrong: "Recycling processes a used bag. Refusing means not taking it at all."
+      - text: "Repair"
+        why_wrong: "There's nothing to repair."
+      - text: "Reuse"
+        why_wrong: "Reuse would be using the bag again. Here it's not taken."
+    answer: 0
+    explanation: "Refuse means not accepting a product you don't need, especially if it's unsustainable."
+
+  - id: eco1-014
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: ecological-design
+    command: describe
+    see: "#ecological-footprint"
+    text: "Which statement best describes ecological design?"
+    options:
+      - text: "Solving problems while minimising environmental damage, without creating new problems"
+      - text: "Designing products that look natural"
+        why_wrong: "Looking natural is aesthetics. Ecological design is about environmental impact."
+      - text: "Designing products only from wood"
+        why_wrong: "Ecological design isn't limited to one material."
+      - text: "Designing the cheapest possible product"
+        why_wrong: "Cheapness isn't the aim. Minimising environmental damage is."
+    answer: 0
+    explanation: "Ecological design solves problems alongside minimising environmental damage, so designers don't create other problems."
+
+  - id: eco1-015
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: lca
+    command: describe
+    context: true
+    see: "#life-cycle-analysis-lca"
+    text: "A designer wants to compare the environmental impact of an aluminium and a plastic water bottle at every stage of their lives. What should they carry out?"
+    options:
+      - text: "A life cycle analysis (LCA)"
+      - text: "A fair trade audit"
+        why_wrong: "Fair trade is about producers' conditions, not each stage's environmental impact."
+      - text: "Market research"
+        why_wrong: "Market research looks at what users want, not environmental impact."
+      - text: "Anthropometric measurement"
+        why_wrong: "Anthropometrics is about body sizes."
+    answer: 0
+    explanation: "An LCA considers environmental impact at every stage: materials, manufacture, use and disposal."
+
+  - id: eco1-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: wind-up-technique
+    command: explain
+    scenario: wind-up-radio
+    see: "#products-using-greener-power-supplies"
+    exam_question:
+      text: "Explain one benefit of using wind-up technology in the radio."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's eco-friendly."
+        marks_awarded: 0
+        why_wrong: "Too vague: it doesn't say what the benefit is or why."
+      - text: "It doesn't need batteries."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but there's no explanation of why that matters."
+      - text: "It doesn't need batteries, so no batteries are thrown away and it can be used at the festival without mains power."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: the benefit, plus the consequence for the environment or user."
+
+  - id: eco1-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: circular-technique
+    command: explain
+    see: "#the-circular-economy"
+    exam_question:
+      text: "Explain how designers can support the circular economy."
+      marks: 2
+    sample_answer: "They can design products that can be taken apart."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that the parts and materials can then be reused or recycled into new products"
+      - text: "Adding that the product should be cheap"
+        why_wrong: "Cost doesn't explain how the circular economy is supported."
+      - text: "Adding that the product should be colourful"
+        why_wrong: "Appearance isn't relevant."
+      - text: "Adding that the product should be sold abroad"
+        why_wrong: "Where it's sold doesn't put materials back into use."
+    answer: 0
+    explanation: "The second mark comes from the consequence: parts can go back into use instead of becoming waste."
+
+  - id: eco1-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 ecological footprint"
+    concept: evaluate-technique
+    command: evaluate
+    scenario: phone-maker
+    see: "#average-life-of-a-mobile-phone"
+    exam_question:
+      text: "Evaluate the manufacturer's decision to release a new model every year."
+      marks: 4
+    text: "Which answer actually evaluates the decision?"
+    options:
+      - text: "The manufacturer releases a new phone every year."
+        why_wrong: "This restates the question."
+      - text: "It keeps sales consistent and brings new features, but it uses more resources and creates more waste, so overall it is bad for the environment unless old phones are recycled."
+      - text: "Phones contain metals and plastics."
+        why_wrong: "A fact about materials isn't an evaluation."
+      - text: "It's a bad idea."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up strengths and weaknesses, then reach a justified judgement."

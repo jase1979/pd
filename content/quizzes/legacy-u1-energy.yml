@@ -1,0 +1,418 @@
+# Energy Generation & Storage (legacy GCSE, 2.1.1).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-energy
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "Energy Generation & Storage"
+page: /gcse/unit1/energy/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: coastal-town
+    text: "A coastal town wants to power its factories with renewable energy. It has a long, tidal coastline and is often windy."
+  - id: camping-products
+    text: "A company designs products for campsites with no mains electricity, including a lantern and a phone charger."
+
+questions:
+
+  - id: energy1-001
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: renewable-identify
+    command: identify
+    see: "#renewable-and-non-renewable-energy-sources"
+    text: "Which of these is a renewable energy source?"
+    options:
+      - text: "Solar"
+      - text: "Coal"
+        why_wrong: "Coal is a fossil fuel: available in limited amounts, so it will run out."
+      - text: "Gas"
+        why_wrong: "Gas is a fossil fuel and non-renewable."
+      - text: "Nuclear"
+        why_wrong: "Nuclear is classed as non-renewable, even though it produces no CO₂ while generating."
+    answer: 0
+    explanation: "Renewable sources (wind, solar, tidal, geothermal, biomass, hydro-electric) come from a natural supply that's continuously replaced."
+
+  - id: energy1-002
+    type: multi
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: non-renewable-identify
+    command: identify
+    see: "#renewable-and-non-renewable-energy-sources"
+    text: "Select TWO non-renewable energy sources."
+    options:
+      - text: "Oil"
+      - text: "Nuclear"
+      - text: "Tidal"
+        why_wrong: "Tides come back twice a day, so tidal energy is renewable."
+      - text: "Biomass"
+        why_wrong: "Biomass is renewable, as long as new trees and crops are planted."
+    answer: [0, 1]
+    explanation: "Coal, oil, gas and nuclear are non-renewable. Nuclear is a common trap: it's clean while generating, but non-renewable."
+
+  - id: energy1-003
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: renewable-meaning
+    command: state
+    see: "#renewable-and-non-renewable-energy-sources"
+    text: "Why are renewable sources called 'green' or 'clean' energy?"
+    options:
+      - text: "They come from a natural supply that is continuously replaced"
+      - text: "They are always the cheapest"
+        why_wrong: "Many renewables, like solar and tidal, are expensive to set up."
+      - text: "They never affect wildlife"
+        why_wrong: "Some do: wind turbines can harm birds, and tidal schemes can harm marine life."
+      - text: "They are fossil fuels"
+        why_wrong: "Fossil fuels are the 'dirty', non-renewable sources."
+    answer: 0
+    explanation: "Renewable energy comes from a natural supply that's continuously replaced, and usually causes less pollution."
+
+  - id: energy1-004
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: fossil-fuel-issues
+    command: state
+    see: "#issues-with-fossil-fuels"
+    text: "Burning fossil fuels releases CO₂. What does this contribute to?"
+    options:
+      - text: "Global warming"
+      - text: "Damage to the ozone layer"
+        why_wrong: "Ozone damage is caused by CFCs, not CO₂."
+      - text: "Acid rain"
+        why_wrong: "Acid rain comes from sulphur dioxide, another pollutant from fossil fuels. CO₂ causes global warming."
+      - text: "Earthquakes"
+        why_wrong: "Earthquake risk is linked to geothermal drilling, not burning fuel."
+    answer: 0
+    explanation: "Burning coal, oil and gas releases CO₂, which contributes to global warming."
+
+  - id: energy1-005
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: fossil-fuel-issues
+    command: identify
+    see: "#issues-with-fossil-fuels"
+    text: "Which pollutant from burning fossil fuels causes acid rain?"
+    options:
+      - text: "Sulphur dioxide"
+      - text: "Carbon dioxide"
+        why_wrong: "CO₂ contributes to global warming. Sulphur dioxide causes acid rain."
+      - text: "Radioactive waste"
+        why_wrong: "Radioactive waste comes from nuclear power, not burning fossil fuels."
+      - text: "Oxygen"
+        why_wrong: "Oxygen isn't a pollutant. Burning actually uses it up."
+    answer: 0
+    explanation: "Fossil fuels release CO₂ (global warming) and pollutants such as sulphur dioxide (acid rain)."
+
+  - id: energy1-006
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: tidal-choice
+    command: compare
+    scenario: coastal-town
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "Which renewable source would give the town the most efficient supply?"
+    options:
+      - text: "Tidal"
+      - text: "Solar"
+        why_wrong: "Solar depends on sunny weather and is less efficient than tidal."
+      - text: "Wind"
+        why_wrong: "Wind only works when it's windy, and tidal systems are more efficient."
+      - text: "Geothermal"
+        why_wrong: "Geothermal is limited to specific 'hot spot' locations and is very costly."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It is around 80% efficient and generates power for about 10 hours a day"
+        - text: "It never harms marine life"
+          why_wrong: "Tidal schemes can damage coastlines and harm marine life. That's a disadvantage."
+        - text: "It is cheap to set up"
+          why_wrong: "Tidal energy is expensive to set up."
+        - text: "It works anywhere"
+          why_wrong: "It needs a suitable tidal coastline, which this town has."
+      answer: 0
+    explanation: "Tidal energy is around 80% efficient, better than solar or wind, and generates power for about 10 hours a day."
+
+  - id: energy1-007
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: tidal-disadvantage
+    command: state
+    scenario: coastal-town
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "What is a disadvantage of building a tidal scheme along the town's coastline?"
+    options:
+      - text: "It can damage the coastline's ecology and harm marine life"
+      - text: "It risks triggering earthquakes"
+        why_wrong: "Earthquake risk is a disadvantage of geothermal energy."
+      - text: "It produces radioactive waste"
+        why_wrong: "Radioactive waste comes from nuclear power."
+      - text: "It only works in sunny weather"
+        why_wrong: "That's solar energy. Tides don't depend on sunshine."
+    answer: 0
+    explanation: "Tidal energy is expensive to set up and can damage ecological coastlines and harm marine life."
+
+  - id: energy1-008
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: wind-disadvantage
+    command: identify
+    context: true
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "Residents object to plans for a wind farm on a nearby hill. Which disadvantage of wind power are they most likely to raise?"
+    options:
+      - text: "Turbines can be unsightly, and can harm birds"
+      - text: "It produces radioactive waste"
+        why_wrong: "That's nuclear power."
+      - text: "It causes acid rain"
+        why_wrong: "Acid rain comes from burning fossil fuels."
+      - text: "It risks triggering earthquakes"
+        why_wrong: "That's geothermal energy."
+    answer: 0
+    explanation: "Wind has little environmental impact, but turbines can be seen as visual pollution, are expensive to install and can harm birds."
+
+  - id: energy1-009
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: geothermal
+    command: state
+    context: true
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "A region with volcanic 'hot spots' is considering geothermal energy. What is a risk of this?"
+    options:
+      - text: "Drilling can risk triggering earthquakes"
+      - text: "It only works when it's windy"
+        why_wrong: "That's wind power. Geothermal uses heat from below ground."
+      - text: "It needs sunny weather"
+        why_wrong: "That's solar power."
+      - text: "It releases sulphur dioxide like coal"
+        why_wrong: "Burning fossil fuels releases sulphur dioxide. Geothermal doesn't burn anything."
+    answer: 0
+    explanation: "Geothermal uses hot water from near molten rock, but it's very costly, limited to certain locations, and risks triggering earthquakes."
+
+  - id: energy1-010
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: nuclear
+    command: state
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "What is a disadvantage of nuclear energy?"
+    options:
+      - text: "Radioactive waste must be stored safely for thousands of years"
+      - text: "It produces large amounts of CO₂ while generating"
+        why_wrong: "Nuclear produces no CO₂ while generating, which is one of its advantages."
+      - text: "Its output is small and unreliable"
+        why_wrong: "Nuclear gives a large, reliable output."
+      - text: "It only works when it's windy"
+        why_wrong: "That's wind power."
+    answer: 0
+    explanation: "Nuclear gives large, reliable output with no CO₂, but its radioactive waste lasts thousands of years and accidents can be serious."
+
+  - id: energy1-011
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: uk-targets
+    command: state
+    see: "#government-targets"
+    text: "By what year has the UK committed to reaching net zero emissions?"
+    options:
+      - text: "2050"
+      - text: "2030"
+        why_wrong: "2030 is when sales of new petrol and diesel cars are banned."
+      - text: "2035"
+        why_wrong: "2035 is the cut-off for selling some new hybrid vehicles."
+      - text: "2025"
+        why_wrong: "The UK's net zero commitment is for 2050."
+    answer: 0
+    explanation: "The UK has committed to net zero emissions by 2050, including more wind energy and cutting carbon emissions."
+
+  - id: energy1-012
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: vehicle-ban
+    command: state
+    see: "#fossil-fuel-powered-road-vehicles"
+    text: "From 2030, what is banned in the UK?"
+    options:
+      - text: "The sale of new petrol and diesel cars"
+      - text: "Driving any petrol or diesel car"
+        why_wrong: "The ban is on selling new cars, not driving existing ones."
+      - text: "The sale of all hybrid vehicles"
+        why_wrong: "Some new hybrids can still be sold until 2035."
+      - text: "The sale of electric cars"
+        why_wrong: "Electric cars are encouraged, often with reduced or no road tax."
+    answer: 0
+    explanation: "From 2030 new petrol and diesel cars can't be sold in the UK; some hybrids can be sold until 2035."
+
+  - id: energy1-013
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: camping-charger-power
+    command: explain
+    scenario: camping-products
+    see: "#renewable-energy-for-products"
+    text: "The charger should collect energy during the day and charge phones at night. What should power it?"
+    options:
+      - text: "PV cells with a built-in rechargeable battery"
+      - text: "Disposable batteries"
+        why_wrong: "Disposable batteries create waste and contain harmful chemicals, and campers would keep buying more."
+      - text: "Mains electricity"
+        why_wrong: "There's no mains electricity at these campsites."
+      - text: "A petrol generator"
+        why_wrong: "That burns a fossil fuel, producing CO₂, and doesn't store free energy from the day."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "PV cells turn free sunlight into electricity, stored in the battery for later"
+        - text: "It generates power when a handle is turned"
+          why_wrong: "That's wind-up technology."
+        - text: "It is cheap and convenient"
+          why_wrong: "That describes disposable batteries, which create waste."
+        - text: "It gives a constant supply from the grid"
+          why_wrong: "That's mains electricity, which isn't available."
+      answer: 0
+    explanation: "PV cells convert free sunlight into electricity, often to charge a built-in battery, so energy collected by day can be used at night."
+
+  - id: energy1-014
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: wind-up
+    command: describe
+    scenario: camping-products
+    see: "#renewable-energy-for-products"
+    text: "The company also sells a wind-up torch. Where does its energy come from?"
+    options:
+      - text: "Turning the handle generates and stores energy, so no batteries are needed"
+      - text: "Sunlight falling on PV cells"
+        why_wrong: "That's solar power. A wind-up torch uses mechanical movement."
+      - text: "Mains electricity"
+        why_wrong: "A wind-up torch needs no mains or batteries."
+      - text: "Disposable batteries inside it"
+        why_wrong: "Wind-up technology works without batteries."
+    answer: 0
+    explanation: "Wind-up technology uses the mechanical movement of turning the handle to generate and store energy."
+
+  - id: energy1-015
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: battery-types
+    command: describe
+    context: true
+    see: "#energy-storage-in-household-products"
+    text: "Why are rechargeable batteries used in laptops rather than disposable ones?"
+    options:
+      - text: "They cost more at first but can be reused hundreds of times"
+      - text: "They are cheaper to buy at first"
+        why_wrong: "Disposable batteries are cheaper at first. Rechargeables save money over time."
+      - text: "They contain no chemicals"
+        why_wrong: "All batteries contain chemicals. Rechargeables just make far less waste."
+      - text: "They never need charging"
+        why_wrong: "They're rechargeable: they need charging, many times over."
+    answer: 0
+    explanation: "Rechargeable batteries, such as lithium-ion, cost more at first but can be reused hundreds of times, cutting waste and cost."
+
+  - id: energy1-016
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: energy-percentage-calc
+    command: calculate
+    context: true
+    see: "#manufacturing-using-renewable-energy"
+    text: "A factory uses 300 MWh of energy a year, and 66% of it comes from fossil fuels. How much comes from fossil fuels?"
+    options:
+      - text: "198 MWh"
+      - text: "102 MWh"
+        why_wrong: "That's the remaining 34%, the part that isn't from fossil fuels."
+      - text: "66 MWh"
+        why_wrong: "66% is a proportion, not an amount. Work out 66% of 300."
+      - text: "454.5 MWh"
+        why_wrong: "This divides by 0.66 instead of multiplying. The answer must be less than the total of 300."
+    answer: 0
+    working: |
+      66% = 0.66.
+      0.66 × 300 = 198 MWh.
+    explanation: "To find a percentage of an amount, multiply by the percentage as a decimal: 66% of 300 = 0.66 × 300."
+
+  - id: energy1-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: pv-technique
+    command: explain
+    scenario: camping-products
+    see: "#renewable-energy-for-products"
+    exam_question:
+      text: "Explain why PV cells are suitable for powering the camping lantern."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Solar power is green."
+        marks_awarded: 0
+        why_wrong: "Too vague, and nothing is linked to the lantern or the campsite."
+      - text: "PV cells turn sunlight into electricity."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't linked to the campsite with no mains power."
+      - text: "PV cells turn free sunlight into electricity to charge the lantern's battery, so it works at a campsite with no mains power."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: how the technology works, then why that suits this product and setting."
+
+  - id: energy1-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: solar-disadvantage-technique
+    command: describe
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    exam_question:
+      text: "Describe one disadvantage of solar energy."
+      marks: 2
+    sample_answer: "It depends on the weather."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it needs sunny conditions, so it generates less on dull days"
+      - text: "Adding that it is clean"
+        why_wrong: "That's an advantage, so it doesn't develop the disadvantage."
+      - text: "Adding that it is free once set up"
+        why_wrong: "That's an advantage."
+      - text: "Adding that wind turbines are unsightly"
+        why_wrong: "That's a disadvantage of wind power, not solar."
+    answer: 0
+    explanation: "A describe answer needs development: what about the weather, and what effect it has."
+
+  - id: energy1-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 energy"
+    concept: compare-technique
+    command: compare
+    context: true
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    exam_question:
+      text: "Compare wind and tidal energy for generating electricity."
+      marks: 4
+    text: "Which answer actually compares the two?"
+    options:
+      - text: "Wind turbines can harm birds."
+        why_wrong: "This describes wind only."
+      - text: "Tidal energy is around 80% efficient."
+        why_wrong: "This describes tidal only."
+      - text: "Both are renewable, but tidal is more efficient and predictable, while wind only works when it's windy and turbines can harm birds."
+      - text: "They are both expensive."
+        why_wrong: "A similarity alone isn't enough for 4 marks. A comparison needs differences too."
+    answer: 2
+    explanation: "Compare means show how two things are alike and how they differ, using words like 'both', 'but', 'more… than'."

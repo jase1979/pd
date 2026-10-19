@@ -1,0 +1,391 @@
+# Modern & Smart Materials (legacy GCSE, 2.1.1 Core Knowledge).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# Concentrates on what this page adds to the 2.1.2 one: micro-encapsulation,
+# biometrics, smart fibres and the uses of shape memory alloys.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u1-modern-smart-materials
+spec: gcse-legacy
+unit: "2.1.1"
+topic: "Modern & Smart Materials (2.1.1)"
+page: /gcse/unit1/modern-smart-materials/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: running-jacket
+    text: "A sportswear brand is designing a running jacket. It should keep the runner at a comfortable temperature, have a built-in heater for cold mornings, and change colour in bright sunlight."
+  - id: secure-phone
+    text: "A company is designing a smartphone that unlocks using its owner's fingerprint or face."
+
+questions:
+
+  - id: smart1-001
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: micro-encapsulation
+    command: describe
+    see: "#micro-encapsulation"
+    text: "What is micro-encapsulation?"
+    options:
+      - text: "Enclosing tiny particles or droplets in a coating, released when the capsule breaks"
+      - text: "Weaving conductive fibres into a fabric"
+        why_wrong: "That's how smart fibres carry electrical signals, not micro-encapsulation."
+      - text: "Changing colour in UV light"
+        why_wrong: "That's what photochromic materials do."
+      - text: "Returning to a pre-set shape when heated"
+        why_wrong: "That's a shape memory alloy."
+    answer: 0
+    explanation: "Micro-encapsulation encloses tiny particles or droplets in capsules that release their contents when broken by pressure, heat or friction."
+
+  - id: smart1-002
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: micro-encapsulation
+    command: identify
+    context: true
+    see: "#micro-encapsulation"
+    text: "A scratch-and-sniff birthday card releases a strawberry smell when you rub it. Which technology is this?"
+    options:
+      - text: "Micro-encapsulation"
+      - text: "Photochromic ink"
+        why_wrong: "Photochromic ink changes colour in UV light. It doesn't release a smell."
+      - text: "Biometrics"
+        why_wrong: "Biometrics identify people from biological features such as fingerprints."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is a mouldable polymer."
+    answer: 0
+    explanation: "Fragrance is held in tiny capsules in the surface. Scratching breaks them and releases the smell."
+
+  - id: smart1-003
+    type: two_tier
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: phase-change-textiles
+    command: explain
+    scenario: running-jacket
+    see: "#micro-encapsulation"
+    text: "Which technology would help keep the runner at a comfortable temperature?"
+    options:
+      - text: "Micro-encapsulated phase-change materials"
+      - text: "Photochromic dye"
+        why_wrong: "Photochromic dye changes colour in UV light. It doesn't affect temperature."
+      - text: "A biometric sensor"
+        why_wrong: "Biometric sensors identify people. They don't regulate temperature."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is a hand-mouldable polymer, not a textile technology."
+    answer: 0
+    reason:
+      text: "How does it work?"
+      options:
+        - text: "Capsules in the fabric absorb heat, then release it again"
+        - text: "It changes colour in UV light"
+          why_wrong: "That's photochromic."
+        - text: "It identifies the wearer"
+          why_wrong: "That's biometrics."
+        - text: "It becomes mouldable at 62°C"
+          why_wrong: "That's polymorph."
+      answer: 0
+    explanation: "Phase-change materials in micro-capsules absorb heat when the runner is hot and release it as they cool, regulating body temperature."
+
+  - id: smart1-004
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: smart-fibres
+    command: identify
+    scenario: running-jacket
+    see: "#smart-fibres-and-technical-textiles"
+    text: "Which smart fibre would let the jacket have a built-in heater?"
+    options:
+      - text: "Conductive fibres"
+      - text: "Thermochromic dye"
+        why_wrong: "Thermochromic dye changes colour with temperature. It can't produce heat."
+      - text: "Shape memory fibres"
+        why_wrong: "Shape memory fibres change shape or tighten. They don't carry current to a heater."
+      - text: "Photochromic dye"
+        why_wrong: "Photochromic dye changes colour in UV light."
+    answer: 0
+    explanation: "Conductive fibres woven into fabric carry electrical signals or current, so they're used in heated jackets and wearable technology."
+
+  - id: smart1-005
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: photo-vs-thermo
+    command: identify
+    scenario: running-jacket
+    see: "#smart-fibres-and-technical-textiles"
+    text: "Which dye would make the jacket change colour in bright sunlight?"
+    options:
+      - text: "Photochromic dye"
+      - text: "Thermochromic dye"
+        why_wrong: "Thermochromic dye reacts to temperature, not to UV light from the sun."
+      - text: "Conductive fibre"
+        why_wrong: "Conductive fibres carry electrical signals. They don't change colour."
+      - text: "Micro-encapsulated fragrance"
+        why_wrong: "Fragrance capsules release a smell when broken."
+    answer: 0
+    explanation: "Photochromic dyes change colour when exposed to UV light, as in sunlight, and change back when it's removed."
+
+  - id: smart1-006
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: photo-vs-thermo
+    command: identify
+    context: true
+    see: "#thermochromic-materials"
+    text: "A mood ring changes colour as the wearer's finger warms up. Which type of material is this?"
+    options:
+      - text: "Thermochromic"
+      - text: "Photochromic"
+        why_wrong: "Photochromic materials react to UV light, not body heat."
+      - text: "Micro-encapsulated"
+        why_wrong: "Micro-encapsulation releases contents from capsules. It doesn't change colour with warmth."
+      - text: "Biometric"
+        why_wrong: "Biometrics identify people from biological features."
+    answer: 0
+    explanation: "Thermochromic materials change colour in response to temperature, which is how mood rings work."
+
+  - id: smart1-007
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: sma-uses
+    command: describe
+    context: true
+    see: "#shape-memory-alloys-smas"
+    text: "How does a Nitinol dental brace help straighten teeth?"
+    options:
+      - text: "At body temperature the wire tries to return to its original shape, gently pushing the teeth"
+      - text: "It changes colour as the teeth move"
+        why_wrong: "Colour change is thermochromic or photochromic. Nitinol is a shape memory alloy."
+      - text: "It is moulded to the teeth by hand at 62°C"
+        why_wrong: "That's polymorph, not Nitinol."
+      - text: "It carries electrical signals to the teeth"
+        why_wrong: "That's conductive fibres."
+    answer: 0
+    explanation: "Nitinol wire tries to return to its pre-set shape at body temperature, exerting a gentle, consistent force that moves the teeth."
+
+  - id: smart1-008
+    type: multi
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: sma-uses
+    command: identify
+    see: "#shape-memory-alloys-smas"
+    text: "Select TWO uses of shape memory alloys."
+    options:
+      - text: "Medical stents"
+      - text: "Spectacle frames"
+      - text: "Mood rings"
+        why_wrong: "Mood rings use thermochromic materials."
+      - text: "Scratch-and-sniff cards"
+        why_wrong: "Scratch-and-sniff uses micro-encapsulation."
+    answer: [0, 1]
+    explanation: "SMAs such as Nitinol are used for spectacle frames, dental braces and medical stents, which expand back to shape inside the body."
+
+  - id: smart1-009
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: polymorph
+    command: state
+    see: "#polymorph"
+    text: "Which statement about polymorph is true?"
+    options:
+      - text: "It can be reheated and reshaped many times"
+      - text: "Once it has set, it can never be reshaped"
+        why_wrong: "That describes a thermoset. Polymorph is a thermoplastic that can be reshaped repeatedly."
+      - text: "It softens at around 162°C"
+        why_wrong: "Polymorph softens at about 62°C, low enough to warm in hot water."
+      - text: "It changes colour with temperature"
+        why_wrong: "That's thermochromic material."
+    answer: 0
+    explanation: "Polymorph softens at about 62°C, can be shaped by hand, sets rigid, and can be reheated and reshaped many times."
+
+  - id: smart1-010
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: biometrics
+    command: identify
+    scenario: secure-phone
+    see: "#biometrics"
+    text: "Unlocking the phone with the owner's fingerprint is an example of what?"
+    options:
+      - text: "Biometrics"
+      - text: "Micro-encapsulation"
+        why_wrong: "Micro-encapsulation releases contents from tiny capsules."
+      - text: "A shape memory alloy"
+        why_wrong: "SMAs change shape when heated."
+      - text: "Photochromic technology"
+        why_wrong: "Photochromic materials change colour in UV light."
+    answer: 0
+    explanation: "Biometrics identify or authenticate people using unique biological characteristics, such as fingerprints."
+
+  - id: smart1-011
+    type: multi
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: biometric-examples
+    command: identify
+    scenario: secure-phone
+    see: "#biometrics"
+    text: "Select TWO biometric methods the phone could use."
+    options:
+      - text: "Facial recognition"
+      - text: "Fingerprint sensor"
+      - text: "A four-digit PIN"
+        why_wrong: "A PIN is something you know, not a biological characteristic."
+      - text: "A password"
+        why_wrong: "A password isn't biological, so it isn't biometric."
+    answer: [0, 1]
+    explanation: "Biometrics use biological features: fingerprints, faces, irises and voices."
+
+  - id: smart1-012
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: biometric-ethics
+    command: describe
+    scenario: secure-phone
+    see: "#biometrics"
+    text: "What is the main ethical concern about the phone storing its owner's fingerprint and face data?"
+    options:
+      - text: "Personal biological data is highly sensitive, so its storage and use must be carefully regulated"
+      - text: "Fingerprints wear out over time"
+        why_wrong: "That isn't the ethical issue. The concern is how sensitive biological data is stored and used."
+      - text: "The sensors are too slow"
+        why_wrong: "Speed is a technical issue, not an ethical one."
+      - text: "It makes the phone cheaper"
+        why_wrong: "Cost isn't an ethical concern here."
+    answer: 0
+    explanation: "Biometric data is highly sensitive and can't be changed like a password, so storing and using it raises social and ethical issues."
+
+  - id: smart1-013
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: photochromic-uses
+    command: identify
+    context: true
+    see: "#photochromic-materials"
+    text: "Banknotes include security marks that only show up under UV light. Which material is used?"
+    options:
+      - text: "Photochromic (UV-reactive) ink"
+      - text: "Thermochromic ink"
+        why_wrong: "Thermochromic ink reacts to temperature, not UV light."
+      - text: "Conductive fibres"
+        why_wrong: "Conductive fibres carry electrical signals."
+      - text: "Micro-encapsulated adhesive"
+        why_wrong: "Adhesive capsules are used in self-healing materials."
+    answer: 0
+    explanation: "Photochromic materials react to UV light, so they're used in security printing on banknotes and documents."
+
+  - id: smart1-014
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: thermochromic-reversible
+    command: state
+    see: "#thermochromic-materials"
+    text: "What happens to a thermochromic material when it returns to normal temperature?"
+    options:
+      - text: "It returns to its original colour"
+      - text: "It stays the new colour permanently"
+        why_wrong: "The change is reversible, so it goes back."
+      - text: "It melts"
+        why_wrong: "Thermochromic materials change colour, not state, at these temperatures."
+      - text: "It becomes conductive"
+        why_wrong: "That's not what thermochromic materials do."
+    answer: 0
+    explanation: "The colour change is reversible: when the temperature returns to normal, so does the colour."
+
+  - id: smart1-015
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: smart-definition
+    command: state
+    see: "#what-are-smart-materials"
+    text: "What makes a material 'smart'?"
+    options:
+      - text: "Its properties change in response to an external stimulus, such as heat, light or pressure"
+      - text: "It is very strong and lightweight"
+        why_wrong: "Strength and lightness describe modern materials such as carbon fibre."
+      - text: "It contains electronics"
+        why_wrong: "Smart materials sense and react themselves. They don't need electronics."
+      - text: "It was invented recently"
+        why_wrong: "Being new doesn't make a material smart. Reacting to a stimulus does."
+    answer: 0
+    explanation: "Smart materials sense and react to their environment: their properties change with temperature, light, pressure or current."
+
+  - id: smart1-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: phase-change-technique
+    command: explain
+    scenario: running-jacket
+    see: "#micro-encapsulation"
+    exam_question:
+      text: "Explain why micro-encapsulated phase-change materials are suitable for the running jacket."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "They are smart materials."
+        marks_awarded: 0
+        why_wrong: "Classifying them doesn't explain why they suit the jacket."
+      - text: "They absorb and release heat."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't linked to the runner."
+      - text: "Capsules absorb heat when the runner is hot and release it when they cool, so their body temperature stays comfortable."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: how the technology behaves, linked to the benefit for the user."
+
+  - id: smart1-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: stent-technique
+    command: describe
+    context: true
+    see: "#shape-memory-alloys-smas"
+    exam_question:
+      text: "Describe how a medical stent made from a shape memory alloy works."
+      marks: 2
+    sample_answer: "It changes shape."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it's collapsed to be inserted, then expands to its original shape when warmed inside the body"
+      - text: "Adding that it's made from nickel and titanium"
+        why_wrong: "Its composition doesn't describe how the stent works."
+      - text: "Adding that it changes colour in UV light"
+        why_wrong: "That's a photochromic material."
+      - text: "Adding that it can be reshaped in hot water many times"
+        why_wrong: "That describes polymorph."
+    answer: 0
+    explanation: "The detail that earns the mark is the sequence: collapsed for insertion, then expanding back to its set shape in the body."
+
+  - id: smart1-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.1 modern and smart materials"
+    concept: discuss-technique
+    command: discuss
+    scenario: secure-phone
+    see: "#biometrics"
+    exam_question:
+      text: "Discuss the use of facial recognition to unlock the phone."
+      marks: 4
+    text: "Which answer actually discusses the issue?"
+    options:
+      - text: "Facial recognition uses your face to unlock the phone."
+        why_wrong: "This describes how it works, without weighing anything up."
+      - text: "It's quick and convenient because you just look at the phone, but it stores sensitive biological data, so it must be carefully regulated."
+      - text: "Facial recognition is also used at passport control."
+        why_wrong: "Another use isn't a discussion."
+      - text: "It's the best way to unlock a phone."
+        why_wrong: "A judgement with no reasons isn't a discussion."
+    answer: 1
+    explanation: "Discuss means look at different sides, here convenience against privacy, and reason towards a view."
