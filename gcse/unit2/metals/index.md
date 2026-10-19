@@ -16,8 +16,11 @@ unit_url: "/gcse/unit2/"
 | Metal | Properties | Uses |
 |---|---|---|
 | Mild steel (low carbon steel) | Ductile, tough, easy to shape/braze/weld, good conductor, corrodes easily | Nuts and bolts, screws, bicycle frames, car parts |
+| Medium carbon steel | Stronger and harder than mild steel but less ductile; can be hardened and tempered | Garden tools, springs, hammer heads, gears |
 | High carbon steel (tool steel) | Hard, brittle, less malleable than mild steel, good conductor | Tools, screwdrivers, chisels |
 | Cast iron | Brittle if thin, strong compressive strength, good conductivity, poor corrosion resistance | Gates, manhole covers, drains, vices |
+
+Carbon content (approximate): mild steel 0.15–0.35%, medium carbon steel 0.35–0.7%, high carbon steel 0.7–1.4%. More carbon makes steel harder but more brittle.
 
 ## Non-ferrous metals
 
@@ -40,8 +43,22 @@ unit_url: "/gcse/unit2/"
 | Alloy | Composition | Properties | Uses |
 |---|---|---|---|
 | Brass | Copper + zinc | Strong, ductile, good heat conductor, golden colour, darkens with age | Taps, door fittings, hinges, locks, musical instruments |
-| Bronze | Copper + aluminium and/or nickel | Hard, corrosion resistant, low friction, reddish-brown | Bearings, outdoor components, monuments, nautical |
-| Stainless steel | Iron + chromium, nickel and magnesium | Hard, tough, good resistance to stains and corrosion, shiny silver | Kitchen sinks, cutlery, hospital equipment, architecture |
+| Bronze | Copper + tin¹ | Hard, corrosion resistant, low friction, reddish-brown | Bearings, outdoor components, monuments, nautical |
+| Stainless steel | Iron + chromium + nickel | Hard, tough, good resistance to stains and corrosion, shiny silver | Kitchen sinks, cutlery, hospital equipment, architecture |
+| Pewter | Mainly tin with small amounts of copper and antimony | Very low melting point (about 170–230°C), soft, malleable, silvery and polishes well but tarnishes dull grey | Jewellery, tankards, ornaments; ideal for casting in school |
+
+¹ Some bronzes also contain aluminium (aluminium bronze), but the standard answer is copper and tin.
+
+### Casting pewter
+
+Because pewter melts at a low temperature, it can be cast in school using a mould cut from **MDF** (which resists the heat, is easy to cut and has no grain).
+
+**Hazards and precautions:**
+
+- **Molten metal and burns** — wear heat-resistant gloves, a leather apron and a face shield.
+- **Moisture in the mould** makes molten metal spit violently — make sure the mould and tools are completely dry.
+- **Fumes** from the mould scorching — work in a well-ventilated area or under extraction.
+- **Spills** — pour over a sand tray and keep the area clear.
 
 ## Properties of metals
 
@@ -49,21 +66,24 @@ unit_url: "/gcse/unit2/"
 |---|---|
 | Hardness | A metal's ability to withstand friction and abrasion |
 | Toughness | How well a metal can resist fracturing when force is applied |
-| Elasticity | The rate at which a metal distorts in size and shape under stress |
+| Elasticity | The ability of a material to bend or stretch under a force and return to its original shape when the force is removed |
 | Conductivity | How well a metal allows electricity or heat to flow through it |
 | Ductility | The ability of the metal to be drawn or deformed without fracture |
 | Tensile strength | The amount of load a metal can withstand before failure |
 | Malleability | The metal's ability to be bent or shaped easily |
+| Plasticity | The ability of a material to be permanently changed in shape without cracking, keeping its new shape once the force is removed |
 
 ## Melting points
 
 | Metal | Melting point |
 |---|---|
-| Mild steel | 1300°C |
+| Mild steel | about 1450°C |
 | Cast iron | 1200°C |
 | Copper | 1100°C |
 | Brass | 900°C |
 | Aluminium | 660°C |
+
+Values are approximate and vary with the exact composition.
 
 ## Finishing metals
 
