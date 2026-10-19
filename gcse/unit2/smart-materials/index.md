@@ -34,7 +34,7 @@ Fibre strands are embedded into a polymer resin matrix, resulting in high compre
 
 ### Styrofoam
 
-Styrofoam is a trade name for **expanded polystyrene foam** (also called blue modelling foam). Available in various sheet sizes and thicknesses. Easy to cut, shape and work, with excellent insulation properties.
+Styrofoam is a trade name for **extruded polystyrene foam** (also called blue modelling foam). It is not the same as expanded polystyrene (EPS), the white beaded foam used for packaging; the specification lists them separately. Available in various sheet sizes and thicknesses. Easy to cut, shape and work, with excellent insulation properties.
 
 ### Modelling foam board
 
@@ -66,3 +66,5 @@ Materials that **change shape when heated** and return to their original shape.
 ### Polymorph
 
 A polymer that becomes **malleable at 62°C**. Can be moulded by hand when warm, sets rigid when cooled, and can be reheated and reshaped repeatedly.
+
+**See also:** [Modern & Smart Materials (2.1.1 Core Knowledge)](/gcse/unit1/modern-smart-materials/)
