@@ -118,7 +118,7 @@ For each product, end with a short **"What this tells me"** sentence — link wh
 
 #### Other secondary research to include
 
-- **Past and present professionals and companies** — research designers or companies whose work relates to your context (link to the Designers content from Unit 1). This is named in the mark scheme, so don't skip it
+- **Past and present professionals and companies** — research designers or companies whose work relates to your context (link to the [Designers & Companies](/gcse/unit1/designers-and-companies/) content in 2.1.1 Core Knowledge). This is named in the mark scheme, so don't skip it
 - **Standards and legislation** — note any relevant BSI/ISO standards or safety requirements
 - **New materials, processes and techniques** — explore materials and making methods that could be appropriate, including modern and smart materials
 
