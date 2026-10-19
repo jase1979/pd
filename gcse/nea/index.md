@@ -1,6 +1,6 @@
 ---
 layout: unit
-title: "2.2.1 NEA Guide"
+title: "2.2 NEA Guide (Core & In-depth Skills)"
 level: gcse
 level_url: "/gcse/"
 ---
