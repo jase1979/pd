@@ -1,0 +1,435 @@
+# Stock Forms & Standard Components (D&T 2026, 1.1.28 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.28). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-stock-forms
+spec: gcse-2026
+unit: "1.1"
+topic: "Stock Forms & Standard Components"
+page: /gcse-2026/unit1/product-design/stock-forms/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: flat-pack-desk
+    text: "A company is designing a flat-pack desk made from MDF panels, to be sold online and assembled by the customer."
+  - id: garden-planter
+    text: "A designer is making a softwood garden planter, and a smooth pine shelf unit for indoors."
+
+questions:
+
+  - id: dt26-stock-001
+    status: draft
+    spec_point: "1.1.28"
+    concept: stock-form
+    command: describe
+    see: "#sectional-forms-and-standard-sizes-of-natural-timber"
+    text: "Why do designers use materials in standard stock sizes?"
+    options:
+      - text: "They are cheaper, easier to get, and parts can be planned to fit with little waste"
+      - text: "They are always stronger"
+        why_wrong: "Size doesn't change a material's strength."
+      - text: "They never need cutting"
+        why_wrong: "Stock is usually cut to size."
+      - text: "The law requires it"
+        why_wrong: "It's a practical and economic choice."
+    answer: 0
+    explanation: "Standard sizes keep materials cheaper and easier to obtain, and let designers plan for little waste."
+
+  - id: dt26-stock-002
+    status: draft
+    spec_point: "1.1.28"
+    concept: sectional-forms
+    command: identify
+    context: true
+    see: "#sectional-forms-and-standard-sizes-of-natural-timber"
+    text: "Which timber section would you buy to make the round rail of a towel holder?"
+    options:
+      - text: "Dowel"
+      - text: "Plank"
+        why_wrong: "A plank is wide and thick, with a rectangular section."
+      - text: "Board"
+        why_wrong: "A board is wide and thin."
+      - text: "Strip"
+        why_wrong: "A strip is narrow and thin, with a rectangular section."
+    answer: 0
+    explanation: "Dowel is a long round section, roughly 6–25 mm in diameter, used for rails, pegs, handles and axles."
+
+  - id: dt26-stock-003
+    status: draft
+    spec_point: "1.1.28"
+    concept: size-notation
+    command: describe
+    see: "#sectional-forms-and-standard-sizes-of-natural-timber"
+    text: "What does '95 × 22 mm' mean for a piece of timber?"
+    options:
+      - text: "95 mm wide and 22 mm thick"
+      - text: "95 mm long and 22 mm wide"
+        why_wrong: "Length is given separately. 95 × 22 is width × thickness."
+      - text: "95 cm wide and 22 cm thick"
+        why_wrong: "The units are millimetres."
+      - text: "22 mm wide and 95 mm thick"
+        why_wrong: "Width comes first, then thickness."
+    answer: 0
+    explanation: "Timber sizes are given as width × thickness, with the length stated separately."
+
+  - id: dt26-stock-004
+    status: draft
+    spec_point: "1.1.28"
+    concept: standard-lengths
+    command: state
+    see: "#sectional-forms-and-standard-sizes-of-natural-timber"
+    text: "Softwood standard lengths usually rise in steps of how much?"
+    options:
+      - text: "300 mm"
+      - text: "100 mm"
+        why_wrong: "The steps are larger: 300 mm, e.g. 1.8 m, 2.1 m, 2.4 m."
+      - text: "500 mm"
+        why_wrong: "The steps are 300 mm."
+      - text: "1 m"
+        why_wrong: "The steps are 300 mm."
+    answer: 0
+    explanation: "Softwood lengths rise in 300 mm steps, such as 1.8, 2.1, 2.4, 2.7 and 3.0 m."
+
+  - id: dt26-stock-005
+    type: two_tier
+    status: draft
+    spec_point: "1.1.28"
+    concept: sawn-vs-planed
+    command: explain
+    scenario: garden-planter
+    see: "#sawn-and-planed-timber"
+    text: "Which timber suits the indoor shelf unit?"
+    options:
+      - text: "Planed timber"
+      - text: "Sawn timber"
+        why_wrong: "Sawn timber is rough, with visible saw marks. It suits hidden or outdoor structural work."
+      - text: "Hardboard"
+        why_wrong: "Hardboard is a thin manufactured board, not solid timber."
+      - text: "Rough-cut logs"
+        why_wrong: "Logs aren't a stock form for furniture."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It's smooth on all faces, ready for visible furniture"
+        - text: "It's cheaper"
+          why_wrong: "Planed timber costs more because of the extra processing."
+        - text: "It's larger than its nominal size"
+          why_wrong: "Planed timber is smaller than its nominal size."
+        - text: "It has visible saw marks"
+          why_wrong: "That's sawn timber."
+      answer: 0
+    explanation: "Planed timber is smooth on all faces and used for furniture and visible woodwork. It costs more than sawn."
+
+  - id: dt26-stock-006
+    status: draft
+    spec_point: "1.1.28"
+    concept: nominal-size
+    command: describe
+    scenario: garden-planter
+    see: "#sawn-and-planed-timber"
+    text: "The designer buys '50 × 25 mm' planed pine for the shelves. What should they expect?"
+    options:
+      - text: "It will measure a few millimetres less, so they should check the actual size"
+      - text: "It will be exactly 50 × 25 mm"
+        why_wrong: "Planing removes a few millimetres from each face."
+      - text: "It will be larger"
+        why_wrong: "Planing makes it smaller, not larger."
+      - text: "It will be rough"
+        why_wrong: "Planed timber is smooth."
+    answer: 0
+    explanation: "Planed timber is smaller than its nominal sawn size, so check the actual size when designing joints."
+
+  - id: dt26-stock-007
+    status: draft
+    spec_point: "1.1.28"
+    concept: par
+    command: state
+    see: "#sawn-and-planed-timber"
+    text: "What does PAR stand for?"
+    options:
+      - text: "Planed all round"
+      - text: "Pine and redwood"
+        why_wrong: "PAR describes how the timber is finished, not the species."
+      - text: "Partly rough"
+        why_wrong: "PAR timber is planed smooth on all four faces."
+      - text: "Plywood and resin"
+        why_wrong: "PAR is a term for natural timber."
+    answer: 0
+    explanation: "PAR is timber planed smooth on all four faces."
+
+  - id: dt26-stock-008
+    status: draft
+    spec_point: "1.1.28"
+    concept: sheet-size
+    command: state
+    scenario: flat-pack-desk
+    see: "#manufactured-boards-sheets-standard-sizes-and-thicknesses"
+    text: "What is the full standard size of the MDF sheets the desk panels are cut from?"
+    options:
+      - text: "2440 × 1220 mm"
+      - text: "1220 × 610 mm"
+        why_wrong: "That's a half sheet."
+      - text: "3000 × 1500 mm"
+        why_wrong: "The standard is 2440 × 1220 mm (8 ft × 4 ft)."
+      - text: "1000 × 1000 mm"
+        why_wrong: "The standard is 2440 × 1220 mm."
+    answer: 0
+    explanation: "The standard full sheet is 2440 × 1220 mm (8 ft × 4 ft). Half sheets are 1220 × 610 mm."
+
+  - id: dt26-stock-009
+    type: two_tier
+    status: draft
+    spec_point: "1.1.28"
+    concept: nesting
+    command: explain
+    scenario: flat-pack-desk
+    see: "#manufactured-boards-sheets-standard-sizes-and-thicknesses"
+    text: "What should the designers do to waste as little MDF as possible when cutting the desk panels?"
+    options:
+      - text: "Nest the parts on the standard sheet, allowing for the kerf"
+      - text: "Cut each part from a new sheet"
+        why_wrong: "That wastes most of every sheet."
+      - text: "Make every part a different, non-standard size"
+        why_wrong: "Random sizes make nesting harder."
+      - text: "Use thicker MDF"
+        why_wrong: "Thickness doesn't reduce waste."
+    answer: 0
+    reason:
+      text: "What is the kerf?"
+      options:
+        - text: "The width of material removed by each saw cut"
+        - text: "The edge of the sheet"
+          why_wrong: "Kerf is the width of the cut, not the edge."
+        - text: "A type of knock-down fitting"
+          why_wrong: "Kerf is about cutting."
+        - text: "The grain direction"
+          why_wrong: "MDF has no grain."
+      answer: 0
+    explanation: "Nesting lays parts out to fill the sheet. Allowing for the kerf stops parts coming out undersized."
+
+  - id: dt26-stock-010
+    status: draft
+    spec_point: "1.1.28"
+    concept: board-grades
+    command: identify
+    context: true
+    see: "#manufactured-boards-sheets-standard-sizes-and-thicknesses"
+    text: "Which board grade would be best for a bathroom cabinet?"
+    options:
+      - text: "Moisture-resistant MDF"
+      - text: "Standard MDF"
+        why_wrong: "Standard MDF swells in damp conditions."
+      - text: "Hardboard"
+        why_wrong: "Hardboard is thin and not moisture resistant."
+      - text: "Flexible plywood"
+        why_wrong: "Flexible ply is for curves, not damp areas."
+    answer: 0
+    explanation: "Special grades include moisture-resistant MDF, exterior or marine ply, and flexible ply."
+
+  - id: dt26-stock-011
+    type: multi
+    status: draft
+    spec_point: "1.1.28"
+    concept: standard-components
+    command: identify
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    text: "Select TWO reasons for using standard components."
+    options:
+      - text: "Mass production keeps them cheap"
+      - text: "They're consistent and easy to replace"
+      - text: "Each one is custom made for the product"
+        why_wrong: "Standard components are made in large quantities to agreed sizes."
+      - text: "They always look unique"
+        why_wrong: "They're standardised, not unique."
+    answer: [0, 1]
+    explanation: "Standard components are cheaper, reliable, made to BSI or ISO sizes, easy to replace, and save design time."
+
+  - id: dt26-stock-012
+    status: draft
+    spec_point: "1.1.28"
+    concept: kdf
+    command: describe
+    scenario: flat-pack-desk
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    text: "What is a knock-down fitting?"
+    options:
+      - text: "A fixing that lets a product be assembled and taken apart using simple tools"
+      - text: "A permanent glued joint"
+        why_wrong: "KDFs can be undone. Glue is permanent."
+      - text: "A fitting that breaks if knocked"
+        why_wrong: "'Knock-down' means it can be taken apart."
+      - text: "A type of hinge"
+        why_wrong: "Hinges are a separate standard component."
+    answer: 0
+    explanation: "KDFs let products be assembled and dismantled with simple tools. They're the basis of flat-pack furniture."
+
+  - id: dt26-stock-013
+    status: draft
+    spec_point: "1.1.28"
+    concept: cam-lock
+    command: identify
+    scenario: flat-pack-desk
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    text: "A metal dowel in one panel locks into a round fitting in the other when it's turned. Which KDF is this?"
+    options:
+      - text: "Cam lock"
+      - text: "Corner block"
+        why_wrong: "A corner block is screwed into both panels."
+      - text: "Threaded insert"
+        why_wrong: "A threaded insert gives wood an internal thread for a bolt."
+      - text: "Butt hinge"
+        why_wrong: "A hinge allows movement. It doesn't lock panels."
+    answer: 0
+    explanation: "A cam lock's metal dowel locks into a round cam when the cam is turned."
+
+  - id: dt26-stock-014
+    type: multi
+    status: draft
+    spec_point: "1.1.28"
+    concept: kdf-pros-cons
+    command: identify
+    scenario: flat-pack-desk
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    text: "Select TWO advantages of using KDFs for the desk."
+    options:
+      - text: "It can be flat-packed, saving space and transport cost"
+      - text: "It can be taken apart to move or repair"
+      - text: "The joints are stronger than glued joints"
+        why_wrong: "KDF joints are usually weaker than glued joints."
+      - text: "They never work loose"
+        why_wrong: "KDF joints can work loose."
+    answer: [0, 1]
+    explanation: "Flat-packing cuts transport and storage costs, and the user can assemble and dismantle the product."
+
+  - id: dt26-stock-015
+    status: draft
+    spec_point: "1.1.28"
+    concept: granules
+    command: identify
+    context: true
+    see: "#the-forms-polymers-are-supplied-in-powders-and-granules"
+    text: "In what form is polymer fed into an injection moulding machine making bottle caps?"
+    options:
+      - text: "Granules from a hopper"
+      - text: "Sheet"
+        why_wrong: "Sheet is used for vacuum forming and laser cutting."
+      - text: "Filament on a spool"
+        why_wrong: "Filament is for 3D printing."
+      - text: "Rod"
+        why_wrong: "Rod is a semi-finished form for turning."
+    answer: 0
+    explanation: "Granules (pellets) are fed from a hopper and melted in injection moulding, blow moulding and extrusion."
+
+  - id: dt26-stock-016
+    status: draft
+    spec_point: "1.1.28"
+    concept: powders
+    command: identify
+    context: true
+    see: "#the-forms-polymers-are-supplied-in-powders-and-granules"
+    text: "Which polymer form is used to rotationally mould hollow road cones?"
+    options:
+      - text: "Powder"
+      - text: "Film"
+        why_wrong: "Film is for packaging and laminating."
+      - text: "Sheet"
+        why_wrong: "Sheet is for vacuum forming."
+      - text: "Filament"
+        why_wrong: "Filament is for 3D printing."
+    answer: 0
+    explanation: "Powders are used for rotational moulding, compression moulding of thermosets, and powder and dip coating."
+
+  - id: dt26-stock-017
+    status: draft
+    spec_point: "1.1.28"
+    concept: masterbatch
+    command: describe
+    see: "#the-forms-polymers-are-supplied-in-powders-and-granules"
+    text: "What is masterbatch used for?"
+    options:
+      - text: "Adding colour to polymer granules"
+      - text: "Joining plastic parts"
+        why_wrong: "That's adhesive or welding."
+      - text: "Cutting sheet"
+        why_wrong: "Masterbatch is a raw material, not a tool."
+      - text: "Finishing cut edges"
+        why_wrong: "That's polishing."
+    answer: 0
+    explanation: "Masterbatch granules carry pigment, so colour can be mixed in as the polymer is processed."
+
+  - id: dt26-stock-018
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.28"
+    concept: kdf-technique
+    command: explain
+    scenario: flat-pack-desk
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    exam_question:
+      text: "Explain one advantage of knock-down fittings for the desk."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "They're fittings."
+        marks_awarded: 0
+        why_wrong: "No advantage is given."
+      - text: "It can be flat-packed."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't explained."
+      - text: "It can be flat-packed, so it takes up less space in transport and storage, making it cheaper to deliver."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: the advantage, plus why it matters."
+
+  - id: dt26-stock-019
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.28"
+    concept: standard-technique
+    command: explain
+    see: "#standardised-fixtures-and-fittings-including-knock-down-fittings"
+    exam_question:
+      text: "Explain why manufacturers use standard components such as hinges and screws."
+      marks: 2
+    sample_answer: "They're mass produced."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that this makes them cheap and saves the time of designing and making them"
+      - text: "Adding that they're made of metal"
+        why_wrong: "Material doesn't explain the benefit."
+      - text: "Adding that hinges let doors open"
+        why_wrong: "That's what a hinge does, not why standard ones are used."
+      - text: "Adding that they come in boxes"
+        why_wrong: "Not relevant."
+    answer: 0
+    explanation: "The missing mark explains the consequence of mass production for the manufacturer."
+
+  - id: dt26-stock-020
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.28"
+    concept: compare-technique
+    command: compare
+    see: "#sawn-and-planed-timber"
+    exam_question:
+      text: "Compare sawn and planed timber."
+      marks: 4
+    text: "Which answer actually compares them?"
+    options:
+      - text: "Sawn timber is rough."
+        why_wrong: "This only describes one form."
+      - text: "Sawn timber is rough and cheaper, so it's used for hidden structural work, whereas planed timber is smooth but smaller than its nominal size and costs more."
+      - text: "Both are made from trees."
+        why_wrong: "Too general to be a comparison."
+      - text: "Planed timber is better."
+        why_wrong: "A judgement isn't a comparison."
+    answer: 1
+    explanation: "Compare means set out similarities and differences, using words like 'whereas' and 'but'."

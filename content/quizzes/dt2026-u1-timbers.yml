@@ -1,0 +1,408 @@
+# Timbers (D&T 2026, 1.1.23 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.23). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-timbers
+spec: gcse-2026
+unit: "1.1"
+topic: "Timbers"
+page: /gcse-2026/unit1/product-design/timbers/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: toddler-toy
+    text: "A designer is making a wooden push-along toy for toddlers. It must be tough, smooth and safe to chew."
+  - id: kitchen-units
+    text: "A company makes flat-pack kitchen cabinets with painted doors. The parts are cut on a CNC router."
+
+questions:
+
+  - id: dt26-timber-001
+    status: draft
+    spec_point: "1.1.23"
+    concept: hardwood-definition
+    command: state
+    see: "#telling-hardwoods-and-softwoods-apart"
+    text: "What decides whether a timber is a hardwood?"
+    options:
+      - text: "It comes from a deciduous, broad-leaved tree"
+      - text: "It is hard to cut"
+        why_wrong: "The name describes the tree type, not hardness. Balsa is a hardwood."
+      - text: "It is heavy"
+        why_wrong: "Weight isn't a reliable test."
+      - text: "It comes from a tree with needles and cones"
+        why_wrong: "That's a softwood."
+    answer: 0
+    explanation: "Hardwoods come from deciduous, broad-leaved trees, whatever their actual hardness."
+
+  - id: dt26-timber-002
+    type: two_tier
+    status: draft
+    spec_point: "1.1.23"
+    concept: balsa-trap
+    command: explain
+    context: true
+    see: "#aesthetic-and-functional-properties-of-beech-balsa-scots-pine-and-parana-pine"
+    text: "A model aircraft is made from balsa, the softest and lightest timber in the workshop. Is balsa a hardwood or a softwood?"
+    options:
+      - text: "Hardwood"
+      - text: "Softwood"
+        why_wrong: "Balsa is soft, but it comes from a broad-leaved tree, so it's a hardwood."
+      - text: "Manufactured board"
+        why_wrong: "Balsa is a natural timber."
+      - text: "It depends on how it's cut"
+        why_wrong: "Classification depends on the tree, not the cut."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "The classification depends on the type of tree, not the hardness of the wood"
+        - text: "It is very hard"
+          why_wrong: "Balsa is extremely soft."
+        - text: "It is expensive"
+          why_wrong: "Cost doesn't decide the classification."
+        - text: "It has needles"
+          why_wrong: "Trees with needles give softwoods."
+      answer: 0
+    explanation: "Balsa is a favourite exam trap: it's a hardwood because of the tree it comes from."
+
+  - id: dt26-timber-003
+    status: draft
+    spec_point: "1.1.23"
+    concept: softwood-cost
+    command: describe
+    see: "#telling-hardwoods-and-softwoods-apart"
+    text: "Why are softwoods generally cheaper than hardwoods?"
+    options:
+      - text: "Coniferous trees grow quickly and straight, often in 25–30 years"
+      - text: "They are weaker"
+        why_wrong: "Strength isn't the reason for the price."
+      - text: "They are always imported"
+        why_wrong: "Many softwoods are grown locally."
+      - text: "They contain no resin"
+        why_wrong: "Softwoods are often resinous."
+    answer: 0
+    explanation: "Softwoods grow fast, so they're cheaper and more readily available. Hardwoods can take 60–100+ years."
+
+  - id: dt26-timber-004
+    type: two_tier
+    status: draft
+    spec_point: "1.1.23"
+    concept: beech-toy
+    command: explain
+    scenario: toddler-toy
+    see: "#aesthetic-and-functional-properties-of-beech-balsa-scots-pine-and-parana-pine"
+    text: "Which timber is best for the toy?"
+    options:
+      - text: "Beech"
+      - text: "Balsa"
+        why_wrong: "Balsa is too soft and weak for a toddler's toy."
+      - text: "Scots pine"
+        why_wrong: "Pine is knotty and resinous, so it isn't ideal for a smooth, chewable toy."
+      - text: "MDF"
+        why_wrong: "MDF swells when wet and its dust and adhesives make it unsuitable."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It is hard, very tough and takes a smooth finish, with a fine close grain"
+        - text: "It is extremely light"
+          why_wrong: "That's balsa."
+        - text: "It has decorative red streaks"
+          why_wrong: "That's Parana pine."
+        - text: "It is very durable outdoors"
+          why_wrong: "Beech isn't durable outdoors, but a toddler toy is used inside."
+      answer: 0
+    explanation: "Beech is tough and hard-wearing with a smooth, fine finish, which is why it's used for children's toys."
+
+  - id: dt26-timber-005
+    status: draft
+    spec_point: "1.1.23"
+    concept: parana-pine
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-beech-balsa-scots-pine-and-parana-pine"
+    text: "A joiner wants a softwood with few knots and attractive red streaks for an indoor staircase. Which should they choose?"
+    options:
+      - text: "Parana pine"
+      - text: "Scots pine"
+        why_wrong: "Scots pine is often knotty."
+      - text: "Balsa"
+        why_wrong: "Balsa is a hardwood and far too weak."
+      - text: "Beech"
+        why_wrong: "Beech is a hardwood, without red streaks."
+    answer: 0
+    explanation: "Parana pine is hard and strong for a softwood, straight grained with few knots and decorative streaks."
+
+  - id: dt26-timber-006
+    status: draft
+    spec_point: "1.1.23"
+    concept: scots-pine
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-beech-balsa-scots-pine-and-parana-pine"
+    text: "Which timber is most commonly used for roof joists and construction?"
+    options:
+      - text: "Scots pine"
+      - text: "Beech"
+        why_wrong: "Beech is used for toys and furniture, and is more expensive."
+      - text: "Balsa"
+        why_wrong: "Balsa is far too weak."
+      - text: "Parana pine"
+        why_wrong: "Parana pine is used for interior joinery and costs more."
+    answer: 0
+    explanation: "Scots pine is fairly strong, light, cheap and widely available, so it's used for construction timber."
+
+  - id: dt26-timber-007
+    status: draft
+    spec_point: "1.1.23"
+    concept: seasoning
+    command: describe
+    see: "#natural-wood-compared-with-man-made-boards"
+    text: "Why must natural timber be seasoned before use?"
+    options:
+      - text: "Drying it reduces moisture, so it won't shrink, warp or split later"
+      - text: "To add flavour to kitchen utensils"
+        why_wrong: "'Seasoning' here means drying the wood."
+      - text: "To change its colour"
+        why_wrong: "Seasoning is about moisture, not colour."
+      - text: "To make it a hardwood"
+        why_wrong: "Seasoning doesn't change the type of timber."
+    answer: 0
+    explanation: "Timber is air- or kiln-dried to reduce its moisture content and prevent later shrinking, warping and splitting."
+
+  - id: dt26-timber-008
+    type: multi
+    status: draft
+    spec_point: "1.1.23"
+    concept: boards-vs-natural
+    command: identify
+    see: "#natural-wood-compared-with-man-made-boards"
+    text: "Select TWO advantages of manufactured boards over natural timber."
+    options:
+      - text: "They come in large, flat sheets"
+      - text: "They are very stable, with little movement"
+      - text: "They always have an attractive natural grain"
+        why_wrong: "Boards are plain and often veneered. Natural grain belongs to solid timber."
+      - text: "Their adhesives are always formaldehyde-free"
+        why_wrong: "Adhesives can contain formaldehyde, which is a drawback."
+    answer: [0, 1]
+    explanation: "Boards come in large sheets (typically 2440 × 1220 mm) and are very stable, with no natural defects."
+
+  - id: dt26-timber-009
+    status: draft
+    spec_point: "1.1.23"
+    concept: plywood-structure
+    command: describe
+    see: "#plywood"
+    text: "How is plywood made?"
+    options:
+      - text: "Thin veneers glued with the grain of each layer at 90° to the next"
+      - text: "Wood fibres mixed with resin and pressed"
+        why_wrong: "That's MDF."
+      - text: "Wood chips glued together"
+        why_wrong: "That's chipboard."
+      - text: "A single solid plank"
+        why_wrong: "That's natural timber."
+    answer: 0
+    explanation: "Plywood is made from veneers with the grain crossed at 90°, which makes it strong in all directions."
+
+  - id: dt26-timber-010
+    status: draft
+    spec_point: "1.1.23"
+    concept: plywood-odd
+    command: describe
+    see: "#plywood"
+    text: "Why does plywood always have an odd number of layers?"
+    options:
+      - text: "So the grain on both outer faces runs the same way and the board stays balanced"
+      - text: "To make it cheaper"
+        why_wrong: "It's about balance, not cost."
+      - text: "So it can be laser cut"
+        why_wrong: "Any plywood can be laser cut."
+      - text: "To make it waterproof"
+        why_wrong: "Water resistance depends on the grade and adhesive."
+    answer: 0
+    explanation: "An odd number of plies means both faces have matching grain, so the board is balanced and doesn't warp."
+
+  - id: dt26-timber-011
+    type: two_tier
+    status: draft
+    spec_point: "1.1.23"
+    concept: mdf-use
+    command: explain
+    scenario: kitchen-units
+    see: "#mdf-medium-density-fibreboard"
+    text: "Which board is best for the painted cabinet doors?"
+    options:
+      - text: "MDF"
+      - text: "Balsa"
+        why_wrong: "Balsa is a soft natural timber, not a board for cabinets."
+      - text: "Scots pine"
+        why_wrong: "Pine has knots and can move, so it isn't the smoothest base for paint."
+      - text: "Standard plywood"
+        why_wrong: "Plywood edges show the layers and its face can splinter."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It has a smooth, flat surface, takes paint well and machines cleanly"
+        - text: "It is waterproof"
+          why_wrong: "MDF swells badly with water unless sealed."
+        - text: "It is very light"
+          why_wrong: "MDF is heavy for its size."
+        - text: "Screws hold well in its edges"
+          why_wrong: "Screws hold poorly in MDF edges."
+      answer: 0
+    explanation: "MDF has a smooth, flat surface ideal for painting, no grain, and machines and cuts cleanly on a CNC router."
+
+  - id: dt26-timber-012
+    status: draft
+    spec_point: "1.1.23"
+    concept: mdf-weakness
+    command: identify
+    scenario: kitchen-units
+    see: "#mdf-medium-density-fibreboard"
+    text: "Why must the MDF cabinets near the sink be well sealed?"
+    options:
+      - text: "MDF absorbs water and swells badly"
+      - text: "MDF is a hardwood"
+        why_wrong: "MDF is a manufactured board."
+      - text: "MDF changes colour when wet"
+        why_wrong: "The problem is swelling, not colour change."
+      - text: "MDF is too light"
+        why_wrong: "MDF is heavy for its size."
+    answer: 0
+    explanation: "MDF is very absorbent and swells badly when wet, so it must be sealed in kitchens and bathrooms."
+
+  - id: dt26-timber-013
+    status: draft
+    spec_point: "1.1.23"
+    concept: mdf-dust
+    command: describe
+    scenario: kitchen-units
+    see: "#mdf-medium-density-fibreboard"
+    text: "What safety precaution is needed when the factory cuts MDF?"
+    options:
+      - text: "Use dust extraction and a mask, because fine MDF dust is a health hazard"
+      - text: "Wear oven gloves"
+        why_wrong: "Heat isn't the hazard. Dust is."
+      - text: "Cut it underwater"
+        why_wrong: "MDF swells when wet, and dust extraction is the answer."
+      - text: "None is needed"
+        why_wrong: "MDF dust is a recognised health hazard."
+    answer: 0
+    explanation: "Cutting MDF produces fine dust that is a health hazard, so extraction and a mask are needed."
+
+  - id: dt26-timber-014
+    status: draft
+    spec_point: "1.1.23"
+    concept: strength-grain
+    command: state
+    see: "#physical-and-working-properties-of-timber"
+    text: "In which direction is natural timber strongest?"
+    options:
+      - text: "Along the grain"
+      - text: "Across the grain"
+        why_wrong: "Timber is weaker across the grain, which is why it splits that way."
+      - text: "Diagonally"
+        why_wrong: "Timber is strongest along the grain."
+      - text: "It's the same in every direction"
+        why_wrong: "That's closer to MDF. Natural timber has a grain direction."
+    answer: 0
+    explanation: "Timber is strongest along the grain and weaker across it."
+
+  - id: dt26-timber-015
+    status: draft
+    spec_point: "1.1.23"
+    concept: absorbency
+    command: identify
+    context: true
+    see: "#physical-and-working-properties-of-timber"
+    text: "A boat builder needs a board that resists water. Which should they use?"
+    options:
+      - text: "Marine plywood"
+      - text: "MDF"
+        why_wrong: "MDF is very absorbent and swells."
+      - text: "Balsa"
+        why_wrong: "Balsa is light and floats, but it's soft and weak as a structural board."
+      - text: "Standard interior plywood"
+        why_wrong: "Interior grades aren't made to resist water."
+    answer: 0
+    explanation: "Marine and exterior grades of plywood are made to resist water."
+
+  - id: dt26-timber-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.23"
+    concept: beech-technique
+    command: explain
+    scenario: toddler-toy
+    see: "#aesthetic-and-functional-properties-of-beech-balsa-scots-pine-and-parana-pine"
+    exam_question:
+      text: "Explain why beech is suitable for the toddler's toy."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's a hardwood."
+        marks_awarded: 0
+        why_wrong: "Classifying it doesn't explain suitability."
+      - text: "It's tough."
+        marks_awarded: 1
+        why_wrong: "A correct property earns 1 mark, but it isn't linked to the toy."
+      - text: "It's very tough, so it won't break or splinter when dropped or chewed, keeping the toddler safe."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a property linked to the product and the user."
+
+  - id: dt26-timber-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.23"
+    concept: plywood-technique
+    command: explain
+    see: "#plywood"
+    exam_question:
+      text: "Explain why plywood is stronger than a sheet of natural timber of the same thickness."
+      marks: 2
+    sample_answer: "The grain of each layer is at 90° to the next."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that this makes it strong in all directions, unlike timber, which is weak across the grain"
+      - text: "Adding that it's made in large sheets"
+        why_wrong: "Sheet size doesn't explain strength."
+      - text: "Adding that the edges show the layers"
+        why_wrong: "That's a weakness of appearance, not an explanation of strength."
+      - text: "Adding that it's cheaper"
+        why_wrong: "Cost doesn't explain strength."
+    answer: 0
+    explanation: "The missing mark explains the effect of crossed grain: even strength in all directions."
+
+  - id: dt26-timber-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.23"
+    concept: compare-technique
+    command: compare
+    see: "#natural-wood-compared-with-man-made-boards"
+    exam_question:
+      text: "Compare natural timber with manufactured boards for making furniture."
+      marks: 4
+    text: "Which answer actually compares them?"
+    options:
+      - text: "Natural timber comes from trees."
+        why_wrong: "This only describes one material."
+      - text: "Natural timber has an attractive grain but can warp and is limited in width, whereas boards are stable and come in large sheets but look plain unless veneered."
+      - text: "MDF is used for flat-pack furniture."
+        why_wrong: "A single use isn't a comparison."
+      - text: "Natural timber is better."
+        why_wrong: "A judgement isn't a comparison."
+    answer: 1
+    explanation: "Compare means set out similarities and differences, using words like 'whereas' and 'but'."

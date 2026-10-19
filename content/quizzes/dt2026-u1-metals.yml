@@ -1,0 +1,430 @@
+# Metals (D&T 2026, 1.1.22 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.22). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-metals
+spec: gcse-2026
+unit: "1.1"
+topic: "Metals"
+page: /gcse-2026/unit1/product-design/metals/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: commuter-bike
+    text: "A company is designing a lightweight commuter bicycle that will be ridden and stored outdoors all year round."
+  - id: kitchen-pan
+    text: "A designer is developing a saucepan that must be hygienic, resist staining and heat food evenly."
+
+questions:
+
+  - id: dt26-metals-001
+    status: draft
+    spec_point: "1.1.22"
+    concept: ferrous-definition
+    command: state
+    see: "#comparing-the-suitability-of-metals"
+    text: "What is a ferrous metal?"
+    options:
+      - text: "A metal that contains iron"
+      - text: "A metal that never rusts"
+        why_wrong: "Most ferrous metals rust unless protected."
+      - text: "A mixture of two non-ferrous metals"
+        why_wrong: "That's a non-ferrous alloy, such as brass."
+      - text: "A metal with no iron in it"
+        why_wrong: "That's a non-ferrous metal."
+    answer: 0
+    explanation: "Ferrous metals contain iron. Most are magnetic and rust unless protected."
+
+  - id: dt26-metals-002
+    type: two_tier
+    status: draft
+    spec_point: "1.1.22"
+    concept: aluminium-bike
+    command: explain
+    scenario: commuter-bike
+    see: "#non-ferrous-metals-titanium-aluminium-copper-and-brass"
+    text: "Which metal is most suitable for the bicycle frame?"
+    options:
+      - text: "Aluminium"
+      - text: "Mild steel"
+        why_wrong: "Mild steel is heavier and rusts outdoors unless protected."
+      - text: "High carbon steel"
+        why_wrong: "High carbon steel is brittle and dense, so it's unsuitable for a light frame."
+      - text: "Copper"
+        why_wrong: "Copper is soft and dense. It's chosen for conductivity, not frames."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Its low density keeps the bike light, and it resists corrosion outdoors"
+        - text: "It is the hardest metal"
+          why_wrong: "Hardness isn't aluminium's strength, and isn't what a frame needs most."
+        - text: "It is the best electrical conductor"
+          why_wrong: "Conductivity doesn't matter for a frame."
+        - text: "It has the highest melting point"
+          why_wrong: "Aluminium has a low melting point, and it's irrelevant here."
+      answer: 0
+    explanation: "Aluminium has low density and a good strength-to-weight ratio, and it resists corrosion, so it's ideal for an outdoor bicycle."
+
+  - id: dt26-metals-003
+    status: draft
+    spec_point: "1.1.22"
+    concept: stainless-pan
+    command: identify
+    scenario: kitchen-pan
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    text: "Which metal should the body of the saucepan be made from?"
+    options:
+      - text: "Stainless steel"
+      - text: "Mild steel"
+        why_wrong: "Mild steel rusts, which isn't hygienic for a pan."
+      - text: "High carbon steel"
+        why_wrong: "High carbon steel is brittle and rusts. It's used for tools."
+      - text: "Brass"
+        why_wrong: "Brass darkens with age and isn't the usual choice for a cooking surface."
+    answer: 0
+    explanation: "Stainless steel resists rust and staining, and it's hygienic and easy to clean."
+
+  - id: dt26-metals-004
+    type: two_tier
+    status: draft
+    spec_point: "1.1.22"
+    concept: pan-base
+    command: explain
+    scenario: kitchen-pan
+    see: "#physical-properties-melting-point-thermal-and-electrical-conductivity"
+    text: "Why might the stainless steel pan have a copper or aluminium base?"
+    options:
+      - text: "To spread the heat evenly"
+      - text: "To make it rust"
+        why_wrong: "Nobody wants a pan that rusts, and the base is there to spread heat."
+      - text: "To make it heavier"
+        why_wrong: "Weight isn't the reason."
+      - text: "To make it magnetic"
+        why_wrong: "Copper and aluminium aren't magnetic."
+    answer: 0
+    reason:
+      text: "Which property makes copper and aluminium suitable?"
+      options:
+        - text: "Excellent thermal conductivity"
+        - text: "High hardness"
+          why_wrong: "Hardness doesn't help spread heat."
+        - text: "Low tensile strength"
+          why_wrong: "Tensile strength isn't relevant to heating."
+        - text: "Brittleness"
+          why_wrong: "Brittleness would be a weakness."
+      answer: 0
+    explanation: "Stainless steel is a poor thermal conductor, so a copper or aluminium base spreads the heat evenly."
+
+  - id: dt26-metals-005
+    status: draft
+    spec_point: "1.1.22"
+    concept: stainless-rust
+    command: describe
+    context: true
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    text: "Why does a stainless steel kitchen sink not rust, even when scratched?"
+    options:
+      - text: "Chromium forms a thin oxide layer that re-forms when scratched"
+      - text: "It contains no iron"
+        why_wrong: "Stainless steel is ferrous: it does contain iron."
+      - text: "It is coated in plastic"
+        why_wrong: "No coating is needed. The protection comes from the chromium."
+      - text: "It is very high in carbon"
+        why_wrong: "Carbon content isn't what stops rust."
+    answer: 0
+    explanation: "Chromium forms an invisible oxide layer. If scratched, it re-forms, so the steel underneath stays protected."
+
+  - id: dt26-metals-006
+    status: draft
+    spec_point: "1.1.22"
+    concept: carbon-effect
+    command: describe
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    text: "What happens to steel as its carbon content increases?"
+    options:
+      - text: "It gets harder and stronger, but more brittle"
+      - text: "It gets softer and more ductile"
+        why_wrong: "It's the other way round: more carbon means harder but more brittle."
+      - text: "It stops being ferrous"
+        why_wrong: "It still contains iron, so it's still ferrous."
+      - text: "It becomes stainless"
+        why_wrong: "Chromium, not carbon, makes steel stainless."
+    answer: 0
+    explanation: "More carbon makes steel harder and stronger, but more brittle and less ductile. Mild steel bends; high carbon steel snaps."
+
+  - id: dt26-metals-007
+    status: draft
+    spec_point: "1.1.22"
+    concept: high-carbon-uses
+    command: identify
+    context: true
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    text: "Which metal should a wood chisel blade be made from?"
+    options:
+      - text: "High carbon steel"
+      - text: "Mild steel"
+        why_wrong: "Mild steel won't hold a sharp edge well."
+      - text: "Aluminium"
+        why_wrong: "Aluminium is too soft to keep a cutting edge."
+      - text: "Copper"
+        why_wrong: "Copper is soft and malleable, not suited to a blade."
+    answer: 0
+    explanation: "High carbon steel is very hard and keeps a sharp edge, and it can be hardened and tempered."
+
+  - id: dt26-metals-008
+    status: draft
+    spec_point: "1.1.22"
+    concept: titanium
+    command: identify
+    context: true
+    see: "#non-ferrous-metals-titanium-aluminium-copper-and-brass"
+    text: "Which metal is best for a hip replacement implant?"
+    options:
+      - text: "Titanium"
+      - text: "Mild steel"
+        why_wrong: "Mild steel would corrode inside the body."
+      - text: "Brass"
+        why_wrong: "Brass isn't used for implants."
+      - text: "Copper"
+        why_wrong: "Copper isn't strong enough and isn't used inside the body."
+    answer: 0
+    explanation: "Titanium is biocompatible, has excellent corrosion resistance and a very high strength-to-weight ratio."
+
+  - id: dt26-metals-009
+    status: draft
+    spec_point: "1.1.22"
+    concept: brass
+    command: identify
+    see: "#non-ferrous-metals-titanium-aluminium-copper-and-brass"
+    text: "Brass is an alloy of which two metals?"
+    options:
+      - text: "Copper and zinc"
+      - text: "Iron and carbon"
+        why_wrong: "That's steel."
+      - text: "Iron, chromium and nickel"
+        why_wrong: "That's stainless steel."
+      - text: "Copper and tin"
+        why_wrong: "Copper and tin make bronze."
+    answer: 0
+    explanation: "Brass is copper plus zinc: harder than copper, it casts and machines well and resists corrosion."
+
+  - id: dt26-metals-010
+    type: multi
+    status: draft
+    spec_point: "1.1.22"
+    concept: brass-uses
+    command: identify
+    see: "#non-ferrous-metals-titanium-aluminium-copper-and-brass"
+    text: "Select TWO typical uses of brass."
+    options:
+      - text: "Door handles"
+      - text: "Taps and plumbing fittings"
+      - text: "Drinks cans"
+        why_wrong: "Drinks cans are aluminium."
+      - text: "Saw blades"
+        why_wrong: "Saw blades are high carbon steel."
+    answer: [0, 1]
+    explanation: "Brass is used for door handles, hinges, taps, plumbing fittings, instruments and electrical pins."
+
+  - id: dt26-metals-011
+    status: draft
+    spec_point: "1.1.22"
+    concept: copper-wiring
+    command: describe
+    context: true
+    see: "#physical-properties-melting-point-thermal-and-electrical-conductivity"
+    text: "Why is copper used for household electrical wiring?"
+    options:
+      - text: "It conducts very well, can be drawn into wire, and is cheaper than silver"
+      - text: "It is the only metal that conducts electricity"
+        why_wrong: "All metals conduct electricity."
+      - text: "It has the highest melting point"
+        why_wrong: "Titanium and steel melt at higher temperatures."
+      - text: "It is very hard"
+        why_wrong: "Copper is soft and ductile, which helps in wiring."
+    answer: 0
+    explanation: "Copper is an excellent conductor, ductile enough to draw into wire, and cheaper than silver."
+
+  - id: dt26-metals-012
+    status: draft
+    spec_point: "1.1.22"
+    concept: melting-point
+    command: describe
+    context: true
+    see: "#physical-properties-melting-point-thermal-and-electrical-conductivity"
+    text: "Why is aluminium widely die-cast for products like car wheels?"
+    options:
+      - text: "Its low melting point makes it easier and cheaper to cast"
+      - text: "It has the highest melting point"
+        why_wrong: "Aluminium has the lowest melting point of these metals, around 660°C."
+      - text: "It is magnetic"
+        why_wrong: "Aluminium isn't magnetic, and that's not relevant to casting."
+      - text: "It is very brittle"
+        why_wrong: "Brittleness would be a weakness, and aluminium isn't brittle."
+    answer: 0
+    explanation: "Aluminium melts at about 660°C, so it's easier and cheaper to cast than metals like steel."
+
+  - id: dt26-metals-013
+    status: draft
+    spec_point: "1.1.22"
+    concept: density
+    command: state
+    see: "#mechanical-properties-tensile-strength-toughness-density-plasticity-malleability-hardness"
+    text: "Roughly how dense is aluminium compared with steel?"
+    options:
+      - text: "About a third as dense"
+      - text: "About the same"
+        why_wrong: "Aluminium is about 2.7 g/cm³ and steel about 7.8 g/cm³."
+      - text: "About three times as dense"
+        why_wrong: "It's the other way round: steel is about three times as dense."
+      - text: "About a tenth as dense"
+        why_wrong: "Not that light: it's about a third."
+    answer: 0
+    explanation: "Aluminium is about 2.7 g/cm³ and steel about 7.8 g/cm³, so aluminium is roughly a third as dense."
+
+  - id: dt26-metals-014
+    type: two_tier
+    status: draft
+    spec_point: "1.1.22"
+    concept: hard-vs-tough
+    command: explain
+    context: true
+    see: "#mechanical-properties-tensile-strength-toughness-density-plasticity-malleability-hardness"
+    text: "A high carbon steel file shatters when dropped on a concrete floor. Which property does it lack?"
+    options:
+      - text: "Toughness"
+      - text: "Hardness"
+        why_wrong: "High carbon steel is very hard. Hardness resists scratching, not impact."
+      - text: "Electrical conductivity"
+        why_wrong: "Conductivity has nothing to do with shattering."
+      - text: "Density"
+        why_wrong: "Density is mass per volume. It doesn't decide whether a material shatters."
+    answer: 0
+    reason:
+      text: "What is toughness?"
+      options:
+        - text: "The ability to absorb energy and withstand impact without breaking"
+        - text: "The ability to resist scratching"
+          why_wrong: "That's hardness."
+        - text: "The ability to be pulled without breaking"
+          why_wrong: "That's tensile strength."
+        - text: "The ability to be hammered into shape"
+          why_wrong: "That's malleability."
+      answer: 0
+    explanation: "High carbon steel is hard but not tough, so it can shatter on impact. Don't confuse hardness and toughness."
+
+  - id: dt26-metals-015
+    status: draft
+    spec_point: "1.1.22"
+    concept: malleability
+    command: identify
+    context: true
+    see: "#mechanical-properties-tensile-strength-toughness-density-plasticity-malleability-hardness"
+    text: "Aluminium can be rolled into kitchen foil without cracking. Which property is this?"
+    options:
+      - text: "Malleability"
+      - text: "Hardness"
+        why_wrong: "Hardness resists scratching and wear."
+      - text: "Tensile strength"
+        why_wrong: "Tensile strength resists pulling apart."
+      - text: "Thermal conductivity"
+        why_wrong: "That's about heat, not shaping."
+    answer: 0
+    explanation: "Malleability is being hammered, pressed or rolled into shape without cracking."
+
+  - id: dt26-metals-016
+    type: multi
+    status: draft
+    spec_point: "1.1.22"
+    concept: selection-factors
+    command: identify
+    scenario: commuter-bike
+    see: "#comparing-the-suitability-of-metals"
+    text: "Select TWO factors that matter most when choosing a metal for the bicycle."
+    options:
+      - text: "Strength-to-weight ratio"
+      - text: "Corrosion resistance"
+      - text: "Electrical conductivity"
+        why_wrong: "A bicycle frame doesn't need to conduct electricity."
+      - text: "A low melting point"
+        why_wrong: "Melting point isn't a priority for a frame."
+    answer: [0, 1]
+    explanation: "A light, outdoor bike needs strength for its weight, and resistance to corrosion."
+
+  - id: dt26-metals-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.22"
+    concept: suitability-technique
+    command: explain
+    scenario: commuter-bike
+    see: "#comparing-the-suitability-of-metals"
+    exam_question:
+      text: "Explain why aluminium is suitable for the bicycle frame."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's a non-ferrous metal."
+        marks_awarded: 0
+        why_wrong: "Classifying it doesn't explain suitability."
+      - text: "It's light."
+        marks_awarded: 1
+        why_wrong: "A correct property earns 1 mark, but it isn't linked to the bike."
+      - text: "Its low density keeps the bike light to ride and carry, and it resists corrosion when stored outdoors."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: link each property to the product with 'because' or 'so'."
+
+  - id: dt26-metals-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.22"
+    concept: stainless-technique
+    command: explain
+    scenario: kitchen-pan
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    exam_question:
+      text: "Explain why stainless steel is suitable for the saucepan."
+      marks: 2
+    sample_answer: "It doesn't rust."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it's hygienic and easy to clean, so it's safe for food"
+      - text: "Adding that it's a ferrous metal"
+        why_wrong: "Classifying it doesn't explain suitability."
+      - text: "Adding that it's more expensive than mild steel"
+        why_wrong: "That's a drawback, not a reason it suits the pan."
+      - text: "Adding that it melts at about 1400°C"
+        why_wrong: "A fact without a link to the pan doesn't earn the mark."
+    answer: 0
+    explanation: "The second mark is another property linked to the product: hygiene for food."
+
+  - id: dt26-metals-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.22"
+    concept: compare-technique
+    command: compare
+    see: "#ferrous-metals-mild-steel-stainless-steel-and-high-carbon-steel"
+    exam_question:
+      text: "Compare mild steel and high carbon steel."
+      marks: 4
+    text: "Which answer actually compares them?"
+    options:
+      - text: "Mild steel is used for car bodies."
+        why_wrong: "This only describes one metal."
+      - text: "High carbon steel contains more carbon than mild steel, so it is harder and keeps an edge, whereas mild steel is tougher and easier to bend."
+      - text: "Both are metals."
+        why_wrong: "Too general to be a comparison."
+      - text: "High carbon steel is better."
+        why_wrong: "A judgement isn't a comparison."
+    answer: 1
+    explanation: "Compare means set out similarities and differences, using words like 'whereas' and 'but'."

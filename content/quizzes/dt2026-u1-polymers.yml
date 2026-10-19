@@ -1,0 +1,430 @@
+# Polymers (D&T 2026, 1.1.24 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.24). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-polymers
+spec: gcse-2026
+unit: "1.1"
+topic: "Polymers"
+page: /gcse-2026/unit1/product-design/polymers/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: bluetooth-speaker
+    text: "A company is designing an injection-moulded casing for a portable Bluetooth speaker. It must survive being dropped."
+  - id: garden-chair
+    text: "A manufacturer makes polymer garden chairs that stay outdoors all summer."
+
+questions:
+
+  - id: dt26-poly-001
+    type: two_tier
+    status: draft
+    spec_point: "1.1.24"
+    concept: abs-casing
+    command: explain
+    scenario: bluetooth-speaker
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "Which polymer is best for the speaker casing?"
+    options:
+      - text: "ABS"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is brittle and can crack if dropped."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is a modelling and insulation foam, far too weak for a casing."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy is a thermoset used for adhesives and composites, not injection-moulded casings."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It is tough and impact resistant, and injection moulds well"
+        - text: "It has glass-like clarity"
+          why_wrong: "That's acrylic."
+        - text: "It is self-lubricating"
+          why_wrong: "That's nylon."
+        - text: "It is very light and easy to carve"
+          why_wrong: "That's Styrofoam."
+      answer: 0
+    explanation: "ABS is tough, impact resistant and injection moulds well, so it's used for electronic casings."
+
+  - id: dt26-poly-002
+    status: draft
+    spec_point: "1.1.24"
+    concept: acrylic
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "A shop wants a clear display stand, laser cut with polished edges. Which polymer should it use?"
+    options:
+      - text: "Acrylic"
+      - text: "ABS"
+        why_wrong: "ABS isn't clear and isn't the usual laser-cutting choice."
+      - text: "Nylon"
+        why_wrong: "Nylon is creamy white and used for gears and fibres."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is a blue modelling foam."
+    answer: 0
+    explanation: "Acrylic has glass-like clarity and laser cuts cleanly with polished edges."
+
+  - id: dt26-poly-003
+    status: draft
+    spec_point: "1.1.24"
+    concept: nylon
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "Which polymer is used for small gears in a food mixer because it is self-lubricating?"
+    options:
+      - text: "Nylon"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is brittle and not self-lubricating."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is a weak foam."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy is an adhesive and composite matrix."
+    answer: 0
+    explanation: "Nylon is tough, hard-wearing and low friction, ideal for gears and bearings."
+
+  - id: dt26-poly-004
+    status: draft
+    spec_point: "1.1.24"
+    concept: styrofoam
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "A student wants to carve a quick block model of a computer mouse. Which material should they use?"
+    options:
+      - text: "Styrofoam"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is hard and rigid, so it's slow to carve."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy is a liquid adhesive before curing."
+      - text: "Nylon"
+        why_wrong: "Nylon is tough and hard to carve by hand."
+    answer: 0
+    explanation: "Styrofoam is very light and easy to cut, carve and sand, so it's ideal for block models."
+
+  - id: dt26-poly-005
+    status: draft
+    spec_point: "1.1.24"
+    concept: styrofoam-safety
+    command: describe
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "Why must you work in a well-ventilated area when using a hot wire cutter on Styrofoam?"
+    options:
+      - text: "The melting polymer gives off fumes"
+      - text: "It produces fine dust"
+        why_wrong: "Hot wire cutting melts the foam rather than making dust."
+      - text: "It might explode"
+        why_wrong: "The hazard is fumes."
+      - text: "It absorbs water from the air"
+        why_wrong: "That isn't the hazard."
+    answer: 0
+    explanation: "Melting Styrofoam gives off fumes, so ventilation is needed."
+
+  - id: dt26-poly-006
+    status: draft
+    spec_point: "1.1.24"
+    concept: epoxy
+    command: identify
+    context: true
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    text: "Which polymer forms the matrix in a carbon-fibre bicycle frame?"
+    options:
+      - text: "Epoxy resin"
+      - text: "ABS"
+        why_wrong: "ABS is an injection-moulded thermoplastic."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is a modelling foam."
+      - text: "Acrylic"
+        why_wrong: "Acrylic is used for clear sheet products."
+    answer: 0
+    explanation: "Epoxy resin is a strong two-part thermoset used as the matrix in carbon-fibre composites."
+
+  - id: dt26-poly-007
+    type: two_tier
+    status: draft
+    spec_point: "1.1.24"
+    concept: thermo-difference
+    command: explain
+    see: "#thermosetting-and-thermoforming-plastics"
+    text: "Why can a thermoforming plastic be reshaped, but a thermoset can't?"
+    options:
+      - text: "Thermosets have cross-links between their chains"
+      - text: "Thermosets have no long chains"
+        why_wrong: "Both are polymers made of long chains."
+      - text: "Thermoforming plastics are made from plants"
+        why_wrong: "Most are made from oil. The difference is cross-linking."
+      - text: "Thermosets melt at a lower temperature"
+        why_wrong: "Thermosets don't soften at all once set."
+    answer: 0
+    reason:
+      text: "What do the cross-links do?"
+      options:
+        - text: "Lock the chains together permanently, so they can't be softened again"
+        - text: "Let the chains slide apart when heated"
+          why_wrong: "That's what happens in thermoforming plastics, which have no cross-links."
+        - text: "Make the plastic conduct electricity"
+          why_wrong: "Cross-links don't make polymers conductive."
+        - text: "Make it compostable"
+          why_wrong: "Cross-links make thermosets very hard to recycle."
+      answer: 0
+    explanation: "Cross-links bond the chains together when a thermoset first sets, so it can't be softened or reshaped again."
+
+  - id: dt26-poly-008
+    status: draft
+    spec_point: "1.1.24"
+    concept: plug-thermoset
+    command: describe
+    context: true
+    see: "#physical-properties-thermal-conductivity-electrical-conductivity-and-insulation"
+    text: "Why are plugs and sockets often made from urea formaldehyde?"
+    options:
+      - text: "It insulates electricity and won't soften if a connection gets warm"
+      - text: "It is a good electrical conductor"
+        why_wrong: "Plugs need an insulator to protect users from shock."
+      - text: "It can be reshaped many times"
+        why_wrong: "Urea formaldehyde is a thermoset. It can't be reshaped."
+      - text: "It is compostable"
+        why_wrong: "It's a thermoset, which is very difficult to recycle or compost."
+    answer: 0
+    explanation: "Urea formaldehyde is a thermoset: an excellent insulator that resists heat and won't soften."
+
+  - id: dt26-poly-009
+    type: multi
+    status: draft
+    spec_point: "1.1.24"
+    concept: thermoforming-examples
+    command: identify
+    see: "#thermosetting-and-thermoforming-plastics"
+    text: "Select TWO thermoforming plastics."
+    options:
+      - text: "Acrylic"
+      - text: "Polypropylene"
+      - text: "Melamine formaldehyde"
+        why_wrong: "Melamine formaldehyde is a thermoset."
+      - text: "Polyester resin"
+        why_wrong: "Polyester resin is a thermoset."
+    answer: [0, 1]
+    explanation: "Acrylic, ABS, nylon, HDPE, polypropylene and PVC are thermoforming plastics."
+
+  - id: dt26-poly-010
+    status: draft
+    spec_point: "1.1.24"
+    concept: thermal-insulation
+    command: describe
+    context: true
+    see: "#physical-properties-thermal-conductivity-electrical-conductivity-and-insulation"
+    text: "Why is a cool box lined with foamed polymer?"
+    options:
+      - text: "It traps air in tiny cells, making it a very good thermal insulator"
+      - text: "It conducts heat away quickly"
+        why_wrong: "A cool box needs an insulator, which slows heat flow."
+      - text: "It is very heavy"
+        why_wrong: "Foams are light."
+      - text: "It is self-lubricating"
+        why_wrong: "That's nylon, and not relevant here."
+    answer: 0
+    explanation: "Foamed polymers trap air in tiny cells, so they're excellent thermal insulators."
+
+  - id: dt26-poly-011
+    status: draft
+    spec_point: "1.1.24"
+    concept: elasticity
+    command: identify
+    context: true
+    see: "#mechanical-properties-of-polymers"
+    text: "A polypropylene living hinge on a shampoo lid bends thousands of times and springs back. Which property is this?"
+    options:
+      - text: "Elasticity"
+      - text: "Hardness"
+        why_wrong: "Hardness is resistance to scratching."
+      - text: "Plasticity"
+        why_wrong: "Plasticity is a permanent change of shape. The hinge returns to shape."
+      - text: "Thermal insulation"
+        why_wrong: "That's about heat flow."
+    answer: 0
+    explanation: "Elasticity is bending or stretching and returning to the original shape when the force is removed."
+
+  - id: dt26-poly-012
+    status: draft
+    spec_point: "1.1.24"
+    concept: pla
+    command: identify
+    context: true
+    see: "#biopolymers-compared-with-synthetic-oil-based-polymers"
+    text: "Which biopolymer is widely used as 3D printing filament?"
+    options:
+      - text: "PLA (polylactic acid)"
+      - text: "ABS"
+        why_wrong: "ABS 3D prints well but is oil-based."
+      - text: "Nylon"
+        why_wrong: "Nylon is oil-based."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy is an oil-based thermoset."
+    answer: 0
+    explanation: "PLA is made from plant starch and is widely used for 3D printing, cups and packaging."
+
+  - id: dt26-poly-013
+    type: multi
+    status: draft
+    spec_point: "1.1.24"
+    concept: biopolymer-drawbacks
+    command: identify
+    see: "#biopolymers-compared-with-synthetic-oil-based-polymers"
+    text: "Select TWO disadvantages of biopolymers such as PLA."
+    options:
+      - text: "Many only compost in industrial facilities"
+      - text: "They are often less heat resistant"
+      - text: "They come from finite crude oil"
+        why_wrong: "Biopolymers come from renewable crops."
+      - text: "They always have a higher carbon footprint"
+        why_wrong: "Their carbon footprint is usually lower."
+    answer: [0, 1]
+    explanation: "PLA softens at about 60°C, many biopolymers need industrial composting, they cost more, and the crops use farmland."
+
+  - id: dt26-poly-014
+    status: draft
+    spec_point: "1.1.24"
+    concept: biodegradable-myth
+    command: describe
+    context: true
+    see: "#biopolymers-compared-with-synthetic-oil-based-polymers"
+    text: "A PLA cup is labelled 'compostable'. What happens if it's put in the normal plastic recycling bin?"
+    options:
+      - text: "It can contaminate the plastic recycling"
+      - text: "It is recycled into a new PLA cup"
+        why_wrong: "Normal plastic recycling isn't set up for PLA."
+      - text: "It composts in the bin"
+        why_wrong: "Most PLA needs the high temperatures of industrial composting."
+      - text: "It turns into ABS"
+        why_wrong: "Polymers don't change type in a bin."
+    answer: 0
+    explanation: "'Biodegradable' doesn't mean it breaks down anywhere, and biopolymers can contaminate normal recycling."
+
+  - id: dt26-poly-015
+    type: two_tier
+    status: draft
+    spec_point: "1.1.24"
+    concept: uv-protection
+    command: explain
+    scenario: garden-chair
+    see: "#how-surface-treatments-and-finishes-prolong-material-life"
+    text: "What is the biggest threat to the chairs' appearance and life outdoors?"
+    options:
+      - text: "UV light"
+      - text: "Rust"
+        why_wrong: "Polymers don't rust."
+      - text: "Woodworm"
+        why_wrong: "Woodworm attacks timber, not polymers."
+      - text: "Electricity"
+        why_wrong: "Electricity isn't a threat to garden furniture."
+    answer: 0
+    reason:
+      text: "How can it be reduced?"
+      options:
+        - text: "Adding UV stabilisers or a UV-resistant coating"
+        - text: "Painting the chairs with primer only"
+          why_wrong: "Primer alone doesn't protect against UV."
+        - text: "Making them from a thermoset"
+          why_wrong: "The notes give UV stabilisers and coatings as the answer."
+        - text: "Polishing the edges"
+          why_wrong: "Polishing edges helps against cracking from nicks, not UV."
+      answer: 0
+    explanation: "UV light makes many polymers fade and become brittle. UV stabilisers and coatings slow this down."
+
+  - id: dt26-poly-016
+    status: draft
+    spec_point: "1.1.24"
+    concept: self-finishing
+    command: describe
+    scenario: bluetooth-speaker
+    see: "#how-surface-treatments-and-finishes-prolong-material-life"
+    text: "Why does the injection-moulded speaker casing usually need no extra finish?"
+    options:
+      - text: "Polymers are self-finishing: shape, colour and texture come from the mould"
+      - text: "It will be painted later anyway"
+        why_wrong: "Most injection mouldings aren't painted."
+      - text: "Polymers can't be finished"
+        why_wrong: "They can be, but often don't need to be."
+      - text: "It will rust otherwise"
+        why_wrong: "Polymers don't rust."
+    answer: 0
+    explanation: "The mould gives the casing its colour and surface texture, so no further finish is needed."
+
+  - id: dt26-poly-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.24"
+    concept: abs-technique
+    command: explain
+    scenario: bluetooth-speaker
+    see: "#aesthetic-and-functional-properties-of-key-polymers"
+    exam_question:
+      text: "Explain why ABS is suitable for the speaker casing."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's a thermoforming plastic."
+        marks_awarded: 0
+        why_wrong: "Classifying it doesn't explain suitability."
+      - text: "It's tough."
+        marks_awarded: 1
+        why_wrong: "A correct property earns 1 mark, but it isn't linked to the speaker."
+      - text: "It's tough and impact resistant, so the casing won't crack if the speaker is dropped."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a property linked to how the product is used."
+
+  - id: dt26-poly-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.24"
+    concept: thermoset-technique
+    command: explain
+    see: "#thermosetting-and-thermoforming-plastics"
+    exam_question:
+      text: "Explain why thermosetting plastics are difficult to recycle."
+      marks: 2
+    sample_answer: "They have cross-links between the chains."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that this means they can't be softened and reshaped into new products"
+      - text: "Adding that they're often brittle"
+        why_wrong: "Brittleness doesn't explain the recycling problem."
+      - text: "Adding that they're good insulators"
+        why_wrong: "Insulation isn't related to recycling."
+      - text: "Adding that epoxy is a thermoset"
+        why_wrong: "An example doesn't explain why."
+    answer: 0
+    explanation: "The missing mark links the structure to the consequence: they can't be melted down and remoulded."
+
+  - id: dt26-poly-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.24"
+    concept: evaluate-technique
+    command: evaluate
+    see: "#biopolymers-compared-with-synthetic-oil-based-polymers"
+    exam_question:
+      text: "Evaluate the use of PLA instead of oil-based polymers for disposable cups."
+      marks: 6
+    text: "Which answer actually evaluates the choice?"
+    options:
+      - text: "PLA is made from corn starch."
+        why_wrong: "This only describes PLA."
+      - text: "PLA is renewable and usually has a lower carbon footprint, but it needs industrial composting, costs more and uses farmland, so it's only better if proper composting is available."
+      - text: "Many coffee shops use PLA cups."
+        why_wrong: "An example isn't an evaluation."
+      - text: "PLA is better for the planet."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up advantages and disadvantages, then reach a justified, conditional conclusion."

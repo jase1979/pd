@@ -1,0 +1,421 @@
+# Modern, Smart & Emerging Materials (D&T 2026, 1.1.25 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# Concentrates on what this page adds to 1.1.2: conductive polymers, phase
+# changing materials, composites, connectivity and AI.
+#
+# spec_point values come from the page title (1.1.25). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-smart-materials
+spec: gcse-2026
+unit: "1.1"
+topic: "Modern, Smart & Emerging Materials"
+page: /gcse-2026/unit1/product-design/smart-materials/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: smart-thermostat
+    text: "A company is designing a smart heating thermostat that can be controlled from a phone and learns the household's routine."
+  - id: kayak
+    text: "A manufacturer is designing a lightweight, waterproof kayak to be made in small batches at a reasonable price."
+
+questions:
+
+  - id: dt26-msm-001
+    status: draft
+    spec_point: "1.1.25"
+    concept: no-electronics
+    command: describe
+    context: true
+    see: "#materials-that-respond-to-the-environment-or-external-stimuli"
+    text: "How does a thermochromic baby spoon 'warn' that food is too hot?"
+    options:
+      - text: "The pigment in it changes colour, with no electronics or power supply"
+      - text: "A sensor sends a message to a phone"
+        why_wrong: "Smart materials react by themselves, without sensors or power."
+      - text: "It changes shape"
+        why_wrong: "Changing shape is a shape memory alloy."
+      - text: "It releases a smell"
+        why_wrong: "That's micro-encapsulation."
+    answer: 0
+    explanation: "Smart materials sense and react on their own: the pigment changes colour as the temperature rises."
+
+  - id: dt26-msm-002
+    status: draft
+    spec_point: "1.1.25"
+    concept: thermochromic-manufacture
+    command: describe
+    see: "#photochromic-thermochromic-and-micro-encapsulation"
+    text: "How is a thermochromic effect usually added to a moulded polymer product?"
+    options:
+      - text: "The pigment is added to the polymer before moulding"
+      - text: "The product is heated to 62°C"
+        why_wrong: "That's how polymorph is softened."
+      - text: "Conductive thread is sewn in"
+        why_wrong: "That's for conductive circuits in textiles."
+      - text: "It's dipped in UV ink"
+        why_wrong: "UV-reactive ink is photochromic."
+    answer: 0
+    explanation: "Thermochromic pigments are added to polymers before moulding, or printed as inks onto packaging."
+
+  - id: dt26-msm-003
+    status: draft
+    spec_point: "1.1.25"
+    concept: sma-stent
+    command: describe
+    context: true
+    see: "#shape-memory-materials-and-polymorph"
+    text: "How does a Nitinol medical stent work?"
+    options:
+      - text: "It is inserted collapsed, then opens to its pre-set shape inside the warm blood vessel"
+      - text: "It is moulded by hand at 62°C"
+        why_wrong: "That's polymorph."
+      - text: "It changes colour to show blood flow"
+        why_wrong: "Nitinol is a shape memory alloy, not a colour-changing material."
+      - text: "It dissolves in the body"
+        why_wrong: "It returns to its shape. It doesn't dissolve."
+    answer: 0
+    explanation: "Nitinol remembers a pre-set shape and returns to it when warmed, so the stent opens inside the vessel."
+
+  - id: dt26-msm-004
+    status: draft
+    spec_point: "1.1.25"
+    concept: conductive-polymer
+    command: describe
+    see: "#conductive-polymers"
+    text: "What makes conductive polymers useful?"
+    options:
+      - text: "They combine a polymer's flexibility and low weight with the ability to carry a current"
+      - text: "They are better insulators than other polymers"
+        why_wrong: "They're the exception: they conduct, while most polymers insulate."
+      - text: "They change colour in sunlight"
+        why_wrong: "That's photochromic."
+      - text: "They are stronger than steel"
+        why_wrong: "Strength isn't their key feature."
+    answer: 0
+    explanation: "Conductive polymers are flexible and light but conduct electricity, so they're used in flexible circuits and wearables."
+
+  - id: dt26-msm-005
+    type: multi
+    status: draft
+    spec_point: "1.1.25"
+    concept: conductive-uses
+    command: identify
+    see: "#conductive-polymers"
+    text: "Select TWO uses of conductive polymers or inks."
+    options:
+      - text: "Anti-static packaging for electronic components"
+      - text: "Circuits printed onto paper or sewn into fabric"
+      - text: "Plug casings"
+        why_wrong: "Plugs need insulating polymers, not conductive ones."
+      - text: "Cable sheathing"
+        why_wrong: "Cable sheathing must insulate."
+    answer: [0, 1]
+    explanation: "Conductive polymers are used for flexible circuits, touch surfaces, anti-static packaging and wearable technology."
+
+  - id: dt26-msm-006
+    type: two_tier
+    status: draft
+    spec_point: "1.1.25"
+    concept: pcm
+    command: explain
+    context: true
+    see: "#phase-changing-materials-pcm"
+    text: "A food delivery box must keep meals at a steady temperature. Which material would help?"
+    options:
+      - text: "A phase changing material"
+      - text: "A photochromic material"
+        why_wrong: "Photochromic materials change colour in UV light."
+      - text: "A conductive polymer"
+        why_wrong: "Conductive polymers carry current, not heat storage."
+      - text: "A shape memory alloy"
+        why_wrong: "SMAs change shape, not temperature."
+    answer: 0
+    reason:
+      text: "How does it work?"
+      options:
+        - text: "It absorbs a lot of heat as it melts and releases it as it solidifies"
+        - text: "It changes colour when food goes cold"
+          why_wrong: "That would be thermochromic, and wouldn't keep the food warm."
+        - text: "It generates electricity"
+          why_wrong: "PCMs store and release heat."
+        - text: "It returns to a set shape"
+          why_wrong: "That's an SMA."
+      answer: 0
+    explanation: "PCMs absorb heat as they melt and release it as they solidify, holding a temperature steady."
+
+  - id: dt26-msm-007
+    status: draft
+    spec_point: "1.1.25"
+    concept: composite-definition
+    command: describe
+    see: "#composite-materials"
+    text: "What is a composite material?"
+    options:
+      - text: "Two or more materials combined to give better properties than either alone"
+      - text: "A metal mixed with another element"
+        why_wrong: "That's an alloy."
+      - text: "A material that reacts to a stimulus"
+        why_wrong: "That's a smart material."
+      - text: "A polymer made from plants"
+        why_wrong: "That's a biopolymer."
+    answer: 0
+    explanation: "A composite usually sets fibres, for strength, in a matrix such as resin, which binds them and spreads the load."
+
+  - id: dt26-msm-008
+    type: two_tier
+    status: draft
+    spec_point: "1.1.25"
+    concept: grp-vs-carbon
+    command: explain
+    scenario: kayak
+    see: "#composite-materials"
+    text: "Which composite is best for the kayak?"
+    options:
+      - text: "Glass reinforced plastic (GRP)"
+      - text: "Carbon fibre"
+        why_wrong: "Carbon fibre would work, but it's very expensive. The brief asks for a reasonable price."
+      - text: "MDF"
+        why_wrong: "MDF isn't a composite in this sense, and it swells in water."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is a hand-mouldable polymer for prototypes."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It is light, waterproof and mouldable into large shapes, and much cheaper than carbon fibre"
+        - text: "It is the strongest material for its weight"
+          why_wrong: "Carbon fibre is stronger for its weight. GRP wins on cost."
+        - text: "It conducts electricity"
+          why_wrong: "Irrelevant to a kayak."
+        - text: "It changes colour in sunlight"
+          why_wrong: "That's photochromic."
+      answer: 0
+    explanation: "GRP is strong, light, waterproof and easily moulded into large shapes, at much lower cost than carbon fibre."
+
+  - id: dt26-msm-009
+    status: draft
+    spec_point: "1.1.25"
+    concept: lay-up
+    command: describe
+    scenario: kayak
+    see: "#composite-materials"
+    text: "How would the kayak hull be made?"
+    options:
+      - text: "Layers of glass fibre mat are laid into a mould and resin is brushed or rolled in"
+      - text: "It is injection moulded from ABS pellets"
+        why_wrong: "That's injection moulding, not composite lay-up."
+      - text: "It is carved from Styrofoam"
+        why_wrong: "Styrofoam is for models."
+      - text: "It is laser cut from sheet"
+        why_wrong: "Laser cutting makes flat parts, not a hull."
+    answer: 0
+    explanation: "In lay-up, fibre mat is laid in a mould and resin with hardener is brushed in. The mould surface gives the smooth face."
+
+  - id: dt26-msm-010
+    status: draft
+    spec_point: "1.1.25"
+    concept: carbon-fibre-uses
+    command: identify
+    context: true
+    see: "#composite-materials"
+    text: "Why is carbon fibre used for Formula 1 car parts?"
+    options:
+      - text: "It is extremely strong and stiff for its weight"
+      - text: "It is cheap and quick to make"
+        why_wrong: "Carbon fibre is very expensive and labour-intensive."
+      - text: "It is a good thermal insulator for lofts"
+        why_wrong: "That's loose glass fibre."
+      - text: "It can be reshaped when heated"
+        why_wrong: "The epoxy matrix is a thermoset, so it can't be reshaped."
+    answer: 0
+    explanation: "Carbon fibre is extremely strong and stiff for its weight and resists corrosion, but it's expensive."
+
+  - id: dt26-msm-011
+    status: draft
+    spec_point: "1.1.25"
+    concept: bluetooth-vs-wifi
+    command: identify
+    context: true
+    see: "#emerging-technologies-bluetooth-wi-fi-and-the-internet-of-things"
+    text: "Wireless earbuds connect directly to a phone a short distance away, using little power. Which technology is this?"
+    options:
+      - text: "Bluetooth"
+      - text: "Wi-Fi"
+        why_wrong: "Wi-Fi connects to a network through a router, with longer range. Bluetooth connects devices directly."
+      - text: "Biometrics"
+        why_wrong: "Biometrics identify people."
+      - text: "Machine learning"
+        why_wrong: "Machine learning is a type of AI."
+    answer: 0
+    explanation: "Bluetooth is short-range (about 10 m), low-power wireless connecting devices directly to each other."
+
+  - id: dt26-msm-012
+    status: draft
+    spec_point: "1.1.25"
+    concept: iot
+    command: identify
+    scenario: smart-thermostat
+    see: "#emerging-technologies-bluetooth-wi-fi-and-the-internet-of-things"
+    text: "The thermostat collects data and is controlled remotely over the internet. What is it part of?"
+    options:
+      - text: "The Internet of Things"
+      - text: "A composite material"
+        why_wrong: "Composites combine materials."
+      - text: "Lay-up"
+        why_wrong: "Lay-up is a composite manufacturing method."
+      - text: "Market pull"
+        why_wrong: "Market pull is about where demand comes from."
+    answer: 0
+    explanation: "IoT products have sensors, processors and wireless connections, so they collect data and can be controlled remotely."
+
+  - id: dt26-msm-013
+    type: multi
+    status: draft
+    spec_point: "1.1.25"
+    concept: iot-drawbacks
+    command: identify
+    scenario: smart-thermostat
+    see: "#emerging-technologies-bluetooth-wi-fi-and-the-internet-of-things"
+    text: "Select TWO drawbacks the designers must consider."
+    options:
+      - text: "Connected devices can be hacked"
+      - text: "It may stop working if the company withdraws support"
+      - text: "It can save energy automatically"
+        why_wrong: "That's a benefit."
+      - text: "It can learn the household's routine"
+        why_wrong: "That's a benefit."
+    answer: [0, 1]
+    explanation: "IoT drawbacks include security, privacy, obsolescence when support ends, higher cost and more e-waste."
+
+  - id: dt26-msm-014
+    status: draft
+    spec_point: "1.1.25"
+    concept: machine-learning
+    command: describe
+    scenario: smart-thermostat
+    see: "#ai-and-machine-learning-in-developing-products"
+    text: "How does machine learning let the thermostat learn the household's routine?"
+    options:
+      - text: "It finds patterns in data about when the heating is used"
+      - text: "It follows fixed instructions that never change"
+        why_wrong: "Machine learning improves by finding patterns, not by fixed rules."
+      - text: "It uses a phase changing material"
+        why_wrong: "PCMs store heat. They don't learn."
+      - text: "It changes colour"
+        why_wrong: "Colour change has nothing to do with learning."
+    answer: 0
+    explanation: "Machine learning software gets better at a task by finding patterns in data instead of following fixed instructions."
+
+  - id: dt26-msm-015
+    status: draft
+    spec_point: "1.1.25"
+    concept: ai-manufacture
+    command: identify
+    see: "#ai-and-machine-learning-in-developing-products"
+    text: "How is AI used on a production line?"
+    options:
+      - text: "Vision systems inspect products and predict when machines need maintenance"
+      - text: "It replaces all materials with composites"
+        why_wrong: "AI doesn't choose materials on the line."
+      - text: "It lays up glass fibre by hand"
+        why_wrong: "Lay-up is a manual or machine process, not AI."
+      - text: "It removes the need for any quality control"
+        why_wrong: "AI helps carry out quality control."
+    answer: 0
+    explanation: "AI vision inspects products on the line, and predictive maintenance spots when machines will need attention."
+
+  - id: dt26-msm-016
+    status: draft
+    spec_point: "1.1.25"
+    concept: tech-push
+    command: identify
+    context: true
+    see: "#emerging-technology-as-a-driving-force-in-product-development"
+    text: "Tiny batteries, sensors and Bluetooth chips made fitness trackers possible. What is this an example of?"
+    options:
+      - text: "Technology push"
+      - text: "Market pull"
+        why_wrong: "Here the new components came first and the product followed."
+      - text: "Planned obsolescence"
+        why_wrong: "That's designing a product to have a limited life."
+      - text: "Biomimicry"
+        why_wrong: "Biomimicry copies nature."
+    answer: 0
+    explanation: "Technology push: new, smaller and cheaper components made a new kind of product possible."
+
+  - id: dt26-msm-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.25"
+    concept: grp-technique
+    command: explain
+    scenario: kayak
+    see: "#composite-materials"
+    exam_question:
+      text: "Explain why GRP is suitable for the kayak."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's a composite."
+        marks_awarded: 0
+        why_wrong: "Classifying it doesn't explain suitability."
+      - text: "It's waterproof."
+        marks_awarded: 1
+        why_wrong: "A correct property earns 1 mark, but it isn't developed."
+      - text: "It's waterproof and corrosion resistant, so the hull won't rot or weaken in water, and it's light so the kayak is easy to carry."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: properties linked to how the kayak is used."
+
+  - id: dt26-msm-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.25"
+    concept: composite-technique
+    command: describe
+    see: "#composite-materials"
+    exam_question:
+      text: "Describe the structure of a composite material such as carbon fibre."
+      marks: 2
+    sample_answer: "It has carbon fibres in it."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that the fibres are set in a resin matrix that binds them and spreads the load"
+      - text: "Adding that it's expensive"
+        why_wrong: "Cost doesn't describe the structure."
+      - text: "Adding that it's used in F1 cars"
+        why_wrong: "A use doesn't describe the structure."
+      - text: "Adding that it's black"
+        why_wrong: "Colour doesn't describe the structure."
+    answer: 0
+    explanation: "A full description names both parts: fibres for strength and a matrix to bind them."
+
+  - id: dt26-msm-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.25"
+    concept: evaluate-technique
+    command: evaluate
+    scenario: smart-thermostat
+    see: "#emerging-technologies-bluetooth-wi-fi-and-the-internet-of-things"
+    exam_question:
+      text: "Evaluate the use of IoT technology in the thermostat."
+      marks: 6
+    text: "Which answer actually evaluates it?"
+    options:
+      - text: "The thermostat connects to the internet."
+        why_wrong: "This only describes it."
+      - text: "It saves energy by learning routines and can be controlled remotely, but it can be hacked and may stop working if support ends, so it's worthwhile only if the company keeps it secure and updated."
+      - text: "Smart speakers are also IoT products."
+        why_wrong: "Another example isn't an evaluation."
+      - text: "IoT is the future."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up benefits and drawbacks, then reach a justified conclusion."

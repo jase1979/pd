@@ -1,0 +1,446 @@
+# Manufacture & Industry (D&T 2026, 1.1.29 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.29). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-manufacture-and-industry
+spec: gcse-2026
+unit: "1.1"
+topic: "Manufacture & Industry"
+page: /gcse-2026/unit1/product-design/manufacture-and-industry/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: car-plant
+    text: "A car manufacturer builds 1,000 cars a day on an assembly line. Parts arrive from hundreds of suppliers."
+  - id: christmas-mugs
+    text: "A small company makes 500 identical mugs for the Christmas market each year, and different designs at other times of year."
+
+questions:
+
+  - id: dt26-mfg-001
+    type: two_tier
+    status: draft
+    spec_point: "1.1.29"
+    concept: economies-of-scale
+    command: explain
+    see: "#the-different-scales-of-production"
+    text: "What happens to the cost per product as the number made increases?"
+    options:
+      - text: "It goes down"
+      - text: "It goes up"
+        why_wrong: "The total cost goes up, but the cost per product falls."
+      - text: "It stays the same"
+        why_wrong: "Shared tooling costs and bulk buying lower the cost per item."
+      - text: "It depends only on the material"
+        why_wrong: "Scale has a big effect on cost per item."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Tooling and set-up costs are shared across more items, and materials are bought in bulk"
+        - text: "Workers are paid less"
+          why_wrong: "That isn't what economies of scale means."
+        - text: "Machines are cheaper"
+          why_wrong: "High-volume machinery is more expensive."
+        - text: "Products are smaller"
+          why_wrong: "Size doesn't change with scale."
+      answer: 0
+    explanation: "Economies of scale: fixed costs are spread across more items, and bulk buying lowers material prices."
+
+  - id: dt26-mfg-002
+    status: draft
+    spec_point: "1.1.29"
+    concept: flexibility
+    command: describe
+    see: "#the-different-scales-of-production"
+    text: "What happens to flexibility as the scale of production increases?"
+    options:
+      - text: "It goes down, because changing the design means retooling"
+      - text: "It goes up"
+        why_wrong: "Larger scales rely on dedicated tooling that's hard to change."
+      - text: "It stays the same"
+        why_wrong: "Flexibility falls as scale rises."
+      - text: "It only changes for textiles"
+        why_wrong: "It applies to all products."
+    answer: 0
+    explanation: "High-volume production depends on dedicated moulds and lines, so design changes are slow and costly."
+
+  - id: dt26-mfg-003
+    status: draft
+    spec_point: "1.1.29"
+    concept: job-production
+    command: identify
+    context: true
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "A designer makes a single made-to-measure wedding dress for one client. What scale of production is this?"
+    options:
+      - text: "Job (one-off) production"
+      - text: "Batch production"
+        why_wrong: "Batch production makes a set quantity of identical items."
+      - text: "Mass production"
+        why_wrong: "Mass production makes very large numbers of identical items."
+      - text: "Continuous flow"
+        why_wrong: "Continuous flow runs 24/7 making identical items."
+    answer: 0
+    explanation: "Job production makes a single product to a client's exact requirements, often by hand."
+
+  - id: dt26-mfg-004
+    type: two_tier
+    status: draft
+    spec_point: "1.1.29"
+    concept: batch-production
+    command: explain
+    scenario: christmas-mugs
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "Which scale of production suits the mug company?"
+    options:
+      - text: "Batch production"
+      - text: "Job production"
+        why_wrong: "Making 500 identical mugs one at a time to order would be slow and costly."
+      - text: "Mass production"
+        why_wrong: "500 is too few to justify a mass production line, and the designs change."
+      - text: "Continuous flow"
+        why_wrong: "Demand isn't constant and enormous."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "A set quantity is made at once, and equipment can switch designs between batches"
+        - text: "It is the cheapest per item at any quantity"
+          why_wrong: "Mass production is cheaper per item at very high volumes."
+        - text: "Each mug is unique"
+          why_wrong: "The mugs in a batch are identical."
+        - text: "It runs 24 hours a day"
+          why_wrong: "That's continuous flow."
+      answer: 0
+    explanation: "Batch production makes a set quantity of identical items and switches to other designs between batches."
+
+  - id: dt26-mfg-005
+    status: draft
+    spec_point: "1.1.29"
+    concept: batch-drawback
+    command: identify
+    scenario: christmas-mugs
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "What is a disadvantage of batch production for the mug company?"
+    options:
+      - text: "Machines stand idle while being reset between batches"
+      - text: "Every mug is different"
+        why_wrong: "Mugs in a batch are identical."
+      - text: "It needs a huge investment in automated lines"
+        why_wrong: "That's mass or continuous production."
+      - text: "It can never be repeated"
+        why_wrong: "Batches can be repeated when needed."
+    answer: 0
+    explanation: "Resetting between batches leaves machines idle, and stock has to be stored."
+
+  - id: dt26-mfg-006
+    type: multi
+    status: draft
+    spec_point: "1.1.29"
+    concept: mass-production
+    command: identify
+    scenario: car-plant
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "Select TWO features of the car plant's mass production."
+    options:
+      - text: "Low cost per car"
+      - text: "Consistent quality"
+      - text: "Easy to change the design for each customer"
+        why_wrong: "Mass production is inflexible."
+      - text: "Low set-up cost"
+        why_wrong: "Mass production has a huge set-up cost."
+    answer: [0, 1]
+    explanation: "Mass production gives low cost per item and consistent quality, but huge set-up costs and little flexibility."
+
+  - id: dt26-mfg-007
+    type: two_tier
+    status: draft
+    spec_point: "1.1.29"
+    concept: jit
+    command: explain
+    scenario: car-plant
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "Parts arrive from suppliers exactly when they're needed on the line. What system is this?"
+    options:
+      - text: "Just in Time (JIT)"
+      - text: "Continuous flow"
+        why_wrong: "Continuous flow is about running 24/7, not delivery timing."
+      - text: "Cell production"
+        why_wrong: "Cell production is about teams making complete products."
+      - text: "Job production"
+        why_wrong: "Job production is one-off making."
+    answer: 0
+    reason:
+      text: "What is its biggest risk?"
+      options:
+        - text: "Production stops if a delivery is late or a supplier fails"
+        - text: "Too much stock fills the warehouse"
+          why_wrong: "JIT reduces stock."
+        - text: "Products can't respond to demand"
+          why_wrong: "JIT helps products respond quickly."
+        - text: "Workers need no skills"
+          why_wrong: "That isn't a JIT risk."
+      answer: 0
+    explanation: "JIT cuts stock and waste, but relies on very reliable suppliers. A late delivery stops the line."
+
+  - id: dt26-mfg-008
+    status: draft
+    spec_point: "1.1.29"
+    concept: jit-origin
+    command: state
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    text: "Which company developed Just in Time in the car industry?"
+    options:
+      - text: "Toyota"
+      - text: "Dyson"
+        why_wrong: "Dyson is known for vacuum cleaners."
+      - text: "Alessi"
+        why_wrong: "Alessi makes kitchenware."
+      - text: "The Design Council"
+        why_wrong: "The Design Council is a design charity, not a car maker."
+    answer: 0
+    explanation: "JIT was developed by Toyota and is used widely in mass production, especially cars."
+
+  - id: dt26-mfg-009
+    status: draft
+    spec_point: "1.1.29"
+    concept: continuous-flow
+    command: identify
+    context: true
+    see: "#continuous-flow-production"
+    text: "Drinks cans are made 24 hours a day, 7 days a week. What scale of production is this?"
+    options:
+      - text: "Continuous flow"
+      - text: "Batch"
+        why_wrong: "Batch production stops and resets between batches."
+      - text: "Job"
+        why_wrong: "Job production makes one-offs."
+      - text: "Just in Time"
+        why_wrong: "JIT is a stock system, not a scale of production."
+    answer: 0
+    explanation: "Continuous flow runs 24/7 for products with enormous, constant demand, such as cans, bottles and screws."
+
+  - id: dt26-mfg-010
+    status: draft
+    spec_point: "1.1.29"
+    concept: continuous-why
+    command: describe
+    see: "#continuous-flow-production"
+    text: "Why does continuous flow production run without a break?"
+    options:
+      - text: "Stopping and restarting is expensive, for example furnaces must stay hot"
+      - text: "Workers prefer night shifts"
+        why_wrong: "The reason is the cost of stopping."
+      - text: "It is required by law"
+        why_wrong: "It's an economic reason."
+      - text: "Demand changes every day"
+        why_wrong: "Continuous flow suits constant demand."
+    answer: 0
+    explanation: "Restarting processes like furnaces is very costly, so the line keeps running."
+
+  - id: dt26-mfg-011
+    type: multi
+    status: draft
+    spec_point: "1.1.29"
+    concept: cam-high-volume
+    command: identify
+    scenario: car-plant
+    see: "#the-importance-of-cam-in-modern-high-volume-production"
+    text: "Select TWO ways CAM and robots help the car plant."
+    options:
+      - text: "Robots take over dangerous tasks such as welding and spray painting"
+      - text: "Every part is made to the same accuracy, so parts are interchangeable"
+      - text: "Machinery and maintenance are cheap"
+        why_wrong: "CAM machinery is expensive to buy and maintain."
+      - text: "No trained staff are needed"
+        why_wrong: "Trained programmers and technicians are needed."
+    answer: [0, 1]
+    explanation: "CAM brings consistency, speed, complex shapes, flexibility, less waste and safety."
+
+  - id: dt26-mfg-012
+    status: draft
+    spec_point: "1.1.29"
+    concept: percentiles
+    command: identify
+    context: true
+    see: "#ergonomics-and-anthropometrics-in-product-development"
+    text: "When designing a shelf for a kitchen, which user should it be reachable by?"
+    options:
+      - text: "A 5th percentile (shorter) user"
+      - text: "A 95th percentile (taller) user"
+        why_wrong: "If the shortest users can reach it, taller ones can too."
+      - text: "The average user"
+        why_wrong: "Designing for the average fits almost nobody exactly."
+      - text: "The designer"
+        why_wrong: "The designer isn't representative of all users."
+    answer: 0
+    explanation: "For reach, design for the shorter extreme. For clearance, such as doorways, design for the taller extreme."
+
+  - id: dt26-mfg-013
+    status: draft
+    spec_point: "1.1.29"
+    concept: adjustability
+    command: describe
+    context: true
+    see: "#ergonomics-and-anthropometrics-in-product-development"
+    text: "Why are office chairs usually adjustable?"
+    options:
+      - text: "Users vary a lot in size, so adjustment lets one design fit most of them"
+      - text: "To make them cheaper"
+        why_wrong: "Adjustment adds cost."
+      - text: "To make them lighter"
+        why_wrong: "Adjusters add weight."
+      - text: "Because chairs are mass produced"
+        why_wrong: "Adjustment is about fitting users, not scale."
+    answer: 0
+    explanation: "Where users vary a lot, products such as office chairs, car seats and saddles are made adjustable."
+
+  - id: dt26-mfg-014
+    status: draft
+    spec_point: "1.1.29"
+    concept: double-diamond
+    command: identify
+    see: "#the-role-of-design-organisations-such-as-the-design-council"
+    text: "Which design process did the Design Council create?"
+    options:
+      - text: "The Double Diamond: Discover, Define, Develop, Deliver"
+      - text: "Just in Time"
+        why_wrong: "JIT is a stock system developed by Toyota."
+      - text: "The 6 Rs"
+        why_wrong: "The 6 Rs are a sustainability checklist."
+      - text: "Life cycle analysis"
+        why_wrong: "LCA is an environmental assessment."
+    answer: 0
+    explanation: "The Design Council's Double Diamond (Discover, Define, Develop, Deliver) is used by designers worldwide."
+
+  - id: dt26-mfg-015
+    status: draft
+    spec_point: "1.1.29"
+    concept: design-council
+    command: describe
+    see: "#the-role-of-design-organisations-such-as-the-design-council"
+    text: "What is the Design Council?"
+    options:
+      - text: "The UK's national strategic adviser on design, an independent charity founded in 1944"
+      - text: "The body that awards the Kitemark"
+        why_wrong: "That's the BSI."
+      - text: "A government department that makes products"
+        why_wrong: "It's an independent charity that advises on design."
+      - text: "A car manufacturer"
+        why_wrong: "It's a design organisation."
+    answer: 0
+    explanation: "The Design Council champions good design for business, public services, the environment and people's lives."
+
+  - id: dt26-mfg-016
+    status: draft
+    spec_point: "1.1.29"
+    concept: cell-production
+    command: describe
+    see: "#how-manufacturing-is-organised"
+    text: "What is cell production?"
+    options:
+      - text: "A team of multi-skilled workers and machines makes a complete product or component"
+      - text: "Each worker does one task as the product moves down a line"
+        why_wrong: "That's a production line."
+      - text: "Production of mobile phones only"
+        why_wrong: "'Cell' means a team area, not phones."
+      - text: "Making batteries"
+        why_wrong: "'Cell' here means a working team."
+    answer: 0
+    explanation: "In cell production, a team in a cell makes a complete product and shares responsibility for quality."
+
+  - id: dt26-mfg-017
+    status: draft
+    spec_point: "1.1.29"
+    concept: lean
+    command: describe
+    see: "#how-manufacturing-is-organised"
+    text: "What is lean manufacturing?"
+    options:
+      - text: "Removing every kind of waste: stock, waiting, movement, overproduction and defects"
+      - text: "Making products lighter"
+        why_wrong: "'Lean' refers to waste, not product weight."
+      - text: "Using fewer workers at any cost"
+        why_wrong: "Lean is about removing waste from the whole system."
+      - text: "Only making products by hand"
+        why_wrong: "Lean applies to all kinds of manufacturing."
+    answer: 0
+    explanation: "Lean manufacturing removes waste of every kind, and JIT is part of it."
+
+  - id: dt26-mfg-018
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.29"
+    concept: scale-technique
+    command: explain
+    scenario: christmas-mugs
+    see: "#choosing-the-most-appropriate-scale"
+    exam_question:
+      text: "Recommend a scale of production for the mugs, and justify your choice."
+      marks: 3
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Batch."
+        marks_awarded: 0
+        why_wrong: "A recommendation with no justification."
+      - text: "Batch production, because they need 500 mugs."
+        marks_awarded: 1
+        why_wrong: "Justified by quantity only."
+      - text: "Batch production, because 500 identical mugs are needed at once, the jigs and moulds can be reused for next year's order, and the equipment can switch to other designs during the rest of the year."
+        marks_awarded: 3
+    answer: 2
+    explanation: "Full marks: justify with the quantity, the cost or reuse of tooling, and the type of product."
+
+  - id: dt26-mfg-019
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.29"
+    concept: jit-technique
+    command: explain
+    scenario: car-plant
+    see: "#job-batch-and-mass-production-and-just-in-time"
+    exam_question:
+      text: "Explain one advantage of Just in Time for the car manufacturer."
+      marks: 2
+    sample_answer: "They don't need to store much stock."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that this means less money is tied up in stock and less warehouse space is needed"
+      - text: "Adding that Toyota invented it"
+        why_wrong: "History doesn't explain the advantage."
+      - text: "Adding that deliveries can be late"
+        why_wrong: "That's a disadvantage."
+      - text: "Adding that cars have many parts"
+        why_wrong: "Not an explanation of the advantage."
+    answer: 0
+    explanation: "The missing mark explains the consequence of storing less stock for the business."
+
+  - id: dt26-mfg-020
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.29"
+    concept: evaluate-technique
+    command: evaluate
+    see: "#continuous-flow-production"
+    exam_question:
+      text: "Evaluate the use of continuous flow production for making plastic bottles."
+      marks: 6
+    text: "Which answer actually evaluates it?"
+    options:
+      - text: "Continuous flow runs 24 hours a day."
+        why_wrong: "This only describes it."
+      - text: "It gives the lowest cost per bottle and very consistent quality with few workers, but needs huge investment and a breakdown halts everything; because demand for bottles is enormous and steady, it's the right choice."
+      - text: "Drinks cans are also made this way."
+        why_wrong: "Another example isn't an evaluation."
+      - text: "It is the best way to make bottles."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up advantages and disadvantages for this product, then reach a justified judgement."

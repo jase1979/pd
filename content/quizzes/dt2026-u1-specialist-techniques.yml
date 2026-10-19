@@ -1,0 +1,503 @@
+# Specialist Techniques & Processes (D&T 2026, 1.1.26 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.26). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-specialist-techniques
+spec: gcse-2026
+unit: "1.1"
+topic: "Specialist Techniques & Processes"
+page: /gcse-2026/unit1/product-design/specialist-techniques/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: bedside-cabinet
+    text: "A school is making a batch of 30 small pine bedside cabinets, each with a hinged door and an acrylic name plate."
+  - id: phone-casing
+    text: "A manufacturer is producing 200,000 polymer casings for a TV remote control, with a battery cover that can be opened."
+
+questions:
+
+  - id: dt26-spec-001
+    status: draft
+    spec_point: "1.1.26"
+    concept: wastage-addition
+    command: identify
+    context: true
+    see: "#wastage-and-addition"
+    text: "A student cuts out the shape of a pine coat hook with a coping saw. Is this wastage or addition?"
+    options:
+      - text: "Wastage"
+      - text: "Addition"
+        why_wrong: "Addition adds material or joins parts. Sawing removes material."
+      - text: "Deforming"
+        why_wrong: "Deforming changes shape without removing material."
+      - text: "Reforming"
+        why_wrong: "Reforming melts or softens a material into a new shape."
+    answer: 0
+    explanation: "Wastage shapes a material by removing parts of it, by sawing, drilling, filing or machining."
+
+  - id: dt26-spec-002
+    status: draft
+    spec_point: "1.1.26"
+    concept: datum
+    command: describe
+    see: "#wastage-and-addition"
+    text: "Why should you measure from a datum edge when marking out?"
+    options:
+      - text: "It's a straight reference edge, so all measurements are accurate and consistent"
+      - text: "It's the edge that gets cut off"
+        why_wrong: "The datum is kept as the reference, not cut off."
+      - text: "It's always the shortest edge"
+        why_wrong: "A datum is chosen for being straight and true, not for length."
+      - text: "It's where you hold the work in the vice"
+        why_wrong: "Holding is a separate stage."
+    answer: 0
+    explanation: "Measuring from one straight datum edge keeps marking out accurate and consistent."
+
+  - id: dt26-spec-003
+    type: two_tier
+    status: draft
+    spec_point: "1.1.26"
+    concept: drilling-jig
+    command: explain
+    scenario: bedside-cabinet
+    see: "#jigs-and-formers-for-accuracy-in-manufacture"
+    text: "What would help place the hinge holes in exactly the same position on all 30 doors?"
+    options:
+      - text: "A drilling jig"
+      - text: "A laminating former"
+        why_wrong: "A former shapes laminated curves. It doesn't position holes."
+      - text: "Marking out each door separately"
+        why_wrong: "That's slower and less consistent across 30 doors."
+      - text: "A countersink bit"
+        why_wrong: "That shapes the top of a hole, not its position."
+    answer: 0
+    reason:
+      text: "Why does this suit batch production?"
+      options:
+        - text: "Parts become interchangeable, with fewer mistakes and faster production"
+        - text: "It makes each door unique"
+          why_wrong: "Batch production needs identical parts."
+        - text: "It removes the need for any drilling"
+          why_wrong: "The jig guides the drill. It doesn't replace it."
+        - text: "It changes the colour of the wood"
+          why_wrong: "Jigs don't affect appearance."
+      answer: 0
+    explanation: "A jig holds the work or guides the tool, so the same operation is repeated accurately without marking out each part."
+
+  - id: dt26-spec-004
+    status: draft
+    spec_point: "1.1.26"
+    concept: former
+    command: identify
+    context: true
+    see: "#jigs-and-formers-for-accuracy-in-manufacture"
+    text: "A furniture maker wants every laminated chair leg to have exactly the same curve. What should they use?"
+    options:
+      - text: "A former"
+      - text: "A drilling jig"
+        why_wrong: "A drilling jig positions holes."
+      - text: "A template"
+        why_wrong: "A template marks out an outline. It doesn't shape the lamination."
+      - text: "A tap"
+        why_wrong: "A tap cuts internal threads."
+    answer: 0
+    explanation: "A former is a solid shape that material is bent or laminated around, so every part takes the same shape."
+
+  - id: dt26-spec-005
+    status: draft
+    spec_point: "1.1.26"
+    concept: pilot-hole
+    command: describe
+    scenario: bedside-cabinet
+    see: "#pilot-clearance-tapping-countersunk-and-counterbored-holes"
+    text: "Why drill a pilot hole before screwing the cabinet's pine sides together?"
+    options:
+      - text: "It guides the screw and stops the timber splitting"
+      - text: "It lets the screw head sit below the surface"
+        why_wrong: "That's a counterbored hole."
+      - text: "It lets a thread be cut with a tap"
+        why_wrong: "That's a tapping hole."
+      - text: "It makes the screw removable"
+        why_wrong: "All screws are removable. The pilot hole guides it and prevents splitting."
+    answer: 0
+    explanation: "A pilot hole is a small hole drilled first to guide a screw and stop timber splitting."
+
+  - id: dt26-spec-006
+    status: draft
+    spec_point: "1.1.26"
+    concept: countersunk
+    command: identify
+    scenario: bedside-cabinet
+    see: "#pilot-clearance-tapping-countersunk-and-counterbored-holes"
+    text: "The hinge screws must sit flush with the surface. Which hole is needed?"
+    options:
+      - text: "A countersunk hole"
+      - text: "A counterbored hole"
+        why_wrong: "A counterbore puts the head below the surface, not flush."
+      - text: "A tapping hole"
+        why_wrong: "A tapping hole is for cutting a thread."
+      - text: "A clearance hole only"
+        why_wrong: "A clearance hole alone leaves the head standing proud."
+    answer: 0
+    explanation: "A countersunk hole has a cone-shaped recess so a countersunk screw head sits flush."
+
+  - id: dt26-spec-007
+    status: draft
+    spec_point: "1.1.26"
+    concept: tapping
+    command: state
+    see: "#pilot-clearance-tapping-countersunk-and-counterbored-holes"
+    text: "Which size tapping hole is drilled for an M6 thread?"
+    options:
+      - text: "5 mm"
+      - text: "6 mm"
+        why_wrong: "That's the bolt size. The tapping hole is slightly smaller so the tap can cut a thread."
+      - text: "7 mm"
+        why_wrong: "Larger than the bolt would be a clearance hole."
+      - text: "3 mm"
+        why_wrong: "Too small: the tap would jam."
+    answer: 0
+    explanation: "A tapping hole is slightly smaller than the bolt: 5 mm for an M6 thread."
+
+  - id: dt26-spec-008
+    status: draft
+    spec_point: "1.1.26"
+    concept: tap-and-die
+    command: describe
+    see: "#pilot-clearance-tapping-countersunk-and-counterbored-holes"
+    text: "What is the difference between a tap and a die?"
+    options:
+      - text: "A tap cuts an internal thread in a hole. A die cuts an external thread on a rod"
+      - text: "A tap cuts an external thread. A die cuts an internal one"
+        why_wrong: "It's the other way round."
+      - text: "They are the same tool"
+        why_wrong: "They cut threads in different places."
+      - text: "A die is used for drilling"
+        why_wrong: "A die cuts threads on rods."
+    answer: 0
+    explanation: "Taps cut internal threads, used in order: taper, second, plug. Dies cut external threads."
+
+  - id: dt26-spec-009
+    type: multi
+    status: draft
+    spec_point: "1.1.26"
+    concept: permanent-fixings
+    command: identify
+    see: "#deforming-reforming-and-fixing-soldering-nuts-and-bolts-screws-riveting-and-lathe-turning"
+    text: "Select TWO permanent methods of joining metals."
+    options:
+      - text: "Soldering"
+      - text: "Riveting"
+      - text: "Nuts and bolts"
+        why_wrong: "Nuts and bolts are a temporary fixing."
+      - text: "Machine screws"
+        why_wrong: "Screws are temporary fixings."
+    answer: [0, 1]
+    explanation: "Soldering and riveting are permanent. Nuts, bolts and screws can be undone."
+
+  - id: dt26-spec-010
+    status: draft
+    spec_point: "1.1.26"
+    concept: pop-rivet
+    command: describe
+    context: true
+    see: "#deforming-reforming-and-fixing-soldering-nuts-and-bolts-screws-riveting-and-lathe-turning"
+    text: "A metal box can only be reached from the outside. Why are pop rivets a good choice to close it?"
+    options:
+      - text: "They are fitted from one side with a rivet gun"
+      - text: "They can be undone easily"
+        why_wrong: "Rivets are permanent."
+      - text: "They need hammering from both sides"
+        why_wrong: "That's snap-head rivets."
+      - text: "They cut their own thread"
+        why_wrong: "That's self-tapping screws."
+    answer: 0
+    explanation: "Pop rivets are fitted from one side, so they suit joints with no access to the back."
+
+  - id: dt26-spec-011
+    status: draft
+    spec_point: "1.1.26"
+    concept: lathe
+    command: identify
+    context: true
+    see: "#deforming-reforming-and-fixing-soldering-nuts-and-bolts-screws-riveting-and-lathe-turning"
+    text: "Which process would make a round aluminium handle with a groove in it?"
+    options:
+      - text: "Lathe turning"
+      - text: "Laser cutting"
+        why_wrong: "Laser cutting cuts flat sheet."
+      - text: "Vacuum forming"
+        why_wrong: "Vacuum forming shapes polymer sheet."
+      - text: "Line bending"
+        why_wrong: "Line bending folds acrylic sheet."
+    answer: 0
+    explanation: "On a lathe the work spins while a tool removes material, making cylinders, tapers, grooves and threads."
+
+  - id: dt26-spec-012
+    type: two_tier
+    status: draft
+    spec_point: "1.1.26"
+    concept: mitre
+    command: explain
+    context: true
+    see: "#frame-joints-mitre-and-dowel"
+    text: "Which joint gives a picture frame a neat corner with no end grain showing?"
+    options:
+      - text: "Mitre"
+      - text: "Butt"
+        why_wrong: "A butt joint shows end grain and is the weakest joint."
+      - text: "Lap"
+        why_wrong: "A lap joint is used for boxes and partly hides end grain."
+      - text: "Dowel"
+        why_wrong: "Dowels can reinforce a mitre, but the corner itself is the mitre."
+    answer: 0
+    reason:
+      text: "What is its main weakness?"
+      options:
+        - text: "It's weak, because end grain is glued to end grain"
+        - text: "It shows lots of end grain"
+          why_wrong: "No end grain shows. That's its strength."
+        - text: "It can only be used on metal"
+          why_wrong: "It's a wooden joint."
+        - text: "It's very hard to make look neat"
+          why_wrong: "It's the neatest of these joints."
+      answer: 0
+    explanation: "Mitres are cut at 45° and look neat, but they're weak, so they're often reinforced with dowels, a spline or pins."
+
+  - id: dt26-spec-013
+    status: draft
+    spec_point: "1.1.26"
+    concept: lap-vs-butt
+    command: describe
+    scenario: bedside-cabinet
+    see: "#box-and-carcass-joints-butt-and-lap"
+    text: "Why would a lap joint be better than a butt joint for the cabinet carcass?"
+    options:
+      - text: "The rebate gives a larger gluing area, so it's stronger"
+      - text: "It's quicker to make"
+        why_wrong: "A butt joint is quicker. The lap is stronger."
+      - text: "It needs no glue"
+        why_wrong: "Both need glue."
+      - text: "It's cut at 45°"
+        why_wrong: "That's a mitre."
+    answer: 0
+    explanation: "The lap's rebate increases the gluing area and partly hides the end grain."
+
+  - id: dt26-spec-014
+    status: draft
+    spec_point: "1.1.26"
+    concept: laser-settings
+    command: describe
+    scenario: bedside-cabinet
+    see: "#cam-machines-laser-cutters-and-3d-printers"
+    text: "The acrylic name plate is engraved and then cut out on the laser cutter. What changes between the two operations?"
+    options:
+      - text: "The power, speed and number of passes"
+      - text: "The CAD software"
+        why_wrong: "The same file can hold both operations. The settings change."
+      - text: "The material"
+        why_wrong: "Both operations are on the same acrylic."
+      - text: "Nothing"
+        why_wrong: "Cutting and engraving need different settings."
+    answer: 0
+    explanation: "Laser settings (power, speed and passes) are set differently for cutting and engraving each material."
+
+  - id: dt26-spec-015
+    type: two_tier
+    status: draft
+    spec_point: "1.1.26"
+    concept: snap-fit
+    command: explain
+    scenario: phone-casing
+    see: "#joining-plastics-permanently-and-temporarily"
+    text: "How should the battery cover be attached?"
+    options:
+      - text: "Snap fits"
+      - text: "Solvent cement"
+        why_wrong: "Solvent cement is permanent, so the cover couldn't be opened."
+      - text: "Plastic welding"
+        why_wrong: "Welding is permanent."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy is permanent."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "They're a temporary fixing moulded into the part, so the cover clicks on and off with no extra parts"
+        - text: "They make the joint permanent"
+          why_wrong: "Snap fits are temporary."
+        - text: "They are the strongest possible joint"
+          why_wrong: "Strength isn't the point. Opening the cover is."
+        - text: "They need a screwdriver"
+          why_wrong: "Snap fits click together by hand."
+      answer: 0
+    explanation: "Flexible moulded snap fits click together and apart, which is why they're common on battery covers."
+
+  - id: dt26-spec-016
+    status: draft
+    spec_point: "1.1.26"
+    concept: solvent-cement
+    command: describe
+    see: "#joining-plastics-permanently-and-temporarily"
+    text: "How does solvent cement such as Tensol join acrylic?"
+    options:
+      - text: "It dissolves the surfaces so they fuse together as the solvent evaporates"
+      - text: "It is a two-part resin and hardener"
+        why_wrong: "That's epoxy."
+      - text: "It uses ultrasonic vibration"
+        why_wrong: "That's plastic welding."
+      - text: "It clamps the parts mechanically"
+        why_wrong: "That's nuts and bolts."
+    answer: 0
+    explanation: "Solvent cement dissolves the two surfaces, which fuse as the solvent evaporates, making a permanent joint."
+
+  - id: dt26-spec-017
+    status: draft
+    spec_point: "1.1.26"
+    concept: adhesive-choice
+    command: identify
+    context: true
+    see: "#adhesives-and-the-materials-they-suit"
+    text: "Which adhesive would bond an aluminium badge onto an acrylic sign?"
+    options:
+      - text: "Epoxy resin"
+      - text: "PVA"
+        why_wrong: "PVA is for wood, paper and card."
+      - text: "Contact adhesive"
+        why_wrong: "Contact adhesive is for sheet materials like laminates onto a backing."
+      - text: "Solvent cement"
+        why_wrong: "Solvent cement only works on plastics that it dissolves, not metal."
+    answer: 0
+    explanation: "Epoxy resin bonds almost anything, including different materials such as metal and acrylic."
+
+  - id: dt26-spec-018
+    status: draft
+    spec_point: "1.1.26"
+    concept: contact-adhesive
+    command: describe
+    see: "#adhesives-and-the-materials-they-suit"
+    text: "Why must you position parts carefully when using contact adhesive?"
+    options:
+      - text: "It bonds instantly once the touch-dry surfaces meet, so they can't be repositioned"
+      - text: "It takes 24 hours to set"
+        why_wrong: "That's PVA's full strength time. Contact adhesive bonds instantly."
+      - text: "It must be clamped for an hour"
+        why_wrong: "That's PVA."
+      - text: "It only works on one surface"
+        why_wrong: "It's spread on both surfaces."
+    answer: 0
+    explanation: "Contact adhesive goes on both surfaces, is left touch-dry, then bonds instantly, so there's no repositioning."
+
+  - id: dt26-spec-019
+    status: draft
+    spec_point: "1.1.26"
+    concept: injection-moulding
+    command: identify
+    scenario: phone-casing
+    see: "#industrial-manufacturing-processes-for-metals-woods-and-plastics"
+    text: "Which industrial process should be used to make the 200,000 casings?"
+    options:
+      - text: "Injection moulding"
+      - text: "Vacuum forming"
+        why_wrong: "Vacuum forming makes simple shapes like trays, not detailed casings."
+      - text: "Blow moulding"
+        why_wrong: "Blow moulding makes hollow bottles and containers."
+      - text: "3D printing"
+        why_wrong: "3D printing is far too slow for 200,000 parts."
+    answer: 0
+    explanation: "Injection moulding forces molten polymer into a closed mould, making complex, high-volume products such as casings."
+
+  - id: dt26-spec-020
+    type: multi
+    status: draft
+    spec_point: "1.1.26"
+    concept: extrusion
+    command: identify
+    see: "#industrial-manufacturing-processes-for-metals-woods-and-plastics"
+    text: "Select TWO products made by extrusion."
+    options:
+      - text: "Aluminium window frames"
+      - text: "Plastic pipes"
+      - text: "Drinks bottles"
+        why_wrong: "Bottles are blow moulded."
+      - text: "Car body panels"
+        why_wrong: "Body panels are press formed."
+    answer: [0, 1]
+    explanation: "Extrusion pushes material through a die to make long, constant cross-sections such as window frames and pipes."
+
+  - id: dt26-spec-021
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.26"
+    concept: jig-technique
+    command: explain
+    scenario: bedside-cabinet
+    see: "#jigs-and-formers-for-accuracy-in-manufacture"
+    exam_question:
+      text: "Explain why a drilling jig would be useful when making the 30 cabinets."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It helps with drilling."
+        marks_awarded: 0
+        why_wrong: "Too vague: it restates the name."
+      - text: "It puts the holes in the same place."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but the benefit isn't explained."
+      - text: "It puts every hinge hole in the same place without marking out, so the doors are interchangeable and production is faster."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: what the jig does, plus why that matters for a batch."
+
+  - id: dt26-spec-022
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.26"
+    concept: adhesive-technique
+    command: explain
+    see: "#adhesives-and-the-materials-they-suit"
+    exam_question:
+      text: "Name a suitable adhesive for joining two pieces of pine, and explain your choice."
+      marks: 2
+    sample_answer: "PVA."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it's made for wood and gives a strong joint once clamped and set"
+      - text: "Adding that it's white"
+        why_wrong: "Colour doesn't justify the choice."
+      - text: "Adding that it's a type of glue"
+        why_wrong: "That doesn't explain why it suits pine."
+      - text: "Adding that it bonds instantly"
+        why_wrong: "That's wrong: PVA needs clamping while it sets."
+    answer: 0
+    explanation: "Name the adhesive and link it to the materials: that earns more than the name alone."
+
+  - id: dt26-spec-023
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.26"
+    concept: compare-technique
+    command: compare
+    see: "#frame-joints-mitre-and-dowel"
+    exam_question:
+      text: "Compare a mitre joint and a dowel joint for a wooden frame."
+      marks: 4
+    text: "Which answer actually compares them?"
+    options:
+      - text: "A mitre joint is cut at 45°."
+        why_wrong: "This only describes one joint."
+      - text: "A mitre looks neater because no end grain shows, but it's weak, whereas a dowel joint is stronger and invisible, but the holes must line up exactly."
+      - text: "Both are wooden joints."
+        why_wrong: "Too general to be a comparison."
+      - text: "Dowel joints are better."
+        why_wrong: "A judgement isn't a comparison."
+    answer: 1
+    explanation: "Compare means set out similarities and differences, using words like 'whereas' and 'but'."

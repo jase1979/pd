@@ -1,0 +1,409 @@
+# Surface Finishes & Treatments (D&T 2026, 1.1.27 Product Design).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.27). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-surface-finishes
+spec: gcse-2026
+unit: "1.1"
+topic: "Surface Finishes & Treatments"
+page: /gcse-2026/unit1/product-design/surface-finishes/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: garden-bench
+    text: "A designer is making a garden bench with a mild steel frame and an oak seat. It will stay outside all year."
+  - id: toy-box
+    text: "A company makes a brightly coloured MDF toy box for young children."
+
+questions:
+
+  - id: dt26-finish-001
+    type: multi
+    status: draft
+    spec_point: "1.1.27"
+    concept: why-finish
+    command: identify
+    see: "#why-surface-treatments-and-finishes-are-applied"
+    text: "Select TWO reasons for applying a surface finish."
+    options:
+      - text: "To prolong the life of the material"
+      - text: "To improve its aesthetic appeal"
+      - text: "To make the material lighter"
+        why_wrong: "A finish adds a little weight. It doesn't lighten the product."
+      - text: "To change it from ferrous to non-ferrous"
+        why_wrong: "A finish can't change a metal's type."
+    answer: [0, 1]
+    explanation: "Finishes protect materials and improve appearance, and a good choice usually does both."
+
+  - id: dt26-finish-002
+    status: draft
+    spec_point: "1.1.27"
+    concept: rust
+    command: describe
+    scenario: garden-bench
+    see: "#why-surface-treatments-and-finishes-are-applied"
+    text: "Why does the bench's mild steel frame need a finish?"
+    options:
+      - text: "It will rust, and a finish seals out the oxygen and water"
+      - text: "It is a poor electrical conductor"
+        why_wrong: "Conductivity isn't the problem for a bench."
+      - text: "It will rot"
+        why_wrong: "Timber rots. Steel rusts."
+      - text: "It will fade in UV light"
+        why_wrong: "UV fading is mainly a problem for polymers."
+    answer: 0
+    explanation: "Ferrous metals rust in air and moisture, and a finish stops the oxygen and water reaching the surface."
+
+  - id: dt26-finish-003
+    status: draft
+    spec_point: "1.1.27"
+    concept: preparation
+    command: describe
+    see: "#why-surface-treatments-and-finishes-are-applied"
+    text: "Why is surface preparation so important before applying a finish?"
+    options:
+      - text: "A finish is only as good as the surface beneath it"
+      - text: "It makes the material heavier"
+        why_wrong: "Preparation doesn't add weight."
+      - text: "It changes the material's colour"
+        why_wrong: "Preparation cleans and smooths. It doesn't colour."
+      - text: "It isn't important"
+        why_wrong: "Without preparation, finishes flake, peel or look poor."
+    answer: 0
+    explanation: "Metals must be cleaned of rust, grease and scale, and timber sanded and dusted, so the finish grips and looks good."
+
+  - id: dt26-finish-004
+    type: two_tier
+    status: draft
+    spec_point: "1.1.27"
+    concept: powder-coating
+    command: explain
+    scenario: garden-bench
+    see: "#metal-surface-treatments-powder-and-plastic-coating-paint-and-primer"
+    text: "Which finish is most durable for the steel frame?"
+    options:
+      - text: "Powder coating"
+      - text: "Wax"
+        why_wrong: "Wax gives little protection, and is used on timber."
+      - text: "Paint straight onto bare steel"
+        why_wrong: "Without primer, paint soon flakes and rust spreads underneath."
+      - text: "Varnish"
+        why_wrong: "Varnish is a timber finish."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It is baked into a tough, chip-resistant, even coat"
+        - text: "It is soft, warm and grippy"
+          why_wrong: "That describes plastic dip coating."
+        - text: "It is the cheapest and easiest to touch up"
+          why_wrong: "That's paint."
+        - text: "It shows off the grain"
+          why_wrong: "Steel has no grain to show."
+      answer: 0
+    explanation: "Powder coating is sprayed electrostatically and baked into a hard, durable, chip-resistant coat."
+
+  - id: dt26-finish-005
+    status: draft
+    spec_point: "1.1.27"
+    concept: powder-process
+    command: describe
+    see: "#metal-surface-treatments-powder-and-plastic-coating-paint-and-primer"
+    text: "How is powder coating applied?"
+    options:
+      - text: "Powder is sprayed on with an electrostatic charge, then baked so it melts into a coat"
+      - text: "Hot metal is dipped into a fluidised bed of polythene powder"
+        why_wrong: "That's plastic dip coating."
+      - text: "It is brushed on in thin coats"
+        why_wrong: "That's paint or varnish."
+      - text: "It is rubbed in and buffed"
+        why_wrong: "That's wax."
+    answer: 0
+    explanation: "The charge makes the powder cling, and baking melts it into a hard, even coat. Overspray can be reused."
+
+  - id: dt26-finish-006
+    status: draft
+    spec_point: "1.1.27"
+    concept: dip-coating
+    command: identify
+    context: true
+    see: "#metal-surface-treatments-powder-and-plastic-coating-paint-and-primer"
+    text: "Which finish gives a pair of pliers soft, grippy, insulated handles?"
+    options:
+      - text: "Plastic dip coating"
+      - text: "Powder coating"
+        why_wrong: "Powder coating is thin and hard, not soft and grippy."
+      - text: "Varnish"
+        why_wrong: "Varnish is a timber finish."
+      - text: "Primer"
+        why_wrong: "Primer is an undercoat."
+    answer: 0
+    explanation: "Dip coating gives a thick, soft, warm, grippy layer with good electrical and thermal insulation."
+
+  - id: dt26-finish-007
+    status: draft
+    spec_point: "1.1.27"
+    concept: primer
+    command: describe
+    see: "#metal-surface-treatments-powder-and-plastic-coating-paint-and-primer"
+    text: "What does a metal primer do?"
+    options:
+      - text: "It seals the surface, prevents corrosion and helps the top coat stick"
+      - text: "It gives the final colour"
+        why_wrong: "That's the top coat."
+      - text: "It removes rust"
+        why_wrong: "Rust is removed before priming."
+      - text: "It makes the metal non-ferrous"
+        why_wrong: "A finish can't change the metal."
+    answer: 0
+    explanation: "Primer is the first coat on bare material. On steel it prevents corrosion and helps the top coat bond."
+
+  - id: dt26-finish-008
+    type: two_tier
+    status: draft
+    spec_point: "1.1.27"
+    concept: varnish-outdoor
+    command: explain
+    scenario: garden-bench
+    see: "#protecting-natural-and-manufactured-timbers"
+    text: "Which finish is best for the oak seat?"
+    options:
+      - text: "An exterior varnish or preservative"
+      - text: "Wax"
+        why_wrong: "Wax gives little protection against water and would need constant reapplying outside."
+      - text: "Powder coating"
+        why_wrong: "Powder coating is baked onto metal."
+      - text: "No finish"
+        why_wrong: "Unprotected outdoor timber absorbs water, then swells, rots and stains."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It seals out water and resists rot, while the grain still shows"
+        - text: "It hides the grain completely"
+          why_wrong: "Clear varnish shows the grain. Paint hides it."
+        - text: "It conducts heat"
+          why_wrong: "Not relevant."
+        - text: "It's soft and grippy"
+          why_wrong: "That's dip coating."
+      answer: 0
+    explanation: "Outdoor timber needs a preservative or exterior-grade finish to resist water, rot and insects."
+
+  - id: dt26-finish-009
+    status: draft
+    spec_point: "1.1.27"
+    concept: wax
+    command: describe
+    context: true
+    see: "#protecting-natural-and-manufactured-timbers"
+    text: "Why is wax a good finish for a turned wooden bowl used for fruit?"
+    options:
+      - text: "It enhances the grain, feels natural, and is easy to renew"
+      - text: "It is completely waterproof and heatproof"
+        why_wrong: "Wax gives little protection against water or heat."
+      - text: "It hides the grain"
+        why_wrong: "Wax enhances the grain."
+      - text: "It never needs reapplying"
+        why_wrong: "Wax needs reapplying from time to time."
+    answer: 0
+    explanation: "Wax brings out the grain with a soft sheen and is easy to apply, but offers little protection."
+
+  - id: dt26-finish-010
+    status: draft
+    spec_point: "1.1.27"
+    concept: sanding-sealer
+    command: describe
+    see: "#protecting-natural-and-manufactured-timbers"
+    text: "What does a sanding sealer do?"
+    options:
+      - text: "It seals the pores of the wood, so fewer top coats are needed and the finish goes on evenly"
+      - text: "It is the final, decorative coat"
+        why_wrong: "Sealer goes on before the top coats."
+      - text: "It removes old varnish"
+        why_wrong: "That would be a stripper, not a sealer."
+      - text: "It colours the wood"
+        why_wrong: "A sealer seals. A stain colours."
+    answer: 0
+    explanation: "Sanding sealer soaks in and seals the pores before varnish, wax or paint."
+
+  - id: dt26-finish-011
+    type: two_tier
+    status: draft
+    spec_point: "1.1.27"
+    concept: mdf-finish
+    command: explain
+    scenario: toy-box
+    see: "#protecting-natural-and-manufactured-timbers"
+    text: "Which finish suits the MDF toy box?"
+    options:
+      - text: "Primer, then paint"
+      - text: "Wax"
+        why_wrong: "MDF has no attractive grain to enhance, and wax gives little protection."
+      - text: "Clear varnish only"
+        why_wrong: "MDF has no grain worth showing, and the brief wants bright colours."
+      - text: "Powder coating"
+        why_wrong: "Powder coating is for metal."
+    answer: 0
+    reason:
+      text: "Why is the primer essential?"
+      options:
+        - text: "MDF's cut edges are very absorbent, so paint would soak in without it"
+        - text: "MDF rusts"
+          why_wrong: "MDF is a timber-based board. It doesn't rust."
+        - text: "It makes the paint glossy"
+          why_wrong: "Primer seals and helps grip. Gloss comes from the top coat."
+        - text: "It changes MDF into solid timber"
+          why_wrong: "A finish can't change the material."
+      answer: 0
+    explanation: "MDF is usually painted. Its absorbent edges need sealing or priming so the paint doesn't soak in."
+
+  - id: dt26-finish-012
+    status: draft
+    spec_point: "1.1.27"
+    concept: laminate
+    command: identify
+    context: true
+    see: "#protecting-natural-and-manufactured-timbers"
+    text: "How is a chipboard kitchen worktop usually given a hard-wearing, wipe-clean surface?"
+    options:
+      - text: "It is covered with a melamine laminate"
+      - text: "It is waxed"
+        why_wrong: "Wax isn't hard-wearing or waterproof enough for a worktop."
+      - text: "It is powder coated"
+        why_wrong: "Powder coating is for metal."
+      - text: "It is left untreated"
+        why_wrong: "Chipboard absorbs water and swells."
+    answer: 0
+    explanation: "Manufactured boards are often laminated, for example with melamine on kitchen worktops."
+
+  - id: dt26-finish-013
+    status: draft
+    spec_point: "1.1.27"
+    concept: self-finishing
+    command: describe
+    context: true
+    see: "#the-self-finishing-nature-of-plastics"
+    text: "Why doesn't a scratch on an injection-moulded toy brick show a different colour underneath?"
+    options:
+      - text: "The pigment runs all the way through the polymer"
+      - text: "It has a very thick coat of paint"
+        why_wrong: "Self-finishing plastics have no paint to chip."
+      - text: "It is powder coated"
+        why_wrong: "Powder coating is for metals."
+      - text: "It is varnished"
+        why_wrong: "Varnish is a timber finish."
+    answer: 0
+    explanation: "Pigment is added before moulding, so the colour runs right through the polymer."
+
+  - id: dt26-finish-014
+    status: draft
+    spec_point: "1.1.27"
+    concept: mould-texture
+    command: describe
+    see: "#the-self-finishing-nature-of-plastics"
+    text: "How does an injection-moulded product get a textured, grippy surface?"
+    options:
+      - text: "The texture is in the mould, so every product made in it has the same surface"
+      - text: "It is sanded after moulding"
+        why_wrong: "Self-finishing products come out of the mould finished."
+      - text: "It is dip coated"
+        why_wrong: "Dip coating is applied to metal."
+      - text: "It is waxed"
+        why_wrong: "Wax gives a smooth sheen, not texture."
+    answer: 0
+    explanation: "A polished mould gives gloss and a textured mould gives a matt or grip pattern, on every product it makes."
+
+  - id: dt26-finish-015
+    status: draft
+    spec_point: "1.1.27"
+    concept: acrylic-edges
+    command: identify
+    context: true
+    see: "#the-self-finishing-nature-of-plastics"
+    text: "A student cuts a phone stand from acrylic sheet with a coping saw. How should the rough edges be finished?"
+    options:
+      - text: "Draw file, then wet-and-dry paper and polish"
+      - text: "Varnish the edges"
+        why_wrong: "Varnish is for timber."
+      - text: "Powder coat the edges"
+        why_wrong: "Powder coating is for metal."
+      - text: "Leave them rough because plastics are self-finishing"
+        why_wrong: "Cut edges of stock sheet aren't self-finished. They need filing and polishing."
+    answer: 0
+    explanation: "Cut acrylic edges are draw filed, then smoothed with wet-and-dry paper and polished (or flame polished)."
+
+  - id: dt26-finish-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.27"
+    concept: powder-technique
+    command: explain
+    scenario: garden-bench
+    see: "#metal-surface-treatments-powder-and-plastic-coating-paint-and-primer"
+    exam_question:
+      text: "Explain why powder coating is suitable for the bench frame."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It looks nice."
+        marks_awarded: 0
+        why_wrong: "Too vague, and not the main reason for an outdoor bench."
+      - text: "It protects against rust."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't developed."
+      - text: "It's tough and chip-resistant, so it keeps sealing out moisture and the frame won't rust, even outside all year."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a property of the finish linked to the bench's conditions of use."
+
+  - id: dt26-finish-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.27"
+    concept: stages-technique
+    command: describe
+    see: "#protecting-natural-and-manufactured-timbers"
+    exam_question:
+      text: "Describe the stages in varnishing the oak seat."
+      marks: 3
+    sample_answer: "Sand it smooth, then apply the varnish."
+    text: "This answer gets 1 mark. Which point would add the most marks?"
+    options:
+      - text: "Adding the stages in between: use progressively finer paper, remove dust, apply sealer, and sand lightly between thin coats"
+      - text: "Adding that oak is a hardwood"
+        why_wrong: "That doesn't describe a finishing stage."
+      - text: "Adding that varnish is shiny"
+        why_wrong: "That doesn't describe a stage."
+      - text: "Adding that the bench goes outside"
+        why_wrong: "Context, but not a stage."
+    answer: 0
+    explanation: "Give the stages in order: sand with finer grades, remove dust, seal, then thin coats with light sanding between."
+
+  - id: dt26-finish-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.27"
+    concept: compare-technique
+    command: compare
+    see: "#protecting-natural-and-manufactured-timbers"
+    exam_question:
+      text: "Compare varnish and wax as finishes for a wooden table."
+      marks: 4
+    text: "Which answer actually compares them?"
+    options:
+      - text: "Varnish is a clear coating."
+        why_wrong: "This only describes one finish."
+      - text: "Varnish is hard-wearing and waterproof but can chip and is hard to repair, whereas wax feels natural and is easy to renew but gives little protection against water or heat."
+      - text: "Both are used on wood."
+        why_wrong: "Too general to be a comparison."
+      - text: "Varnish is better."
+        why_wrong: "A judgement isn't a comparison."
+    answer: 1
+    explanation: "Compare means set out similarities and differences, using words like 'whereas' and 'but'."
