@@ -10,6 +10,9 @@ declare global {
 				QUIZ_SIGNING_SECRET?: string;
 				// Comma-separated addresses allowed to sign in as teachers. Unset == nobody.
 				TEACHER_EMAILS?: string;
+				// PBKDF2 hash of the teacher password (scripts/set-teacher-password.mjs).
+				// Set == teachers sign in with a password; unset == by emailed link.
+				TEACHER_PASSWORD_HASH?: string;
 				// Sends teacher sign-in links. Unset == links are logged instead (dev).
 				RESEND_API_KEY?: string;
 				// The sender, on a domain verified with Resend, e.g. "PD Revision <revision@example.com>".

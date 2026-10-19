@@ -121,9 +121,16 @@ Running it again replaces the test group and everything its students did.
 
 ## Teachers
 
-- Teachers sign in at `/teacher/login/` with a link emailed to them, if their
-  address is in the `TEACHER_EMAILS` secret. Opening the link only shows a
-  "Sign in" button, so mail scanners can't use it up.
+- Teachers sign in at `/teacher/login/`. Their address must be in the
+  `TEACHER_EMAILS` secret.
+- **With a password** (the current setup, for a single teacher): when the
+  `TEACHER_PASSWORD_HASH` secret is set, sign in with that address and the
+  password. `node scripts/set-teacher-password.mjs` generates a new password,
+  saves it to `~/pd-teacher-password.txt` (readable only by you) and sets just
+  its hash on Cloudflare. Add `--local` to set one for local development instead.
+- **With an emailed link** (when `TEACHER_PASSWORD_HASH` isn't set): needs
+  `RESEND_API_KEY` and `MAIL_FROM`. Opening the link only shows a "Sign in"
+  button, so mail scanners can't use it up.
 - Locally, with no `RESEND_API_KEY`, the link is printed in the terminal and
   shown on screen. `DEV_TEACHER_EMAIL` in `.dev.vars` skips signing in
   altogether; it only works when `ENVIRONMENT=dev`.

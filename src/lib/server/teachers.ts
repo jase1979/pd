@@ -1,4 +1,11 @@
-// Teacher sign-in, by a link emailed to them. There are no teacher passwords.
+// Teacher sign-in. Two ways, depending on which secrets are set:
+//
+// - A password (TEACHER_PASSWORD_HASH set): the address must be in
+//   TEACHER_EMAILS and the password must match the hash. Only a PBKDF2 hash is
+//   stored, as a Cloudflare secret; scripts/set-teacher-password.mjs makes it.
+//   Meant for a single teacher.
+// - Otherwise, a link emailed to them (below). Kept for when there are more
+//   teachers.
 //
 // - Only addresses in TEACHER_EMAILS can sign in. Anyone else gets the same
 //   "check your email" reply but no email, so the form doesn't reveal who is
@@ -13,13 +20,16 @@
 
 import type { Cookies } from '@sveltejs/kit';
 import {
+	LOGIN_BLOCK_MINUTES,
+	PASSWORD_HASH_ITERATIONS,
+	TEACHER_PASSWORD_MAX_FAILURES,
 	LINK_LIMIT_MINUTES,
 	LINK_LIMIT_PER_EMAIL,
 	LINK_LIMIT_PER_IP,
 	MAGIC_LINK_MINUTES
 } from './config';
 import { hitRateLimit } from './ratelimit';
-import { createSession, newToken, sha256Hex } from './students';
+import { createSession, loginBlockedFor, newToken, recordLoginFailure, sha256Hex } from './students';
 
 export const TEACHER_COOKIE = 'pd_teacher';
 
@@ -145,6 +155,73 @@ export async function teacherForToken(db: D1Database, token: string | undefined,
 
 export function setTeacherCookie(cookies: Cookies, token: string, remember: boolean, expires: Date) {
 	cookies.set(TEACHER_COOKIE, token, { path: '/', httpOnly: true, sameSite: 'lax', ...(remember && { expires }) });
+}
+
+// ---- Password -------------------------------------------------------------------------
+
+const b64 = (bytes: Uint8Array) => btoa(String.fromCharCode(...bytes));
+const unb64 = (s: string) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+
+async function pbkdf2(password: string, salt: Uint8Array<ArrayBuffer>, iterations: number): Promise<Uint8Array> {
+	const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+	return new Uint8Array(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt, iterations }, key, 256));
+}
+
+/** "pbkdf2$<iterations>$<salt>$<hash>", base64. Matches scripts/set-teacher-password.mjs. */
+export async function hashPassword(password: string, iterations = PASSWORD_HASH_ITERATIONS): Promise<string> {
+	const salt = crypto.getRandomValues(new Uint8Array(16));
+	return `pbkdf2$${iterations}$${b64(salt)}$${b64(await pbkdf2(password, salt, iterations))}`;
+}
+
+export async function verifyPassword(password: string, stored: string | undefined): Promise<boolean> {
+	const [scheme, iters, salt, hash] = (stored ?? '').split('$');
+	const iterations = Number(iters);
+	if (scheme !== 'pbkdf2' || !Number.isInteger(iterations) || !salt || !hash) return false;
+	const actual = await pbkdf2(password, unb64(salt), iterations);
+	const expected = unb64(hash);
+	// Compare every byte, so the time taken doesn't reveal how much matched.
+	let diff = actual.length ^ expected.length;
+	for (let i = 0; i < Math.max(actual.length, expected.length); i++) diff |= (actual[i] ?? 0) ^ (expected[i] ?? 0);
+	return diff === 0;
+}
+
+export type PasswordSignInResult =
+	| { ok: true; teacher: Teacher; sessionToken: string; expires: Date; remember: boolean }
+	| { ok: false; status: 401 | 429; message: string };
+
+/**
+ * Sign in with an allowed address and the teacher password. Failures are
+ * counted per IP address (successes never are); the same message is given
+ * whether the address or the password was wrong.
+ */
+export async function passwordSignIn(
+	db: D1Database,
+	{
+		email: raw,
+		password,
+		remember,
+		ip,
+		allowList,
+		passwordHash,
+		now = Date.now()
+	}: { email: unknown; password: unknown; remember: boolean; ip: string; allowList: string | undefined; passwordHash: string | undefined; now?: number }
+): Promise<PasswordSignInResult> {
+	const scope = `teacher-pw:${ip}`;
+	const blocked = await loginBlockedFor(db, scope, now, TEACHER_PASSWORD_MAX_FAILURES);
+	if (blocked > 0) {
+		return { ok: false, status: 429, message: `Too many attempts. Please try again in ${LOGIN_BLOCK_MINUTES} minutes.` };
+	}
+	const email = normaliseEmail(raw);
+	const allowed = !!email && isAllowedTeacher(email, allowList);
+	// Always check the password, even for an unknown address, so both take the same time.
+	const right = await verifyPassword(typeof password === 'string' ? password : '', passwordHash);
+	if (!allowed || !right) {
+		await recordLoginFailure(db, scope, now);
+		return { ok: false, status: 401, message: "That email address and password don't match." };
+	}
+	const teacher = await teacherByEmail(db, email!, now);
+	const { token: sessionToken, expires } = await createSession(db, teacher.id, remember, now, 'teacher');
+	return { ok: true, teacher, sessionToken, expires, remember };
 }
 
 // ---- Email -------------------------------------------------------------------------

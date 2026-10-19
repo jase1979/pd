@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isAllowedTeacher, normaliseEmail, peekSignInLink, requestSignInLink, teacherForToken, useSignInLink, type Mailer } from './teachers';
+import { hashPassword, isAllowedTeacher, normaliseEmail, passwordSignIn, peekSignInLink, requestSignInLink, teacherForToken, useSignInLink, verifyPassword, type Mailer } from './teachers';
 import { testDb } from './testing/d1';
 
 const now = Date.UTC(2026, 9, 19, 8);
@@ -120,5 +120,65 @@ describe('teacher sign-in links', () => {
 		expect(await ask(db, 'nope', mailer)).toMatchObject({ ok: false, status: 400 });
 		expect(await peekSignInLink(db, undefined, now)).toEqual({ status: 'unknown' });
 		expect(await useSignInLink(db, 'made-up', allowList, now)).toBeNull();
+	});
+});
+
+describe('teacher password sign-in', () => {
+	const sign = (db: D1Database, password: string, passwordHash: string, extra: { email?: string; ip?: string; at?: number } = {}) =>
+		passwordSignIn(db, {
+			email: extra.email ?? 'ms.jones@school.org',
+			password,
+			remember: false,
+			ip: extra.ip ?? '203.0.113.7',
+			allowList,
+			passwordHash,
+			now: extra.at ?? now
+		});
+
+	it('stores only a salted hash, which verifies the right password and nothing else', async () => {
+		const hash = await hashPassword('correct horse', 1000);
+		expect(hash).toMatch(/^pbkdf2\$1000\$[A-Za-z0-9+/=]+\$[A-Za-z0-9+/=]+$/);
+		expect(hash).not.toContain('correct');
+		expect(await hashPassword('correct horse', 1000)).not.toBe(hash); // random salt
+		expect(await verifyPassword('correct horse', hash)).toBe(true);
+		expect(await verifyPassword('correct horsf', hash)).toBe(false);
+		expect(await verifyPassword('', hash)).toBe(false);
+		expect(await verifyPassword('correct horse', undefined)).toBe(false);
+		expect(await verifyPassword('correct horse', 'nonsense')).toBe(false);
+	});
+
+	it('signs in an allowed address with the right password', async () => {
+		const db = testDb();
+		const r = await sign(db, 'pw', await hashPassword('pw', 1000));
+		expect(r.ok).toBe(true);
+		if (r.ok) expect(await teacherForToken(db, r.sessionToken, now)).toMatchObject({ email: 'ms.jones@school.org' });
+	});
+
+	it('gives the same answer for a wrong password and an unknown address', async () => {
+		const db = testDb();
+		const hash = await hashPassword('pw', 1000);
+		const wrongPassword = await sign(db, 'nope', hash);
+		const wrongEmail = await sign(db, 'pw', hash, { email: 'stranger@example.com' });
+		expect(wrongPassword).toEqual(wrongEmail);
+		expect(wrongPassword).toMatchObject({ ok: false, status: 401 });
+	});
+
+	it('blocks an IP address after 10 failures for 15 minutes, even with the right password', async () => {
+		const db = testDb();
+		const hash = await hashPassword('pw', 1000);
+		for (let i = 0; i < 10; i++) await sign(db, 'guess', hash);
+		expect(await sign(db, 'pw', hash)).toMatchObject({ ok: false, status: 429 });
+		expect((await sign(db, 'pw', hash, { ip: '198.51.100.9' })).ok).toBe(true);
+		expect((await sign(db, 'pw', hash, { at: now + 15 * 60_000 })).ok).toBe(true);
+	});
+});
+
+describe('scripts/set-teacher-password.mjs', () => {
+	it('makes hashes the site can verify', async () => {
+		const script = await import('../../../scripts/set-teacher-password.mjs');
+		const password = script.generatePassword();
+		expect(password).toMatch(/^([A-HJKMNP-Z2-9]{5}-){4}[A-HJKMNP-Z2-9]{5}$/);
+		expect(await verifyPassword(password, script.hashPassword(password, 1000))).toBe(true);
+		expect(await verifyPassword(password + 'x', script.hashPassword(password, 1000))).toBe(false);
 	});
 });

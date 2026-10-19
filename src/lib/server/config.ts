@@ -111,3 +111,7 @@ export const USERNAME_MIN = 1;
 export const USERNAME_MAX = 50;
 /** Most students that can be added in one paste. */
 export const MAX_STUDENTS_PER_PASTE = 200;
+/** Failed teacher password sign-ins allowed per IP address within LOGIN_BLOCK_MINUTES. */
+export const TEACHER_PASSWORD_MAX_FAILURES = 10;
+/** PBKDF2 rounds for the teacher password hash (100,000 is the most Cloudflare Workers allow). */
+export const PASSWORD_HASH_ITERATIONS = 100_000;

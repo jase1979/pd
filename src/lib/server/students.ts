@@ -96,12 +96,12 @@ const loginKey = async (ip: string) => `login:${await sha256Hex(ip)}`;
 const WINDOW = LOGIN_BLOCK_MINUTES * 60 * 1000;
 
 /** Ms until this IP may try again, or 0 if it isn't blocked. */
-export async function loginBlockedFor(db: D1Database, ip: string, now = Date.now()): Promise<number> {
+export async function loginBlockedFor(db: D1Database, ip: string, now = Date.now(), maxFailures = LOGIN_MAX_FAILURES): Promise<number> {
 	const row = await db
 		.prepare('SELECT count, window_start FROM rate_limits WHERE key = ?')
 		.bind(await loginKey(ip))
 		.first<{ count: number; window_start: number }>();
-	if (!row || row.window_start <= now - WINDOW || row.count < LOGIN_MAX_FAILURES) return 0;
+	if (!row || row.window_start <= now - WINDOW || row.count < maxFailures) return 0;
 	return row.window_start + WINDOW - now;
 }
 

@@ -39,6 +39,9 @@ ENVIRONMENT = "preview"
 #                        A secret rather than a var, so staff addresses stay out
 #                        of this repo. Unset == nobody can sign in. Taking an
 #                        address off ends its sessions straight away.
+#   TEACHER_PASSWORD_HASH  set by `node scripts/set-teacher-password.mjs`, which
+#                        sets it for both environments. Set == teachers sign in
+#                        with a password; unset == by emailed link (below).
 #   RESEND_API_KEY       from https://resend.com → API Keys (sending access).
 #                        Sends the teacher sign-in emails.
 #   MAIL_FROM            the sender, on a domain verified in Resend, e.g.
