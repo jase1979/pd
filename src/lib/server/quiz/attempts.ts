@@ -2,14 +2,24 @@
 // /api/attempts/start and /api/attempts/submit. Kept out of the route files so
 // the tests can call it directly.
 //
-// Phase 1a handles anonymous topic-mode attempts only. Logged-in attempts
+// Phase 1 handles anonymous topic-mode attempts only. Logged-in attempts
 // (stored in D1) and the other modes arrive in Phase 2.
 
 import { ANON_TOKEN_TTL_S, DRAFTS_SERVED_IN, MIN_QUESTIONS_PER_ATTEMPT } from '../config';
-import { markAnswer, type SubmittedAnswer } from './mark';
+import { answerShapeError, mark } from '$lib/quiz/marking';
+import type {
+	Chosen,
+	PublicOption,
+	PublicQuestion,
+	QuestionResult,
+	QuizMeta,
+	StartResult,
+	SubmitResult,
+	SubmittedAnswer
+} from '$lib/quiz/public';
 import { attemptSize, selectRandom } from './select';
 import { signToken, verifyToken } from './token';
-import type { PublicQuestion, Question, Quiz } from './types';
+import type { Option, Question, Quiz } from './types';
 
 /** An error with the HTTP status the endpoint should answer with. */
 export class QuizError extends Error {
@@ -27,38 +37,41 @@ export function servableQuestions(quiz: Quiz, environment: string): Question[] {
 	return quiz.questions.filter((q) => q.status === 'reviewed' || drafts);
 }
 
-export interface QuizMeta {
-	id: string;
-	title: string;
-	/** False == the topic page shows nothing at all. */
-	available: boolean;
-	/** How many questions an attempt will have. */
-	questions_per_attempt: number;
-}
-
 export function quizMeta(quiz: Quiz, environment: string): QuizMeta {
-	const size = attemptSize(servableQuestions(quiz, environment), quiz.questions_per_attempt);
-	const available = size >= MIN_QUESTIONS_PER_ATTEMPT;
-	return { id: quiz.id, title: quiz.topic, available, questions_per_attempt: available ? size : 0 };
+	const size = attemptSize(servableQuestions(quiz, environment), quiz.questions_per_attempt, quiz.exam_skills_per_attempt);
+	// The minimum applies to knowledge questions: exam technique alone isn't a topic quiz.
+	const available = size.knowledge >= MIN_QUESTIONS_PER_ATTEMPT;
+	return {
+		id: quiz.id,
+		title: quiz.topic,
+		available,
+		questions_per_attempt: available ? size.knowledge + size.exam_skill : 0
+	};
 }
 
-/** A question with the answer, explanations and why_wrong stripped out. */
-export function toPublic(q: Question): PublicQuestion {
+const publicOption = (o: Option): PublicOption => ({
+	...(o.text !== undefined && { text: o.text }),
+	...(o.image && { image: o.image, image_alt: o.image_alt })
+});
+
+/** A question with the answers, explanations, why_wrong and marks_awarded stripped out. */
+export function toPublic(q: Question, quiz: Quiz): PublicQuestion {
+	const scenario = q.scenario ? quiz.scenarios.find((s) => s.id === q.scenario) : undefined;
 	return {
 		id: q.id,
 		type: q.type,
 		text: q.text,
 		...(q.image && { image: q.image, image_alt: q.image_alt }),
-		options: q.options.map((o) => ({
-			...(o.text !== undefined && { text: o.text }),
-			...(o.image && { image: o.image, image_alt: o.image_alt })
-		}))
+		options: q.options.map(publicOption),
+		...(q.type === 'multi' && { select: q.answer.length }),
+		...(q.type === 'two_tier' && { reason: { text: q.reason.text, options: q.reason.options.map(publicOption) } }),
+		...(q.type === 'exam_skill' && {
+			format: q.format,
+			exam_question: q.exam_question,
+			...(q.sample_answer && { sample_answer: q.sample_answer })
+		}),
+		...(scenario && { scenario })
 	};
-}
-
-export interface StartResult {
-	token: string;
-	questions: PublicQuestion[];
 }
 
 export async function startAttempt(
@@ -68,43 +81,16 @@ export async function startAttempt(
 	{ random = Math.random, now = Date.now() } = {}
 ): Promise<StartResult> {
 	if (!quizMeta(quiz, environment).available) throw new QuizError(404, 'This quiz is not available yet.');
-	const picked = selectRandom(servableQuestions(quiz, environment), quiz.questions_per_attempt, random);
+	const pool = servableQuestions(quiz, environment);
+	const picked = selectRandom(pool, quiz.questions_per_attempt, quiz.exam_skills_per_attempt, random);
 	const token = await signToken(
 		{ v: 1, mode: 'topic', quiz_id: quiz.id, q: picked.map((q) => q.id), exp: now + ANON_TOKEN_TTL_S * 1000 },
 		secret
 	);
-	return { token, questions: picked.map(toPublic) };
+	return { token, questions: picked.map((q) => toPublic(q, quiz)) };
 }
 
-/** Feedback for one question. Everything the feedback screen needs, in served order. */
-export interface QuestionResult {
-	question_id: string;
-	marks: number;
-	max_marks: number;
-	correct: boolean;
-	chosen: number | null;
-	dont_know: boolean;
-	confidence: 'sure' | 'guess' | null;
-	/** Index of the correct option. */
-	answer: number;
-	explanation: string;
-	/** Full path with anchor, for the "Revise this" link. */
-	see: string | null;
-	/**
-	 * Only for questions not answered fully correctly: why_wrong for EVERY
-	 * option (null for the correct one), not just the one chosen, so "Try again
-	 * now" can explain whichever wrong option the student picks next time.
-	 */
-	why_wrong?: (string | null)[];
-}
-
-export interface SubmitResult {
-	score: number;
-	max_score: number;
-	results: QuestionResult[];
-}
-
-/** Check the shape of the submitted answers; throws a 400 QuizError if anything is off. */
+/** Check the general shape of the submitted answers; the choices are checked per question later. */
 export function parseAnswers(raw: unknown): SubmittedAnswer[] {
 	if (!Array.isArray(raw)) throw new QuizError(400, '"answers" should be a list.');
 	return raw.map((a, i) => {
@@ -115,11 +101,18 @@ export function parseAnswers(raw: unknown): SubmittedAnswer[] {
 		if (dont_know === true) {
 			return { question_id, chosen: null, dont_know: true, confidence: null };
 		}
-		if (!Number.isInteger(chosen)) throw bad('choose an option or "I don\'t know".');
+		if (chosen === undefined || chosen === null) throw bad('choose an answer or "I don\'t know".');
 		if (confidence !== 'sure' && confidence !== 'guess') throw bad('confidence should be "sure" or "guess".');
-		return { question_id, chosen: chosen as number, dont_know: false, confidence };
+		return { question_id, chosen: chosen as Chosen, dont_know: false, confidence };
 	});
 }
+
+/** The correct answer, in the same shape as a student's `chosen`. */
+export function answerKey(q: Question): Chosen {
+	return q.type === 'two_tier' ? { answer: q.answer, reason: q.reason.answer } : q.answer;
+}
+
+const whyWrong = (options: Option[]) => options.map((o) => o.why_wrong ?? null);
 
 export async function submitAttempt(
 	body: { token?: unknown; answers?: unknown },
@@ -146,27 +139,37 @@ export async function submitAttempt(
 
 	const results = (questions as Question[]).map((q): QuestionResult => {
 		const a = byId.get(q.id)!;
-		if (a.chosen !== null && a.chosen >= q.options.length) {
-			throw new QuizError(400, `Question ${q.id}: there is no option ${a.chosen}.`);
+		const key = answerKey(q);
+		if (a.chosen !== null) {
+			const reasons = q.type === 'two_tier' ? q.reason.options.length : 0;
+			const problem = answerShapeError(q.type, key, q.options.length, reasons, a.chosen);
+			if (problem) throw new QuizError(400, `Question ${q.id}: the answer ${problem}.`);
 		}
-		const mark = markAnswer(q, a);
+		const m = mark(q.type, key, a.chosen);
+		// "Try again now" re-asks everything that wasn't both correct and Sure,
+		// so those questions get every option's why_wrong.
+		const retried = !(m.correct && a.confidence === 'sure');
+		const bestAnswer = q.type === 'exam_skill' && q.format === 'best_answer';
 		return {
 			question_id: q.id,
-			...mark,
+			...m,
 			chosen: a.chosen,
 			dont_know: a.dont_know,
 			confidence: a.confidence,
-			answer: q.answer,
+			answer: key,
 			explanation: q.explanation,
 			see: q.see ?? null,
-			...(!mark.correct && { why_wrong: q.options.map((o) => o.why_wrong ?? null) })
+			...(q.working && { working: q.working }),
+			...((retried || bestAnswer) && { why_wrong: whyWrong(q.options) }),
+			...(retried && q.type === 'two_tier' && { reason_why_wrong: whyWrong(q.reason.options) }),
+			...(bestAnswer && { marks_awarded: q.options.map((o) => o.marks_awarded ?? 0) })
 		};
 	});
 
 	return {
 		score: results.reduce((sum, r) => sum + r.marks, 0),
 		max_score: results.reduce((sum, r) => sum + r.max_marks, 0),
-		results
+		results,
+		past_papers: quiz.past_papers
 	};
 }
-

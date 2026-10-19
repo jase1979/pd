@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { Heading } from '$lib/server/markdown';
-	import Quiz from './Quiz.svelte';
+	import Quiz from './quiz/Quiz.svelte';
 
 	interface Topic {
 		title: string;

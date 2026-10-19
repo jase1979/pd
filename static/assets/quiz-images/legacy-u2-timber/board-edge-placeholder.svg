@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" role="img" aria-label="Placeholder drawing of the edge of a board made of thin layers">
+  <!-- PLACEHOLDER: replace with a real photo of the edge of a plywood sheet. -->
+  <rect width="480" height="220" fill="#ede6d6"/>
+  <g stroke="#7a5a32" stroke-width="1">
+    <rect x="40" y="60" width="400" height="18" fill="#d9b98a"/>
+    <rect x="40" y="78" width="400" height="18" fill="#b98f5a"/>
+    <rect x="40" y="96" width="400" height="18" fill="#d9b98a"/>
+    <rect x="40" y="114" width="400" height="18" fill="#b98f5a"/>
+    <rect x="40" y="132" width="400" height="18" fill="#d9b98a"/>
+  </g>
+  <g stroke="#8a6a42" stroke-width="1" opacity="0.6">
+    <path d="M60 64h360M60 70h360M60 100h360M60 106h360M60 136h360M60 142h360"/>
+    <path d="M70 80v14M110 80v14M150 80v14M190 80v14M230 80v14M270 80v14M310 80v14M350 80v14M390 80v14M70 116v14M110 116v14M150 116v14M190 116v14M230 116v14M270 116v14M310 116v14M350 116v14M390 116v14"/>
+  </g>
+  <text x="240" y="190" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#7a5a32">Placeholder: replace with a photo of a board edge</text>
+</svg>

@@ -3,7 +3,9 @@
 // scripts/build-quizzes.mjs and quiz-bank.json:
 //
 // - Every quiz file is validated; any error fails `npm run build` (and shows
-//   on screen in `npm run dev`) with a list of what's wrong.
+//   on screen in `npm run dev`) with a list of what's wrong. Warnings are
+//   printed but don't fail the build.
+// - quiz-report.md is written to the repo root (never published).
 // - The bank, answers included, is compiled into the server code. It is never
 //   written to a file that could be published.
 // - Only files under src/lib/server/ may import it. SvelteKit already refuses
@@ -17,13 +19,20 @@ import path from 'node:path';
 import yaml from 'js-yaml';
 import type { Plugin } from 'vite';
 import { validateQuizzes, type QuizFile } from './validate';
+import { quizWarnings } from './warnings';
+import { quizReport } from './report';
 import type { QuizBank } from './types';
 
 const VIRTUAL_ID = 'virtual:quiz-bank';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
 
 /** Read and validate every quiz under `root`. Exported for the tests. */
-export function loadQuizBank(root: string): { bank: QuizBank; errors: string[]; files: string[] } {
+export function loadQuizBank(root: string): {
+	bank: QuizBank;
+	errors: string[];
+	warnings: string[];
+	files: string[];
+} {
 	const dir = path.join(root, 'content', 'quizzes');
 	const names = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /\.ya?ml$/.test(f)).sort() : [];
 	const files: string[] = [];
@@ -47,7 +56,8 @@ export function loadQuizBank(root: string): { bank: QuizBank; errors: string[]; 
 		// /gcse/unit2/timber/ is built from content/gcse/unit2/timber/index.md
 		pageExists: (url) => /^\/.*\/$/.test(url) && fs.existsSync(path.join(root, 'content', url, 'index.md'))
 	});
-	return { bank: { quizzes: result.quizzes }, errors: [...errors, ...result.errors], files };
+	const warnings = result.quizzes.flatMap((q) => quizWarnings(q, `content/quizzes/${q.id}.yml`));
+	return { bank: { quizzes: result.quizzes }, errors: [...errors, ...result.errors], warnings, files };
 }
 
 export function quizBank(): Plugin {
@@ -68,11 +78,15 @@ export function quizBank(): Plugin {
 		},
 		load(id) {
 			if (id !== RESOLVED_ID) return;
-			const { bank, errors, files } = loadQuizBank(root);
+			const { bank, errors, warnings, files } = loadQuizBank(root);
 			for (const file of files) this.addWatchFile(file);
 			if (errors.length > 0) {
 				this.error(`\n\nThe quiz files have ${errors.length} problem(s):\n\n  - ${errors.join('\n  - ')}\n`);
 			}
+			if (warnings.length > 0) {
+				this.warn(`${warnings.length} quiz warning(s), also listed in quiz-report.md:\n  - ${warnings.join('\n  - ')}`);
+			}
+			fs.writeFileSync(path.join(root, 'quiz-report.md'), quizReport(bank.quizzes, warnings));
 			return `export default ${JSON.stringify(bank)};`;
 		},
 		// In `npm run dev`, rebuild the bank when a quiz file is added, edited or deleted.

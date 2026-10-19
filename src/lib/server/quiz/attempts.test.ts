@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { QuizError, quizMeta, startAttempt, submitAttempt, servableQuestions } from './attempts';
-import { question, quiz, seeded } from './fixtures';
+import { bestAnswer, multi, question, quiz, seeded, twoTier } from './fixtures';
 import type { Quiz } from './types';
 
 const secret = 'test-secret';
@@ -47,6 +47,14 @@ describe('draft questions', () => {
 });
 
 describe('quizMeta', () => {
+	it('needs 5 knowledge questions; exam technique alone doesn\'t count', () => {
+		const q = quiz(4);
+		q.questions.push(bestAnswer('b-1', 'b-1'), bestAnswer('b-2', 'b-2'));
+		expect(quizMeta(q, 'production').available).toBe(false);
+		q.questions.push(question('q-5', 'concept-5'));
+		expect(quizMeta(q, 'production')).toMatchObject({ available: true, questions_per_attempt: 7 });
+	});
+
 	it('counts concepts, not questions', () => {
 		// 6 questions but 4 concepts: not enough for the minimum of 5.
 		expect(quizMeta(quiz(6, {}, ['a', 'a', 'b', 'b', 'c', 'd']), 'production').available).toBe(false);
@@ -58,13 +66,37 @@ describe('quizMeta', () => {
 });
 
 describe('startAttempt', () => {
-	it('sends no answers, explanations or why_wrong to the browser', async () => {
-		const { questions } = await begin(quiz(10));
+	it('sends no answers, explanations, why_wrong or marks to the browser, for any type', async () => {
+		const q = quiz(5, {
+			scenarios: [{ id: 'bench', text: 'A park bench.' }],
+			past_papers: [{ title: 'Paper', url: '/past-papers/#s24-q6' }]
+		});
+		q.questions.push(
+			multi('m-1', 'm'),
+			twoTier('t-1', 't'),
+			bestAnswer('b-1', 'b', { scenario: 'bench' }),
+			question('c-1', 'c', { command: 'calculate', working: 'Secret working.' })
+		);
+		const { questions } = await begin(q);
 		const sent = JSON.stringify(questions);
-		for (const secretField of ['answer', 'explanation', 'why_wrong', 'Because', 'Right is right', 'concept', 'see']) {
-			expect(sent).not.toContain(secretField);
+		for (const secret of ['"answer":', 'explanation', 'why_wrong', 'Because', 'Not a reason', 'No reason given', 'Right is right', 'marks_awarded', 'working', 'Secret', 'concept', 'see', 'status', 'past-papers']) {
+			expect(sent).not.toContain(secret);
 		}
-		expect(questions[0].options).toHaveLength(3);
+	});
+
+	it('sends what each type needs to be shown', async () => {
+		const q = quiz(5, { scenarios: [{ id: 'bench', text: 'A park bench.' }], exam_skills_per_attempt: 1 });
+		q.questions.push(multi('m-1', 'm'), twoTier('t-1', 't'), bestAnswer('b-1', 'b', { scenario: 'bench' }));
+		const { questions } = await begin(q);
+		const byId = Object.fromEntries(questions.map((x) => [x.id, x]));
+		expect(byId['m-1'].select).toBe(2);
+		expect(byId['t-1'].reason).toEqual({ text: 'Why?', options: [{ text: 'Good reason' }, { text: 'Bad reason' }] });
+		expect(byId['b-1']).toMatchObject({
+			format: 'best_answer',
+			exam_question: { text: 'Explain why.', marks: 2 },
+			scenario: { id: 'bench', text: 'A park bench.' }
+		});
+		expect(questions.at(-1)!.id).toBe('b-1'); // exam technique comes last
 	});
 });
 
@@ -152,6 +184,83 @@ describe('submitAttempt', () => {
 		await expect(
 			submitAttempt({ token, answers: answerAll(questions, 0) }, secret, () => smaller, now)
 		).rejects.toMatchObject({ status: 409 });
+	});
+
+	describe('with every question type', () => {
+		const mixed = quiz(5, { past_papers: [{ title: 'Paper', url: '/past-papers/#s24-q6' }], exam_skills_per_attempt: 1 });
+		mixed.questions.push(
+			multi('m-1', 'm'),
+			twoTier('t-1', 't'),
+			bestAnswer('b-1', 'b'),
+			question('c-1', 'c', { command: 'calculate', working: 'Step 1, step 2.' })
+		);
+		const find = (res: Awaited<ReturnType<typeof submitAttempt>>, id: string) => res.results.find((r) => r.question_id === id)!;
+
+		async function submitWith(choices: Record<string, unknown>, confidence: 'sure' | 'guess' = 'sure') {
+			const { token, questions } = await begin(mixed);
+			// Anything not in `choices` gets the right answer.
+			const right: Record<string, unknown> = { 'm-1': [0, 1], 't-1': { answer: 0, reason: 0 }, 'b-1': 2 };
+			const answers = questions.map((x) => ({
+				question_id: x.id,
+				chosen: x.id in choices ? choices[x.id] : (right[x.id] ?? 0),
+				dont_know: false,
+				confidence
+			}));
+			return submitAttempt({ token, answers }, secret, () => mixed, now);
+		}
+
+		it('marks each type and totals the marks', async () => {
+			const res = await submitWith({ 'm-1': [0, 2], 't-1': { answer: 0, reason: 1 }, 'b-1': 2 });
+			expect(find(res, 'm-1')).toMatchObject({ marks: 1, max_marks: 2, correct: false, answer: [0, 1] });
+			expect(find(res, 't-1')).toMatchObject({ marks: 1, max_marks: 2, correct: false, answer: { answer: 0, reason: 0 } });
+			expect(find(res, 'b-1')).toMatchObject({ marks: 1, correct: true });
+			// 6 singles right (6) + multi 1 of 2 + two-tier 1 of 2 + best answer 1 of 1
+			expect(res.score).toBe(9);
+			expect(res.max_score).toBe(11);
+		});
+
+		it('includes why_wrong for every option, and every reason, of a two-tier question not fully correct', async () => {
+			const res = await submitWith({ 't-1': { answer: 0, reason: 1 } });
+			expect(find(res, 't-1').why_wrong).toEqual([null, 'Because A.', 'Because B.']);
+			expect(find(res, 't-1').reason_why_wrong).toEqual([null, 'Not a reason.']);
+		});
+
+		it('includes why_wrong for guessed answers, even correct ones, for "Try again now"', async () => {
+			const res = await submitWith({ 'm-1': [0, 1], 't-1': { answer: 0, reason: 0 } }, 'guess');
+			for (const r of res.results) {
+				expect(r.correct).toBe(true);
+				expect(r.why_wrong).toBeDefined();
+			}
+			expect(find(res, 't-1').reason_why_wrong).toEqual([null, 'Not a reason.']);
+		});
+
+		it('always shows every best_answer sample\'s marks and reasons', async () => {
+			const res = await submitWith({ 'b-1': 2 });
+			expect(find(res, 'b-1')).toMatchObject({
+				correct: true,
+				marks_awarded: [0, 1, 2],
+				why_wrong: ['No reason given.', 'Not linked to the product.', null]
+			});
+		});
+
+		it('includes the worked solution for calculations', async () => {
+			const res = await submitWith({});
+			expect(find(res, 'c-1').working).toBe('Step 1, step 2.');
+		});
+
+		it('returns the past paper links', async () => {
+			const res = await submitWith({});
+			expect(res.past_papers).toEqual([{ title: 'Paper', url: '/past-papers/#s24-q6' }]);
+		});
+
+		it.each([
+			['a multi answer with the wrong number of options', 'm-1', [0]],
+			['a multi answer that is not a list', 'm-1', 0],
+			['a two-tier answer without a reason', 't-1', { answer: 0 }],
+			['a two-tier answer as a number', 't-1', 0]
+		])('rejects %s', async (_name, id, chosen) => {
+			await expect(submitWith({ [id]: chosen })).rejects.toMatchObject({ status: 400 });
+		});
 	});
 
 	it('uses the question as stored, not anything the browser sends', async () => {

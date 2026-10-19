@@ -5,6 +5,11 @@
 #
 # TO CHECK: the spec_point values are placeholders taken from the examples in
 # the build spec. Replace them with the real WJEC specification references.
+#
+# TO SUPPLY: timber-015 uses a placeholder drawing,
+# static/assets/quiz-images/legacy-u2-timber/board-edge-placeholder.svg.
+# Please replace it with a real photo of the edge of a plywood sheet (and
+# update `image` if the file name changes).
 
 id: legacy-u2-timber
 spec: gcse-legacy
@@ -12,6 +17,19 @@ unit: "2.1.2"
 topic: "Natural & Manufactured Timber"
 page: /gcse/unit2/timber/
 questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+past_papers:
+  - title: "2024 Paper, Q6 (properties of MDF)"
+    url: /past-papers/#s24-q6
+  - title: "2022 Paper, Q3 (why MDF suits a casting mould)"
+    url: /past-papers/#s22-q3
+
+scenarios:
+  - id: garden-bench
+    text: "A designer is developing a timber bench for a public park. It will stay outdoors all year and must need very little maintenance."
+  - id: bedside-cabinet
+    text: "A furniture company is designing a low-cost, flat-pack bedside cabinet for teenagers' bedrooms. The door fronts will be painted in bright colours, and the top must stand up to spilled drinks."
 
 questions:
 
@@ -55,6 +73,7 @@ questions:
 
   - id: timber-003
     status: draft
+    context: true
     spec_point: "2.1.2.2"
     concept: softwood-availability-cost
     command: state
@@ -73,6 +92,7 @@ questions:
 
   - id: timber-004
     status: draft
+    context: true
     spec_point: "2.1.2.2"
     concept: board-selection
     command: identify
@@ -91,6 +111,7 @@ questions:
 
   - id: timber-005
     status: draft
+    context: true
     spec_point: "2.1.2.6"
     concept: mdf-finishing
     command: describe
@@ -124,3 +145,225 @@ questions:
         why_wrong: "Bonding fibres with resin is how manufactured boards are made, not how natural timber is prepared."
     answer: 2
     explanation: "Freshly cut timber is full of water. Seasoning, by air drying or kiln drying, removes moisture so the wood doesn't shrink, warp or split after it has been made into a product."
+
+  # --- Select TWO -----------------------------------------------------------
+
+  - id: timber-007
+    type: multi
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: manufactured-boards-identify
+    command: identify
+    scenario: bedside-cabinet
+    see: "#manufactured-boards"
+    text: "The cabinet will be made from manufactured boards to keep the cost down. Which TWO of these are manufactured boards?"
+    options:
+      - text: "MDF"
+      - text: "Chipboard"
+      - text: "Beech"
+        why_wrong: "Beech is a natural hardwood, cut and seasoned from a tree rather than made into a sheet."
+      - text: "Parana pine"
+        why_wrong: "Parana pine is a natural softwood. Being smooth and almost knot-free doesn't make it a manufactured board."
+    answer: [0, 1]
+    explanation: "MDF and chipboard are manufactured boards: wood fibres or chips bonded with resin into sheets, often from recycled wood."
+
+  - id: timber-008
+    type: multi
+    status: draft
+    spec_point: "2.1.2.6"
+    concept: finish-function
+    command: identify
+    scenario: garden-bench
+    see: "#finishes-for-hardwoods-and-softwoods"
+    text: "Which TWO finishes would mainly protect the bench, rather than change how it looks?"
+    options:
+      - text: "A preservative"
+      - text: "Polyurethane varnish"
+      - text: "Wax"
+        why_wrong: "Wax mainly brings out the natural grain. It is an aesthetic finish and gives little protection outdoors."
+      - text: "A coloured stain"
+        why_wrong: "A stain changes or adds colour to match a colour scheme, so its main job is aesthetic."
+    answer: [0, 1]
+    explanation: "Preservatives protect timber for long-lasting outdoor use, and polyurethane varnish is a hard-wearing sealing finish. Both are mainly functional."
+
+  # --- Two-tier: answer, then reason ----------------------------------------
+
+  - id: timber-009
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2.6"
+    concept: outdoor-timber-choice
+    command: compare
+    scenario: garden-bench
+    see: "#softwoods"
+    text: "Which timber would be most suitable for the bench?"
+    options:
+      - text: "Larch"
+      - text: "Scots pine"
+        why_wrong: "Pine is cheap and easy to work, but it isn't naturally water resistant, so it would need regular treatment outdoors."
+      - text: "Parana pine"
+        why_wrong: "Parana pine gives a smooth finish for interior joinery and stairs, not for furniture left outside all year."
+      - text: "Jelutong"
+        why_wrong: "Jelutong is lightweight and easy to carve, so it is used for modelling and pattern making, not outdoor furniture."
+    answer: 0
+    reason:
+      text: "Why is it the most suitable?"
+      options:
+        - text: "It is water resistant and durable"
+        - text: "It is the cheapest timber available"
+          why_wrong: "Larch is more expensive than pine. It is chosen for how well it lasts outdoors, not for its price."
+        - text: "It is a hardwood, so it is stronger"
+          why_wrong: "Larch is a softwood. Hardwood and softwood describe the type of tree, not strength."
+        - text: "It has no grain, so it is easy to finish"
+          why_wrong: "All natural timber has grain. Having no grain describes MDF."
+      answer: 0
+    explanation: "Larch is water resistant and durable, so it lasts outdoors with little maintenance. That is why it is used for exterior cladding and boats."
+
+  - id: timber-010
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: mdf-painted-parts
+    command: explain
+    scenario: bedside-cabinet
+    see: "#manufactured-boards"
+    text: "Which board is the best choice for the painted door fronts?"
+    options:
+      - text: "MDF"
+      - text: "Chipboard"
+        why_wrong: "Chipboard's surface of bonded chips looks rough, which is why it is normally covered with a veneer rather than painted."
+      - text: "Hardboard"
+        why_wrong: "Hardboard is too thin to make a rigid door. It is used for back panels and drawer bases."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It has no grain and a smooth surface, so it takes paint well"
+        - text: "It is waterproof, so the paint won't peel"
+          why_wrong: "MDF is the opposite of waterproof: it is very porous, which is why its edges need sealing before painting."
+        - text: "It is made of layers glued at 90°, so it won't warp"
+          why_wrong: "Layers bonded at 90° to each other describes plywood, not MDF."
+      answer: 0
+    explanation: "MDF is made from fine fibres, so it has no grain and is easy to work. Once its edges are sealed it gives a smooth surface that takes paint well."
+
+  # --- Calculation, with typical-mistake options and a worked solution ------
+
+  - id: timber-014
+    status: draft
+    spec_point: "2.1.2.8"
+    concept: sheet-area-calc
+    command: calculate
+    context: true
+    see: "#manufactured-boards"
+    text: "A workshop orders a half sheet of MDF measuring 1220 mm × 610 mm. What is its area in m²?"
+    options:
+      - text: "0.744 m²"
+      - text: "744,200 m²"
+        why_wrong: "This is the area in mm². The millimetres weren't converted to metres before multiplying."
+      - text: "7.442 m²"
+        why_wrong: "The conversion is out by a factor of 10. There are 1,000,000 mm² in 1 m², or convert each side first: 1220 mm = 1.22 m."
+      - text: "1.83 m²"
+        why_wrong: "The two sides were added (1.22 + 0.61) instead of multiplied. Area is length × width."
+    answer: 0
+    working: |
+      Convert both sides to metres: 1220 mm = 1.22 m and 610 mm = 0.61 m.
+      Area = length × width = 1.22 × 0.61 = 0.7442 m², about 0.744 m².
+    explanation: "Convert both sides to metres before multiplying, then multiply length by width."
+
+  # --- Image-based -----------------------------------------------------------
+
+  - id: timber-015
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: identify-board-from-edge
+    command: identify
+    see: "#manufactured-boards"
+    text: "The picture shows the edge of a board. Which manufactured board is it?"
+    image: /assets/quiz-images/legacy-u2-timber/board-edge-placeholder.svg
+    image_alt: "The edge of a board made of several thin wooden layers stacked on top of each other, with the grain of each layer running in a different direction to the next."
+    options:
+      - text: "Plywood"
+      - text: "MDF"
+        why_wrong: "MDF is made of fine fibres, so its edge looks smooth and even, with no layers."
+      - text: "Chipboard"
+        why_wrong: "Chipboard's edge shows small chips of timber pressed together, not neat layers."
+      - text: "Hardboard"
+        why_wrong: "Hardboard is a single thin sheet of compressed fibres, so its edge shows no layers."
+    answer: 0
+    explanation: "Plywood is made of thin layers of wood bonded with the grain of each layer at 90° to the next. You can see the layers at its edge."
+
+  # --- Exam technique ------------------------------------------------------------
+
+  - id: timber-011
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2.6"
+    concept: outdoor-timber-explain-technique
+    command: explain
+    scenario: garden-bench
+    see: "#softwoods"
+    exam_question:
+      text: "Explain why larch would be a suitable timber for the bench."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Larch is a softwood so it is good for outside and it looks nice."
+        marks_awarded: 0
+        why_wrong: "Being a softwood doesn't make a timber suitable for outdoors, and 'good for outside' just repeats the question. No property is given."
+      - text: "Larch is water resistant."
+        marks_awarded: 1
+        why_wrong: "This names a relevant property, so it earns 1 mark. It doesn't explain why that matters for a bench in a park, so it misses the second mark."
+      - text: "Larch is water resistant and durable, so the bench won't rot when it is left out in the rain all year and won't need much maintenance."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks need a relevant property and an explanation linking it to the product. Linking words like 'so' or 'which means' help you make that second point."
+
+  - id: timber-012
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2.6"
+    concept: chipboard-finish-technique
+    command: describe
+    scenario: bedside-cabinet
+    see: "#finishes-for-manufactured-boards"
+    exam_question:
+      text: "Describe how the chipboard top of the cabinet could be finished so it stands up to spilled drinks."
+      marks: 2
+    sample_answer: "The chipboard could be covered with a layer on top."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Naming the layer as melamine, which resists heat, scratches and water"
+      - text: "Saying that chipboard is made from small chips of timber bonded together"
+        why_wrong: "This describes how chipboard is made, not how it is finished, so it doesn't answer the question."
+      - text: "Saying that the layer should be put on carefully and neatly"
+        why_wrong: "Care and neatness are always expected. They aren't a specific point about the finish, so they don't earn a mark."
+      - text: "Saying that chipboard is cheaper than solid timber"
+        why_wrong: "This may be true, but it is about cost, not about how the top is finished."
+    answer: 0
+    explanation: "A describe question rewards specific detail. Naming melamine and what it does for a cabinet top turns a vague answer into a full-mark one."
+
+  - id: timber-013
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: explain-vs-describe-technique
+    command: explain
+    context: true
+    see: "#manufactured-boards"
+    exam_question:
+      text: "Explain why plywood is often used to make shelves for a bookcase."
+      marks: 2
+    text: "Which of these answers explains, rather than just describes?"
+    options:
+      - text: "Plywood is made of thin layers of wood glued together."
+        why_wrong: "This describes what plywood is, but gives no reason why it suits shelves."
+      - text: "Plywood is strong and rigid."
+        why_wrong: "This states properties, but doesn't link them to the shelves, so it doesn't explain."
+      - text: "Plywood's layers are bonded at 90° to each other, which makes it strong and rigid, so the shelves won't sag under the weight of the books."
+      - text: "Plywood is used for furniture and construction."
+        why_wrong: "This gives examples of uses. It doesn't give a reason, so it doesn't explain."
+    answer: 2
+    explanation: "Explain means give reasons. A good explanation states a property and then says why it matters for the product, often using 'so' or 'which means'."

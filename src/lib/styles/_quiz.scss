@@ -227,6 +227,136 @@
     font-weight: 600;
     margin-top: 0.5rem;
   }
+
+  // "Select TWO", after the question text
+  .quiz-select {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    vertical-align: middle;
+  }
+
+  .quiz-option.disabled { opacity: 0.5; cursor: not-allowed; }
+  .quiz-option-text { white-space: pre-line; }
+
+  // best_answer sample answers are longer, so give them room
+  .quiz-options--samples .quiz-option { align-items: flex-start; line-height: 1.5; }
+  .quiz-options--samples input { margin-top: 0.3rem; }
+
+  .quiz-reason { margin-top: 1.25rem; }
+  .quiz-reason-label { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+  // Shared context shown above the question, like the product descriptions on exam papers
+  .quiz-scenario {
+    border-left: 3px solid var(--gcse);
+    background: rgba(78, 205, 196, 0.06);
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+
+    img { display: block; max-width: 100%; max-height: 220px; border-radius: 6px; margin: 0.4rem 0; }
+  }
+
+  .quiz-exam-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  // Styled like a printed exam paper: light paper, dark serif text, marks in brackets
+  .quiz-exam-paper {
+    background: #f7f5ef;
+    color: #1d1d1f;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    font-family: Georgia, 'Times New Roman', serif;
+
+    .quiz-exam-label { color: #5b5b60; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  }
+
+  .quiz-exam-question { line-height: 1.5; }
+
+  .quiz-exam-marks {
+    float: right;
+    margin-left: 1rem;
+    font-weight: 700;
+  }
+
+  .quiz-exam-sample {
+    clear: both;
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px dashed #b8b4a8;
+    border-radius: 4px;
+    font-style: italic;
+  }
+
+  .quiz-nav--top { margin-top: 0.5rem; }
+
+  .quiz-fb-scenario {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-left: 3px solid var(--gcse);
+    padding-left: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .quiz-fb-marks {
+    margin-left: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .quiz-fb-samples { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .quiz-fb-sample {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border-inner);
+    border-radius: 6px;
+    font-size: 0.9rem;
+
+    &.quiz-fb-right { border-color: rgba(78, 205, 196, 0.5); }
+  }
+
+  .quiz-fb-sample-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+
+    .quiz-fb-sample-marks { color: var(--accent); }
+  }
+
+  .quiz-fb-right .quiz-fb-sample-head { color: var(--gcse); }
+  .quiz-fb-you { color: var(--text-muted); }
+
+  .quiz-fb-working {
+    margin-top: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--surface);
+    border-radius: 6px;
+    font-size: 0.9rem;
+
+    p:last-child { white-space: pre-line; }
+  }
+
+  .quiz-past-papers {
+    list-style: none;
+
+    li { margin-top: 0.3rem; }
+    a { font-weight: 600; font-size: 0.9rem; }
+  }
 }
 
 @media (max-width: 600px) {

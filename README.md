@@ -20,8 +20,11 @@ src/lib/server/markdown.ts    Markdown → HTML for the notes (heading ids,
                               key-term boxes, glossary tooltips)
 src/lib/server/site.ts        loads the data files and notes at build time
 content/quizzes/*.yml         the quizzes, one file per topic (see below)
-src/lib/server/quiz/          quiz validation, question selection, tokens and
-                              marking; the answers never leave the server
+src/lib/server/quiz/          quiz validation, warnings, question selection and
+                              tokens; the answers never leave the server
+src/lib/quiz/                 marking and the API's data shapes, shared with the
+                              browser (no answers in here)
+src/lib/components/quiz/      the quiz screens
 src/lib/server/config.ts      every quiz threshold and tunable number
 src/routes/api/               the quiz API (start, submit, meta)
 migrations/                   D1 database schema
@@ -75,6 +78,21 @@ example.
   anything is wrong (a missing `why_wrong`, an answer out of range, a typo in a
   field name, ...). `npm run dev` shows the same list on screen.
 - Question ids are permanent. Never reuse or renumber them.
+- Question types: `single` (the default), `multi` ("Select TWO"), `two_tier`
+  (answer, then reason) and `exam_skill` (`best_answer`, `missing_point` or
+  `command_word`). `legacy-u2-timber.yml` has an example of each, plus
+  scenarios, a calculation with `working`, an image question and
+  `past_papers` links.
+- A question that describes its own product context, rather than using a
+  shared scenario, can say `context: true`, so it counts towards the target
+  of half the questions being in context.
+- The build also prints **warnings** (fewer than 20 reviewed questions, a
+  missing `see` link, a long explanation, ...) without failing, and writes
+  `quiz-report.md` at the repo root with counts for each quiz. Git ignores it.
+- After the build, `scripts/check-quiz-links.mjs` checks that every `see` and
+  `past_papers` link points at a real page and `#anchor`, and warns if not.
+- Tunable numbers (minimum quiz size, warning targets, token lifetime) are in
+  `src/lib/server/config.ts`.
 
 ## Local development
 
