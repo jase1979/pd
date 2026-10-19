@@ -1,6 +1,7 @@
 # Pilot quiz for Natural & Manufactured Timber.
-# Every question is a draft until reviewed: change `status: draft` to
-# `status: reviewed` once you've checked it. Question ids are permanent:
+# New questions start as `status: draft` and are only served on the live
+# site once changed to `status: reviewed`. Reviewed 19 Oct 2026, except
+# timber-015, which waits for its real photo. Question ids are permanent:
 # never reuse or renumber them.
 #
 # TO CHECK: the spec_point values are placeholders taken from the examples in
@@ -34,7 +35,7 @@ scenarios:
 questions:
 
   - id: timber-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: hardwood-vs-softwood
     command: identify
@@ -54,7 +55,7 @@ questions:
   # Same concept as timber-001, worded differently, so the two never appear
   # in the same attempt.
   - id: timber-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: hardwood-vs-softwood
     command: state
@@ -72,7 +73,7 @@ questions:
     explanation: "Hardwoods come from deciduous broadleaf trees that lose their leaves in autumn. Softwoods come from evergreen conifers with cones and needles."
 
   - id: timber-003
-    status: draft
+    status: reviewed
     context: true
     spec_point: "2.1.2.2"
     concept: softwood-availability-cost
@@ -91,7 +92,7 @@ questions:
     explanation: "Softwood trees grow quickly and in many locations, so the timber is readily available and less expensive. Slow-growing hardwoods are scarcer, so they cost more."
 
   - id: timber-004
-    status: draft
+    status: reviewed
     context: true
     spec_point: "2.1.2.2"
     concept: board-selection
@@ -110,7 +111,7 @@ questions:
     explanation: "Hardboard is made of compressed wood fibres. It is thin and hard with one smooth face, which is why it is used for back panels and drawer bases."
 
   - id: timber-005
-    status: draft
+    status: reviewed
     context: true
     spec_point: "2.1.2.6"
     concept: mdf-finishing
@@ -129,7 +130,7 @@ questions:
     explanation: "MDF is very porous, especially at its cut edges, so they are sealed first. Otherwise they soak up the paint and give an uneven finish."
 
   - id: timber-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: seasoning
     command: state
@@ -150,7 +151,7 @@ questions:
 
   - id: timber-007
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: manufactured-boards-identify
     command: identify
@@ -169,7 +170,7 @@ questions:
 
   - id: timber-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.6"
     concept: finish-function
     command: identify
@@ -190,7 +191,7 @@ questions:
 
   - id: timber-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.6"
     concept: outdoor-timber-choice
     command: compare
@@ -221,7 +222,7 @@ questions:
 
   - id: timber-010
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: mdf-painted-parts
     command: explain
@@ -249,7 +250,7 @@ questions:
   # --- Calculation, with typical-mistake options and a worked solution ------
 
   - id: timber-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.8"
     concept: sheet-area-calc
     command: calculate
@@ -297,7 +298,7 @@ questions:
   - id: timber-011
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.6"
     concept: outdoor-timber-explain-technique
     command: explain
@@ -322,7 +323,7 @@ questions:
   - id: timber-012
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.6"
     concept: chipboard-finish-technique
     command: describe
@@ -347,7 +348,7 @@ questions:
   - id: timber-013
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2.2"
     concept: explain-vs-describe-technique
     command: explain
