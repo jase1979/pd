@@ -1,0 +1,396 @@
+# Modern & Smart Materials (D&T 2026, 1.1.2 Core).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.2). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-modern-smart-materials
+spec: gcse-2026
+unit: "1.1"
+topic: "Modern & Smart Materials"
+page: /gcse-2026/unit1/core/modern-smart-materials/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: baby-feeding
+    text: "A company is designing a feeding set for babies: a bottle and a spoon that warn parents when food or milk is too hot."
+  - id: smart-wristband
+    text: "A designer is developing a festival wristband. It should warn wearers when the sun is strong enough to burn, and unlock entry with the wearer's fingerprint."
+
+questions:
+
+  - id: dt26-smart-001
+    status: draft
+    spec_point: "1.1.2"
+    concept: smart-vs-modern
+    command: identify
+    context: true
+    see: "#modern-and-smart-materials"
+    text: "Carbon fibre is used for racing bike frames because it is very strong and light. What type of material is it?"
+    options:
+      - text: "A modern material"
+      - text: "A smart material"
+        why_wrong: "Carbon fibre is useful for the properties it has. It doesn't change in response to a stimulus."
+      - text: "A shape memory alloy"
+        why_wrong: "SMAs are metals that return to a pre-set shape when heated."
+      - text: "A thermochromic material"
+        why_wrong: "Thermochromic materials change colour with temperature."
+    answer: 0
+    explanation: "A modern material is valued for the properties it has. A smart material is valued for how its properties change."
+
+  - id: dt26-smart-002
+    status: draft
+    spec_point: "1.1.2"
+    concept: smart-definition
+    command: describe
+    see: "#modern-and-smart-materials"
+    text: "Which statement best describes a smart material?"
+    options:
+      - text: "Its properties change in a controlled, usually reversible way in response to a stimulus"
+      - text: "It is made using new or improved processes"
+        why_wrong: "That describes a modern material."
+      - text: "It always contains electronic circuits"
+        why_wrong: "Smart materials react by themselves, without electronics."
+      - text: "It is the strongest material available"
+        why_wrong: "Strength doesn't make a material smart."
+    answer: 0
+    explanation: "Smart materials respond to heat, light, pressure, moisture or electricity, usually reversibly."
+
+  - id: dt26-smart-003
+    status: draft
+    spec_point: "1.1.2"
+    concept: stimulus
+    command: identify
+    see: "#how-smart-materials-respond-to-stimuli"
+    text: "Which stimulus makes a photochromic material change colour?"
+    options:
+      - text: "Ultraviolet light"
+      - text: "Temperature"
+        why_wrong: "Temperature triggers thermochromic materials."
+      - text: "Pressure"
+        why_wrong: "Pressure bursts micro-capsules."
+      - text: "Electricity"
+        why_wrong: "Photochromic materials react to UV light."
+    answer: 0
+    explanation: "Photochromic materials change colour in UV light and reverse in the dark."
+
+  - id: dt26-smart-004
+    type: two_tier
+    status: draft
+    spec_point: "1.1.2"
+    concept: thermochromic-use
+    command: explain
+    scenario: baby-feeding
+    see: "#thermochromic-materials"
+    text: "Which smart material should the feeding set use?"
+    options:
+      - text: "Thermochromic pigment"
+      - text: "Photochromic pigment"
+        why_wrong: "Photochromic pigment reacts to UV light, not to the heat of food."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is mouldable at 62°C. It doesn't give a warning."
+      - text: "Nitinol"
+        why_wrong: "Nitinol changes shape, not colour."
+    answer: 0
+    reason:
+      text: "Why does it suit the feeding set?"
+      options:
+        - text: "It changes colour when the contents are too hot, giving a clear warning"
+        - text: "It cools the food down"
+          why_wrong: "It shows the temperature. It doesn't change it."
+        - text: "It changes colour in sunlight"
+          why_wrong: "That's photochromic."
+        - text: "It releases a smell when hot"
+          why_wrong: "That's micro-encapsulation."
+      answer: 0
+    explanation: "Thermochromic pigment changes colour with temperature, showing parents at a glance when something is too hot to be safe."
+
+  - id: dt26-smart-005
+    status: draft
+    spec_point: "1.1.2"
+    concept: thermochromic-battery
+    command: describe
+    context: true
+    see: "#thermochromic-materials"
+    text: "How does a thermochromic battery test strip show the charge?"
+    options:
+      - text: "Current heats the strip, and the colour change shows how much charge is left"
+      - text: "UV light from the battery changes its colour"
+        why_wrong: "Batteries don't give off UV. The strip reacts to heat."
+      - text: "Capsules in the strip burst"
+        why_wrong: "That's micro-encapsulation."
+      - text: "The strip changes shape"
+        why_wrong: "Changing shape is a shape memory alloy."
+    answer: 0
+    explanation: "Resistance in the strip turns current into heat, and the thermochromic colour change shows the charge."
+
+  - id: dt26-smart-006
+    status: draft
+    spec_point: "1.1.2"
+    concept: photochromic-use
+    command: identify
+    scenario: smart-wristband
+    see: "#photochromic-materials"
+    text: "Which material would let the wristband warn when the sun is strong enough to burn?"
+    options:
+      - text: "Photochromic beads or ink"
+      - text: "Thermochromic ink"
+        why_wrong: "It's UV that burns, and thermochromic ink reacts to temperature, not UV."
+      - text: "Conductive fibres"
+        why_wrong: "Conductive fibres carry signals. They don't detect UV."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is a mouldable polymer."
+    answer: 0
+    explanation: "Photochromic indicators change colour in strong UV, warning the wearer before their skin burns."
+
+  - id: dt26-smart-007
+    status: draft
+    spec_point: "1.1.2"
+    concept: photochromic-fade
+    command: state
+    see: "#photochromic-materials"
+    text: "What is a limitation of photochromic pigments?"
+    options:
+      - text: "They fade after long exposure"
+      - text: "They only work once"
+        why_wrong: "The change is reversible and repeats many times."
+      - text: "They react to temperature instead of light"
+        why_wrong: "They react to UV light."
+      - text: "They are poisonous to touch"
+        why_wrong: "The notes don't say that. The limitation is fading."
+    answer: 0
+    explanation: "Photochromic change can be repeated many times, but the pigment fades with long exposure."
+
+  - id: dt26-smart-008
+    status: draft
+    spec_point: "1.1.2"
+    concept: nitinol
+    command: state
+    see: "#shape-memory-alloys"
+    text: "Nitinol is an alloy of which two metals?"
+    options:
+      - text: "Nickel and titanium"
+      - text: "Nickel and tin"
+        why_wrong: "The 'Ti' is titanium, not tin."
+      - text: "Iron and carbon"
+        why_wrong: "That's steel."
+      - text: "Copper and zinc"
+        why_wrong: "That's brass."
+    answer: 0
+    explanation: "Nitinol is nickel and titanium: NiTi plus 'nol' for the Naval Ordnance Laboratory where it was developed."
+
+  - id: dt26-smart-009
+    type: multi
+    status: draft
+    spec_point: "1.1.2"
+    concept: sma-uses
+    command: identify
+    see: "#shape-memory-alloys"
+    text: "Select TWO uses of shape memory alloys."
+    options:
+      - text: "Spectacle frames that spring back after being sat on"
+      - text: "Thermal safety devices that shut a valve at a set temperature"
+      - text: "Kettles that change colour when hot"
+        why_wrong: "That's thermochromic."
+      - text: "Scratch-and-sniff print"
+        why_wrong: "That's micro-encapsulation."
+    answer: [0, 1]
+    explanation: "SMAs return to a pre-set shape when heated: spectacle frames, braces, stents and thermal safety devices."
+
+  - id: dt26-smart-010
+    status: draft
+    spec_point: "1.1.2"
+    concept: polymorph
+    command: identify
+    context: true
+    see: "#polymorph"
+    text: "A designer wants to model a custom-fitting handle for a walking stick quickly by hand. Which material should they use?"
+    options:
+      - text: "Polymorph"
+      - text: "Nitinol"
+        why_wrong: "Nitinol is a metal alloy that can't be hand-moulded."
+      - text: "Thermochromic pigment"
+        why_wrong: "Thermochromic pigment changes colour. It isn't a modelling material."
+      - text: "Carbon fibre"
+        why_wrong: "Carbon fibre needs resin and moulds. It can't be shaped by hand in hot water."
+    answer: 0
+    explanation: "Polymorph softens at about 62°C in hot water, is shaped by hand, sets tough, and can be reshaped if needed."
+
+  - id: dt26-smart-011
+    status: draft
+    spec_point: "1.1.2"
+    concept: polymorph-reuse
+    command: describe
+    see: "#polymorph"
+    text: "Why is polymorph useful when mistakes are made?"
+    options:
+      - text: "It can be reheated and reshaped repeatedly without losing its properties"
+      - text: "It sets permanently the first time"
+        why_wrong: "Then mistakes couldn't be corrected. Polymorph can be reshaped."
+      - text: "It dissolves in water"
+        why_wrong: "It softens in hot water but doesn't dissolve."
+      - text: "It changes colour to show the mistake"
+        why_wrong: "That isn't a property of polymorph."
+    answer: 0
+    explanation: "As a thermoplastic, polymorph can be reheated and reshaped many times, so mistakes are recoverable."
+
+  - id: dt26-smart-012
+    status: draft
+    spec_point: "1.1.2"
+    concept: self-healing
+    command: describe
+    see: "#micro-encapsulation"
+    text: "How does a self-healing material use micro-encapsulation?"
+    options:
+      - text: "Capsules of adhesive burst into a crack and seal it"
+      - text: "It changes colour where it is cracked"
+        why_wrong: "Colour change is thermochromic or photochromic."
+      - text: "It returns to its original shape when heated"
+        why_wrong: "That's a shape memory alloy."
+      - text: "It becomes mouldable at 62°C"
+        why_wrong: "That's polymorph."
+    answer: 0
+    explanation: "When a crack breaks the capsules, adhesive is released into it and seals the damage."
+
+  - id: dt26-smart-013
+    type: multi
+    status: draft
+    spec_point: "1.1.2"
+    concept: micro-encapsulation-uses
+    command: identify
+    see: "#micro-encapsulation"
+    text: "Select TWO products that use micro-encapsulation."
+    options:
+      - text: "Antibacterial sportswear"
+      - text: "Bedding with phase-changing materials"
+      - text: "Transition spectacle lenses"
+        why_wrong: "These are photochromic."
+      - text: "Nitinol dental braces"
+        why_wrong: "These use a shape memory alloy."
+    answer: [0, 1]
+    explanation: "Micro-encapsulation is used for scratch-and-sniff, fragranced, antibacterial and phase-changing textiles, and self-healing materials."
+
+  - id: dt26-smart-014
+    type: two_tier
+    status: draft
+    spec_point: "1.1.2"
+    concept: biometric-risk
+    command: explain
+    scenario: smart-wristband
+    see: "#biometrics"
+    text: "What is the biggest risk of using the wearer's fingerprint for entry?"
+    options:
+      - text: "If the data is stolen, it can't be changed"
+      - text: "The wearer might forget their fingerprint"
+        why_wrong: "Fingerprints can't be forgotten. That's an advantage."
+      - text: "Fingerprints change every year"
+        why_wrong: "Fingerprints are unique and stay the same."
+      - text: "It makes entry slower than a paper ticket"
+        why_wrong: "Speed isn't the main risk."
+    answer: 0
+    reason:
+      text: "So what must the designer consider?"
+      options:
+        - text: "How the data is stored, who can access it, and whether it works for all users"
+        - text: "Making the wristband a brighter colour"
+          why_wrong: "Appearance doesn't address the data risk."
+        - text: "Using a cheaper sensor"
+          why_wrong: "Cost doesn't make the data safer."
+        - text: "Letting anyone read the data"
+          why_wrong: "That makes the risk worse."
+      answer: 0
+    explanation: "Unlike a password, biometric data can't be changed if stolen, so designers must protect it and make sure the system works for everyone."
+
+  - id: dt26-smart-015
+    status: draft
+    spec_point: "1.1.2"
+    concept: conductive-fibres
+    command: identify
+    see: "#smart-fibres-and-fabrics"
+    text: "Which smart textile would allow a wearable health monitor to be built into a shirt?"
+    options:
+      - text: "Conductive fibres"
+      - text: "Photochromic dye"
+        why_wrong: "Photochromic dye changes colour in sunlight."
+      - text: "Shape memory fibres"
+        why_wrong: "Shape memory fibres tighten, loosen or change texture."
+      - text: "Fragrance capsules"
+        why_wrong: "Fragrance capsules release a smell."
+    answer: 0
+    explanation: "Conductive fibres carry electrical signals, so they allow heated jackets, health monitors and touch-sensitive garments."
+
+  - id: dt26-smart-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.2"
+    concept: thermochromic-technique
+    command: explain
+    scenario: baby-feeding
+    see: "#thermochromic-materials"
+    exam_question:
+      text: "Explain why a thermochromic spoon is a good design for babies."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It uses a smart material."
+        marks_awarded: 0
+        why_wrong: "Naming the category doesn't explain why it's good for babies."
+      - text: "It changes colour when hot."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but the safety benefit is missing."
+      - text: "It changes colour if the food is too hot, so the parent can see it isn't safe and avoid burning the baby's mouth."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: how the material behaves, linked to the benefit for the user."
+
+  - id: dt26-smart-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.2"
+    concept: sma-technique
+    command: describe
+    context: true
+    see: "#shape-memory-alloys"
+    exam_question:
+      text: "Describe how a shape memory alloy works in spectacle frames."
+      marks: 2
+    sample_answer: "The frames can be bent."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that they spring back to their pre-set shape"
+      - text: "Adding that they are made of nickel and titanium"
+        why_wrong: "Composition doesn't describe how the frames work."
+      - text: "Adding that they darken in sunlight"
+        why_wrong: "That's photochromic lenses, not the frame."
+      - text: "Adding that they are expensive"
+        why_wrong: "Cost doesn't describe how they work."
+    answer: 0
+    explanation: "The full description needs both halves: deformed, then returning to the pre-set shape."
+
+  - id: dt26-smart-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.2"
+    concept: discuss-technique
+    command: discuss
+    scenario: smart-wristband
+    see: "#biometrics"
+    exam_question:
+      text: "Discuss the use of biometrics in the festival wristband."
+      marks: 4
+    text: "Which answer actually discusses the issue?"
+    options:
+      - text: "Biometrics use your fingerprint."
+        why_wrong: "This describes biometrics without weighing anything up."
+      - text: "Fingerprint entry is quick and can't be lost like a ticket, but if the data is stolen it can't be changed, so it must be stored securely."
+      - text: "Phones also use fingerprints."
+        why_wrong: "Another example isn't a discussion."
+      - text: "Biometrics are the future."
+        why_wrong: "An opinion with no reasons isn't a discussion."
+    answer: 1
+    explanation: "Discuss means look at both sides, convenience against data risk, and reason towards a view."

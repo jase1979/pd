@@ -1,0 +1,453 @@
+# Sustainable Design (D&T 2026, 1.1.3 Core).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.3). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-sustainable-design
+spec: gcse-2026
+unit: "1.1"
+topic: "Sustainable Design"
+page: /gcse-2026/unit1/core/sustainable-design/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: kettle
+    text: "A manufacturer is redesigning its electric kettle. The current model has a sealed body, glued-in parts and stops working after about three years."
+  - id: toaster-refund
+    text: "A customer buys a toaster online. After a week, it won't heat up at all."
+
+questions:
+
+  - id: dt26-sust-001
+    status: draft
+    spec_point: "1.1.3"
+    concept: sustainability-definition
+    command: state
+    see: "#what-sustainable-design-means"
+    text: "What does sustainability mean?"
+    options:
+      - text: "Meeting today's needs without stopping future generations from meeting theirs"
+      - text: "Using only natural materials"
+        why_wrong: "Natural materials can still be used unsustainably. Sustainability is about future generations."
+      - text: "Making products as cheaply as possible"
+        why_wrong: "Cost isn't the definition."
+      - text: "Recycling everything at the end of its life"
+        why_wrong: "Recycling helps, but sustainability covers the whole life of a product."
+    answer: 0
+    explanation: "Sustainability is meeting the needs of the present without compromising the ability of future generations to meet their own."
+
+  - id: dt26-sust-002
+    status: draft
+    spec_point: "1.1.3"
+    concept: early-decisions
+    command: describe
+    scenario: kettle
+    see: "#what-sustainable-design-means"
+    text: "When are the decisions that fix most of the new kettle's environmental impact made?"
+    options:
+      - text: "Early in the design, when materials, number of parts and repairability are chosen"
+      - text: "When the product is thrown away"
+        why_wrong: "By then most of the impact is already fixed."
+      - text: "When the product is sold"
+        why_wrong: "Selling doesn't decide the materials or construction."
+      - text: "During packaging"
+        why_wrong: "Packaging matters, but the biggest decisions come earlier."
+    answer: 0
+    explanation: "By the time a product reaches manufacture, material choice, part count and repairability have fixed most of its impact."
+
+  - id: dt26-sust-003
+    type: two_tier
+    status: draft
+    spec_point: "1.1.3"
+    concept: consumer-rights
+    command: explain
+    scenario: toaster-refund
+    see: "#consumer-rights-and-protection"
+    text: "Is the customer entitled to a repair, replacement or refund?"
+    options:
+      - text: "Yes"
+      - text: "No, because it was bought online"
+        why_wrong: "The Consumer Rights Act covers online purchases as well as shops."
+      - text: "No, because it has been used"
+        why_wrong: "A faulty product is still covered after use."
+      - text: "Only if the shop agrees"
+        why_wrong: "It's a legal right, not the shop's choice."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Under the Consumer Rights Act 2015, goods must be of satisfactory quality and fit for purpose"
+        - text: "Under the Trade Descriptions Act, all products must last ten years"
+          why_wrong: "The Trade Descriptions Act is about false descriptions, and says nothing about lifespan."
+        - text: "Because it has a Kitemark"
+          why_wrong: "A Kitemark shows testing to a standard. It doesn't give a right to a refund."
+        - text: "Because ISO says so"
+          why_wrong: "ISO sets international standards, not consumer rights."
+      answer: 0
+    explanation: "A toaster that won't heat isn't of satisfactory quality or fit for purpose, so the Consumer Rights Act 2015 entitles the customer to a remedy."
+
+  - id: dt26-sust-004
+    type: multi
+    status: draft
+    spec_point: "1.1.3"
+    concept: consumer-rights-act
+    command: identify
+    see: "#consumer-rights-and-protection"
+    text: "Under the Consumer Rights Act 2015, select TWO things goods must be."
+    options:
+      - text: "Fit for purpose"
+      - text: "As described"
+      - text: "Made in the UK"
+        why_wrong: "Where goods are made isn't part of the Act."
+      - text: "The cheapest available"
+        why_wrong: "Price isn't one of the standards."
+    answer: [0, 1]
+    explanation: "Goods must be of satisfactory quality, fit for purpose and as described."
+
+  - id: dt26-sust-005
+    status: draft
+    spec_point: "1.1.3"
+    concept: kitemark
+    command: describe
+    context: true
+    see: "#legislation-and-standards"
+    text: "A child's car seat carries the BSI Kitemark. What does this show?"
+    options:
+      - text: "It has been independently tested to a British Standard"
+      - text: "It is made from recycled materials"
+        why_wrong: "The Kitemark is about meeting a standard, not recycled content."
+      - text: "It was made under Fair Trade conditions"
+        why_wrong: "Fair Trade has its own mark."
+      - text: "It is the cheapest seat available"
+        why_wrong: "The Kitemark says nothing about price."
+    answer: 0
+    explanation: "The Kitemark shows a product meets a BSI standard and has been independently tested, which reassures buyers."
+
+  - id: dt26-sust-006
+    status: draft
+    spec_point: "1.1.3"
+    concept: trade-descriptions
+    command: identify
+    context: true
+    see: "#legislation-and-standards"
+    text: "A shop advertises a jacket as 'waterproof' when it isn't. Which law does this break?"
+    options:
+      - text: "The Trade Descriptions Act"
+      - text: "The ISO standard"
+        why_wrong: "ISO sets standards. It isn't the law on false descriptions."
+      - text: "Fair Trade"
+        why_wrong: "Fair Trade is a trading arrangement, not a law."
+      - text: "The 6 Rs"
+        why_wrong: "The 6 Rs are a sustainability checklist."
+    answer: 0
+    explanation: "The Trade Descriptions Act makes it illegal to describe goods falsely or misleadingly."
+
+  - id: dt26-sust-007
+    status: draft
+    spec_point: "1.1.3"
+    concept: lca-stages
+    command: identify
+    scenario: kettle
+    see: "#carrying-out-an-lca"
+    text: "At which LCA stage would you ask how much energy the kettle uses to boil water?"
+    options:
+      - text: "Use"
+      - text: "Raw material extraction"
+        why_wrong: "Extraction is about where materials come from."
+      - text: "Manufacture"
+        why_wrong: "Manufacture is about processing energy, not energy in service."
+      - text: "Disposal"
+        why_wrong: "Disposal is about end of life."
+    answer: 0
+    explanation: "The use stage covers energy consumption, consumables, servicing and how long the product lasts."
+
+  - id: dt26-sust-008
+    status: draft
+    spec_point: "1.1.3"
+    concept: lca-value
+    command: describe
+    scenario: kettle
+    see: "#carrying-out-an-lca"
+    text: "What is the main value of carrying out a life cycle analysis on the kettle?"
+    options:
+      - text: "It shows which stage has the biggest impact, so effort goes where it makes most difference"
+      - text: "It always gives one clean answer"
+        why_wrong: "LCA rarely gives one clean answer, because improving one stage can worsen another."
+      - text: "It predicts how well a product will sell"
+        why_wrong: "Sales over time is the Product Life Cycle."
+      - text: "It sets the selling price"
+        why_wrong: "LCA is about environmental impact, not price."
+    answer: 0
+    explanation: "LCA shows which stage dominates, so designers focus on the changes that matter most."
+
+  - id: dt26-sust-009
+    type: two_tier
+    status: draft
+    spec_point: "1.1.3"
+    concept: life-cycle-confusion
+    command: explain
+    see: "#the-product-life-cycle"
+    text: "A product's sales have peaked and levelled off, and the market is crowded. Which stage of the Product Life Cycle is it in?"
+    options:
+      - text: "Maturity"
+      - text: "Growth"
+        why_wrong: "In growth, sales are still rising quickly."
+      - text: "Introduction"
+        why_wrong: "At introduction, sales are low."
+      - text: "Decline"
+        why_wrong: "In decline, sales are falling."
+    answer: 0
+    reason:
+      text: "What does the Product Life Cycle measure?"
+      options:
+        - text: "A product's commercial performance (sales) over time"
+        - text: "Environmental impact from cradle to grave"
+          why_wrong: "That's life cycle analysis, which is a different thing."
+        - text: "How long the product physically lasts"
+          why_wrong: "It tracks sales, not durability."
+        - text: "Carbon emissions"
+          why_wrong: "That's a carbon footprint."
+      answer: 0
+    explanation: "At maturity, sales peak and level off. The Product Life Cycle is about sales; LCA is about the environment."
+
+  - id: dt26-sust-010
+    status: draft
+    spec_point: "1.1.3"
+    concept: cradle-to-cradle
+    command: describe
+    see: "#cradle-to-cradle"
+    text: "How does cradle to cradle go further than cradle to grave?"
+    options:
+      - text: "Every material is designed to be recovered and fed into a new product"
+      - text: "It measures impact only up to manufacture"
+        why_wrong: "It covers the whole life and beyond."
+      - text: "It sends products to landfill more safely"
+        why_wrong: "The aim is for nothing to become waste."
+      - text: "It makes products last longer in use"
+        why_wrong: "Durability helps, but cradle to cradle is about recovering all materials."
+    answer: 0
+    explanation: "Cradle to cradle designs the product from the start so nothing becomes waste and every material goes into something new."
+
+  - id: dt26-sust-011
+    type: multi
+    status: draft
+    spec_point: "1.1.3"
+    concept: circular-design
+    command: identify
+    scenario: kettle
+    see: "#the-circular-economy"
+    text: "Select TWO changes that would make the kettle fit a circular economy."
+    options:
+      - text: "Use standard fixings so it can be taken apart"
+      - text: "Choose materials that can be separated and recycled"
+      - text: "Glue more parts together to make it stronger"
+        why_wrong: "Bonded parts can't be separated for repair or recycling."
+      - text: "Make it lighter by using less durable parts"
+        why_wrong: "Shortening its life adds waste."
+    answer: [0, 1]
+    explanation: "Circular design means products can be taken apart and materials separated cleanly, so they stay in use."
+
+  - id: dt26-sust-012
+    status: draft
+    spec_point: "1.1.3"
+    concept: six-rs-order
+    command: describe
+    see: "#the-6-rs-of-sustainability"
+    text: "Why does the order of the 6 Rs matter?"
+    options:
+      - text: "Those near the top prevent waste, while those near the bottom only deal with it"
+      - text: "They are in alphabetical order"
+        why_wrong: "They aren't. The order shows how much each one prevents waste."
+      - text: "Only the first R is important"
+        why_wrong: "All six help. The order shows which to try first."
+      - text: "The order is random"
+        why_wrong: "The order is deliberate."
+    answer: 0
+    explanation: "Work through them in order: preventing waste is better than dealing with it afterwards."
+
+  - id: dt26-sust-013
+    status: draft
+    spec_point: "1.1.3"
+    concept: rethink
+    command: identify
+    see: "#the-6-rs-of-sustainability"
+    text: "A designer asks: 'Could this need be met in a completely different way?' Which R is this?"
+    options:
+      - text: "Rethink"
+      - text: "Reduce"
+        why_wrong: "Reduce asks whether less material or energy could be used."
+      - text: "Refuse"
+        why_wrong: "Refuse rejects harmful materials or features."
+      - text: "Reuse"
+        why_wrong: "Reuse is using the product or parts again."
+    answer: 0
+    explanation: "Rethink questions whether the product is needed at all, or whether the need could be met differently."
+
+  - id: dt26-sust-014
+    type: multi
+    status: draft
+    spec_point: "1.1.3"
+    concept: carbon-footprint
+    command: identify
+    scenario: kettle
+    see: "#carbon-footprint"
+    text: "Select TWO ways to reduce the kettle's carbon footprint."
+    options:
+      - text: "Use recycled materials"
+      - text: "Source materials locally"
+      - text: "Ship parts from further away"
+        why_wrong: "Longer transport adds emissions."
+      - text: "Shorten its life so it's replaced sooner"
+        why_wrong: "More frequent replacement increases the footprint."
+    answer: [0, 1]
+    explanation: "Recycled materials need less energy, and local sourcing cuts transport emissions."
+
+  - id: dt26-sust-015
+    status: draft
+    spec_point: "1.1.3"
+    concept: planned-obsolescence
+    command: identify
+    scenario: kettle
+    see: "#obsolescence-and-sustainable-design"
+    text: "The kettle is sealed so its element can't be replaced, and it stops working after about three years. What is this?"
+    options:
+      - text: "Planned obsolescence"
+      - text: "Style obsolescence"
+        why_wrong: "Style obsolescence is when a working product goes out of fashion."
+      - text: "Technological obsolescence"
+        why_wrong: "That's when newer technology replaces a product that still works."
+      - text: "Cradle to cradle design"
+        why_wrong: "Cradle to cradle aims for every material to be recovered."
+    answer: 0
+    explanation: "Deliberately limiting a product's useful life, for example by sealing in parts that can't be replaced, is planned obsolescence."
+
+  - id: dt26-sust-016
+    status: draft
+    spec_point: "1.1.3"
+    concept: obsolescence-types
+    command: identify
+    context: true
+    see: "#obsolescence-and-sustainable-design"
+    text: "DVD players still work, but most people now stream films instead. What type of obsolescence is this?"
+    options:
+      - text: "Technological obsolescence"
+      - text: "Planned obsolescence"
+        why_wrong: "The players weren't deliberately designed to fail."
+      - text: "Style obsolescence"
+        why_wrong: "It's newer technology replacing them, not fashion."
+      - text: "Life cycle analysis"
+        why_wrong: "LCA isn't a type of obsolescence."
+    answer: 0
+    explanation: "Technological obsolescence is when newer technology replaces a product that still works."
+
+  - id: dt26-sust-017
+    status: draft
+    spec_point: "1.1.3"
+    concept: fair-trade
+    command: describe
+    see: "#responsibilities-of-designers-and-manufacturers"
+    text: "What does Fair Trade guarantee producers in developing countries?"
+    options:
+      - text: "A fair, stable price, with a premium invested in the local community"
+      - text: "That their products will be recycled"
+        why_wrong: "Fair Trade is about producers' pay and conditions."
+      - text: "A Kitemark"
+        why_wrong: "The Kitemark is a BSI safety standard."
+      - text: "That they can sell at any price"
+        why_wrong: "It guarantees a fair, stable price."
+    answer: 0
+    explanation: "Fair Trade gives producers a fair, stable price and better trading conditions, plus a premium for the community."
+
+  - id: dt26-sust-018
+    status: draft
+    spec_point: "1.1.3"
+    concept: supply-chains
+    command: describe
+    see: "#responsibilities-of-designers-and-manufacturers"
+    text: "Why are working conditions hard to police in long global supply chains?"
+    options:
+      - text: "A brand may not know who makes its parts several levels down"
+      - text: "Factories are always automated"
+        why_wrong: "Many aren't, and that isn't the reason."
+      - text: "There are no laws about working conditions"
+        why_wrong: "There are laws. The problem is knowing who makes the parts."
+      - text: "Workers are paid too much"
+        why_wrong: "That isn't the issue."
+    answer: 0
+    explanation: "With many layers of suppliers a brand can lose sight of who makes its parts, so responsible manufacturers audit suppliers."
+
+  - id: dt26-sust-019
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.3"
+    concept: repair-technique
+    command: explain
+    scenario: kettle
+    see: "#obsolescence-and-sustainable-design"
+    exam_question:
+      text: "Explain one way the kettle could be redesigned to be more sustainable."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Make it eco-friendly."
+        marks_awarded: 0
+        why_wrong: "Too vague: no actual change is suggested."
+      - text: "Use screws instead of glue."
+        marks_awarded: 1
+        why_wrong: "A correct change earns 1 mark, but it doesn't say why it helps."
+      - text: "Use screws instead of glue, so it can be taken apart and the element replaced, making it last longer and creating less waste."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a specific change plus why it makes the kettle more sustainable."
+
+  - id: dt26-sust-020
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.3"
+    concept: carbon-technique
+    command: explain
+    scenario: kettle
+    see: "#carbon-footprint"
+    exam_question:
+      text: "Explain how reducing the kettle's weight can reduce its carbon footprint."
+      marks: 2
+    sample_answer: "It uses less material."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that less energy is needed to make and transport it, so fewer greenhouse gases are released"
+      - text: "Adding that it looks more modern"
+        why_wrong: "Appearance doesn't affect the carbon footprint."
+      - text: "Adding that it's cheaper"
+        why_wrong: "Cost isn't the link to carbon."
+      - text: "Adding that it's easier to hold"
+        why_wrong: "Ergonomics isn't the link to carbon."
+    answer: 0
+    explanation: "The missing mark links the change to the result: less energy, so fewer emissions."
+
+  - id: dt26-sust-021
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.3"
+    concept: evaluate-technique
+    command: evaluate
+    see: "#obsolescence-and-sustainable-design"
+    exam_question:
+      text: "Evaluate planned obsolescence from the point of view of manufacturers, consumers and the environment."
+      marks: 6
+    text: "Which answer actually evaluates it?"
+    options:
+      - text: "Planned obsolescence means designing a product to have a limited life."
+        why_wrong: "This only defines the term."
+      - text: "Manufacturers gain repeat sales that fund development, but consumers pay more over time and the environment absorbs the waste, so overall the costs outweigh the benefits."
+      - text: "Phones and printers often have planned obsolescence."
+        why_wrong: "Examples aren't an evaluation."
+      - text: "Planned obsolescence is unfair."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up different viewpoints, then give a justified judgement."

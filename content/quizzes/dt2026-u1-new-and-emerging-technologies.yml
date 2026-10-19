@@ -1,0 +1,415 @@
+# New & Emerging Technologies (D&T 2026, 1.1.1 Core).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.1). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-new-and-emerging-technologies
+spec: gcse-2026
+unit: "1.1"
+topic: "New & Emerging Technologies"
+page: /gcse-2026/unit1/core/new-and-emerging-technologies/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: lamp-startup
+    text: "Two designers are starting a small business selling a desk lamp. They have no factory, a small budget, and want to test whether people will buy it before committing to production."
+  - id: sofa-retailer
+    text: "A furniture retailer wants customers to see how a new sofa will look in their own living room before they buy it."
+
+questions:
+
+  - id: dt26-tech-001
+    status: draft
+    spec_point: "1.1.1"
+    concept: market-pull
+    command: identify
+    context: true
+    see: "#market-pull-and-technology-push"
+    text: "Reusable water bottles were developed as consumers rejected single-use plastic. Is this market pull or technology push?"
+    options:
+      - text: "Market pull"
+      - text: "Technology push"
+        why_wrong: "Here the consumer need came first and industry responded, which is market pull."
+      - text: "Planned obsolescence"
+        why_wrong: "Planned obsolescence is designing a product to last a set time."
+      - text: "Generative design"
+        why_wrong: "Generative design is AI producing design options in CAD."
+    answer: 0
+    explanation: "Market pull: consumers demanded an alternative to single-use plastic, and the product was developed to meet that need."
+
+  - id: dt26-tech-002
+    type: two_tier
+    status: draft
+    spec_point: "1.1.1"
+    concept: technology-push
+    command: explain
+    context: true
+    see: "#market-pull-and-technology-push"
+    text: "Touchscreens created products nobody had asked for. Is this market pull or technology push?"
+    options:
+      - text: "Technology push"
+      - text: "Market pull"
+        why_wrong: "Nobody had asked for it, so the demand didn't come first."
+      - text: "Crowdfunding"
+        why_wrong: "Crowdfunding is a way of raising money, not a source of new products."
+      - text: "On-demand production"
+        why_wrong: "On-demand production is making items only when ordered."
+    answer: 0
+    reason:
+      text: "Which statement about technology push is true?"
+      options:
+        - text: "It is higher risk, because the market may not exist yet"
+        - text: "It is lower risk, because demand is already proven"
+          why_wrong: "That's market pull."
+        - text: "It always starts with a customer complaint"
+          why_wrong: "A complaint or need is the starting point for market pull."
+        - text: "It only applies to textiles"
+          why_wrong: "It applies across all products."
+      answer: 0
+    explanation: "With technology push the technology comes first and the market follows, so there's a risk nobody will want it."
+
+  - id: dt26-tech-003
+    type: multi
+    status: draft
+    spec_point: "1.1.1"
+    concept: impact-on-industry
+    command: identify
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    text: "Select TWO effects of automation and robotics on industry."
+    options:
+      - text: "Higher output and more consistent quality"
+      - text: "Fewer manual jobs"
+      - text: "Lower upfront investment"
+        why_wrong: "Automation needs large upfront investment."
+      - text: "More people working in dangerous jobs"
+        why_wrong: "Automation takes people out of dangerous jobs."
+    answer: [0, 1]
+    explanation: "Automation raises output and consistency and removes dangerous work, but reduces manual roles and costs a lot upfront."
+
+  - id: dt26-tech-004
+    status: draft
+    spec_point: "1.1.1"
+    concept: flexible-manufacturing
+    command: describe
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    text: "What is flexible manufacturing?"
+    options:
+      - text: "Reprogramming CNC and CAM equipment to make a different product instead of replacing it"
+      - text: "Making products from flexible materials"
+        why_wrong: "'Flexible' here describes the equipment's ability to switch products."
+      - text: "Letting workers choose their own hours"
+        why_wrong: "That's flexible working, not flexible manufacturing."
+      - text: "Making every product by hand"
+        why_wrong: "Flexible manufacturing relies on reprogrammable machinery."
+    answer: 0
+    explanation: "Reprogrammable CNC and CAM equipment lets a factory switch products quickly as demand changes."
+
+  - id: dt26-tech-005
+    status: draft
+    spec_point: "1.1.1"
+    concept: crowdfunding
+    command: identify
+    scenario: lamp-startup
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    text: "Which approach would let the designers prove demand and raise money before production?"
+    options:
+      - text: "Crowdfunding"
+      - text: "Buying a factory"
+        why_wrong: "That's a large financial risk before demand is proven."
+      - text: "Mass production"
+        why_wrong: "Mass production needs proven demand and big investment."
+      - text: "Selling only through a large retailer"
+        why_wrong: "That doesn't raise money or prove demand first."
+    answer: 0
+    explanation: "Crowdfunding lets backers pay before the product exists, proving demand and reducing financial risk."
+
+  - id: dt26-tech-006
+    type: multi
+    status: draft
+    spec_point: "1.1.1"
+    concept: barriers-to-entry
+    command: identify
+    scenario: lamp-startup
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    text: "Select TWO technologies that let the designers make and sell the lamp without owning a factory."
+    options:
+      - text: "A low-cost 3D printer and subscription CAD software"
+      - text: "Online manufacturing services and selling direct to consumers"
+      - text: "A continuous flow production line"
+        why_wrong: "That's a huge investment for very high volumes, the opposite of a low barrier."
+      - text: "Injection moulding tooling"
+        why_wrong: "Moulds are very expensive and only pay off at high volumes."
+    answer: [0, 1]
+    explanation: "Cheap 3D printers, subscription CAD, online manufacturing and direct selling lower the barriers to entry for small businesses."
+
+  - id: dt26-tech-007
+    status: draft
+    spec_point: "1.1.1"
+    concept: on-demand
+    command: describe
+    scenario: lamp-startup
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    text: "The designers decide to make each lamp only when it is ordered. What is one benefit of this on-demand production?"
+    options:
+      - text: "Less cost from holding stock, and less waste from unsold goods"
+      - text: "Every product is identical"
+        why_wrong: "Consistency comes from CAM, not from making items only when ordered."
+      - text: "It needs no machinery"
+        why_wrong: "On-demand production still uses machinery."
+      - text: "Products are always cheaper per unit"
+        why_wrong: "Unit cost can be higher. The savings come from stock and waste."
+    answer: 0
+    explanation: "Making products only when they're ordered cuts stock-holding costs and avoids unsold goods being wasted."
+
+  - id: dt26-tech-008
+    type: two_tier
+    status: draft
+    spec_point: "1.1.1"
+    concept: ar-vs-vr
+    command: explain
+    scenario: sofa-retailer
+    see: "#augmented-reality"
+    text: "Which technology should the retailer use?"
+    options:
+      - text: "Augmented reality"
+      - text: "Virtual reality"
+        why_wrong: "VR replaces the real room with a computer-generated one, so customers wouldn't see their own living room."
+      - text: "4D printing"
+        why_wrong: "4D printing makes objects that change shape over time."
+      - text: "Laser cutting"
+        why_wrong: "Laser cutting is a manufacturing process."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "It overlays a virtual sofa on a live view of the real room"
+        - text: "It replaces the room with a virtual one"
+          why_wrong: "That's VR, which hides the real room."
+        - text: "It prints a small model of the sofa"
+          why_wrong: "That's 3D printing."
+        - text: "It needs no device at all"
+          why_wrong: "AR needs a phone, tablet or headset."
+      answer: 0
+    explanation: "AR keeps the real environment visible and adds the virtual product, so customers can check size, colour and style at home."
+
+  - id: dt26-tech-009
+    status: draft
+    spec_point: "1.1.1"
+    concept: vr-uses
+    command: identify
+    see: "#virtual-reality"
+    text: "Which is a use of virtual reality in design?"
+    options:
+      - text: "Checking whether controls can be reached, without building a physical prototype"
+      - text: "Overlaying assembly instructions on a real component"
+        why_wrong: "That keeps the real world visible, which is AR."
+      - text: "Cutting acrylic sheet"
+        why_wrong: "That's laser cutting."
+      - text: "Raising money before production"
+        why_wrong: "That's crowdfunding."
+    answer: 0
+    explanation: "VR lets designers and clients test ergonomics and walk around a product before it exists."
+
+  - id: dt26-tech-010
+    status: draft
+    spec_point: "1.1.1"
+    concept: generative-design
+    command: describe
+    see: "#artificial-intelligence"
+    text: "What is generative design?"
+    options:
+      - text: "The designer enters constraints and AI software produces many possible solutions"
+      - text: "Drawing a design by hand before using CAD"
+        why_wrong: "Generative design is done by AI in software."
+      - text: "Printing an object that changes shape over time"
+        why_wrong: "That's 4D printing."
+      - text: "Copying a competitor's product"
+        why_wrong: "Generative design creates new options from constraints."
+    answer: 0
+    explanation: "With generative design, the designer sets loads, materials, size and process, and the software generates many, often lighter, solutions."
+
+  - id: dt26-tech-011
+    status: draft
+    spec_point: "1.1.1"
+    concept: ai-concerns
+    command: identify
+    see: "#artificial-intelligence"
+    text: "Which is a concern about using AI in CAD?"
+    options:
+      - text: "It's unclear who owns an AI-generated design"
+      - text: "It makes designs heavier"
+        why_wrong: "AI optimisation usually makes designs lighter."
+      - text: "It can't check for errors"
+        why_wrong: "AI can automatically check designs for errors."
+      - text: "It only works on paper"
+        why_wrong: "AI works within CAD software."
+    answer: 0
+    explanation: "AI raises questions about ownership of designs, and about designers relying too much on the software's judgement."
+
+  - id: dt26-tech-012
+    type: multi
+    status: draft
+    spec_point: "1.1.1"
+    concept: cad-pros-cons
+    command: identify
+    see: "#advantages-and-disadvantages-of-cad"
+    text: "Select TWO disadvantages of CAD."
+    options:
+      - text: "Software and hardware are expensive"
+      - text: "Files can be lost, corrupted, hacked or copied"
+      - text: "Designs are hard to modify"
+        why_wrong: "Quick modification is one of CAD's main advantages."
+      - text: "Files can't be sent to CAM machines"
+        why_wrong: "Files transfer straight to CAM, which is an advantage."
+    answer: [0, 1]
+    explanation: "CAD's disadvantages include cost, training, and the risk of files being lost, corrupted, hacked or copied."
+
+  - id: dt26-tech-013
+    status: draft
+    spec_point: "1.1.1"
+    concept: laser-safety
+    command: identify
+    context: true
+    see: "#laser-cutting"
+    text: "A student wants to laser cut a phone stand. Which material must they never use?"
+    options:
+      - text: "PVC"
+      - text: "Acrylic"
+        why_wrong: "Acrylic laser cuts well."
+      - text: "Plywood"
+        why_wrong: "Plywood is suitable for laser cutting."
+      - text: "MDF"
+        why_wrong: "MDF is suitable for laser cutting with extraction."
+    answer: 0
+    explanation: "PVC gives off toxic fumes when laser cut, so it must never be used."
+
+  - id: dt26-tech-014
+    status: draft
+    spec_point: "1.1.1"
+    concept: additive
+    command: state
+    see: "#3d-printing"
+    text: "Why is 3D printing called additive manufacturing?"
+    options:
+      - text: "The product is built up in layers"
+      - text: "Material is cut away from a block"
+        why_wrong: "That's subtractive (wastage) manufacturing."
+      - text: "Extra parts are added after printing"
+        why_wrong: "'Additive' refers to building up material in layers."
+      - text: "It adds smart materials"
+        why_wrong: "That's 4D printing."
+    answer: 0
+    explanation: "Additive manufacturing builds the product up layer by layer, putting material only where it's needed."
+
+  - id: dt26-tech-015
+    status: draft
+    spec_point: "1.1.1"
+    concept: 4d-printing
+    command: describe
+    context: true
+    see: "#4d-printing"
+    text: "A medical stent is printed compact and expands once it reaches body temperature. Which technology is this?"
+    options:
+      - text: "4D printing"
+      - text: "Laser cutting"
+        why_wrong: "Laser cutting cuts flat sheet. It doesn't make objects that transform."
+      - text: "Augmented reality"
+        why_wrong: "AR is a visualisation tool."
+      - text: "Generative design"
+        why_wrong: "Generative design creates options in CAD. It doesn't make the object change shape."
+    answer: 0
+    explanation: "4D printing uses smart materials so the object changes shape over time in response to a stimulus. The fourth dimension is time."
+
+  - id: dt26-tech-016
+    status: draft
+    spec_point: "1.1.1"
+    concept: cam-error
+    command: describe
+    context: true
+    see: "#advantages-and-disadvantages-of-cam"
+    text: "A factory laser cuts 500 phone stands from one CAM program, but the program has a wrong dimension. Why is this a serious problem?"
+    options:
+      - text: "The same error is repeated across the whole batch"
+      - text: "The machine will refuse to run"
+        why_wrong: "The machine runs the program as written, which is the problem."
+      - text: "It makes the product heavier"
+        why_wrong: "Weight isn't the issue. Repeating the error is."
+      - text: "It only affects the first product"
+        why_wrong: "CAM repeats the program exactly every time."
+    answer: 0
+    explanation: "CAM repeats its program exactly, so a mistake is copied on every item made."
+
+  - id: dt26-tech-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.1"
+    concept: 3d-printing-technique
+    command: explain
+    scenario: lamp-startup
+    see: "#3d-printing"
+    exam_question:
+      text: "Explain why 3D printing suits the designers' prototypes."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It's modern technology."
+        marks_awarded: 0
+        why_wrong: "Too vague: no reason why it suits prototypes."
+      - text: "It's quick."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't explained."
+      - text: "A design can be printed and tested the same day it's drawn, so they can improve the lamp quickly without paying for tooling."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a point (rapid prototyping) developed with its benefit for the business."
+
+  - id: dt26-tech-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.1"
+    concept: cam-technique
+    command: explain
+    see: "#advantages-and-disadvantages-of-cam"
+    exam_question:
+      text: "Explain one advantage of CAM for a manufacturer."
+      marks: 2
+    sample_answer: "Every item is made to the same quality."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that this reduces faulty products, saving waste and cost"
+      - text: "Adding that CAM machines are expensive"
+        why_wrong: "That's a disadvantage, not an explanation of the advantage."
+      - text: "Adding that CAD files are used"
+        why_wrong: "That describes CAM rather than explaining the benefit."
+      - text: "Adding that it's used in schools"
+        why_wrong: "Not relevant to the advantage."
+    answer: 0
+    explanation: "The second mark comes from the consequence for the manufacturer."
+
+  - id: dt26-tech-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.1"
+    concept: evaluate-technique
+    command: evaluate
+    see: "#how-new-and-emerging-technologies-impact-industry-and-enterprise"
+    exam_question:
+      text: "Evaluate the impact of automation on a manufacturing company."
+      marks: 4
+    text: "Which answer actually evaluates the impact?"
+    options:
+      - text: "Automation means robots make products."
+        why_wrong: "This only defines automation."
+      - text: "It raises output and quality and removes dangerous jobs, but costs a lot upfront and reduces manual roles, so it's worthwhile for high-volume production."
+      - text: "Robots are used in car factories."
+        why_wrong: "An example isn't an evaluation."
+      - text: "Automation is good."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh benefits against drawbacks, then give a justified conclusion."

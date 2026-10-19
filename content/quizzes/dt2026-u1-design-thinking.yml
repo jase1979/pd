@@ -1,0 +1,445 @@
+# Design Thinking (D&T 2026, 1.1.5 Core).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.5). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-design-thinking
+spec: gcse-2026
+unit: "1.1"
+topic: "Design Thinking"
+page: /gcse-2026/unit1/core/design-thinking/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: school-chair
+    text: "A company is designing a stackable chair for secondary school classrooms, to be used by students aged 11 to 18."
+  - id: kitchen-gadget
+    text: "A start-up wants to launch a premium kitchen gadget that people will buy for how it looks and feels, not just for what it does."
+
+questions:
+
+  - id: dt26-think-001
+    status: draft
+    spec_point: "1.1.5"
+    concept: history-materials
+    command: describe
+    context: true
+    see: "#how-history-and-culture-influence-design-thinking"
+    text: "Why does the moulded plastic chair exist?"
+    options:
+      - text: "Injection moulding made it possible to make"
+      - text: "Victorian designers invented it"
+        why_wrong: "It depended on a process developed much later."
+      - text: "It copies a natural form"
+        why_wrong: "That would be biomimicry. The point is that the process made it possible."
+      - text: "It was required by law"
+        why_wrong: "No law created it."
+    answer: 0
+    explanation: "Available materials and processes shape design: what can be made shapes what is designed."
+
+  - id: dt26-think-002
+    status: draft
+    spec_point: "1.1.5"
+    concept: reaction
+    command: describe
+    see: "#how-history-and-culture-influence-design-thinking"
+    text: "Plain, undecorated modern design was a deliberate reaction against what?"
+    options:
+      - text: "Heavy Victorian ornament"
+      - text: "Bright, playful 1980s design"
+        why_wrong: "1980s design came later, as a reaction against plainness."
+      - text: "Biomimicry"
+        why_wrong: "Modern design wasn't a reaction against nature-inspired design."
+      - text: "Injection moulding"
+        why_wrong: "It was reacting against a style, not a process."
+    answer: 0
+    explanation: "Design often reacts against what came before: plain modern design rejected Victorian ornament."
+
+  - id: dt26-think-003
+    status: draft
+    spec_point: "1.1.5"
+    concept: culture
+    command: describe
+    see: "#how-history-and-culture-influence-design-thinking"
+    text: "Why must designers consider culture when selling a product in another country?"
+    options:
+      - text: "Colours, symbols and forms carry different meanings in different places"
+      - text: "Every country uses the same symbols"
+        why_wrong: "They don't. That's why culture matters."
+      - text: "Culture only affects food"
+        why_wrong: "Culture affects how all products are seen and used."
+      - text: "It changes the material's strength"
+        why_wrong: "Culture doesn't change material properties."
+    answer: 0
+    explanation: "A product that ignores local meanings can offend or simply fail to sell."
+
+  - id: dt26-think-004
+    status: draft
+    spec_point: "1.1.5"
+    concept: organic-architecture
+    command: describe
+    see: "#frank-lloyd-wright"
+    text: "What is Frank Lloyd Wright's idea of organic architecture?"
+    options:
+      - text: "A building should be in harmony with its users and its landscape"
+      - text: "Buildings should only use plant-based materials"
+        why_wrong: "'Organic' here means harmony with the setting, not plant materials."
+      - text: "Buildings should be heavily decorated"
+        why_wrong: "Wright's work emphasises harmony and unity, not ornament."
+      - text: "Buildings should look the same everywhere"
+        why_wrong: "Organic architecture suits each building to its own site."
+    answer: 0
+    explanation: "Organic architecture means a building is in harmony with its people and landscape, not imposed on the site."
+
+  - id: dt26-think-005
+    type: two_tier
+    status: draft
+    spec_point: "1.1.5"
+    concept: fallingwater
+    command: explain
+    context: true
+    see: "#frank-lloyd-wright"
+    text: "Which Wright building is built over a waterfall?"
+    options:
+      - text: "Fallingwater"
+      - text: "The Guggenheim Museum"
+        why_wrong: "The Guggenheim is in New York and is known for its spiral ramp."
+      - text: "A Prairie School house"
+        why_wrong: "Prairie houses echo the flat Midwest landscape."
+      - text: "The Juicy Salif"
+        why_wrong: "That's a lemon squeezer designed by Philippe Starck for Alessi."
+    answer: 0
+    reason:
+      text: "How does it show organic architecture?"
+      options:
+        - text: "Cantilevered terraces and local stone make the building and landscape one composition"
+        - text: "It uses a continuous spiral ramp"
+          why_wrong: "That's the Guggenheim."
+        - text: "It is covered in Victorian ornament"
+          why_wrong: "Wright rejected that style."
+        - text: "It is made entirely of plastic"
+          why_wrong: "It uses concrete and local stone."
+      answer: 0
+    explanation: "Fallingwater's cantilevered concrete terraces and local stone merge the house with the waterfall and landscape."
+
+  - id: dt26-think-006
+    status: draft
+    spec_point: "1.1.5"
+    concept: total-design
+    command: describe
+    see: "#frank-lloyd-wright"
+    text: "Why did Wright design the furniture, lighting and textiles for his buildings?"
+    options:
+      - text: "So the building and everything in it formed one unified whole"
+      - text: "Because there was no furniture to buy"
+        why_wrong: "It was a design philosophy, not a shortage."
+      - text: "To make the buildings cheaper"
+        why_wrong: "Total design was about unity, not cost."
+      - text: "To sell the furniture separately in shops"
+        why_wrong: "The aim was a single unified design."
+    answer: 0
+    explanation: "Wright's 'total design' approach treats a building and its contents as a single product."
+
+  - id: dt26-think-007
+    status: draft
+    spec_point: "1.1.5"
+    concept: alessi-style
+    command: describe
+    see: "#alessi--co"
+    text: "Which statement best describes Alessi's house style?"
+    options:
+      - text: "Playful, colourful and often anthropomorphic"
+      - text: "Plain, grey and purely functional"
+        why_wrong: "Alessi products are playful and colourful, and sell on emotional appeal."
+      - text: "Heavy Victorian ornament"
+        why_wrong: "Alessi's style is modern and playful."
+      - text: "Long, low horizontal lines"
+        why_wrong: "That's Wright's Prairie School."
+    answer: 0
+    explanation: "Alessi products are playful and colourful, often given faces or human characteristics, in polished metal and bright polymers."
+
+  - id: dt26-think-008
+    type: multi
+    status: draft
+    spec_point: "1.1.5"
+    concept: alessi-products
+    command: identify
+    context: true
+    see: "#alessi--co"
+    text: "Select TWO Alessi products."
+    options:
+      - text: "Juicy Salif lemon squeezer"
+      - text: "Michael Graves' 9093 kettle"
+      - text: "Fallingwater"
+        why_wrong: "That's a Frank Lloyd Wright house."
+      - text: "Velcro"
+        why_wrong: "Velcro is an example of biomimicry."
+    answer: [0, 1]
+    explanation: "Alessi products include the Juicy Salif, the 9093 kettle with its bird whistle, and the Anna G. corkscrew."
+
+  - id: dt26-think-009
+    type: two_tier
+    status: draft
+    spec_point: "1.1.5"
+    concept: emotional-appeal
+    command: explain
+    scenario: kitchen-gadget
+    see: "#alessi--co"
+    text: "Which company's approach is the best model for the start-up?"
+    options:
+      - text: "Alessi"
+      - text: "A company that sells on function alone"
+        why_wrong: "The brief says people should buy it for how it looks and feels."
+      - text: "A company making the cheapest version"
+        why_wrong: "The brief is for a premium product."
+      - text: "A fast-fashion brand"
+        why_wrong: "Fast fashion isn't a model for premium kitchen products."
+    answer: 0
+    reason:
+      text: "What does Alessi show?"
+      options:
+        - text: "Everyday objects can succeed on emotional and aesthetic appeal"
+        - text: "Function is the only thing that matters"
+          why_wrong: "The Juicy Salif sells despite not being the most effective squeezer."
+        - text: "Products should never be hand finished"
+          why_wrong: "Alessi keeps a high level of hand finishing."
+        - text: "Designers should stay anonymous"
+          why_wrong: "Alessi makes named designers part of the brand."
+      answer: 0
+    explanation: "Alessi shows people buy objects for how they look and how owning them feels, and collaborates with named designers."
+
+  - id: dt26-think-010
+    status: draft
+    spec_point: "1.1.5"
+    concept: cyclic-process
+    command: describe
+    see: "#the-cyclic-process-of-commercial-product-development"
+    text: "Why is commercial product development described as cyclic?"
+    options:
+      - text: "Each stage can loop back to an earlier one, and production feeds the next model"
+      - text: "Every stage is done once, in strict order"
+        why_wrong: "That's linear. Commercial design loops back."
+      - text: "Products are always recycled"
+        why_wrong: "'Cyclic' here describes the design process, not recycling."
+      - text: "It only uses bicycles for testing"
+        why_wrong: "'Cyclic' means the process loops."
+    answer: 0
+    explanation: "Testing sends you back to redesign, feedback to the specification, and production informs the next model."
+
+  - id: dt26-think-011
+    status: draft
+    spec_point: "1.1.5"
+    concept: measurable-spec
+    command: identify
+    scenario: school-chair
+    see: "#design-specifications"
+    text: "Which is the best specification point for the chair?"
+    options:
+      - text: "It must weigh under 5 kg so one student can carry it"
+      - text: "It must be light"
+        why_wrong: "'Light' can't be tested. A measurable point can."
+      - text: "It must look nice"
+        why_wrong: "That isn't measurable."
+      - text: "It must be good quality"
+        why_wrong: "Too vague to test."
+    answer: 0
+    explanation: "Good specification points are measurable, so the product can be tested against them."
+
+  - id: dt26-think-012
+    status: draft
+    spec_point: "1.1.5"
+    concept: brief-vs-spec
+    command: describe
+    see: "#design-briefs"
+    text: "What is a design brief?"
+    options:
+      - text: "A short statement of what is to be designed, for whom and why"
+      - text: "A detailed list of measurable criteria"
+        why_wrong: "That's a design specification."
+      - text: "A dimensioned technical drawing"
+        why_wrong: "That's a working drawing."
+      - text: "A timetable of production"
+        why_wrong: "That's a schedule."
+    answer: 0
+    explanation: "The brief sets the problem without dictating the solution. The specification then lists measurable criteria."
+
+  - id: dt26-think-013
+    status: draft
+    spec_point: "1.1.5"
+    concept: user-centred
+    command: describe
+    scenario: school-chair
+    see: "#user-centred-design"
+    text: "How would a user-centred approach to the chair work?"
+    options:
+      - text: "Students are consulted at the start and try prototypes as the design develops"
+      - text: "Students only see the chair once it's in production"
+        why_wrong: "User-centred design involves users throughout, not just at the end."
+      - text: "The designer decides everything alone"
+        why_wrong: "That isn't user-centred."
+      - text: "Only the cheapest design is considered"
+        why_wrong: "Cost matters, but user-centred design puts the user's needs first."
+    answer: 0
+    explanation: "Involving users throughout means problems surface while they're still cheap to fix."
+
+  - id: dt26-think-014
+    status: draft
+    spec_point: "1.1.5"
+    concept: qc-vs-qa
+    command: describe
+    see: "#quality-control"
+    text: "What is the difference between quality control and quality assurance?"
+    options:
+      - text: "Quality control finds faulty products. Quality assurance designs the process so faults are less likely"
+      - text: "They are exactly the same"
+        why_wrong: "One checks products, the other designs the process."
+      - text: "Quality control happens before design starts"
+        why_wrong: "QC checks products during and after manufacture."
+      - text: "Quality assurance only checks packaging"
+        why_wrong: "QA covers the whole process."
+    answer: 0
+    explanation: "QC checks products against the specification. QA designs the process to prevent faults in the first place."
+
+  - id: dt26-think-015
+    type: two_tier
+    status: draft
+    spec_point: "1.1.5"
+    concept: percentiles
+    command: explain
+    scenario: school-chair
+    see: "#anthropometrics"
+    text: "What anthropometric data should the designers use for the chair?"
+    options:
+      - text: "5th to 95th percentile data for students aged 11 to 18"
+      - text: "The average adult's measurements"
+        why_wrong: "Designing for the average fits almost nobody, and these users are 11 to 18."
+      - text: "The tallest student only"
+        why_wrong: "That leaves smaller students uncomfortable."
+      - text: "No data. Just guess"
+        why_wrong: "Guesswork leads to poor ergonomics."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "That range covers most of the users, while the average fits almost nobody exactly"
+        - text: "Percentiles make the chair cheaper"
+          why_wrong: "They're about fit, not cost."
+        - text: "Averages are illegal"
+          why_wrong: "They aren't illegal, just a poor fit."
+        - text: "Children are all the same size"
+          why_wrong: "Sizes vary a lot between 11 and 18."
+      answer: 0
+    explanation: "Designing for the 5th to 95th percentile of the actual users covers most people."
+
+  - id: dt26-think-016
+    status: draft
+    spec_point: "1.1.5"
+    concept: biomimicry
+    command: identify
+    context: true
+    see: "#biomimicry"
+    text: "The nose of a high-speed train was shaped like a kingfisher's beak to reduce noise when entering tunnels. What is this?"
+    options:
+      - text: "Biomimicry"
+      - text: "Anthropometrics"
+        why_wrong: "Anthropometrics is human body measurement."
+      - text: "Organic architecture"
+        why_wrong: "That's Wright's idea about buildings and their setting."
+      - text: "Quality assurance"
+        why_wrong: "QA is about the manufacturing process."
+    answer: 0
+    explanation: "Biomimicry copies forms and systems from nature, here the kingfisher's beak."
+
+  - id: dt26-think-017
+    status: draft
+    spec_point: "1.1.5"
+    concept: honeycomb
+    command: describe
+    context: true
+    see: "#biomimicry"
+    text: "Why are honeycomb structures used in aircraft panels?"
+    options:
+      - text: "They are very stiff for very little weight"
+      - text: "They reduce noise in tunnels"
+        why_wrong: "That's the kingfisher-beak train nose."
+      - text: "They hook onto fabric"
+        why_wrong: "That's Velcro."
+      - text: "They resist bacteria"
+        why_wrong: "That's shark skin texture."
+    answer: 0
+    explanation: "Honeycomb gives great stiffness for very little weight, ideal for aircraft and packaging."
+
+  - id: dt26-think-018
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.5"
+    concept: ergonomics-technique
+    command: explain
+    scenario: school-chair
+    see: "#ergonomics"
+    exam_question:
+      text: "Explain why ergonomics is important in the design of the chair."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Ergonomics is about people."
+        marks_awarded: 0
+        why_wrong: "Too vague: no link to the chair."
+      - text: "So the chair is comfortable."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't developed."
+      - text: "So the seat height and back support fit students, keeping their posture comfortable and safe through a long lesson."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a point developed with how it affects the user."
+
+  - id: dt26-think-019
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.5"
+    concept: modelling-technique
+    command: explain
+    see: "#modelling-and-testing-ideas"
+    exam_question:
+      text: "Explain why designers make models of their ideas."
+      marks: 2
+    sample_answer: "To check the size and proportion."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that problems can be found and fixed before expensive manufacture"
+      - text: "Adding that models are made of card"
+        why_wrong: "The material doesn't explain why models are made."
+      - text: "Adding that models look nice"
+        why_wrong: "Appearance isn't the reason."
+      - text: "Adding that CAD exists"
+        why_wrong: "Not an explanation of why models are made."
+    answer: 0
+    explanation: "The missing mark explains the benefit: catching problems early, while they're cheap to fix."
+
+  - id: dt26-think-020
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.5"
+    concept: discuss-technique
+    command: discuss
+    see: "#alessi--co"
+    exam_question:
+      text: "Discuss the view that the Juicy Salif is a successful product."
+      marks: 4
+    text: "Which answer actually discusses the view?"
+    options:
+      - text: "The Juicy Salif is a lemon squeezer by Philippe Starck."
+        why_wrong: "This only describes it."
+      - text: "It isn't the most effective way to squeeze a lemon, but it sells well because people buy it for how it looks and feels, so it succeeds as a design object."
+      - text: "It is made of aluminium."
+        why_wrong: "A material fact isn't a discussion."
+      - text: "It is a great product."
+        why_wrong: "An opinion without reasons isn't a discussion."
+    answer: 1
+    explanation: "Discuss means look at both sides, here function against emotional appeal, and reason towards a view."

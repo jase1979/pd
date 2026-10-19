@@ -1,0 +1,445 @@
+# Energy (D&T 2026, 1.1.4 Core).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# spec_point values come from the page title (1.1.4). Add sub-references if
+# the specification has them.
+
+id: dt2026-u1-energy
+spec: gcse-2026
+unit: "1.1"
+topic: "Energy"
+page: /gcse-2026/unit1/core/energy/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: emergency-kit
+    text: "A charity is designing an emergency kit for regions without a reliable electricity supply. It includes a torch and a radio."
+  - id: furniture-factory
+    text: "A furniture factory runs its machines all day and wants to cut its energy bills and its carbon footprint."
+
+questions:
+
+  - id: dt26-energy-001
+    status: draft
+    spec_point: "1.1.4"
+    concept: renewable-definition
+    command: state
+    see: "#renewable-and-non-renewable-energy-sources"
+    text: "What makes an energy source renewable?"
+    options:
+      - text: "It is naturally replaced as fast as it is used"
+      - text: "It produces no carbon dioxide"
+        why_wrong: "Nuclear produces almost no CO₂ but is non-renewable, and biomass releases CO₂ but is renewable."
+      - text: "It is cheap"
+        why_wrong: "Cost doesn't decide whether a source is renewable."
+      - text: "It is used in power stations"
+        why_wrong: "Both renewable and non-renewable sources are used in power stations."
+    answer: 0
+    explanation: "A renewable source is naturally replaced as fast as it's used, so it won't run out."
+
+  - id: dt26-energy-002
+    type: two_tier
+    status: draft
+    spec_point: "1.1.4"
+    concept: nuclear
+    command: explain
+    see: "#non-renewable-sources"
+    text: "Is nuclear power renewable or non-renewable?"
+    options:
+      - text: "Non-renewable"
+      - text: "Renewable"
+        why_wrong: "Its fuel is finite, so it's non-renewable even though it produces little CO₂."
+      - text: "A fossil fuel"
+        why_wrong: "Nuclear isn't a fossil fuel."
+      - text: "Neither"
+        why_wrong: "Every energy source is either renewable or non-renewable."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Its fuel is finite and can't be replaced"
+        - text: "It releases a lot of carbon dioxide"
+          why_wrong: "Nuclear produces almost no CO₂ in operation."
+        - text: "It's made from coal"
+          why_wrong: "Nuclear fuel isn't coal."
+        - text: "It only works at night"
+          why_wrong: "Nuclear runs continuously."
+      answer: 0
+    explanation: "Nuclear isn't a fossil fuel and emits little CO₂, but its fuel is finite and its radioactive waste stays dangerous for thousands of years."
+
+  - id: dt26-energy-003
+    status: draft
+    spec_point: "1.1.4"
+    concept: hydrogen
+    command: state
+    see: "#renewable-sources"
+    text: "What is the only emission from a hydrogen fuel cell at the point of use?"
+    options:
+      - text: "Water"
+      - text: "Carbon dioxide"
+        why_wrong: "Hydrogen fuel cells don't emit CO₂ where they're used."
+      - text: "Sulphur dioxide"
+        why_wrong: "That comes from burning fossil fuels."
+      - text: "Smoke"
+        why_wrong: "Nothing is burned, so there's no smoke."
+    answer: 0
+    explanation: "Hydrogen reacts with oxygen to make electricity, and the only emission is water."
+
+  - id: dt26-energy-004
+    status: draft
+    spec_point: "1.1.4"
+    concept: tidal
+    command: identify
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "Which renewable source has the advantage of being entirely predictable?"
+    options:
+      - text: "Tidal"
+      - text: "Wind"
+        why_wrong: "Wind only generates when the wind blows, which is unpredictable."
+      - text: "Solar"
+        why_wrong: "Solar depends on the weather and produces nothing at night."
+      - text: "Biomass"
+        why_wrong: "Biomass is reliable but its advantage is using waste, not predictability."
+    answer: 0
+    explanation: "Tides rise and fall on a predictable schedule, unlike wind and sun."
+
+  - id: dt26-energy-005
+    type: multi
+    status: draft
+    spec_point: "1.1.4"
+    concept: fossil-issues
+    command: identify
+    see: "#issues-surrounding-the-use-of-fossil-fuels"
+    text: "Select TWO issues with using fossil fuels."
+    options:
+      - text: "They release carbon dioxide, which drives climate change"
+      - text: "Supplies are finite, so prices rise and become unstable"
+      - text: "They can't be used in power stations"
+        why_wrong: "Fossil fuels are widely burned in power stations."
+      - text: "They only work when the wind blows"
+        why_wrong: "That's a disadvantage of wind power."
+    answer: [0, 1]
+    explanation: "Fossil fuels release greenhouse gases and pollution, are finite, damage habitats, and create political dependence."
+
+  - id: dt26-energy-006
+    status: draft
+    spec_point: "1.1.4"
+    concept: solar-disadvantage
+    command: identify
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "Which is a disadvantage of solar PV?"
+    options:
+      - text: "It generates nothing at night"
+      - text: "It needs lots of maintenance because of moving parts"
+        why_wrong: "PV has no moving parts, so needs little maintenance."
+      - text: "It only works at large scale"
+        why_wrong: "PV works at any scale, from a calculator upwards."
+      - text: "It releases carbon dioxide in use"
+        why_wrong: "PV produces no emissions in use."
+    answer: 0
+    explanation: "PV is expensive to install, produces nothing at night and less in poor weather, and needs a large area for big outputs."
+
+  - id: dt26-energy-007
+    status: draft
+    spec_point: "1.1.4"
+    concept: biomass
+    command: describe
+    see: "#advantages-and-disadvantages-of-renewable-energy"
+    text: "What is a disadvantage of wood and biomass?"
+    options:
+      - text: "Land used for fuel crops can't grow food"
+      - text: "It can't be regrown"
+        why_wrong: "Biomass can be regrown, which is why it's renewable."
+      - text: "Power stations can't be converted to use it"
+        why_wrong: "Existing power stations can be converted."
+      - text: "It is completely predictable"
+        why_wrong: "That's tidal, and it's an advantage."
+    answer: 0
+    explanation: "Burning biomass still releases CO₂ and particulates, and growing fuel crops uses land that could grow food."
+
+  - id: dt26-energy-008
+    type: multi
+    status: draft
+    spec_point: "1.1.4"
+    concept: renewable-manufacturing
+    command: identify
+    scenario: furniture-factory
+    see: "#renewable-energy-in-manufacturing"
+    text: "Select TWO steps the factory could take."
+    options:
+      - text: "Fit a roof-mounted PV array"
+      - text: "Recover waste heat from its machines"
+      - text: "Switch to a coal-fired generator"
+        why_wrong: "Coal is the most polluting fossil fuel."
+      - text: "Leave machines running when they're not needed"
+        why_wrong: "That wastes energy."
+    answer: [0, 1]
+    explanation: "Factories commonly fit roof PV, recover waste heat, or buy electricity on a renewable tariff."
+
+  - id: dt26-energy-009
+    status: draft
+    spec_point: "1.1.4"
+    concept: factory-mix
+    command: describe
+    scenario: furniture-factory
+    see: "#renewable-energy-in-manufacturing"
+    text: "Why would the factory probably still use a mix of energy sources?"
+    options:
+      - text: "It runs all day, so it still needs power when renewable output drops"
+      - text: "Renewable energy is illegal in factories"
+        why_wrong: "It's allowed and encouraged."
+      - text: "Renewable energy can't power machines"
+        why_wrong: "It can. The issue is that it doesn't generate all the time."
+      - text: "A mix is always cheaper"
+        why_wrong: "Cost isn't the reason. A steady supply is."
+    answer: 0
+    explanation: "A factory that runs continuously needs supply when the wind drops or it's dark, so most use a mix of sources."
+
+  - id: dt26-energy-010
+    status: draft
+    spec_point: "1.1.4"
+    concept: storage-why
+    command: describe
+    see: "#energy-storage"
+    text: "Why is energy storage important for renewable sources?"
+    options:
+      - text: "They produce power when conditions allow, not when it's needed"
+      - text: "They produce too much carbon dioxide"
+        why_wrong: "Renewables produce little or no CO₂ in use."
+      - text: "They can only be used in vehicles"
+        why_wrong: "Renewables are used everywhere."
+      - text: "Stored energy is free"
+        why_wrong: "Storage costs money. Its job is matching supply to demand."
+    answer: 0
+    explanation: "Storage lets energy generated when the sun shines or the wind blows be used later, when it's needed."
+
+  - id: dt26-energy-011
+    status: draft
+    spec_point: "1.1.4"
+    concept: pumped-storage
+    command: identify
+    see: "#energy-storage"
+    text: "Which storage method uses surplus electricity to pump water uphill?"
+    options:
+      - text: "Pumped storage"
+      - text: "Lithium-ion batteries"
+        why_wrong: "Batteries store chemical energy."
+      - text: "Hydrogen"
+        why_wrong: "Hydrogen storage splits water into hydrogen."
+      - text: "Wind-up"
+        why_wrong: "Wind-up stores mechanical energy in a spring."
+    answer: 0
+    explanation: "Pumped storage pumps water uphill when there's surplus, then releases it through turbines when demand rises."
+
+  - id: dt26-energy-012
+    type: two_tier
+    status: draft
+    spec_point: "1.1.4"
+    concept: rechargeable
+    command: explain
+    context: true
+    see: "#energy-storage"
+    text: "A family uses a lot of batteries in their remote controls and games controllers. Which battery type is the better choice overall?"
+    options:
+      - text: "Rechargeable"
+      - text: "Alkaline single use"
+        why_wrong: "Alkaline batteries are cheap at first, but they're thrown away after one use."
+      - text: "Either, it makes no difference"
+        why_wrong: "Over time there's a big difference in cost and waste."
+      - text: "Neither, they should use mains"
+        why_wrong: "Remote controls and controllers need to be portable."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "They cost more at first but are used hundreds of times, so they're cheaper and greener overall"
+        - text: "They are cheaper to buy"
+          why_wrong: "They cost more to buy at first."
+        - text: "They can be put in general waste"
+          why_wrong: "No battery should go in general waste."
+        - text: "They never need charging"
+          why_wrong: "They need recharging."
+      answer: 0
+    explanation: "Rechargeables are used hundreds of times, so they save money and waste over time."
+
+  - id: dt26-energy-013
+    status: draft
+    spec_point: "1.1.4"
+    concept: lithium-ion
+    command: describe
+    context: true
+    see: "#energy-storage"
+    text: "Why does lithium-ion dominate in phones and electric cars?"
+    options:
+      - text: "It holds more energy for its weight"
+      - text: "It is single use"
+        why_wrong: "Lithium-ion is rechargeable."
+      - text: "It contains no valuable materials"
+        why_wrong: "Batteries contain valuable and hazardous materials."
+      - text: "It is the cheapest battery"
+        why_wrong: "Alkaline is cheaper. Lithium-ion wins on energy for weight."
+    answer: 0
+    explanation: "Lithium-ion holds more energy for its weight, which matters most in portable devices and vehicles."
+
+  - id: dt26-energy-014
+    status: draft
+    spec_point: "1.1.4"
+    concept: hybrid
+    command: describe
+    context: true
+    see: "#energy-in-motor-vehicles"
+    text: "How does a hybrid car recover energy?"
+    options:
+      - text: "Through regenerative braking"
+      - text: "Through solar panels on the roof"
+        why_wrong: "The notes describe regenerative braking, not roof solar."
+      - text: "By burning hydrogen"
+        why_wrong: "Hydrogen fuel cells don't burn hydrogen, and hybrids don't use it."
+      - text: "By winding a spring"
+        why_wrong: "That's wind-up technology."
+    answer: 0
+    explanation: "Hybrids combine a small engine with a battery and motor, recovering energy through regenerative braking."
+
+  - id: dt26-energy-015
+    status: draft
+    spec_point: "1.1.4"
+    concept: electric-vehicles
+    command: identify
+    context: true
+    see: "#energy-in-motor-vehicles"
+    text: "Which is a disadvantage of electric cars?"
+    options:
+      - text: "Their batteries are resource-intensive to make"
+      - text: "They emit carbon dioxide from the exhaust"
+        why_wrong: "Electric cars produce no emissions at the point of use."
+      - text: "They are expensive to run"
+        why_wrong: "They're cheap to run."
+      - text: "They have many moving parts"
+        why_wrong: "They have few moving parts."
+    answer: 0
+    explanation: "Electric cars are slower to recharge, have limited range, and their batteries are resource-intensive to make."
+
+  - id: dt26-energy-016
+    type: two_tier
+    status: draft
+    spec_point: "1.1.4"
+    concept: wind-up
+    command: explain
+    scenario: emergency-kit
+    see: "#renewable-energy-in-products"
+    text: "Which power source best suits the torch and radio?"
+    options:
+      - text: "Wind-up (clockwork) technology"
+      - text: "Mains electricity"
+        why_wrong: "There's no reliable electricity supply in these regions."
+      - text: "Alkaline batteries"
+        why_wrong: "Replacement batteries cost money, may not be available, and create waste."
+      - text: "A petrol generator"
+        why_wrong: "It needs fuel and creates emissions."
+    answer: 0
+    reason:
+      text: "Why?"
+      options:
+        - text: "Winding by hand needs no mains or batteries, avoiding their cost and waste"
+        - text: "It is the brightest light source"
+          why_wrong: "Brightness isn't the reason."
+        - text: "It works from the sun"
+          why_wrong: "That's PV."
+        - text: "It is the lightest option"
+          why_wrong: "Weight isn't the main reason here."
+      answer: 0
+    explanation: "Wind-up torches and radios are used where electricity is unreliable, because they avoid the cost and waste of batteries."
+
+  - id: dt26-energy-017
+    status: draft
+    spec_point: "1.1.4"
+    concept: household-solar
+    command: describe
+    context: true
+    see: "#energy-in-household-products"
+    text: "Why is a solar garden light usually fitted with a small rechargeable cell?"
+    options:
+      - text: "Solar output depends on light, so the cell stores energy for use at night"
+      - text: "The cell makes the panel produce more electricity"
+        why_wrong: "The cell stores energy. It doesn't increase generation."
+      - text: "It lets the light plug into the mains"
+        why_wrong: "Solar lights work without any wiring."
+      - text: "It's needed to change the light's colour"
+        why_wrong: "The cell stores energy. It has nothing to do with colour."
+    answer: 0
+    explanation: "Solar output depends on light levels, so a rechargeable cell stores the day's energy for when it's dark."
+
+  - id: dt26-energy-018
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "1.1.4"
+    concept: renewable-factory-technique
+    command: explain
+    scenario: furniture-factory
+    see: "#renewable-energy-in-manufacturing"
+    exam_question:
+      text: "Explain one benefit to the factory of using renewable energy."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is good."
+        marks_awarded: 0
+        why_wrong: "No benefit is given."
+      - text: "Lower running costs."
+        marks_awarded: 1
+        why_wrong: "A correct point earns 1 mark, but it isn't explained."
+      - text: "Once installed it lowers running costs and protects the factory from rising and unstable fuel prices."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a benefit, developed with why it matters to the factory."
+
+  - id: dt26-energy-019
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "1.1.4"
+    concept: battery-recycling-technique
+    command: explain
+    see: "#energy-storage"
+    exam_question:
+      text: "Explain why batteries should be recycled."
+      marks: 2
+    sample_answer: "They contain hazardous materials."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that they also contain valuable materials that can be recovered and reused"
+      - text: "Adding that they're cheap"
+        why_wrong: "Cost doesn't explain recycling."
+      - text: "Adding that they're used in phones"
+        why_wrong: "Where they're used doesn't explain why they should be recycled."
+      - text: "Adding that they go flat"
+        why_wrong: "Going flat isn't a reason to recycle."
+    answer: 0
+    explanation: "Batteries are recycled for two reasons: hazardous contents and valuable materials."
+
+  - id: dt26-energy-020
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "1.1.4"
+    concept: evaluate-technique
+    command: evaluate
+    context: true
+    see: "#energy-in-motor-vehicles"
+    exam_question:
+      text: "Evaluate the use of electric cars compared with petrol cars."
+      marks: 6
+    text: "Which answer actually evaluates them?"
+    options:
+      - text: "Electric cars use batteries and petrol cars use fuel."
+        why_wrong: "This only describes the difference."
+      - text: "Electric cars have no emissions in use and are cheap to run, but have limited range and resource-intensive batteries; overall they're better for the environment, especially if charged from renewables."
+      - text: "Tesla makes electric cars."
+        why_wrong: "An example isn't an evaluation."
+      - text: "Electric cars are better."
+        why_wrong: "A judgement with no reasons doesn't evaluate."
+    answer: 1
+    explanation: "Evaluate means weigh up advantages and disadvantages, then give a justified conclusion."
