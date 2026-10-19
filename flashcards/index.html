@@ -364,6 +364,10 @@ const FC_DATA = {
       grp.appendChild(allOpt);
 
       info.units.forEach(function (unit) {
+        // Skip units with no decks (e.g. the NEA guide, or topics not yet written)
+        var hasCards = unit.topics.some(function (t) { return FC_DATA[t.key] && FC_DATA[t.key].length; });
+        if (!hasCards) return;
+
         // Unit separator (disabled)
         var sep = document.createElement('option');
         sep.disabled = true;
