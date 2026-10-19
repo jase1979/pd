@@ -44,6 +44,8 @@ Products must meet safety and quality standards:
 - **BSI (British Standards Institution)** sets standards for products sold in the UK. Products meeting BSI standards carry the **Kitemark**.
 - **ISO (International Organisation for Standardisation)** sets international standards for products and processes, ensuring quality, safety, and efficiency worldwide.
 
+Examples include **ISO 9001** (quality management) and **ISO 14001** (environmental management). For consumers, these marks give confidence that a product has been independently tested to be safe and of good quality.
+
 ## Consumer rights and protection
 
 The **Consumer Rights Act 2015** states that all goods must be of a satisfactory standard, as described and seen when purchased, and fit for purpose.
@@ -52,6 +54,8 @@ The **Consumer Rights Act 2015** states that all goods must be of a satisfactory
 - This law also covers online purchases, including digital downloads.
 - You are entitled to a refund or repair if goods or services do not meet expectations or expected standards (in the case of faulty goods).
 - **Trade Descriptions Act** — it is illegal to apply a false description to goods which mislead consumers.
+
+Under the Consumer Rights Act, you normally have **30 days** to reject faulty goods for a full refund. Many shops also have their own **returns policies** that go beyond the law (e.g. returning unwanted items), but these are voluntary.
 
 ## Moral and ethical factors in manufacturing
 
@@ -80,6 +84,8 @@ Manufacturers are increasingly using more sustainable approaches in product desi
 - Using recycled materials or reducing the amount used
 - Using renewable sources for energy or using less energy
 - Extending product life: increasing product efficiency; ease of repair; impact on disposal; potential recyclability
+
+It also means reducing **waste materials** and avoiding harmful substances such as **CFCs** (chlorofluorocarbons). These were once used in fridges and aerosols, but they damage the ozone layer and are now banned.
 
 New or emerging materials, manufacturing methods or energy sources can often provide opportunities for greener products. This could be a more eco-friendly material or a **self-repairing material** — for example, an inner tube in a tyre that contains a sticky liquid that hardens when it contacts air, a perfect cure for punctures.
 

@@ -36,6 +36,27 @@ There are two types of energy sources — **renewable** and **non-renewable**.
 - **Advantages:** Uses 'hot spots' where molten rock close to the earth's crust generates hot water; allows broader access to energy through drilling
 - **Disadvantages:** Very high-cost resource; risks triggering earthquakes; limited to specific locations
 
+### Wave energy
+- **Advantages:** renewable; waves are fairly predictable; no fuel costs.
+- **Disadvantages:** expensive to build; equipment can be damaged by storms; can affect marine life and shipping; only suitable for some coastlines.
+
+### Hydroelectric energy
+Water stored behind a dam flows through turbines to generate electricity.
+- **Advantages:** reliable; can start quickly when demand rises; **pumped storage** schemes can store energy by pumping water back uphill.
+- **Disadvantages:** very expensive to build; flooding valleys destroys habitats and homes; limited suitable locations.
+
+### Wood and biomass
+Organic material (wood, crops, food and animal waste) is burned or turned into biofuel.
+- **Advantages:** renewable if new trees and crops are planted; uses waste products.
+- **Disadvantages:** burning releases CO₂ and smoke; needs large areas of land; can lead to deforestation if not managed.
+
+### Nuclear energy (non-renewable)
+- **Advantages:** large, reliable output; no CO₂ produced while generating.
+- **Disadvantages:** radioactive waste must be stored safely for thousands of years; risk of serious accidents; very expensive to build and decommission.
+
+## Issues with fossil fuels
+Burning coal, oil and gas releases **CO₂** (contributing to global warming) and other pollutants such as sulphur dioxide (acid rain). They are **finite** and will run out, and extracting them damages landscapes.
+
 ## Manufacturing using renewable energy
 
 Industrial and commercial manufacturing plants and factories around the world are implementing alternative methods of power generation from renewable energy sources, in order to increase production and reduce their energy usage.
@@ -53,7 +74,7 @@ This includes:
 
 ## Fossil fuel powered road vehicles
 
-By **2030**, the UK will ban the production of petrol- and diesel-powered cars. Some hybrid vehicles that use both electricity and petrol or diesel will still be allowed to be produced until **2035**.
+From **2030**, the sale of new petrol- and diesel-powered cars will be banned in the UK. Some new hybrid vehicles that use both electricity and petrol or diesel can still be sold until **2035**.
 
 In addition to some cities having congestion charges to help reduce congestion and pollution:
 
@@ -65,3 +86,10 @@ In addition to some cities having congestion charges to help reduce congestion a
 
 - **Photovoltaic (PV) cells** can be used as power supplies and 'trickle chargers', converting free sunlight into electricity — used in calculators, garden lights, and solar-powered chargers.
 - **Wind-up technology** uses mechanical movement to generate and store energy without the need for batteries. A wind-up torch uses the energy from turning the handle to power the device.
+
+## Energy storage in household products
+
+- **Disposable batteries** (e.g. alkaline) — cheap and convenient, but create waste and contain harmful chemicals.
+- **Rechargeable batteries** (e.g. lithium-ion, NiMH) — cost more at first but can be reused hundreds of times; used in phones, laptops, power tools and electric cars.
+- **Mains electricity** — constant supply for products that are not portable.
+- **Solar / PV** — free energy from sunlight, often used to recharge a built-in battery.

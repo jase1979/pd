@@ -3,7 +3,7 @@ layout: topic
 title: "Section D: Making a Prototype"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "2.2.1 NEA Guide"
+unit_name: "2.2 NEA Guide (Core & In-depth Skills)"
 unit_url: "/gcse/nea/"
 ---
 

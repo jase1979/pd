@@ -3,7 +3,7 @@ layout: topic
 title: "Section C: Generating & Developing Ideas"
 level: "GCSE"
 level_url: "/gcse/"
-unit_name: "2.2.1 NEA Guide"
+unit_name: "2.2 NEA Guide (Core & In-depth Skills)"
 unit_url: "/gcse/nea/"
 ---
 
@@ -31,6 +31,14 @@ Start this section with a short explanation of **how** you are going to design. 
 - **Cardboard modelling** — building quick, rough models from card to test size, shape, proportion and how parts fit or move
 
 Explain briefly why these strategies suit your project. For example, card models let you check ergonomics and scale against your user in a way a sketch cannot, and sketching lots of ideas stops you getting stuck on the first one (**design fixation**).
+
+The specification also names these design strategies. Use the correct names when you explain your approach:
+
+- **Collaboration** — working with others through four stages: **Discover, Define, Develop, Deliver**.
+- **User-centred design** — keeping the user at the centre throughout: **Contexts, Requirements, Design solutions, Evaluate, Iteration**.
+- **Systems thinking** — seeing the product as a system of parts (inputs, processes, outputs) and thinking about how changing one part affects the others.
+
+Using one or more of these, as well as sketching and modelling, helps you avoid **design fixation**.
 
 **Recording your models:**
 - **Photograph every cardboard model** — take clear shots from several angles, with and without a user handling it where relevant
@@ -144,6 +152,7 @@ Your teacher picks the band that best fits your work. A mark at the top of a ban
 ## Checklist for Band 4
 
 - [ ] Design strategy explained — sketching multiple designs and cardboard modelling
+- [ ] Named design strategies (collaboration, user-centred design, systems thinking) explained and used
 - [ ] At least 6–8 genuinely different initial ideas, all annotated
 - [ ] Ideas include 2D and 3D sketches, exploded or schematic diagrams
 - [ ] Reasons given for rejecting ideas, and users involved in choosing

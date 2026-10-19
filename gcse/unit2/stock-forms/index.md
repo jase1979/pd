@@ -89,3 +89,38 @@ When estimating costs, designers and manufacturers must consider:
 - The **processes** used to manufacture the product
 - Material costs, fixtures, fittings and finishes required
 - Energy, labour, machinery and intellectual property costs
+
+## Calculating quantities and costs
+
+### Worked example 1 — parts from a sheet
+
+A product needs rectangular MDF parts 200 mm × 150 mm. A half sheet measures 1220 mm × 610 mm and costs £12.00.
+
+- Along the length: 1220 ÷ 200 = 6.1 → **6** parts (always round down)
+- Along the width: 610 ÷ 150 = 4.07 → **4** parts
+- Parts per sheet: 6 × 4 = **24**
+- Cost per part: £12.00 ÷ 24 = **£0.50**
+
+### Worked example 2 — lengths from timber
+
+Pieces 350 mm long are cut from a 2400 mm length of pine. Each saw cut removes 3 mm (the **kerf**).
+
+- Length used per piece: 350 + 3 = 353 mm
+- 2400 ÷ 353 = 6.8 → **6** pieces
+- Waste: 2400 − (6 × 353) = **282 mm**
+
+### Worked example 3 — total cost of a prototype
+
+| Item | Quantity | Unit cost | Total |
+|---|---|---|---|
+| Acrylic sheet (300 × 200 mm) | 1 | £3.20 | £3.20 |
+| M4 bolts and nuts | 4 | £0.15 | £0.60 |
+| Hinges | 2 | £0.85 | £1.70 |
+| Spray paint | 0.25 can | £6.00 | £1.50 |
+| **Total material cost** | | | **£7.00** |
+
+Remember that the **true cost** of a product also includes labour, energy, machine time, packaging and profit.
+
+<div class="exam-tip" markdown="1">
+Always show your working, include units, and round **down** when working out how many parts fit — you cannot use part of a part.
+</div>

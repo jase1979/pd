@@ -104,7 +104,7 @@
   source: "/gcse/unit2/polymers/"
 
 - term: "Injection Moulding"
-  definition: "A manufacturing process where molten plastic is injected under pressure into a mould. Used for high volume production of complex shapes."
+  definition: "A process in which molten thermoforming polymer is forced under high pressure into a closed mould, then pushed out by ejector pins once cool. Used for high-volume production of complex shapes."
   level: "GCSE"
   source: "/gcse/unit2/scales-of-production/"
 
@@ -167,6 +167,136 @@
   definition: "A trading partnership that aims to achieve greater equity in international trade, ensuring fair wages and good working conditions for producers in developing countries."
   level: "GCSE"
   source: "/gcse/unit1/ecological-footprint/"
+
+- term: "Bronze"
+  definition: "An alloy of copper and tin that is hard, corrosion resistant and has low friction."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Stainless Steel"
+  definition: "An alloy of iron, chromium and nickel that is hard, tough and resists staining and corrosion."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Pewter"
+  definition: "An alloy of mainly tin with small amounts of copper and antimony, whose low melting point makes it ideal for casting in school."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Medium Carbon Steel"
+  definition: "A steel containing about 0.35–0.7% carbon that is stronger and harder than mild steel and can be hardened and tempered."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Elasticity"
+  definition: "The ability of a material to bend or stretch under a force and return to its original shape when the force is removed."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Plasticity"
+  definition: "The ability of a material to be permanently changed in shape without cracking, keeping its new shape once the force is removed."
+  level: "GCSE"
+  source: "/gcse/unit2/metals/"
+
+- term: "Tempering"
+  definition: "Reheating hardened steel to a lower temperature, judged by its oxide colour, and quenching it to reduce brittleness while keeping most of the hardness."
+  level: "GCSE"
+  source: "/gcse/unit2/material-properties/"
+
+- term: "Polycarbonate"
+  definition: "A transparent, extremely tough and impact-resistant thermoforming polymer used for safety glasses and riot shields."
+  level: "GCSE"
+  source: "/gcse/unit2/polymers/"
+
+- term: "Extruded Polystyrene (Styrofoam)"
+  definition: "A dense blue foam, sold under the trade name Styrofoam, that is easy to cut and shape for modelling."
+  level: "GCSE"
+  source: "/gcse/unit2/smart-materials/"
+
+- term: "Expanded Polystyrene (EPS)"
+  definition: "A lightweight white beaded foam that insulates well and absorbs shock, used for protective packaging."
+  level: "GCSE"
+  source: "/gcse/unit2/polymers/"
+
+- term: "Duplex Board"
+  definition: "A board with a white coated top layer and a grey, often recycled, back, used for food packaging such as cereal boxes."
+  level: "GCSE"
+  source: "/gcse/unit2/papers-and-boards/"
+
+- term: "Solid White Board"
+  definition: "A high-quality board bleached all the way through that prints very well, used for premium packaging."
+  level: "GCSE"
+  source: "/gcse/unit2/papers-and-boards/"
+
+- term: "Bleed Proof Paper"
+  definition: "A smooth coated paper that stops marker pen ink spreading, used for marker renderings."
+  level: "GCSE"
+  source: "/gcse/unit2/papers-and-boards/"
+
+- term: "Ejector Pin"
+  definition: "A pin in an injection mould that pushes the finished product out of the mould, leaving a small circular mark."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Draft Angle"
+  definition: "A slight taper on the sides of a moulded product so that it can be released from the mould."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Offset Lithography"
+  definition: "A high-volume printing process in which an inked image is transferred from a plate to a rubber blanket and then onto paper, relying on oil and water not mixing."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "CMYK"
+  definition: "The four process ink colours (cyan, magenta, yellow and key/black) used to build up full-colour printed images."
+  level: "GCSE"
+  source: "/gcse/unit2/scales-of-production/"
+
+- term: "Veneering"
+  definition: "Gluing a very thin slice of attractive timber onto a cheaper, stable base such as MDF or chipboard."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Laminating (Wood)"
+  definition: "Gluing thin strips or veneers of wood together and clamping them around a former so they set in a strong curved shape."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Steam Bending"
+  definition: "Softening solid timber in a steam box, then bending it around a former and clamping it until it dries in its new shape."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Line Bending"
+  definition: "Heating a narrow line across a thermoforming sheet on a strip heater so it can be bent to an angle and held in a jig until it cools."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Plastic Dip Coating"
+  definition: "Dipping heated metal into a fluidised bed of polythene powder that melts onto it to give a soft, coloured, protective coating."
+  level: "GCSE"
+  source: "/gcse/unit2/surface-treatments/"
+
+- term: "Cropping"
+  definition: "Trimming printed sheets to their final size along the crop marks, removing the excess bleed."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Kerf"
+  definition: "The width of material removed by a saw cut, which must be allowed for when calculating how many pieces can be cut."
+  level: "GCSE"
+  source: "/gcse/unit2/stock-forms/"
+
+- term: "Knock-Down Fitting"
+  definition: "A temporary fixing, such as a cam lock or corner block, that lets flat-pack furniture be assembled and taken apart."
+  level: "GCSE"
+  source: "/gcse/unit2/specialist-techniques/"
+
+- term: "Cross-Link"
+  definition: "A permanent chemical bond formed between the molecule chains of a thermosetting polymer when it sets, which stops it being softened or remoulded."
+  level: "GCSE"
+  source: "/gcse/unit2/polymers/"
 
 # ── Terms introduced by the 2026 specification (Unit 1 core) ────────────────
 
