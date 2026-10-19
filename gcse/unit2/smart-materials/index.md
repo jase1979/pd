@@ -34,7 +34,7 @@ Fibre strands are embedded into a polymer resin matrix, resulting in high compre
 
 ### Styrofoam
 
-Styrofoam is a trade name for **expanded polystyrene foam** (also called blue modelling foam). Available in various sheet sizes and thicknesses. Easy to cut, shape and work, with excellent insulation properties.
+Styrofoam is a trade name for **extruded polystyrene foam** (also called blue modelling foam). It is not the same as expanded polystyrene (EPS), the white beaded foam used for packaging; the specification lists them separately. Available in various sheet sizes and thicknesses. Easy to cut, shape and work, with excellent insulation properties.
 
 ### Modelling foam board
 
