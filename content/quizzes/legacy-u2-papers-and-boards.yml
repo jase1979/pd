@@ -1,0 +1,384 @@
+# Papers & Boards (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-papers-and-boards
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Papers & Boards"
+page: /gcse/unit2/papers-and-boards/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: perfume-box
+    text: "A cosmetics company is launching a new perfume. It wants a premium box that looks expensive on the shop shelf, with its logo raised up from the surface."
+  - id: design-portfolio
+    text: "A student is putting together their design portfolio: sketching ideas, tracing over drawings, producing marker renderings and mounting their final design sheets."
+
+questions:
+
+  - id: papers-001
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: paper-source
+    command: state
+    see: "#categories-of-papers-and-boards"
+    text: "What are papers and boards made from?"
+    options:
+      - text: "Wood pulp, from trees"
+      - text: "Crude oil"
+        why_wrong: "Crude oil is the source of synthetic polymers, not paper."
+      - text: "Recycled plastic"
+        why_wrong: "Paper and board are made from wood pulp, though they're often recycled back into new paper."
+      - text: "Wool and silk"
+        why_wrong: "Wool and silk are natural fibres used for textiles and natural polymers, not paper."
+    answer: 0
+    explanation: "Papers and boards are made from wood pulp from trees, rolled into thin sheets at a papermill."
+
+  - id: papers-002
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: paper-measures
+    command: identify
+    see: "#categories-of-papers-and-boards"
+    text: "How is the weight (density) of paper measured?"
+    options:
+      - text: "In grams per square metre (gsm)"
+      - text: "In microns"
+        why_wrong: "Microns measure the thickness of board, not the weight of paper."
+      - text: "In millimetres"
+        why_wrong: "Millimetres measure length or thickness. Paper weight is given in gsm."
+      - text: "In A sizes, such as A4"
+        why_wrong: "A sizes give the dimensions of a sheet, not how heavy the paper is."
+    answer: 0
+    explanation: "Paper weight is given in grams per square metre (gsm). Copier paper is about 80 gsm; over about 200 gsm counts as board."
+
+  - id: papers-003
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: micron-conversion
+    command: calculate
+    context: true
+    see: "#types-of-board"
+    text: "A box is made from corrugated cardboard about 3000 microns thick. How thick is that in millimetres?"
+    options:
+      - text: "3 mm"
+      - text: "30 mm"
+        why_wrong: "This divides by 100. There are 1000 microns in a millimetre, so divide by 1000."
+      - text: "0.3 mm"
+        why_wrong: "This divides by 10,000. One micron is a thousandth of a millimetre, so divide by 1000."
+      - text: "3000 mm"
+        why_wrong: "The microns weren't converted at all. 3000 mm would be 3 metres thick."
+    answer: 0
+    working: |
+      1 micron = 1/1000 mm, so divide by 1000.
+      3000 ÷ 1000 = 3 mm.
+    explanation: "A micron is one thousandth of a millimetre, so divide microns by 1000 to get millimetres."
+
+  - id: papers-004
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: paper-vs-board
+    command: identify
+    see: "#categories-of-papers-and-boards"
+    text: "A sheet of card weighs 250 gsm. How is it classed?"
+    options:
+      - text: "As board, because it's above about 200 gsm"
+      - text: "As paper, because board starts at 1000 gsm"
+        why_wrong: "The rule of thumb is that anything above about 200 gsm is board."
+      - text: "As paper, because gsm is only used for paper"
+        why_wrong: "Gsm can describe both. Above about 200 gsm, it's classed as board."
+      - text: "As neither: card is a separate category"
+        why_wrong: "Heavier card is classed as board. The dividing line is about 200 gsm."
+    answer: 0
+    explanation: "As a rule of thumb, paper and card above about 200 gsm is classed as board."
+
+  - id: papers-005
+    type: multi
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: translucent-papers
+    command: identify
+    scenario: design-portfolio
+    see: "#types-of-paper"
+    text: "The student wants to trace over a sketch. Which TWO papers are translucent?"
+    options:
+      - text: "Tracing paper"
+      - text: "Layout paper"
+      - text: "Copier paper"
+        why_wrong: "Copier paper is opaque, so you can't see a drawing through it."
+      - text: "Cartridge paper"
+        why_wrong: "Cartridge paper is thick and opaque, made for paints and pastels."
+    answer: [0, 1]
+    explanation: "Tracing paper and layout paper are both translucent, so a drawing underneath shows through for copying and developing ideas."
+
+  - id: papers-006
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: marker-paper
+    command: explain
+    scenario: design-portfolio
+    see: "#types-of-paper"
+    text: "Which paper is best for the student's marker pen renderings?"
+    options:
+      - text: "Bleed proof paper"
+      - text: "Copier paper"
+        why_wrong: "Copier paper is uncoated, so marker ink can spread into it and blur the edges."
+      - text: "Tracing paper"
+        why_wrong: "Tracing paper is for copying sketches and overlays, not for final marker renderings."
+      - text: "Layout paper"
+        why_wrong: "Layout paper is cheap paper for sketching and developing ideas, not for final renderings."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It is coated, so marker ink doesn't spread (bleed)"
+        - text: "It is translucent"
+          why_wrong: "Being see-through suits tracing. For markers, what matters is that the ink doesn't spread."
+        - text: "It is thick and textured"
+          why_wrong: "That describes cartridge paper, made for paints and pastels."
+        - text: "It is the cheapest paper"
+          why_wrong: "Layout paper is the cheap one. Bleed proof paper is chosen for its coating."
+      answer: 0
+    explanation: "Bleed proof paper is smooth and coated, so marker ink stays where it's put and renderings have crisp edges."
+
+  - id: papers-007
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: mounting-board
+    command: identify
+    scenario: design-portfolio
+    see: "#types-of-board"
+    text: "Which board should the student mount their final design sheets on?"
+    options:
+      - text: "Mounting board"
+      - text: "Corrugated cardboard"
+        why_wrong: "Corrugated card is for packaging. Its fluted structure doesn't give a smooth surface for display."
+      - text: "Duplex board"
+        why_wrong: "Duplex board, with its grey recycled back, is cheap food packaging such as cereal boxes."
+      - text: "Folding boxboard"
+        why_wrong: "Folding boxboard is made to score and fold, for supermarket packaging, not to stay flat and rigid."
+    answer: 0
+    explanation: "Mounting board is rigid with a smooth black or white surface, so it's used for framing, presentation and architectural models."
+
+  - id: papers-008
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: premium-board
+    command: compare
+    scenario: perfume-box
+    see: "#types-of-board"
+    text: "Which board is the best choice for the perfume box?"
+    options:
+      - text: "Solid white board"
+      - text: "Duplex board"
+        why_wrong: "Duplex board has a grey, often recycled, back and is a cheaper board, used for cereal boxes."
+      - text: "Corrugated cardboard"
+        why_wrong: "Corrugated card is strong for transit packaging but its wavy flutes don't give a premium print surface."
+      - text: "Foam board"
+        why_wrong: "Foam board is for display and architectural models, not printed packaging."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It is bleached all the way through and prints very well"
+        - text: "It has a grey recycled back, so it's cheaper"
+          why_wrong: "That describes duplex board. A premium box needs the high-quality white surface of solid white board."
+        - text: "It is the cheapest board"
+          why_wrong: "Solid white board is a premium board. It's chosen for quality, not price."
+        - text: "It has a light polystyrene foam core"
+          why_wrong: "That's foam board, used for models."
+      answer: 0
+    explanation: "Solid white board is bleached through, with a high-quality white surface that prints very well, so it's used for premium packaging such as perfume."
+
+  - id: papers-009
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: surface-finish-board
+    command: identify
+    scenario: perfume-box
+    see: "#adding-surface-finishes-to-papers-cards-and-boards"
+    text: "Which finish will make the logo stand up from the surface of the box?"
+    options:
+      - text: "Embossing"
+      - text: "Edge staining"
+        why_wrong: "Edge staining dyes the edges of a book. It doesn't raise anything."
+      - text: "Laminating"
+        why_wrong: "Laminating adds a layer for thickness and strength. It doesn't create a raised pattern."
+      - text: "UV varnishing"
+        why_wrong: "UV varnishing gives a high-gloss finish, but it's flat, not raised."
+    answer: 0
+    explanation: "Embossing creates raised patterns or shapes. It's popular for perfume boxes, greetings cards and invitations."
+
+  - id: papers-010
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: surface-finish-board
+    command: identify
+    context: true
+    see: "#adding-surface-finishes-to-papers-cards-and-boards"
+    text: "A business wants its business cards to have a high-gloss finish. Which process gives this?"
+    options:
+      - text: "UV varnishing"
+      - text: "Embossing"
+        why_wrong: "Embossing raises a pattern or shape. It doesn't add gloss."
+      - text: "Edge staining"
+        why_wrong: "Edge staining colours the edges of book pages."
+      - text: "Scoring"
+        why_wrong: "Scoring is done before folding, to get a clean fold. It isn't a finish."
+    answer: 0
+    explanation: "UV varnishing produces a high-gloss finish, which is why it's used for business cards and marketing materials."
+
+  - id: papers-011
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: laminating
+    command: state
+    context: true
+    see: "#laminating-papers-cards-and-boards"
+    text: "Why are drinks cartons laminated?"
+    options:
+      - text: "To hold the liquid hygienically and keep it fresh"
+      - text: "To make them see-through"
+        why_wrong: "Laminating adds a coating layer. Its job here is to hold liquid, not to make the carton clear."
+      - text: "To make them easier to fold"
+        why_wrong: "Scoring is what makes card fold cleanly. Laminating adds thickness and strength."
+      - text: "To make them lighter"
+        why_wrong: "Laminating adds a layer, so it adds weight rather than reducing it."
+    answer: 0
+    explanation: "Laminating adds a coating layer. On food and drinks cartons it holds the liquid hygienically and keeps the contents fresh."
+
+  - id: papers-012
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: scoring
+    command: describe
+    see: "#folding-ability-and-absorbency"
+    text: "Why is card scored before it is folded?"
+    options:
+      - text: "To get a clean, accurate fold"
+      - text: "To make it waterproof"
+        why_wrong: "Waxing or laminating resists liquid. Scoring is about folding."
+      - text: "To make it stronger"
+        why_wrong: "Scoring weakens the card along the line, on purpose, so it folds there neatly."
+      - text: "So that it can be printed on"
+        why_wrong: "Card can be printed whether or not it's scored."
+    answer: 0
+    explanation: "Paper and card must be scored before bending so that the fold is clean and in the right place."
+
+  - id: papers-013
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: corrugated-cores
+    command: identify
+    context: true
+    see: "#types-of-board"
+    text: "A company needs corrugated card boxes strong enough to ship heavy items. How can the card be made stronger?"
+    options:
+      - text: "Use double-wall or triple-wall card, with more fluted layers"
+      - text: "Emboss the card"
+        why_wrong: "Embossing is decorative: it raises a pattern but doesn't make the box stronger."
+      - text: "Use bleed proof paper for the outer layer"
+        why_wrong: "Bleed proof paper is for marker renderings and has nothing to do with packaging strength."
+      - text: "Varnish the box"
+        why_wrong: "Varnish adds gloss. Strength comes from more fluted layers."
+    answer: 0
+    explanation: "Corrugated card comes as single-wall, double-wall or triple-wall. Each extra fluted layer makes it stronger."
+
+  - id: papers-014
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: recycling-paper
+    command: describe
+    see: "#greener-solutions"
+    text: "Why is fully recyclable paper packaging described as a 'cradle to cradle' approach?"
+    options:
+      - text: "It can be recycled into new products, reducing the need for new wood fibres"
+      - text: "It is made from crude oil, which can be reused"
+        why_wrong: "Paper is made from wood pulp, not crude oil."
+      - text: "It lasts forever without wearing out"
+        why_wrong: "Paper packaging wears out. 'Cradle to cradle' means it becomes new material at the end of its life."
+      - text: "It is thrown away after a single use"
+        why_wrong: "That's the opposite of cradle to cradle, which keeps the material in use."
+    answer: 0
+    explanation: "Cradle to cradle means the material is recycled into new products, reducing waste and the need to cut down trees for new fibres."
+
+  - id: papers-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: premium-board-technique
+    command: explain
+    scenario: perfume-box
+    see: "#types-of-board"
+    exam_question:
+      text: "Explain why solid white board is a suitable material for the perfume box."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is white and looks good."
+        marks_awarded: 0
+        why_wrong: "'Looks good' is vague. No property that matters for premium packaging is clearly given."
+      - text: "It prints very well."
+        marks_awarded: 1
+        why_wrong: "A relevant property earns 1 mark, but it isn't linked to the product, so the second mark is missed."
+      - text: "It has a high-quality white surface that prints very well, so the box will look expensive on the shop shelf."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a relevant property plus why it matters for this product. The link 'so the box will look expensive' earns the second mark."
+
+  - id: papers-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: waxing-technique
+    command: describe
+    context: true
+    see: "#folding-ability-and-absorbency"
+    exam_question:
+      text: "Describe why card sandwich containers are waxed on the inside."
+      marks: 2
+    sample_answer: "To stop the card absorbing."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding what it would absorb, and the result: moisture from the sandwich, so the card would go soggy"
+      - text: "Adding that the containers are die cut and flat-packed"
+        why_wrong: "True, but it's about how they're made, not why they're waxed."
+      - text: "Adding that wax makes the card shiny"
+        why_wrong: "The wax is there to resist moisture, not for looks, so this earns nothing."
+      - text: "Adding that card is made from wood pulp"
+        why_wrong: "This doesn't add anything about why the wax is needed."
+    answer: 0
+    explanation: "A describe answer needs detail. Saying what's absorbed and what would happen completes the point."
+
+  - id: papers-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 papers and boards"
+    concept: describe-technique
+    command: describe
+    context: true
+    see: "#types-of-board"
+    exam_question:
+      text: "Describe the structure of corrugated cardboard."
+      marks: 2
+    text: "Which answer actually describes the structure?"
+    options:
+      - text: "Corrugated cardboard."
+        why_wrong: "This just names the material."
+      - text: "It is used for packaging."
+        why_wrong: "This gives a use, not the structure."
+      - text: "It is made of wavy, fluted layers, which make it strong but lightweight."
+      - text: "It is recyclable."
+        why_wrong: "This is one property, not a description of the structure."
+    answer: 2
+    explanation: "Describe means give the features, here the fluted layers and what they do. Naming, a use or one property isn't enough."

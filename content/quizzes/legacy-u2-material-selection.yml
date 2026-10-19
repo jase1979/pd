@@ -1,0 +1,382 @@
+# Material Selection Factors (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-material-selection
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Material Selection Factors"
+page: /gcse/unit2/material-selection/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: eco-lamp
+    text: "A designer is developing a desk lamp for an eco-conscious brand. The brand wants sustainable materials, and fair working conditions for everyone in its supply chain."
+  - id: gift-range
+    text: "A company is designing a range of gifts to be sold around the world, including a polished metal keyring and a printed card gift box."
+
+questions:
+
+  - id: select-001
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: aesthetic-definition
+    command: state
+    see: "#aesthetics"
+    text: "What are a material's aesthetic properties?"
+    options:
+      - text: "How it looks, such as its colour, texture, form and gloss"
+      - text: "How well it works for its intended use"
+        why_wrong: "That's functional properties: performance, efficiency, reliability."
+      - text: "How much it costs"
+        why_wrong: "Cost is a separate factor in material selection, not an aesthetic property."
+      - text: "Whether it can be recycled"
+        why_wrong: "Recyclability is an environmental factor, not how a material looks."
+    answer: 0
+    explanation: "Aesthetic properties are about appearance: shape, colour, texture, form, reflection, gloss and style."
+
+  - id: select-002
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: functional-vs-aesthetic
+    command: identify
+    see: "#function"
+    text: "Which of these is a functional property?"
+    options:
+      - text: "Corrosion resistance"
+      - text: "Colour"
+        why_wrong: "Colour is about how a material looks, so it's an aesthetic property."
+      - text: "Texture"
+        why_wrong: "Texture is an aesthetic property: it's about how a material looks and feels."
+      - text: "Gloss"
+        why_wrong: "Gloss is about appearance, so it's aesthetic."
+    answer: 0
+    explanation: "Functional properties are about how a material performs in use, such as corrosion resistance, strength or conductivity."
+
+  - id: select-003
+    type: multi
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: functional-vs-aesthetic
+    command: identify
+    see: "#aesthetics"
+    text: "Select TWO aesthetic properties."
+    options:
+      - text: "Colour"
+      - text: "Texture"
+      - text: "Tensile strength"
+        why_wrong: "Tensile strength is how much load a material takes before failing, so it's functional."
+      - text: "Conductivity"
+        why_wrong: "Conductivity is how well heat or electricity flows through, a functional property."
+    answer: [0, 1]
+    explanation: "Colour and texture are about how a material looks. Strength and conductivity are about how it performs."
+
+  - id: select-004
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: keyring-metal
+    command: compare
+    scenario: gift-range
+    see: "#aesthetics"
+    text: "The keyring should have a bright gold look that lasts. Which metal is the best choice?"
+    options:
+      - text: "Brass"
+      - text: "Aluminium"
+        why_wrong: "Aluminium has a silver appearance, not gold."
+      - text: "Mild steel"
+        why_wrong: "Mild steel is grey and corrodes easily, so it would need a finish."
+      - text: "Pewter"
+        why_wrong: "Pewter looks like silver and tarnishes easily."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It has a bright gold appearance and resists corrosion"
+        - text: "It has a very low melting point"
+          why_wrong: "That's pewter's key property. It doesn't give a gold look."
+        - text: "It is the lightest metal"
+          why_wrong: "Aluminium is the very light one, and it's silver."
+        - text: "It is magnetic"
+          why_wrong: "Brass is non-ferrous, so it isn't magnetic, and that wouldn't affect its look anyway."
+      answer: 0
+    explanation: "Brass has a bright gold appearance and is corrosion resistant, so it keeps looking good as a keyring."
+
+  - id: select-005
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: selection-factors
+    command: identify
+    scenario: gift-range
+    see: "#other-factors-influencing-material-selection"
+    text: "The gift box will be sold in many countries. Which factor is about making sure its colours and symbols won't cause offence?"
+    options:
+      - text: "Cultural"
+      - text: "Ethical"
+        why_wrong: "Ethical factors are about whether materials were sourced and processed fairly."
+      - text: "Environmental"
+        why_wrong: "Environmental factors are about renewability, recycling and carbon footprint."
+      - text: "Availability"
+        why_wrong: "Availability is about whether the material is easy to get in the size needed."
+    answer: 0
+    explanation: "Cultural factors ask whether the material, colours or symbols are acceptable to the target market. Some can cause offence in certain cultures."
+
+  - id: select-006
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: selection-factors
+    command: identify
+    context: true
+    see: "#other-factors-influencing-material-selection"
+    text: "A designer checks that the workers who mined a metal weren't exploited. Which factor is this?"
+    options:
+      - text: "Ethical"
+      - text: "Cultural"
+        why_wrong: "Cultural factors are about colours, symbols or materials that may offend a target market."
+      - text: "Social"
+        why_wrong: "Social factors are about whether the product is safe and suitable for its users and those around them."
+      - text: "Cost"
+        why_wrong: "Cost is about price point and scale of production."
+    answer: 0
+    explanation: "Ethical factors ask whether the material was sourced and processed fairly, without exploiting workers or damaging communities."
+
+  - id: select-007
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: fsc-timber
+    command: describe
+    scenario: eco-lamp
+    see: "#biodiversity-and-deforestation"
+    text: "How can the designer make sure the lamp's wooden base is made from sustainable timber?"
+    options:
+      - text: "Use FSC-certified timber from managed forests"
+      - text: "Use the rarest tropical hardwood available"
+        why_wrong: "Rare timbers are the least sustainable choice and can damage natural habitats."
+      - text: "Use virgin timber rather than recycled"
+        why_wrong: "The opposite: recycled materials are preferred over virgin ones."
+      - text: "Buy whichever timber is cheapest"
+        why_wrong: "Price says nothing about whether the timber was sourced sustainably."
+    answer: 0
+    explanation: "FSC (Forest Stewardship Council) certified timber comes from managed forests, so it's sustainably sourced."
+
+  - id: select-008
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: pla
+    command: explain
+    scenario: eco-lamp
+    see: "#new-and-developing-materials"
+    text: "Some of the lamp's parts will be 3D printed. Which polymer best suits the brand?"
+    options:
+      - text: "PLA"
+      - text: "Polystyrene"
+        why_wrong: "Polystyrene is made from crude oil, so it doesn't fit an eco-conscious brand."
+      - text: "Acrylic"
+        why_wrong: "Acrylic is an oil-based polymer, not a renewable one."
+      - text: "Nylon"
+        why_wrong: "Nylon is made from oil. PLA is the plant-based option."
+    answer: 0
+    reason:
+      text: "Why does it suit the brand?"
+      options:
+        - text: "It is made from plant starch rather than oil, and can be composted industrially"
+        - text: "It is the strongest polymer available"
+          why_wrong: "PLA isn't chosen for strength. It's chosen because it's plant-based and compostable."
+        - text: "It is made from crude oil"
+          why_wrong: "PLA is the opposite: it's made from plant starch such as corn or sugar cane."
+        - text: "It needs no energy to print"
+          why_wrong: "PLA is printed at around 190–220°C, which takes energy."
+      answer: 0
+    explanation: "PLA is inexpensive, made from plant starch rather than oil, and compostable in industrial composting facilities."
+
+  - id: select-009
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: cradle-to-cradle
+    command: describe
+    scenario: eco-lamp
+    see: "#materials-and-the-environment"
+    text: "The brand wants the lamp to be 'cradle to cradle'. What does this mean?"
+    options:
+      - text: "It is designed to be taken apart, reused or recycled rather than thrown away"
+      - text: "It is made only from brand new materials"
+        why_wrong: "Cradle to cradle favours reused and recycled materials."
+      - text: "It goes to landfill at the end of its life"
+        why_wrong: "That's 'cradle to grave', the opposite idea."
+      - text: "It will last forever"
+        why_wrong: "Products still wear out. Cradle to cradle means their materials go back into use."
+    answer: 0
+    explanation: "In cradle to cradle thinking, no product is disposed of entirely: it's disassembled, reused or recycled."
+
+  - id: select-010
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: global-manufacture-risk
+    command: describe
+    see: "#global-manufacture"
+    text: "What is a risk of having products made in countries with very low labour costs?"
+    options:
+      - text: "Workers may be exploited, with poverty wages, long hours or child labour"
+      - text: "Products become more expensive for customers"
+        why_wrong: "Low labour costs usually make products cheaper. The risk is to the workers."
+      - text: "The products can't be exported"
+        why_wrong: "Products made abroad are exported all the time. The concern is working conditions."
+      - text: "Less transport is needed"
+        why_wrong: "Making parts around the world usually means more transport, not less."
+    answer: 0
+    explanation: "Low labour costs can mean poverty wages, long hours and exploitation, so manufacturers must check their supply chains."
+
+  - id: select-011
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: fair-trade
+    command: state
+    see: "#global-manufacture"
+    text: "What does Fair Trade try to do?"
+    options:
+      - text: "Make sure everyone in the supply chain benefits fairly"
+      - text: "Make products as cheap as possible"
+        why_wrong: "Fair Trade is about fairness for producers, not the lowest price."
+      - text: "Guarantee that products can be recycled"
+        why_wrong: "Recycling is an environmental issue. Fair Trade is about fair treatment and pay."
+      - text: "Stop products being made abroad"
+        why_wrong: "Fair Trade doesn't ban global manufacture. It tries to make it fair."
+    answer: 0
+    explanation: "Fair Trade tries to make sure everyone involved, including workers in poorer countries, benefits fairly."
+
+  - id: select-012
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: prototype-cost-calc
+    command: calculate
+    context: true
+    see: "#cost-of-a-prototype"
+    text: "A prototype uses £12 of materials, 2 hours of labour at £15 per hour, and £6 of energy for the machines. What does it cost to make?"
+    options:
+      - text: "£48"
+      - text: "£33"
+        why_wrong: "This counts one hour of labour instead of two. Labour cost = hours × rate = 2 × £15 = £30."
+      - text: "£18"
+        why_wrong: "This leaves out labour, which is often the biggest cost of a one-off, hand-made prototype."
+      - text: "£360"
+        why_wrong: "The costs were multiplied together. Different costs are added: only labour is hours × rate."
+    answer: 0
+    working: |
+      Labour = 2 hours × £15 = £30.
+      Total = materials + labour + energy = £12 + £30 + £6 = £48.
+    explanation: "A prototype's cost is more than its materials: add labour (hours × rate) and energy too."
+
+  - id: select-013
+    type: multi
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: prototype-costs
+    command: state
+    see: "#cost-of-a-prototype"
+    text: "Apart from materials, select TWO costs of making a prototype."
+    options:
+      - text: "Energy to power the machinery"
+      - text: "Labour to make it"
+      - text: "The profit from selling it"
+        why_wrong: "Profit is money earned from sales, not a cost of making the prototype."
+      - text: "The customer's delivery charge"
+        why_wrong: "Delivery is paid by a customer after a sale. It isn't a cost of making a prototype."
+    answer: [0, 1]
+    explanation: "Prototype costs include energy, labour (often one-off and hand-made), CAD/CAM equipment and intellectual property protection."
+
+  - id: select-014
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: availability
+    command: identify
+    context: true
+    see: "#other-factors-influencing-material-selection"
+    text: "A designer chooses a rare timber that is hard to get in the size needed. What problem is this most likely to cause?"
+    options:
+      - text: "Delays and a higher cost"
+      - text: "The product becomes easier to recycle"
+        why_wrong: "Rarity has nothing to do with recyclability."
+      - text: "The timber becomes easier to cut"
+        why_wrong: "How rare a timber is doesn't change how it works."
+      - text: "The product becomes lighter"
+        why_wrong: "Availability doesn't affect weight. Its effect is on time and cost."
+    answer: 0
+    explanation: "Materials that are hard to get in the stock form and size needed cause delays and increase cost."
+
+  - id: select-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: pla-technique
+    command: explain
+    scenario: eco-lamp
+    see: "#new-and-developing-materials"
+    exam_question:
+      text: "Explain why PLA is a suitable material for the lamp's 3D printed parts."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "PLA is a plastic that is used in 3D printers."
+        marks_awarded: 0
+        why_wrong: "This describes what PLA is used for, but gives no reason it suits this brand."
+      - text: "PLA is made from plant starch."
+        marks_awarded: 1
+        why_wrong: "A relevant point earns 1 mark, but it isn't linked to the eco-conscious brand."
+      - text: "PLA is made from plant starch rather than oil and can be composted industrially, so it suits the eco-conscious brand."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a relevant property plus why it matters for this product or client."
+
+  - id: select-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: ethical-technique
+    command: describe
+    see: "#global-manufacture"
+    exam_question:
+      text: "Describe one ethical factor a designer should consider when choosing materials."
+      marks: 2
+    sample_answer: "Whether the workers were treated fairly."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding detail, e.g. that they weren't paid poverty wages, made to work long hours, or children exploited"
+      - text: "Adding whether the colour might offend some cultures"
+        why_wrong: "That's a cultural factor, not an ethical one."
+      - text: "Adding whether the material is cheap"
+        why_wrong: "Cost is a separate factor and doesn't develop the ethical point."
+      - text: "Adding whether the material can be recycled"
+        why_wrong: "That's an environmental factor."
+    answer: 0
+    explanation: "'Describe' needs detail. Saying what unfair treatment looks like develops the point for the second mark."
+
+  - id: select-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 material selection"
+    concept: evaluate-technique
+    command: evaluate
+    context: true
+    see: "#function"
+    exam_question:
+      text: "Evaluate the use of mild steel for the frame of an outdoor bench."
+      marks: 4
+    text: "Which answer actually evaluates, rather than just listing facts?"
+    options:
+      - text: "Mild steel is strong, ductile and magnetic."
+        why_wrong: "This lists properties but doesn't weigh them up for an outdoor bench."
+      - text: "Mild steel is strong, so the frame will be sturdy, but it corrodes easily, so it would need a finish to survive outdoors."
+      - text: "Mild steel is used for car parts and bicycle frames."
+        why_wrong: "These are uses, not an evaluation of the bench."
+      - text: "Mild steel is a good material."
+        why_wrong: "A judgement with no reasons isn't an evaluation."
+    answer: 1
+    explanation: "Evaluate means weigh up strengths and weaknesses for the product. 'Strong, so… but corrodes, so…' does both."

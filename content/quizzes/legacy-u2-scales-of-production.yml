@@ -1,0 +1,418 @@
+# Scales of Production (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-scales-of-production
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Scales of Production"
+page: /gcse/unit2/scales-of-production/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: phone-cases
+    text: "A company is launching a new phone case. It expects to sell 50,000 of them, each with clips and a textured finish moulded in."
+  - id: magazine
+    text: "A publisher prints a monthly magazine: 80,000 full-colour copies each month, plus a 50-copy special edition for a launch event."
+
+questions:
+
+  - id: scale-001
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: scale-identify
+    command: identify
+    context: true
+    see: "#scales-of-production"
+    text: "A jeweller makes a bespoke wedding ring designed for one customer. Which scale of production is this?"
+    options:
+      - text: "One-off"
+      - text: "Batch"
+        why_wrong: "Batch production makes a limited number of similar items. This ring is a single custom piece."
+      - text: "Mass"
+        why_wrong: "Mass production makes thousands of identical products."
+      - text: "Continuous flow"
+        why_wrong: "Continuous flow makes identical products non-stop, 24/7."
+    answer: 0
+    explanation: "One-off production makes single, bespoke items, so the customer gets a product unlike any other."
+
+  - id: scale-002
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: scale-identify
+    command: identify
+    context: true
+    see: "#scales-of-production"
+    text: "A furniture workshop makes 40 identical chairs for a café, then switches to making tables for another order. Which scale is this?"
+    options:
+      - text: "Batch"
+      - text: "One-off"
+        why_wrong: "One-off means a single item. Forty identical chairs is a batch."
+      - text: "Mass"
+        why_wrong: "Mass production is normally thousands of identical products on an automated line."
+      - text: "Continuous flow"
+        why_wrong: "Continuous flow never stops to switch products."
+    answer: 0
+    explanation: "Batch production makes a limited number of similar items at a time, and the batch may be repeated later."
+
+  - id: scale-003
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: continuous-disadvantage
+    command: state
+    see: "#scales-of-production"
+    text: "What is a disadvantage of continuous flow production?"
+    options:
+      - text: "A single fault can stop the whole process, which is very costly"
+      - text: "Every product comes out slightly different"
+        why_wrong: "The opposite: continuous flow makes huge numbers of identical products."
+      - text: "It needs lots of manual labour"
+        why_wrong: "Continuous flow is heavily automated. Lots of manual labour is a disadvantage of one-off production."
+      - text: "Customers wait for the next batch"
+        why_wrong: "That's a disadvantage of batch production. Continuous flow never stops."
+    answer: 0
+    explanation: "Because everything runs on one heavily automated line, 24/7, a single fault can stop production and be very costly."
+
+  - id: scale-004
+    type: multi
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: continuous-products
+    command: identify
+    see: "#scales-of-production"
+    text: "Select TWO products suited to continuous flow production."
+    options:
+      - text: "Drinks cans"
+      - text: "Screws"
+      - text: "A bespoke wedding dress"
+        why_wrong: "A bespoke dress is made once, for one person: one-off production."
+      - text: "An architect's model of a new building"
+        why_wrong: "A model for one building is a one-off."
+    answer: [0, 1]
+    explanation: "Drinks cans, bottles, bottle caps, screws and fixings, newspapers and food packaging are needed in huge, identical numbers."
+
+  - id: scale-005
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: mass-profit
+    command: describe
+    see: "#scales-of-production"
+    text: "Why does mass production usually make more profit on each product?"
+    options:
+      - text: "Materials are bought in bulk, and automated machinery needs fewer workers"
+      - text: "Every product is unique"
+        why_wrong: "Mass-produced products are identical. Uniqueness is a feature of one-off production."
+      - text: "There are no set-up costs"
+        why_wrong: "Set-up costs are high. They're spread across thousands of products."
+      - text: "The design is easy to change"
+        why_wrong: "Mass production has little flexibility once the line is set up."
+    answer: 0
+    explanation: "Buying materials in bulk and using automated machinery with fewer workers lowers the cost of each product."
+
+  - id: scale-006
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: jig-template-pattern
+    command: identify
+    context: true
+    see: "#jigs-and-repeating-activities"
+    text: "A workshop needs every hole drilled in exactly the same place on 200 identical parts. Which device holds the part and guides the drill?"
+    options:
+      - text: "A jig"
+      - text: "A template"
+        why_wrong: "A template is for marking out a shape. It doesn't hold the part or guide a drill."
+      - text: "A pattern"
+        why_wrong: "A pattern is a shape attached to the material to help shape it."
+      - text: "A mould"
+        why_wrong: "Moulds shape molten or softened material. They don't guide drilling."
+    answer: 0
+    explanation: "A jig holds the material and guides cutting or drilling tools, so every repeat is accurate and identical."
+
+  - id: scale-007
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: jig-template-pattern
+    command: state
+    see: "#jigs-and-repeating-activities"
+    text: "What is a template used for?"
+    options:
+      - text: "Marking out the same shape repeatedly, so it's exactly the same each time"
+      - text: "Holding material and guiding a drill"
+        why_wrong: "That's a jig."
+      - text: "Forcing molten polymer into a mould"
+        why_wrong: "That's injection moulding."
+      - text: "Stamping shapes out of card"
+        why_wrong: "That's die cutting."
+    answer: 0
+    explanation: "A template is drawn around to mark out a shape repeatedly, so every copy is identical."
+
+  - id: scale-008
+    type: multi
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: cam-benefits
+    command: state
+    see: "#computer-aided-manufacture-cam"
+    text: "Select TWO advantages of using CAM machines."
+    options:
+      - text: "They are far more accurate and consistent than working by hand"
+      - text: "They can work without supervision"
+      - text: "They are cheaper to buy than hand tools"
+        why_wrong: "CAM equipment is very expensive. Its advantages are accuracy, speed and consistency."
+      - text: "A skilled worker must guide every cut"
+        why_wrong: "The computer controls the machine. That's why it can work without supervision."
+    answer: [0, 1]
+    explanation: "CAM is faster, far more accurate, repeats tasks identically, saves material and can run without supervision."
+
+  - id: scale-009
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: injection-moulding-choice
+    command: compare
+    scenario: phone-cases
+    see: "#producing-products-using-polymers"
+    text: "Which process is the best choice for making the phone cases?"
+    options:
+      - text: "Injection moulding"
+      - text: "Vacuum forming"
+        why_wrong: "Vacuum forming pulls a heated sheet over a mould. It can't form clips and fine detail in one piece."
+      - text: "Blow moulding"
+        why_wrong: "Blow moulding inflates a tube to make hollow forms such as bottles."
+      - text: "Press moulding"
+        why_wrong: "Press moulding presses a heated sheet over a mould. It can't make complex clips."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It makes complex 3D shapes with clips in one piece, with fast cycle times for large numbers"
+        - text: "It heats a sheet of HIPS or acrylic and pulls it over a mould"
+          why_wrong: "That describes vacuum forming."
+        - text: "It inflates a soft tube to fill a cavity"
+          why_wrong: "That's blow moulding."
+        - text: "Its moulds are cheap, so it suits small batches"
+          why_wrong: "Injection moulds are very expensive, which is why it only pays in large quantities."
+      answer: 0
+    explanation: "Injection moulding makes complex, accurate shapes with clips and ribs in one piece, quickly. It suits 50,000 identical cases."
+
+  - id: scale-010
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: injection-parts
+    command: identify
+    scenario: phone-cases
+    see: "#producing-products-using-polymers"
+    text: "In injection moulding, what pushes the finished phone case out of the mould?"
+    options:
+      - text: "Ejector pins"
+      - text: "The hopper"
+        why_wrong: "The hopper feeds polymer granules into the heated barrel at the start."
+      - text: "The screw"
+        why_wrong: "The screw carries the granules forward and acts as a ram, forcing molten polymer into the mould."
+      - text: "The sprue"
+        why_wrong: "The sprue is where the polymer enters the mould, and it leaves a sprue mark on the product."
+    answer: 0
+    explanation: "When the polymer has cooled, the mould opens and ejector pins push the product out, leaving small circular marks."
+
+  - id: scale-011
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: injection-economics
+    command: state
+    scenario: phone-cases
+    see: "#producing-products-using-polymers"
+    text: "Why is injection moulding only economical for large quantities, like the 50,000 cases?"
+    options:
+      - text: "The moulds are very expensive, so their cost must be spread over many products"
+      - text: "Its cycle times are very slow"
+        why_wrong: "Injection moulding is very fast. The issue is the cost of the mould."
+      - text: "It wastes a lot of material"
+        why_wrong: "There's little waste: sprues and runners can be reground and reused."
+      - text: "Every product needs hand finishing"
+        why_wrong: "Injection-moulded products are self-finishing: the texture comes from the mould."
+    answer: 0
+    explanation: "A mould is very expensive to make, so it only pays when its cost is shared across a very large number of products."
+
+  - id: scale-012
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: spot-injection-moulding
+    command: identify
+    context: true
+    see: "#producing-products-using-polymers"
+    text: "How could you tell that a washing-up bowl was injection moulded?"
+    options:
+      - text: "It has small circular ejector pin marks and a sprue mark"
+      - text: "It has rough sawn edges"
+        why_wrong: "Sawn edges come from cutting stock, not from a mould."
+      - text: "It has stitching around the rim"
+        why_wrong: "Stitching is used in textiles and binding, not moulded polymers."
+      - text: "It has crease lines from scoring"
+        why_wrong: "Scoring and creasing are used to fold paper and card."
+    answer: 0
+    explanation: "Signs of injection moulding: small circular ejector pin marks, a sprue mark, tapered sides (draft angles) and ribs inside."
+
+  - id: scale-013
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: litho-principle
+    command: state
+    scenario: magazine
+    see: "#producing-products-in-papers-cards-and-boards"
+    text: "The monthly magazine is printed by offset lithography. What principle does this process rely on?"
+    options:
+      - text: "Oil and water do not mix"
+      - text: "Heat melts the ink onto the paper"
+        why_wrong: "Lithography isn't a heat process. The image area attracts oily ink and the rest attracts water."
+      - text: "Metal cutters stamp the ink into the paper"
+        why_wrong: "Metal cutters stamping shapes is die cutting."
+      - text: "A laser burns the image onto the paper"
+        why_wrong: "No laser is involved. The image is offset from the plate to a rubber blanket, then onto the paper."
+    answer: 0
+    explanation: "The plate's image area attracts oil-based ink and the rest attracts water. The image is offset onto a rubber blanket, then the paper."
+
+  - id: scale-014
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: cmyk
+    command: state
+    scenario: magazine
+    see: "#producing-products-in-papers-cards-and-boards"
+    text: "Which four inks are used to build up the magazine's full-colour images?"
+    options:
+      - text: "Cyan, magenta, yellow and key (black)"
+      - text: "Red, green, blue and black"
+        why_wrong: "Colour printing uses CMYK: cyan, magenta, yellow and key (black)."
+      - text: "Red, yellow, blue and white"
+        why_wrong: "These are painting primaries. Printers use cyan, magenta, yellow and black."
+      - text: "Cyan, magenta, yellow and white"
+        why_wrong: "The fourth ink is key (black). White is usually the paper itself."
+    answer: 0
+    explanation: "Offset lithography builds colour images from four inks, CMYK: cyan, magenta, yellow and key (black)."
+
+  - id: scale-015
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: digital-vs-litho
+    command: explain
+    scenario: magazine
+    see: "#producing-products-in-papers-cards-and-boards"
+    text: "Which process is best for printing the 50-copy special edition?"
+    options:
+      - text: "Digital printing"
+      - text: "Offset lithography"
+        why_wrong: "Lithography is expensive and slow to set up, because plates must be made. That doesn't pay for 50 copies."
+      - text: "Die cutting"
+        why_wrong: "Die cutting stamps out shapes. It doesn't print."
+      - text: "Embossing"
+        why_wrong: "Embossing raises a feature in the card. It doesn't print the magazine."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "No printing plates need making, so it's cost-effective for short runs"
+        - text: "It works because oil and water don't mix"
+          why_wrong: "That's how offset lithography works."
+        - text: "It has the lowest cost per item for long runs"
+          why_wrong: "That's offset lithography's advantage, for long runs like the monthly issue."
+        - text: "It raises the design above the surface"
+          why_wrong: "That's embossing."
+      answer: 0
+    explanation: "Digital printing needs no plates, so it's used for short runs. Offset lithography only becomes cheaper for long runs."
+
+  - id: scale-016
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: emboss-deboss
+    command: identify
+    context: true
+    see: "#producing-products-in-papers-cards-and-boards"
+    text: "A greetings card has its logo pressed into the card, below the surface. Which process was used?"
+    options:
+      - text: "Debossing"
+      - text: "Embossing"
+        why_wrong: "Embossing raises the feature above the surface. Below the surface is debossing."
+      - text: "Die cutting"
+        why_wrong: "Die cutting cuts shapes out completely."
+      - text: "UV varnishing"
+        why_wrong: "UV varnishing adds a glossy or tactile finish. It doesn't press the card in."
+    answer: 0
+    explanation: "Embossing raises a feature above the surface; debossing presses it below the surface."
+
+  - id: scale-017
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: injection-technique
+    command: explain
+    scenario: phone-cases
+    see: "#producing-products-using-polymers"
+    exam_question:
+      text: "Explain why injection moulding is suitable for producing 50,000 phone cases."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Injection moulding is a good process for plastics."
+        marks_awarded: 0
+        why_wrong: "'Good' gives no reason, and nothing links it to making 50,000 cases."
+      - text: "Injection moulding has very fast cycle times."
+        marks_awarded: 1
+        why_wrong: "One valid point earns 1 mark, but it isn't developed for this quantity."
+      - text: "It has very fast cycle times, and the mould's high cost is spread across 50,000 cases, so each case is cheap to make."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: a feature of the process plus what it means at this scale. 'So each case is cheap' completes the explanation."
+
+  - id: scale-018
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: mass-disadvantage-technique
+    command: describe
+    see: "#scales-of-production"
+    exam_question:
+      text: "Describe one disadvantage of mass production."
+      marks: 2
+    sample_answer: "It is expensive to set up."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that once the line is set up there's little flexibility, so changing the design is costly"
+      - text: "Adding that all the products are identical"
+        why_wrong: "Identical products are a feature, usually an advantage, so this doesn't develop the disadvantage."
+      - text: "Adding that materials are bought in bulk"
+        why_wrong: "Buying in bulk is an advantage of mass production."
+      - text: "Adding that it needs fewer workers"
+        why_wrong: "Needing fewer workers is an advantage for the manufacturer."
+    answer: 0
+    explanation: "A describe answer needs development. Adding the consequence, inflexibility once set up, earns the second mark."
+
+  - id: scale-019
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 scales of production"
+    concept: discuss-technique
+    command: discuss
+    context: true
+    see: "#producing-products-in-papers-cards-and-boards"
+    exam_question:
+      text: "Discuss whether a small business should use offset lithography or digital printing for 200 leaflets."
+      marks: 4
+    text: "Which answer actually discusses the choice?"
+    options:
+      - text: "Offset lithography uses CMYK inks."
+        why_wrong: "This is a single fact, with no weighing up of the two processes."
+      - text: "Offset lithography gives high quality, but its plates are expensive and slow to set up, so for only 200 leaflets digital printing would be cheaper and quicker."
+      - text: "Digital printing is used for short runs."
+        why_wrong: "A single fact. A discussion looks at both options."
+      - text: "I would use digital printing."
+        why_wrong: "A decision with no reasons isn't a discussion."
+    answer: 1
+    explanation: "Discuss means weigh up both sides and reach a reasoned view. Here: lithography's strength, its drawback, and so the conclusion."

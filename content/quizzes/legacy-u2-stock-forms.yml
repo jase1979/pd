@@ -1,0 +1,382 @@
+# Stock Forms, Types & Sizes (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-stock-forms
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Stock Forms, Types & Sizes"
+page: /gcse/unit2/stock-forms/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: flatpack-shelf
+    text: "A company makes flat-pack bookshelves from MDF. Customers assemble them at home, and may want to take them apart again when they move."
+  - id: picture-frames
+    text: "A small workshop cuts 2400 mm lengths of pine into 400 mm pieces to make picture frames. Each saw cut removes 3 mm of timber (the kerf)."
+
+questions:
+
+  - id: stock-001
+    type: multi
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: metal-stock-forms
+    command: identify
+    see: "#stock-forms-for-metals"
+    text: "Select TWO stock forms that metals are supplied in."
+    options:
+      - text: "Hexagonal rod"
+      - text: "Angle"
+      - text: "Dowel"
+        why_wrong: "Dowel is a sectional form of timber, not metal."
+      - text: "PSE"
+        why_wrong: "PSE (planed with squared edge) describes how timber is finished."
+    answer: [0, 1]
+    explanation: "Metals come as round, square and hexagonal rods, strips, sheets, round and square tubes, angle and channel."
+
+  - id: stock-002
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: pse
+    command: state
+    see: "#stock-forms-of-timber"
+    text: "Timber is often sold as 'PSE'. What does PSE mean?"
+    options:
+      - text: "Planed with squared edge"
+      - text: "Plastic sheet, extruded"
+        why_wrong: "PSE is a timber term, not a polymer stock form."
+      - text: "Pre-sawn edge"
+        why_wrong: "PSE timber is planed, giving smooth faces and square edges, not just sawn."
+      - text: "Pressed softwood element"
+        why_wrong: "That isn't a real term. PSE means planed with squared edge."
+    answer: 0
+    explanation: "PSE means planed with squared edge: smooth faces and square edges, ready to use."
+
+  - id: stock-003
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: sawn-vs-planed
+    command: describe
+    see: "#stock-forms-of-timber"
+    text: "How does planed timber differ from sawn timber?"
+    options:
+      - text: "Planed timber has smooth faces; sawn timber is left rough from the saw"
+      - text: "Planed timber is a manufactured board; sawn timber is natural"
+        why_wrong: "Both are natural timber. The difference is the surface finish."
+      - text: "Sawn timber is always a hardwood; planed timber is always a softwood"
+        why_wrong: "Hardwoods and softwoods can both be sold sawn or planed."
+      - text: "There is no difference"
+        why_wrong: "There is: sawn timber is rough, planed timber has been smoothed."
+    answer: 0
+    explanation: "Timber can be bought sawn (rough from the saw) or planed (smoothed), for example PSE, which saves time when making."
+
+  - id: stock-004
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: sheet-size
+    command: state
+    scenario: flatpack-shelf
+    see: "#manufactured-boards"
+    text: "What is the standard full size of the MDF sheets the company buys?"
+    options:
+      - text: "2440 mm × 1220 mm"
+      - text: "1220 mm × 610 mm"
+        why_wrong: "That's the half-sheet size."
+      - text: "2000 mm × 1000 mm"
+        why_wrong: "Board sheets are made to 2440 × 1220 mm, not round metric numbers."
+      - text: "A0"
+        why_wrong: "A sizes are for papers and boards, not manufactured timber boards."
+    answer: 0
+    explanation: "Manufactured boards come in standard sheets of 2440 mm × 1220 mm, or half sheets of 1220 mm × 610 mm."
+
+  - id: stock-005
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: board-thickness
+    command: identify
+    context: true
+    see: "#manufactured-boards"
+    text: "A drawer base is made from hardboard. What thickness is hardboard usually supplied in?"
+    options:
+      - text: "3.2 mm"
+      - text: "18 mm"
+        why_wrong: "18 mm is a common thickness of MDF and plywood, not hardboard."
+      - text: "25 mm"
+        why_wrong: "25 mm is a thick MDF size. Hardboard is a thin sheet."
+      - text: "12 mm"
+        why_wrong: "12 mm is an MDF or plywood thickness."
+    answer: 0
+    explanation: "Hardboard is a thin board, usually 3.2 mm. MDF and plywood come in thicknesses from 4 mm up to about 25 mm."
+
+  - id: stock-006
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: parts-per-sheet
+    command: calculate
+    scenario: flatpack-shelf
+    see: "#calculating-quantities-and-costs"
+    text: "Shelf brackets measuring 300 mm × 200 mm are cut from a half sheet of MDF (1220 mm × 610 mm). How many can be cut, laid out in rows?"
+    options:
+      - text: "12"
+      - text: "12.4"
+        why_wrong: "This divides one area by the other. You can't cut part of a bracket, and the layout must fit in rows."
+      - text: "20"
+        why_wrong: "Both divisions were rounded up. A bracket that only partly fits can't be cut, so always round down."
+      - text: "15"
+        why_wrong: "1220 ÷ 300 = 4.07 was rounded up to 5. Only 4 whole brackets fit along the length."
+    answer: 0
+    working: |
+      Along the length: 1220 ÷ 300 = 4.07, so 4 brackets (round down).
+      Along the width: 610 ÷ 200 = 3.05, so 3 brackets.
+      Brackets per half sheet: 4 × 3 = 12.
+    explanation: "Divide each side separately and round each down: you can't use part of a part. Then multiply."
+
+  - id: stock-007
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: cost-per-part
+    command: calculate
+    scenario: flatpack-shelf
+    see: "#calculating-quantities-and-costs"
+    text: "A half sheet of MDF costs £12.00 and makes 12 shelf brackets. What is the material cost of one bracket?"
+    options:
+      - text: "£1.00"
+      - text: "£0.50"
+        why_wrong: "That would be true if the sheet made 24 brackets. Divide the cost by 12 here."
+      - text: "£144.00"
+        why_wrong: "The cost was multiplied by the number of brackets instead of divided."
+      - text: "£12.00"
+        why_wrong: "That's the cost of the whole sheet, not of one bracket."
+    answer: 0
+    working: |
+      Cost per part = sheet cost ÷ parts per sheet
+      = £12.00 ÷ 12 = £1.00.
+    explanation: "Divide the cost of the sheet by the number of parts it makes."
+
+  - id: stock-008
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: kerf-calc
+    command: calculate
+    scenario: picture-frames
+    see: "#calculating-quantities-and-costs"
+    text: "How many whole 400 mm pieces can be cut from one 2400 mm length?"
+    options:
+      - text: "5"
+      - text: "6"
+        why_wrong: "2400 ÷ 400 = 6 ignores the kerf. Each cut removes 3 mm, so each piece uses 403 mm."
+      - text: "5.95"
+        why_wrong: "You can't cut part of a piece. Round down to 5."
+      - text: "7"
+        why_wrong: "Rounding up is never right here: there isn't enough timber for even 6 pieces once the kerf is allowed for."
+    answer: 0
+    working: |
+      Length used per piece = 400 + 3 (kerf) = 403 mm.
+      2400 ÷ 403 = 5.95, so 5 whole pieces (round down).
+    explanation: "Add the kerf to each piece before dividing, then round down."
+
+  - id: stock-009
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: waste-calc
+    command: calculate
+    scenario: picture-frames
+    see: "#calculating-quantities-and-costs"
+    text: "After cutting 5 pieces (each using 403 mm including the kerf), how much of the 2400 mm length is left as waste?"
+    options:
+      - text: "385 mm"
+      - text: "400 mm"
+        why_wrong: "This ignores the 3 mm lost to each cut: 2400 − (5 × 400) = 400."
+      - text: "0 mm"
+        why_wrong: "Without the kerf, 6 pieces would fit exactly. With it, only 5 fit and there's waste."
+      - text: "15 mm"
+        why_wrong: "15 mm is just the total kerf (5 × 3 mm), not the leftover length."
+    answer: 0
+    working: |
+      Length used = 5 × 403 = 2015 mm.
+      Waste = 2400 − 2015 = 385 mm.
+    explanation: "Waste is the original length minus everything used, including the kerf for each cut."
+
+  - id: stock-010
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: kd-fitting-choice
+    command: explain
+    scenario: flatpack-shelf
+    see: "#knock-down-kd-fittings"
+    text: "Which component is best for joining the bookshelf's panels?"
+    options:
+      - text: "Cam lock fittings"
+      - text: "Drawing pins"
+        why_wrong: "Drawing pins are fittings for papers and boards, far too weak for furniture."
+      - text: "Treasury tags"
+        why_wrong: "Treasury tags hold sheets of paper together."
+      - text: "Welding"
+        why_wrong: "Welding is a permanent joint for metals. MDF panels can't be welded."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "Panels can be assembled, and taken apart again, with simple tools"
+        - text: "It makes a permanent joint"
+          why_wrong: "Knock-down fittings are chosen because they aren't permanent."
+        - text: "It is a fitting designed for papers and card"
+          why_wrong: "Cam locks are furniture fittings. Paper fittings include staples and treasury tags."
+        - text: "It is only decorative"
+          why_wrong: "Cam locks hold the panels together. They're functional."
+      answer: 0
+    explanation: "Cam locks are knock-down fittings: customers can assemble the shelves at home and take them apart again."
+
+  - id: stock-011
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: kd-identify
+    command: identify
+    scenario: flatpack-shelf
+    see: "#knock-down-kd-fittings"
+    text: "Which of these is a knock-down (KD) fitting the company might supply with the shelves?"
+    options:
+      - text: "Scan fitting"
+      - text: "Staples"
+        why_wrong: "Staples are a paper and board fitting."
+      - text: "Velcro pads"
+        why_wrong: "Velcro pads are used to mount papers and boards."
+      - text: "Book binding"
+        why_wrong: "Book binding is for papers, not furniture."
+    answer: 0
+    explanation: "KD fittings include cam locks, scan fittings, corner blocks, brackets, dowels, screws, nuts and bolts."
+
+  - id: stock-012
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: paper-fittings
+    command: identify
+    context: true
+    see: "#paper-and-board-fittings"
+    text: "A student wants to fix their design sheets to a display board so they can be removed later without damage. Which fitting is best?"
+    options:
+      - text: "Velcro pads"
+      - text: "Staples"
+        why_wrong: "Staples punch holes, so the sheets would be damaged when removed."
+      - text: "Cam lock fittings"
+        why_wrong: "Cam locks join furniture panels."
+      - text: "Hinges"
+        why_wrong: "Hinges let a door or lid swing. They don't mount paper."
+    answer: 0
+    explanation: "Velcro pads or dots are used for mounting work: they hold firmly and can be removed without damage."
+
+  - id: stock-013
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: polymer-forms
+    command: state
+    see: "#polymers"
+    text: "How is polymer film produced?"
+    options:
+      - text: "It is heated and rolled"
+      - text: "It is blown into shape"
+        why_wrong: "Blowing is how foam is produced."
+      - text: "Granules are melted into a mould"
+        why_wrong: "That's how moulded shapes are made from granules or pellets."
+      - text: "It is cut from a thick sheet"
+        why_wrong: "Sheets are a separate stock form. Film is heated and rolled thin."
+    answer: 0
+    explanation: "Polymers come as sheets, rods and tubes; granules, pellets and powder; foam (blown); and film (heated and rolled)."
+
+  - id: stock-014
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: ply
+    command: state
+    see: "#papers-and-boards"
+    text: "For papers and boards, what does 'ply' refer to?"
+    options:
+      - text: "The number of layers"
+      - text: "The weight in gsm"
+        why_wrong: "Gsm measures weight; ply counts layers."
+      - text: "The thickness in microns"
+        why_wrong: "Thickness is measured in microns; ply counts layers."
+      - text: "The sheet size, such as A4"
+        why_wrong: "A sizes describe the dimensions of a sheet."
+    answer: 0
+    explanation: "Papers and boards are sold by the sheet, roll or ply, where ply means the number of layers."
+
+  - id: stock-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: round-down-technique
+    command: explain
+    scenario: flatpack-shelf
+    see: "#calculating-quantities-and-costs"
+    exam_question:
+      text: "Explain why, when working out how many brackets fit on a sheet, the answer must be rounded down."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Because you always round down."
+        marks_awarded: 0
+        why_wrong: "This repeats the rule without giving a reason."
+      - text: "Because you can't use part of a part."
+        marks_awarded: 1
+        why_wrong: "A valid reason earns 1 mark, but it isn't developed: what happens to the leftover piece?"
+      - text: "A bracket that only partly fits can't be cut out whole, so the leftover piece is waste. Rounding up would promise more brackets than the sheet can make."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: the reason, developed with its consequence. That's what turns a statement into an explanation."
+
+  - id: stock-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: kerf-technique
+    command: describe
+    scenario: picture-frames
+    see: "#calculating-quantities-and-costs"
+    exam_question:
+      text: "Describe what is meant by 'kerf' when cutting timber."
+      marks: 2
+    sample_answer: "It is the saw cut."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it's the width of timber the blade removes, which must be allowed for when working out lengths"
+      - text: "Adding that it's measured in microns"
+        why_wrong: "Microns measure board thickness. Kerf is usually given in millimetres."
+      - text: "Adding that it means planed with squared edge"
+        why_wrong: "That's PSE, a timber finish."
+      - text: "Adding that it's a type of wood joint"
+        why_wrong: "Kerf isn't a joint. It's the material the saw removes."
+    answer: 0
+    explanation: "The detail that earns the mark: kerf is the width of material removed by the blade, so it's lost from the length."
+
+  - id: stock-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 stock forms"
+    concept: calculate-technique
+    command: calculate
+    context: true
+    see: "#calculating-quantities-and-costs"
+    exam_question:
+      text: "Calculate how many 200 mm pieces can be cut from a 1000 mm length of timber, allowing 3 mm for each saw cut."
+      marks: 2
+    text: "Which answer does what 'calculate' asks?"
+    options:
+      - text: "About 5."
+        why_wrong: "An estimate with no working won't get full marks, and it's wrong once the kerf is included."
+      - text: "200 + 3 = 203 mm per piece. 1000 ÷ 203 = 4.93, so 4 pieces."
+      - text: "You need to allow for the kerf."
+        why_wrong: "This describes what to do but doesn't work out the answer."
+      - text: "1000 ÷ 200 = 5, so 5 pieces."
+        why_wrong: "This shows working but ignores the 3 mm kerf the question gives."
+    answer: 1
+    explanation: "Calculate means work out a value, showing your working and using every figure the question gives."

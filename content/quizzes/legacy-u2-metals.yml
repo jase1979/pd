@@ -1,0 +1,375 @@
+# Ferrous & Non-Ferrous Metals (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-metals
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Ferrous & Non-Ferrous Metals"
+page: /gcse/unit2/metals/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: restaurant-kitchen
+    text: "A company is designing cutlery and a range of saucepans for a busy restaurant kitchen. Everything will be washed many times a day."
+  - id: pewter-casting
+    text: "Year 10 students are casting pewter key fobs in the school workshop, using moulds cut from MDF."
+
+questions:
+
+  - id: metals-001
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: ferrous-vs-non-ferrous
+    command: identify
+    see: "#ferrous-metals"
+    text: "Which of these is a ferrous metal?"
+    options:
+      - text: "Mild steel"
+      - text: "Aluminium"
+        why_wrong: "Aluminium contains no iron, so it is non-ferrous. It is not magnetic and does not rust."
+      - text: "Copper"
+        why_wrong: "Copper is a non-ferrous metal: it contains no iron."
+      - text: "Brass"
+        why_wrong: "Brass is an alloy of copper and zinc. Neither contains iron, so brass is non-ferrous."
+    answer: 0
+    explanation: "Mild steel is mostly iron, so it is ferrous: it is magnetic and rusts without a protective finish."
+
+  - id: metals-002
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: ferrous-vs-non-ferrous
+    command: state
+    see: "#ferrous-metals"
+    text: "What makes a metal 'ferrous'?"
+    options:
+      - text: "It contains iron"
+      - text: "It is hard and strong"
+        why_wrong: "Hardness doesn't decide it. Some non-ferrous alloys, such as bronze, are hard too."
+      - text: "It is an alloy"
+        why_wrong: "Alloys can be ferrous or non-ferrous. Stainless steel is a ferrous alloy; brass is a non-ferrous one."
+      - text: "It conducts electricity"
+        why_wrong: "All metals conduct electricity, ferrous or not."
+    answer: 0
+    explanation: "Ferrous metals contain iron. That's why they are magnetic and prone to rust."
+
+  - id: metals-003
+    type: multi
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: ferrous-properties
+    command: identify
+    see: "#ferrous-metals"
+    text: "Select TWO properties that ferrous metals share."
+    options:
+      - text: "They are magnetic"
+      - text: "They are prone to rust"
+      - text: "They are very lightweight"
+        why_wrong: "Lightness describes aluminium, a non-ferrous metal. Most ferrous metals are heavy."
+      - text: "They never need a protective finish"
+        why_wrong: "The opposite: because they rust, ferrous metals usually need a protective finish."
+    answer: [0, 1]
+    explanation: "Ferrous metals contain iron, so they are magnetic and rust unless they are protected."
+
+  - id: metals-004
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: steel-choice-by-carbon
+    command: identify
+    context: true
+    see: "#ferrous-metals"
+    text: "A tool maker needs a steel for wood chisels that must stay sharp. Which is the best choice?"
+    options:
+      - text: "High carbon steel"
+      - text: "Mild steel"
+        why_wrong: "Mild steel is ductile and fairly soft, so a chisel edge would quickly blunt or bend."
+      - text: "Cast iron"
+        why_wrong: "Cast iron is brittle and used for things like manhole covers and vices, not cutting edges."
+      - text: "Stainless steel"
+        why_wrong: "Stainless steel is chosen for its resistance to corrosion and stains, not for holding a sharp edge."
+    answer: 0
+    explanation: "High carbon (tool) steel is very hard, so it keeps a sharp edge. It's used for chisels, screwdrivers and other tools."
+
+  - id: metals-005
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: carbon-content-effect
+    command: describe
+    see: "#ferrous-metals"
+    text: "What happens to steel as its carbon content increases?"
+    options:
+      - text: "It becomes harder but more brittle"
+      - text: "It becomes softer and more ductile"
+        why_wrong: "That's the opposite. Mild steel has the least carbon and is the most ductile."
+      - text: "It becomes lighter"
+        why_wrong: "Carbon content affects hardness and brittleness, not weight."
+      - text: "It stops rusting"
+        why_wrong: "Carbon doesn't stop rust. Stainless steel resists corrosion because of the chromium and nickel in it."
+    answer: 0
+    explanation: "More carbon makes steel harder but more brittle: mild steel has about 0.15–0.35% carbon, high carbon steel up to 1.4%."
+
+  - id: metals-006
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: stainless-steel-choice
+    command: compare
+    scenario: restaurant-kitchen
+    see: "#alloys"
+    text: "Which metal is the best choice for the restaurant's cutlery?"
+    options:
+      - text: "Stainless steel"
+      - text: "Mild steel"
+        why_wrong: "Mild steel corrodes easily, so cutlery made from it would rust after repeated washing."
+      - text: "Copper"
+        why_wrong: "Copper is very soft and oxidises green, so it would bend and discolour."
+      - text: "Cast iron"
+        why_wrong: "Cast iron is brittle when thin and corrodes, so it suits gates and drains, not cutlery."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It resists stains and corrosion"
+        - text: "It is the lightest metal available"
+          why_wrong: "Aluminium is lighter. Stainless steel is chosen because it doesn't stain or rust."
+        - text: "It contains no iron, so it can't rust"
+          why_wrong: "Stainless steel does contain iron: it is iron, chromium and nickel. The chromium and nickel stop it corroding."
+        - text: "It has a very low melting point"
+          why_wrong: "A low melting point describes pewter. It has nothing to do with cutlery being washed."
+      answer: 0
+    explanation: "Stainless steel is hard, tough and resists stains and corrosion, which is why it's used for cutlery, sinks and hospital equipment."
+
+  - id: metals-007
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: aluminium-properties
+    command: identify
+    scenario: restaurant-kitchen
+    see: "#non-ferrous-metals"
+    text: "Some of the saucepans will be aluminium. Which properties make aluminium suitable?"
+    options:
+      - text: "It is lightweight and a good conductor of heat"
+      - text: "It is magnetic and very hard"
+        why_wrong: "Aluminium is non-ferrous, so it isn't magnetic, and it's malleable rather than very hard."
+      - text: "It has a very low melting point"
+        why_wrong: "Aluminium melts at about 660°C. A very low melting point describes pewter, which would be no use for a pan."
+      - text: "It never conducts heat"
+        why_wrong: "The opposite: aluminium is a good conductor of heat, which is why pans spread heat to the food."
+    answer: 0
+    explanation: "Aluminium is lightweight, malleable and a good conductor of heat, so pans are easy to lift and heat food evenly."
+
+  - id: metals-008
+    type: multi
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: alloys-identify
+    command: identify
+    see: "#alloys"
+    text: "Select TWO alloys."
+    options:
+      - text: "Brass"
+      - text: "Pewter"
+      - text: "Copper"
+        why_wrong: "Copper is a pure metal. It's used to make alloys such as brass and bronze."
+      - text: "Aluminium"
+        why_wrong: "Aluminium on its own is a pure metal, not a mixture of metals."
+    answer: [0, 1]
+    explanation: "An alloy is a mixture of metals. Brass is copper and zinc; pewter is mainly tin with copper and antimony."
+
+  - id: metals-009
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: alloy-composition
+    command: state
+    see: "#alloys"
+    text: "Which metals is brass made from?"
+    options:
+      - text: "Copper and zinc"
+      - text: "Copper and tin"
+        why_wrong: "Copper and tin make bronze, not brass."
+      - text: "Iron, chromium and nickel"
+        why_wrong: "That's stainless steel."
+      - text: "Tin, copper and antimony"
+        why_wrong: "That's pewter, which is mainly tin."
+    answer: 0
+    explanation: "Brass is copper and zinc. It's golden, strong and ductile, so it's used for taps, hinges and musical instruments."
+
+  - id: metals-010
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: casting-metal-choice
+    command: explain
+    scenario: pewter-casting
+    see: "#casting-pewter"
+    text: "Which metal is the most suitable for casting in the school workshop?"
+    options:
+      - text: "Pewter"
+      - text: "Aluminium"
+        why_wrong: "Aluminium melts at about 660°C, far hotter than a school can safely work with."
+      - text: "Brass"
+        why_wrong: "Brass melts at about 900°C, which needs a furnace a school workshop doesn't have."
+    answer: 0
+    reason:
+      text: "What makes it suitable?"
+      options:
+        - text: "It melts at a very low temperature, about 170–230°C"
+        - text: "It never tarnishes"
+          why_wrong: "Pewter does tarnish, to a dull grey. That's not why it's chosen for casting."
+        - text: "It is the hardest alloy"
+          why_wrong: "Pewter is soft. Its low melting point is what makes it suitable."
+      answer: 0
+    explanation: "Pewter melts at only about 170–230°C, so it can be melted and poured in school, into an MDF mould that withstands that heat."
+
+  - id: metals-011
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: casting-safety
+    command: state
+    scenario: pewter-casting
+    see: "#casting-pewter"
+    text: "Why must the MDF mould be completely dry before the pewter is poured?"
+    options:
+      - text: "Moisture makes molten metal spit violently"
+      - text: "Wet MDF would melt"
+        why_wrong: "MDF doesn't melt. It's used for moulds because it withstands the heat of molten pewter."
+      - text: "Damp stops the pewter from setting"
+        why_wrong: "Pewter still sets in a damp mould. The danger is that moisture makes molten metal spit."
+      - text: "Water makes the fumes poisonous"
+        why_wrong: "The fume hazard comes from the mould scorching, and is controlled by ventilation."
+    answer: 0
+    explanation: "Any moisture in the mould or tools turns to steam and makes molten metal spit violently, so everything must be dry."
+
+  - id: metals-012
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: property-definitions
+    command: identify
+    see: "#properties-of-metals"
+    text: "Which property describes how well a metal resists fracturing when a force is applied?"
+    options:
+      - text: "Toughness"
+      - text: "Hardness"
+        why_wrong: "Hardness is resistance to friction and abrasion, such as scratching or wear."
+      - text: "Elasticity"
+        why_wrong: "Elasticity is the ability to bend or stretch and then return to the original shape."
+      - text: "Malleability"
+        why_wrong: "Malleability is how easily a metal can be bent or shaped."
+    answer: 0
+    explanation: "Toughness is how well a material resists fracturing when force is applied, for example when it's hit."
+
+  - id: metals-013
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: property-definitions
+    command: identify
+    context: true
+    see: "#properties-of-metals"
+    text: "Copper electrical wire is made by drawing copper through smaller and smaller holes. Which property makes this possible?"
+    options:
+      - text: "Ductility"
+      - text: "Hardness"
+        why_wrong: "Hardness is resistance to wear and scratching. A hard, brittle metal would snap if drawn out."
+      - text: "Elasticity"
+        why_wrong: "Elasticity means returning to the original shape. Wire drawing needs the metal to change shape permanently."
+      - text: "Conductivity"
+        why_wrong: "Conductivity is why copper is used for wire, but it's ductility that lets it be drawn out."
+    answer: 0
+    explanation: "Ductility is the ability to be drawn or deformed without fracturing, which is exactly what wire drawing needs."
+
+  - id: metals-014
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: metal-finishes
+    command: identify
+    context: true
+    see: "#finishing-metals"
+    text: "A steel gate will stand outdoors all year. Which finish coats it with zinc to stop it rusting?"
+    options:
+      - text: "Galvanising"
+      - text: "Anodising"
+        why_wrong: "Anodising creates an oxide layer, mostly on aluminium. It doesn't add zinc."
+      - text: "Enamelling"
+        why_wrong: "Enamelling fuses glass powder to the surface. It isn't a zinc coating."
+      - text: "Hot blackening"
+        why_wrong: "Hot blackening gives a dark oxide finish, mainly for looks, with only mild protection."
+    answer: 0
+    explanation: "Galvanising coats steel with zinc, which stops it rusting, so it suits outdoor steelwork."
+
+  - id: metals-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: stainless-explain-technique
+    command: explain
+    scenario: restaurant-kitchen
+    see: "#alloys"
+    exam_question:
+      text: "Explain why stainless steel is a suitable material for the restaurant's cutlery."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "Stainless steel is a metal so it is strong and good for cutlery."
+        marks_awarded: 0
+        why_wrong: "'Strong' is vague and 'good for cutlery' repeats the question. No property relevant to the kitchen is given."
+      - text: "Stainless steel resists corrosion."
+        marks_awarded: 1
+        why_wrong: "A relevant property earns 1 mark, but it isn't linked to the cutlery, so the second mark is missed."
+      - text: "Stainless steel resists stains and corrosion, so the cutlery won't rust even though it is washed many times a day."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks need a relevant property and a link to the product's use. 'So…' turns the property into an explanation."
+
+  - id: metals-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: copper-wiring-technique
+    command: describe
+    context: true
+    see: "#non-ferrous-metals"
+    exam_question:
+      text: "Describe one property of copper that makes it suitable for electrical wiring."
+      marks: 2
+    sample_answer: "Copper is a good conductor."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it's an excellent conductor of electricity, so current flows easily through the wire"
+      - text: "Adding that copper is an orange-brown colour"
+        why_wrong: "Colour has nothing to do with carrying electricity, so it earns no mark here."
+      - text: "Adding that copper oxidises green"
+        why_wrong: "That's true but it isn't a reason copper suits wiring, so it earns nothing."
+      - text: "Adding that copper is non-ferrous"
+        why_wrong: "True, but it doesn't describe why copper suits wiring."
+    answer: 0
+    explanation: "'Good conductor' is vague: of what? Saying it's an excellent conductor of electricity, and what that does, completes the description."
+
+  - id: metals-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 metals"
+    concept: explain-vs-describe-technique
+    command: explain
+    context: true
+    see: "#ferrous-metals"
+    exam_question:
+      text: "Explain why a mild steel bicycle frame needs a protective finish."
+      marks: 2
+    text: "Which of these answers explains, rather than just describes?"
+    options:
+      - text: "Mild steel is ductile, tough and grey."
+        why_wrong: "This describes mild steel but gives no reason it needs a finish."
+      - text: "Mild steel needs to be painted."
+        why_wrong: "This repeats the question without giving a reason."
+      - text: "Mild steel corrodes easily, so without a finish the frame would rust when it gets wet."
+      - text: "Mild steel is used for bicycle frames, nuts and bolts."
+        why_wrong: "This gives uses, not a reason."
+    answer: 2
+    explanation: "Explain means give a reason. Here: a property (corrodes easily) and its consequence for the product (it would rust)."

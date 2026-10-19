@@ -1,0 +1,398 @@
+# Modern & Smart Materials (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-smart-materials
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Modern & Smart Materials (2.1.2)"
+page: /gcse/unit2/smart-materials/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: cycling-kit
+    text: "A company makes high-performance cycling products: a racing bike frame, a cycling jacket with a built-in switch for its lights, and sunglasses for bright days."
+  - id: baby-range
+    text: "A designer is developing a range of products for babies, including a feeding spoon and a bath toy that show parents when they are too hot."
+
+questions:
+
+  - id: smart2-001
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: smart-definition
+    command: state
+    see: "#smart-materials"
+    text: "What is a smart material?"
+    options:
+      - text: "A material that reacts when triggered by an external stimulus, such as heat, light or pressure"
+      - text: "Any material that has been invented recently"
+        why_wrong: "Being new makes a material modern, not smart. A smart material reacts to a stimulus."
+      - text: "A material that is stronger than steel"
+        why_wrong: "That describes Kevlar, a modern material. Smart materials are defined by how they react."
+      - text: "A material that can always be recycled"
+        why_wrong: "Recyclability has nothing to do with whether a material is smart."
+    answer: 0
+    explanation: "Smart materials react to an external stimulus, such as temperature, light or pressure, and change in a useful way."
+
+  - id: smart2-002
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: modern-vs-smart
+    command: describe
+    see: "#differences-between-modern-and-smart-materials"
+    text: "What is the difference between a modern material and a smart material?"
+    options:
+      - text: "A modern material is designed with improved properties; a smart material changes in response to a stimulus"
+      - text: "A modern material responds to a stimulus; a smart material doesn't"
+        why_wrong: "That's the wrong way round. It's smart materials that react to stimuli."
+      - text: "Modern materials are natural; smart materials are synthetic"
+        why_wrong: "Both can be synthetic. The difference is whether the material reacts to a stimulus."
+      - text: "There is no difference"
+        why_wrong: "They are separate categories: modern materials have improved properties, smart materials react to stimuli."
+    answer: 0
+    explanation: "Modern materials, like carbon fibre, have improved properties. Smart materials, like thermochromic pigment, change when something triggers them."
+
+  - id: smart2-003
+    type: multi
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: smart-identify
+    command: identify
+    see: "#smart-materials"
+    text: "Select TWO smart materials."
+    options:
+      - text: "Thermochromic pigment"
+      - text: "QTC (quantum tunnelling composite)"
+      - text: "Carbon fibre"
+        why_wrong: "Carbon fibre is a modern material with improved properties, but it doesn't react to a stimulus."
+      - text: "Kevlar"
+        why_wrong: "Kevlar is a modern material: very strong, but it doesn't change in response to a stimulus."
+    answer: [0, 1]
+    explanation: "Thermochromic pigment reacts to temperature and QTC reacts to pressure, so both are smart materials."
+
+  - id: smart2-004
+    type: multi
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: modern-identify
+    command: identify
+    see: "#modern-materials"
+    text: "Select TWO modern materials."
+    options:
+      - text: "Carbon fibre"
+      - text: "GRP (glass reinforced polymer)"
+      - text: "Photochromic film"
+        why_wrong: "Photochromic film changes colour in UV light, so it's a smart material."
+      - text: "Polymorph"
+        why_wrong: "Polymorph becomes mouldable when heated, so it's listed as a smart material."
+    answer: [0, 1]
+    explanation: "Carbon fibre and GRP are modern materials, designed with improved properties such as high strength for their weight."
+
+  - id: smart2-005
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: bike-frame-material
+    command: compare
+    scenario: cycling-kit
+    see: "#modern-materials"
+    text: "Which material is the best choice for the racing bike frame?"
+    options:
+      - text: "Carbon fibre"
+      - text: "Kevlar"
+        why_wrong: "Kevlar is a flexible fibre, ideal for protective vests, not a stiff frame."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is a modelling and insulating foam. It couldn't support a rider."
+      - text: "Modelling foam board"
+        why_wrong: "Foam board is for mounting work and architectural models."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It has high stiffness and strength but low weight"
+        - text: "It changes shape when heated"
+          why_wrong: "That's a shape memory alloy. A frame needs to stay stiff."
+        - text: "It stops bullets and knives"
+          why_wrong: "That's Kevlar's claim to fame. The frame needs stiffness and lightness."
+        - text: "It becomes malleable at 62°C"
+          why_wrong: "That's polymorph, a hand-mouldable polymer."
+      answer: 0
+    explanation: "Carbon fibre is very stiff and strong for its low weight, which is why racing bikes, Formula One cars and aircraft use it."
+
+  - id: smart2-006
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: qtc
+    command: identify
+    scenario: cycling-kit
+    see: "#smart-materials"
+    text: "The jacket's lights should switch on when the rider presses a patch on the sleeve. Which material could act as the switch?"
+    options:
+      - text: "QTC"
+      - text: "Thermochromic pigment"
+        why_wrong: "Thermochromic pigment changes colour with temperature. It can't switch a circuit."
+      - text: "Nitinol"
+        why_wrong: "Nitinol is a shape memory alloy. It changes shape when heated, not conductivity when pressed."
+      - text: "Polymorph"
+        why_wrong: "Polymorph is a mouldable polymer, not a switch."
+    answer: 0
+    explanation: "QTC is an insulator until it's squeezed, then it conducts, so pressing it completes the circuit. It's used as switches in clothing."
+
+  - id: smart2-007
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: qtc
+    command: state
+    see: "#smart-materials"
+    text: "What happens to QTC when it is compressed?"
+    options:
+      - text: "It changes from an electrical insulator to a conductor"
+      - text: "It changes colour"
+        why_wrong: "Colour change is what photochromic and thermochromic materials do."
+      - text: "It changes from a conductor to an insulator"
+        why_wrong: "That's backwards: QTC insulates normally and conducts when squeezed."
+      - text: "It becomes soft and mouldable"
+        why_wrong: "That's polymorph when warmed, not QTC under pressure."
+    answer: 0
+    explanation: "QTC is a black rubbery insulator in its normal state. Under compression it becomes a conductor."
+
+  - id: smart2-008
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: photochromic
+    command: identify
+    scenario: cycling-kit
+    see: "#smart-materials"
+    text: "The sunglasses should darken automatically as the sunlight gets brighter. Which material makes this happen?"
+    options:
+      - text: "Photochromic film"
+      - text: "Thermochromic pigment"
+        why_wrong: "Thermochromic materials react to temperature, not to sunlight."
+      - text: "QTC"
+        why_wrong: "QTC reacts to pressure by conducting electricity. It doesn't darken."
+      - text: "Kevlar"
+        why_wrong: "Kevlar is a strong fibre for protective vests. It doesn't react to light."
+    answer: 0
+    explanation: "Photochromic materials change colour in ultraviolet light, so lenses darken automatically as the sun gets brighter."
+
+  - id: smart2-009
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: thermochromic
+    command: explain
+    scenario: baby-range
+    see: "#smart-materials"
+    text: "Which material would show parents when the feeding spoon is too hot?"
+    options:
+      - text: "Thermochromic pigment"
+      - text: "Photochromic pigment"
+        why_wrong: "Photochromic pigment reacts to UV light, not to the temperature of food."
+      - text: "Nitinol"
+        why_wrong: "Nitinol changes shape when heated. Bending a spoon wouldn't be a clear warning."
+      - text: "Polymorph"
+        why_wrong: "Polymorph softens at 62°C. It doesn't give a visual warning."
+    answer: 0
+    reason:
+      text: "How does it show this?"
+      options:
+        - text: "It changes colour in response to temperature"
+        - text: "It changes colour in UV light"
+          why_wrong: "That's photochromic. The spoon needs to react to heat."
+        - text: "It conducts electricity when squeezed"
+          why_wrong: "That's QTC. It wouldn't show the temperature."
+        - text: "It returns to its original shape when heated"
+          why_wrong: "That's a shape memory alloy."
+      answer: 0
+    explanation: "Thermochromic pigments change colour with temperature, so they're used in baby spoons, bottles and bath toys to show when something's too hot."
+
+  - id: smart2-010
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: shape-memory-alloy
+    command: state
+    context: true
+    see: "#smart-materials"
+    text: "A pair of Nitinol glasses frames has been bent out of shape. Why can they be returned to their original shape?"
+    options:
+      - text: "Nitinol is a shape memory alloy, which returns to its original shape when heated"
+      - text: "Nitinol is thermochromic"
+        why_wrong: "Thermochromic materials change colour, not shape."
+      - text: "Nitinol becomes malleable at 62°C"
+        why_wrong: "That describes polymorph, a polymer you mould by hand."
+      - text: "Nitinol is self-finishing"
+        why_wrong: "Self-finishing is about surface finish from a mould, not shape memory."
+    answer: 0
+    explanation: "Nitinol is a shape memory alloy: when heated it returns to the shape it was set in, so bent frames can be restored."
+
+  - id: smart2-011
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: nitinol-composition
+    command: state
+    see: "#smart-materials"
+    text: "Which metals is Nitinol made from?"
+    options:
+      - text: "Nickel and titanium"
+      - text: "Copper and zinc"
+        why_wrong: "Copper and zinc make brass."
+      - text: "Iron, chromium and nickel"
+        why_wrong: "That's stainless steel."
+      - text: "Copper and tin"
+        why_wrong: "Copper and tin make bronze."
+    answer: 0
+    explanation: "Nitinol is nickel and titanium (the name comes from Ni + Ti). It's a shape memory alloy used for glasses frames and dental braces."
+
+  - id: smart2-012
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: polymorph
+    command: identify
+    context: true
+    see: "#smart-materials"
+    text: "A student wants to mould a custom-fit grip for a tool by hand, then reshape it later if needed. Which material should they use?"
+    options:
+      - text: "Polymorph"
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is cut and shaped, not moulded by hand, and it can't be reshaped once cut."
+      - text: "Kevlar"
+        why_wrong: "Kevlar is a woven fibre for protective clothing. It can't be hand moulded."
+      - text: "Carbon fibre"
+        why_wrong: "Carbon fibre is bonded in layers into a composite. It can't be warmed and moulded by hand."
+    answer: 0
+    explanation: "Polymorph becomes malleable at 62°C, can be moulded by hand, sets rigid when cool, and can be reheated and reshaped again."
+
+  - id: smart2-013
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: polymorph-temperature
+    command: state
+    see: "#smart-materials"
+    text: "At about what temperature does polymorph become malleable?"
+    options:
+      - text: "62°C"
+      - text: "6°C"
+        why_wrong: "At 6°C, colder than a fridge, polymorph would be rigid."
+      - text: "162°C"
+        why_wrong: "Too hot. Polymorph softens at 62°C, low enough to warm in hot water."
+      - text: "620°C"
+        why_wrong: "That's close to the melting point of aluminium, far beyond a polymer you mould by hand."
+    answer: 0
+    explanation: "Polymorph softens at 62°C, so it can be warmed in hot water and shaped by hand."
+
+  - id: smart2-014
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: kevlar
+    command: identify
+    context: true
+    see: "#modern-materials"
+    text: "A protective vest must stop knives getting through but stay light and flexible. Which material is used?"
+    options:
+      - text: "Kevlar"
+      - text: "GRP"
+        why_wrong: "GRP is rigid, used for boats and car body panels, so a vest made from it couldn't flex."
+      - text: "Carbon fibre"
+        why_wrong: "Carbon fibre composites are stiff, which suits frames rather than flexible clothing."
+      - text: "Styrofoam"
+        why_wrong: "Styrofoam is an insulating foam. It gives no protection against knives."
+    answer: 0
+    explanation: "Kevlar is a strong synthetic fibre that stops bullets and knives, yet stays lightweight and flexible: ideal for protective vests."
+
+  - id: smart2-015
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: styrofoam
+    command: identify
+    context: true
+    see: "#modern-materials"
+    text: "Students use blue foam blocks to model their design ideas. What is this material?"
+    options:
+      - text: "Styrofoam (extruded polystyrene foam)"
+      - text: "Expanded polystyrene (EPS)"
+        why_wrong: "EPS is the white beaded foam used for packaging. Blue modelling foam is Styrofoam, listed separately."
+      - text: "Modelling foam board"
+        why_wrong: "Foam board has card faces on both sides. It isn't a solid block."
+      - text: "QTC"
+        why_wrong: "QTC is a black rubbery smart material used for switches."
+    answer: 0
+    explanation: "Styrofoam is extruded polystyrene foam, often blue. It's easy to cut and shape, so it's ideal for modelling."
+
+  - id: smart2-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: thermochromic-technique
+    command: explain
+    scenario: baby-range
+    see: "#smart-materials"
+    exam_question:
+      text: "Explain why thermochromic pigment is a suitable material for the baby's feeding spoon."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is a smart material so it is clever."
+        marks_awarded: 0
+        why_wrong: "'Clever' says nothing about what the material does, so no property is given."
+      - text: "It changes colour with temperature."
+        marks_awarded: 1
+        why_wrong: "The property earns 1 mark, but it isn't linked to the baby or the parent, so the second mark is missed."
+      - text: "It changes colour when the spoon is too hot, so the parent can see whether the food will burn the baby's mouth."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: the property, then why it matters for the user. 'So the parent can see…' makes the link."
+
+  - id: smart2-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: qtc-technique
+    command: describe
+    context: true
+    see: "#smart-materials"
+    exam_question:
+      text: "Describe how QTC can be used as a switch in a pair of gloves."
+      marks: 2
+    sample_answer: "QTC conducts electricity."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that it only conducts when squeezed, and insulates otherwise, so pressing it turns the circuit on"
+      - text: "Adding that QTC is black and rubbery"
+        why_wrong: "Its appearance doesn't explain how it works as a switch."
+      - text: "Adding that QTC is used in smartphones"
+        why_wrong: "An example use doesn't describe how the switch works."
+      - text: "Adding that QTC is a composite"
+        why_wrong: "This is just part of its name. It doesn't say how it switches."
+    answer: 0
+    explanation: "The key detail is the change: insulator normally, conductor when compressed. That's what makes it work as a switch."
+
+  - id: smart2-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 modern and smart materials"
+    concept: explain-vs-describe-technique
+    command: explain
+    scenario: cycling-kit
+    see: "#modern-materials"
+    exam_question:
+      text: "Explain why carbon fibre is used for the racing bike frame."
+      marks: 2
+    text: "Which of these answers explains, rather than just describes?"
+    options:
+      - text: "Carbon fibre is made of carbon atoms woven into a fabric."
+        why_wrong: "This describes how carbon fibre is made, but gives no reason it suits a bike frame."
+      - text: "Carbon fibre is also used for Formula One cars."
+        why_wrong: "Another example use isn't a reason."
+      - text: "Carbon fibre is stiff and very light, so the bike is faster and easier to ride."
+      - text: "Carbon fibre is a modern material."
+        why_wrong: "Classifying the material doesn't explain why it's used."
+    answer: 2
+    explanation: "Explain means give reasons: a property (stiff, light) and its effect on the product (faster, easier to ride)."

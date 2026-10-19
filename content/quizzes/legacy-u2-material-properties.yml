@@ -1,0 +1,370 @@
+# Material Sources & Properties (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# Focuses on what this page adds (heat treatment, and where materials come
+# from); the individual materials have their own quizzes.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-material-properties
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Material Sources & Properties"
+page: /gcse/unit2/material-properties/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: cold-chisel
+    text: "A student is making a cold chisel from high carbon steel in the school workshop. Its cutting edge must be hard, but the chisel mustn't shatter when it's hit with a hammer."
+  - id: copper-bowl
+    text: "A jeweller is hammering a copper sheet into a bowl. As she works it, the copper becomes harder and more difficult to shape."
+
+questions:
+
+  - id: props-001
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: metal-source
+    command: identify
+    see: "#metals--sources-and-classification"
+    text: "Where do metals come from?"
+    options:
+      - text: "Ores dug from the ground"
+      - text: "Trees"
+        why_wrong: "Trees are the source of timber and of the wood pulp used for paper."
+      - text: "Crude oil"
+        why_wrong: "Crude oil is the source of synthetic polymers."
+      - text: "Recycled wooden waste"
+        why_wrong: "That's what manufactured boards like MDF and chipboard are made from."
+    answer: 0
+    explanation: "Metals are extracted from ores, a natural resource that will eventually run out."
+
+  - id: props-002
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: ores-finite
+    command: state
+    see: "#metals--sources-and-classification"
+    text: "Why are metal ores described as a finite resource?"
+    options:
+      - text: "They are a natural resource that will eventually run out"
+      - text: "They grow back if they're managed well"
+        why_wrong: "That's true of trees, not ores. Once an ore is mined, it's gone."
+      - text: "They are man-made"
+        why_wrong: "Ores are natural, which is exactly why there's a limited amount."
+      - text: "They will never run out"
+        why_wrong: "Finite means the opposite: there's a limited supply that will run out."
+    answer: 0
+    explanation: "There's only so much ore in the Earth. Once it's mined it can't be replaced, so it will eventually run out."
+
+  - id: props-003
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: hardening
+    command: explain
+    scenario: cold-chisel
+    see: "#heat-treatment-of-metals"
+    text: "Which heat treatment will make the chisel's cutting edge hard?"
+    options:
+      - text: "Hardening"
+      - text: "Annealing"
+        why_wrong: "Annealing makes metal softer, the opposite of what the edge needs."
+      - text: "Normalising"
+        why_wrong: "Normalising reduces hardness and increases ductility."
+      - text: "Tempering"
+        why_wrong: "Tempering comes after hardening, to reduce brittleness. On its own it doesn't harden the steel."
+    answer: 0
+    reason:
+      text: "How is it done?"
+      options:
+        - text: "Heat the steel, then cool it rapidly by quenching it in water or oil"
+        - text: "Heat the steel, then let it cool slowly"
+          why_wrong: "Slow cooling is annealing, which softens the metal."
+        - text: "Heat the steel, then let it cool at room temperature"
+          why_wrong: "Cooling at room temperature is normalising, which reduces hardness."
+        - text: "Add carbon to the surface"
+          why_wrong: "That's the start of case hardening, used to harden just the surface of an alloy."
+      answer: 0
+    explanation: "Hardening means heating the steel then rapidly cooling it by quenching. That makes high carbon steel very hard, but brittle."
+
+  - id: props-004
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: tempering
+    command: identify
+    scenario: cold-chisel
+    see: "#heat-treatment-of-metals"
+    text: "After hardening, the chisel is very hard but brittle. What should be done next?"
+    options:
+      - text: "Temper it"
+      - text: "Anneal it"
+        why_wrong: "Annealing would soften the whole chisel, losing the hard edge."
+      - text: "Case harden it"
+        why_wrong: "Case hardening adds carbon to harden a surface. The problem here is brittleness, not softness."
+      - text: "Normalise it"
+        why_wrong: "Normalising reduces hardness, so the edge wouldn't stay sharp."
+    answer: 0
+    explanation: "Hardening and tempering go together: tempering removes some of the brittleness while keeping most of the hardness."
+
+  - id: props-005
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: tempering
+    command: state
+    see: "#heat-treatment-of-metals"
+    text: "What does tempering do to hardened steel?"
+    options:
+      - text: "It reduces brittleness and increases toughness, while keeping most of the hardness"
+      - text: "It makes the steel completely soft again"
+        why_wrong: "That's closer to annealing. Tempering keeps most of the hardness."
+      - text: "It adds carbon to the surface"
+        why_wrong: "Adding carbon to the surface is case hardening."
+      - text: "It makes the steel rust-proof"
+        why_wrong: "Tempering changes hardness and toughness, not corrosion resistance."
+    answer: 0
+    explanation: "Tempering trades a little hardness for a lot less brittleness, so the tool is tough enough to use."
+
+  - id: props-006
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: tempering-colours
+    command: describe
+    scenario: cold-chisel
+    see: "#heat-treatment-of-metals"
+    text: "When the student reheats the chisel to temper it, how can they judge the right temperature?"
+    options:
+      - text: "By the colour of the oxide on the cleaned steel, from straw to blue"
+      - text: "By waiting until the steel melts"
+        why_wrong: "Tempering uses a much lower temperature. Melting would destroy the chisel."
+      - text: "By weighing the chisel"
+        why_wrong: "Weight doesn't change with temperature, so it can't tell you when to stop."
+      - text: "By how soft the steel feels"
+        why_wrong: "You can't safely feel hot steel, and tempering shouldn't make it soft."
+    answer: 0
+    explanation: "The hardened steel is cleaned so the oxide colours show: straw for harder tools, through to blue for tougher ones. Then it's quenched."
+
+  - id: props-007
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: annealing
+    command: identify
+    scenario: copper-bowl
+    see: "#heat-treatment-of-metals"
+    text: "Which heat treatment will make the copper soft and easy to shape again?"
+    options:
+      - text: "Annealing"
+      - text: "Hardening"
+        why_wrong: "Hardening makes metal harder, the opposite of what's needed."
+      - text: "Tempering"
+        why_wrong: "Tempering is for hardened steel, to reduce brittleness. It isn't used to soften copper for shaping."
+      - text: "Case hardening"
+        why_wrong: "Case hardening hardens a surface. The jeweller needs the metal softer."
+    answer: 0
+    explanation: "Annealing removes stress and makes metal softer, so the jeweller can carry on shaping the bowl."
+
+  - id: props-008
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: annealing-process
+    command: describe
+    scenario: copper-bowl
+    see: "#heat-treatment-of-metals"
+    text: "How should the jeweller anneal the copper?"
+    options:
+      - text: "Heat it, then let it cool slowly"
+      - text: "Heat it, then quench it rapidly in water or oil"
+        why_wrong: "Rapid quenching is hardening steel. Annealing needs slow cooling."
+      - text: "Heat it, then let it cool at room temperature"
+        why_wrong: "Cooling at room temperature is normalising."
+      - text: "Add carbon to the surface, heat it and quench it"
+        why_wrong: "That's case hardening, which hardens the surface."
+    answer: 0
+    explanation: "Annealing: heat the metal, then cool it slowly. That removes stress, softens it and refines its structure."
+
+  - id: props-009
+    type: multi
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: hardening-treatments
+    command: identify
+    see: "#heat-treatment-of-metals"
+    text: "Select TWO heat treatments that make a metal harder."
+    options:
+      - text: "Hardening"
+      - text: "Case hardening"
+      - text: "Annealing"
+        why_wrong: "Annealing makes metal softer."
+      - text: "Normalising"
+        why_wrong: "Normalising reduces hardness and increases ductility."
+    answer: [0, 1]
+    explanation: "Hardening hardens the steel through; case hardening hardens just the surface. Annealing and normalising both reduce hardness."
+
+  - id: props-010
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: case-hardening
+    command: identify
+    context: true
+    see: "#heat-treatment-of-metals"
+    text: "A steel gear needs a hard-wearing surface but a tough core that won't snap. Which treatment is most suitable?"
+    options:
+      - text: "Case hardening"
+      - text: "Annealing"
+        why_wrong: "Annealing softens the whole gear, so its teeth would wear quickly."
+      - text: "Normalising"
+        why_wrong: "Normalising reduces hardness throughout. It doesn't give a hard surface."
+      - text: "Tempering"
+        why_wrong: "Tempering reduces brittleness in hardened steel. It doesn't give a hard surface over a tough core."
+    answer: 0
+    explanation: "Case hardening adds carbon to the surface, then heats and quenches it: a hard outside with a tough core."
+
+  - id: props-011
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: mild-steel-hardening
+    command: state
+    context: true
+    see: "#heat-treatment-of-metals"
+    text: "A student heats a mild steel screwdriver and quenches it, but it doesn't get much harder. Why not?"
+    options:
+      - text: "Mild steel doesn't contain enough carbon to be hardened this way"
+      - text: "Mild steel melts too easily"
+        why_wrong: "Mild steel melts at about 1450°C, far hotter than hardening. The problem is its low carbon content."
+      - text: "Mild steel is non-ferrous"
+        why_wrong: "Mild steel is ferrous: it contains iron."
+      - text: "Mild steel is already as hard as it can be"
+        why_wrong: "Mild steel is quite soft and ductile. It just doesn't have enough carbon to harden by quenching."
+    answer: 0
+    explanation: "Hardening works on high carbon steel. Mild steel has too little carbon (about 0.15–0.35%) to harden by heating and quenching."
+
+  - id: props-012
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: board-source
+    command: describe
+    see: "#natural-and-manufactured-timber--sources"
+    text: "How are manufactured boards such as MDF and chipboard made?"
+    options:
+      - text: "From recycled wooden waste mixed with adhesive"
+      - text: "Cut straight from the trunk of a tree"
+        why_wrong: "That's natural timber. Manufactured boards are man-made from waste wood."
+      - text: "From crude oil"
+        why_wrong: "Crude oil is used to make synthetic polymers, not boards."
+      - text: "From wood pulp rolled into thin sheets"
+        why_wrong: "That's how paper is made at a papermill."
+    answer: 0
+    explanation: "Manufactured boards are man-made from recycled wooden waste mixed with adhesive."
+
+  - id: props-013
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: thermoset-pair
+    command: identify
+    see: "#polymers--sources"
+    text: "Which pair are both thermosetting polymers?"
+    options:
+      - text: "Melamine and epoxy resin"
+      - text: "Acrylic and nylon"
+        why_wrong: "Both of these are thermoplastics: they can be heated and reshaped."
+      - text: "Polypropylene and melamine"
+        why_wrong: "Melamine is a thermoset, but polypropylene is a thermoplastic."
+      - text: "Styrofoam and urea formaldehyde"
+        why_wrong: "Urea formaldehyde is a thermoset, but Styrofoam (polystyrene foam) is a thermoplastic."
+    answer: 0
+    explanation: "Melamine, urea formaldehyde and epoxy resins are thermosets: they can only be heated and shaped once."
+
+  - id: props-014
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: corrugated-structure
+    command: describe
+    context: true
+    see: "#papers-and-boards--sources"
+    text: "Corrugated card is brilliant for packaging. How is it made?"
+    options:
+      - text: "A wavy layer is added between two flat layers"
+      - text: "Thin layers of wood are glued at 90° to each other"
+        why_wrong: "That's plywood."
+      - text: "A foam core is sandwiched between two card faces"
+        why_wrong: "That's foam board."
+      - text: "Card is coated in a plastic layer"
+        why_wrong: "That's laminating, used to resist liquid."
+    answer: 0
+    explanation: "Corrugated card has a wavy layer between two flat layers, making it strong and light for packaging."
+
+  - id: props-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: tempering-technique
+    command: explain
+    scenario: cold-chisel
+    see: "#heat-treatment-of-metals"
+    exam_question:
+      text: "Explain why the chisel is tempered after it has been hardened."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "To make it better."
+        marks_awarded: 0
+        why_wrong: "'Better' doesn't say what tempering changes, so it earns nothing."
+      - text: "To make it less brittle."
+        marks_awarded: 1
+        why_wrong: "This gives the effect, earning 1 mark, but doesn't link it to how the chisel is used."
+      - text: "Tempering reduces its brittleness, so the chisel won't shatter when it's hit with a hammer, but it keeps a hard edge."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks need what tempering does and why that matters for this product. 'So it won't shatter…' is the link."
+
+  - id: props-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: hardening-process-technique
+    command: describe
+    scenario: cold-chisel
+    see: "#heat-treatment-of-metals"
+    exam_question:
+      text: "Describe how the high carbon steel chisel is hardened."
+      marks: 2
+    sample_answer: "Heat the steel until it is very hot."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Then cool it rapidly by quenching it in water or oil"
+      - text: "Use mild steel instead, as it's easier to work"
+        why_wrong: "Mild steel can't be hardened this way, so this would lose marks, not gain them."
+      - text: "Wear safety goggles while heating it"
+        why_wrong: "Safety matters, but the question asks for the hardening process."
+      - text: "Paint it afterwards so it doesn't rust"
+        why_wrong: "Painting is a finish, not part of hardening."
+    answer: 0
+    explanation: "Hardening has two steps: heat it, then cool it rapidly. The rapid quench is what makes it hard."
+
+  - id: props-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 material sources and properties"
+    concept: compare-technique
+    command: compare
+    see: "#heat-treatment-of-metals"
+    exam_question:
+      text: "Compare annealing and normalising."
+      marks: 2
+    text: "Which answer actually compares the two treatments?"
+    options:
+      - text: "Annealing removes stress and makes metal softer."
+        why_wrong: "This only describes annealing, so nothing is compared."
+      - text: "Both heat the metal, but annealed metal is cooled slowly, while normalised metal cools at room temperature."
+      - text: "Normalising increases ductility."
+        why_wrong: "This only describes normalising."
+      - text: "They are both heat treatments."
+        why_wrong: "This gives a similarity but no detail. A good comparison says how they're alike and how they differ."
+    answer: 1
+    explanation: "Compare means say how things are alike and how they differ. 'Both… but…' does exactly that."

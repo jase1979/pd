@@ -1,0 +1,399 @@
+# Surface Treatments & Finishes (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-surface-treatments
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Surface Treatments & Finishes"
+page: /gcse/unit2/surface-treatments/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: garden-products
+    text: "A company makes outdoor products: a mild steel garden chair with comfortable coated arms, and softwood fence panels."
+  - id: restaurant-menu
+    text: "A restaurant wants a printed card menu that folds in half, and a drinks list booklet it can update in-house by adding or swapping pages."
+
+questions:
+
+  - id: surface-001
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: finish-purpose
+    command: state
+    see: "#why-apply-a-surface-finish"
+    text: "Why are surface finishes applied to products?"
+    options:
+      - text: "For functional reasons, such as corrosion protection, and aesthetic reasons, such as appearance"
+      - text: "Only to make products cheaper"
+        why_wrong: "Finishes usually add cost. They're applied to protect the product and improve how it looks."
+      - text: "Only to improve how products look"
+        why_wrong: "Appearance is one reason, but many finishes are functional, such as rust or water protection."
+      - text: "To make materials recyclable"
+        why_wrong: "Finishes don't make materials recyclable, and some make recycling harder."
+    answer: 0
+    explanation: "Finishes are applied for functional reasons (performance, such as protection) and aesthetic reasons (appearance)."
+
+  - id: surface-002
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: metal-preparation
+    command: state
+    see: "#metal-surface-treatments"
+    text: "How should a metal surface be prepared before a finish is applied?"
+    options:
+      - text: "Remove dust, grease and rust, and key (roughen) the surface if needed"
+      - text: "Heat it to bright red heat"
+        why_wrong: "That's part of brazing, not preparing for a finish."
+      - text: "Apply flux"
+        why_wrong: "Flux is for brazing and soldering, to stop oxides during joining."
+      - text: "Wet it with water"
+        why_wrong: "Moisture causes rust and stops finishes sticking. The surface needs to be clean and dry."
+    answer: 0
+    explanation: "Dust, grease and rust must be removed, and some finishes need the surface keyed (roughened) so they grip."
+
+  - id: surface-003
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: dip-coating-choice
+    command: compare
+    scenario: garden-products
+    see: "#metal-surface-treatments"
+    text: "Which finish is the best choice for the chair's comfortable arms?"
+    options:
+      - text: "Plastic dip coating"
+      - text: "Galvanising"
+        why_wrong: "Galvanising protects against rust, but its hard zinc coating gives no grip or comfort."
+      - text: "Enamelling"
+        why_wrong: "Enamel is fused glass: decorative and durable, but hard and not comfortable to hold."
+      - text: "Hot blackening"
+        why_wrong: "Hot blackening is a thin black oil finish giving only mild protection, so it wouldn't last outdoors."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "Polythene melts onto the hot metal, giving grip, comfort, colour and corrosion protection"
+        - text: "It coats the steel in zinc"
+          why_wrong: "That's galvanising."
+        - text: "Glass powder is fused onto the surface"
+          why_wrong: "That's enamelling."
+        - text: "A thin layer of another metal is deposited"
+          why_wrong: "That's electroplating, such as chrome plating."
+      answer: 0
+    explanation: "Plastic dip coating gives a soft, colourful polythene layer: grip and comfort for the user, plus corrosion protection outdoors."
+
+  - id: surface-004
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: dip-coating-process
+    command: state
+    scenario: garden-products
+    see: "#metal-surface-treatments"
+    text: "In plastic dip coating, the steel is heated before it's dipped in polythene powder. To about what temperature?"
+    options:
+      - text: "200°C"
+      - text: "20°C"
+        why_wrong: "At room temperature the powder wouldn't melt onto the metal."
+      - text: "62°C"
+        why_wrong: "62°C is when polymorph softens. Dip coating needs the metal hot enough to melt the powder."
+      - text: "1450°C"
+        why_wrong: "That's roughly the melting point of mild steel itself."
+    answer: 0
+    explanation: "The metal is heated to about 200°C, dipped into a fluidised bed of polythene powder that melts onto it, then cured in the oven."
+
+  - id: surface-005
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: outdoor-timber-finish
+    command: identify
+    scenario: garden-products
+    see: "#surface-treatment-of-timbers"
+    text: "Which treatment gives the softwood fence panels long-lasting protection outdoors?"
+    options:
+      - text: "Preservative, or pressure treatment"
+      - text: "French polish"
+        why_wrong: "French polish gives a lustrous indoor finish. It wouldn't survive the weather."
+      - text: "Sanding sealer"
+        why_wrong: "A sanding sealer just prepares the pores before varnish or polish."
+      - text: "Wax polish"
+        why_wrong: "Wax polish suits indoor furniture. It doesn't give long-lasting outdoor protection."
+    answer: 0
+    explanation: "Preservatives give long-lasting protection outdoors, and fence timber is often pressure treated for longevity."
+
+  - id: surface-006
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: anodising
+    command: identify
+    context: true
+    see: "#metal-surface-treatments"
+    text: "Aluminium window frames are given a protective oxide layer. Which process is this?"
+    options:
+      - text: "Anodising"
+      - text: "Galvanising"
+        why_wrong: "Galvanising coats steel with zinc. Aluminium is usually anodised instead."
+      - text: "Hot blackening"
+        why_wrong: "Hot blackening is for mild steel: it's heated and dipped in oil."
+      - text: "Plastic dip coating"
+        why_wrong: "Dip coating adds a polythene layer, not an oxide layer."
+    answer: 0
+    explanation: "Non-ferrous metals such as aluminium are often anodised, which builds a protective oxide layer."
+
+  - id: surface-007
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: galvanising
+    command: state
+    see: "#metal-surface-treatments"
+    text: "What does galvanising coat steel with?"
+    options:
+      - text: "Zinc"
+      - text: "Chrome"
+        why_wrong: "Chrome plating is a type of electroplating."
+      - text: "Glass powder"
+        why_wrong: "Fusing glass powder to metal is enamelling."
+      - text: "Polythene powder"
+        why_wrong: "Polythene powder is used in plastic dip coating."
+    answer: 0
+    explanation: "Galvanising coats steel with zinc to stop it rusting."
+
+  - id: surface-008
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: primer
+    command: describe
+    context: true
+    see: "#surface-treatment-of-timbers"
+    text: "Why is primer applied to the edges of an MDF shelf before it's painted?"
+    options:
+      - text: "It seals the bare edges so paint doesn't soak in, and helps the top coat stick"
+      - text: "It gives a glossy finish"
+        why_wrong: "Gloss comes from the top coat or varnish. Primer prepares the surface."
+      - text: "It protects the shelf outdoors"
+        why_wrong: "Outdoor protection is the job of preservatives. Primer prepares the surface for paint."
+      - text: "It enhances the natural grain"
+        why_wrong: "MDF has no grain, and primer is usually painted over anyway."
+    answer: 0
+    explanation: "Primer seals bare wood, especially porous MDF edges, so paint doesn't soak in, and helps the top coat stick."
+
+  - id: surface-009
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: sanding-sealer
+    command: describe
+    see: "#surface-treatment-of-timbers"
+    text: "What does a sanding sealer do before varnish is applied?"
+    options:
+      - text: "It seals the pores of the wood, so fewer coats are needed"
+      - text: "It adds colour to the timber"
+        why_wrong: "Colour comes from wood stain or paint."
+      - text: "It gives a smooth, lustrous surface on its own"
+        why_wrong: "That's what polishes do."
+      - text: "It protects the timber outdoors"
+        why_wrong: "That's a preservative."
+    answer: 0
+    explanation: "A sanding sealer seals the wood's pores before varnish or polish, so fewer coats are needed."
+
+  - id: surface-010
+    type: multi
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: grain-finishes
+    command: identify
+    see: "#surface-treatment-of-timbers"
+    text: "Select TWO finishes that enhance the natural look of the timber."
+    options:
+      - text: "Wax polish"
+      - text: "Oil"
+      - text: "Paint"
+        why_wrong: "Paint covers the timber, hiding the grain rather than enhancing it."
+      - text: "Primer"
+        why_wrong: "Primer seals bare wood ready for paint, which then covers the grain."
+    answer: [0, 1]
+    explanation: "Oils and wax soak in and enhance the timber's appearance; polishes give a lustrous surface that brings out the grain."
+
+  - id: surface-011
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: textured-moulds
+    command: describe
+    context: true
+    see: "#self-finishing-polymers"
+    text: "Every injection-moulded phone grip comes out with a leather-effect texture, with no extra work. How?"
+    options:
+      - text: "The texture is built into the surface of the mould"
+      - text: "The texture is sprayed on afterwards"
+        why_wrong: "No further process is needed: the mould gives the texture."
+      - text: "Each grip is embossed after moulding"
+        why_wrong: "Embossing is a paper and card process. The texture comes from the mould."
+      - text: "Each grip is polished by hand"
+        why_wrong: "Polishing would make it smoother, not textured, and adds a process."
+    answer: 0
+    explanation: "Polymers formed in a mould are self-finishing: textures such as grip patterns or leather-effect are built into the mould."
+
+  - id: surface-012
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: polymer-edges
+    command: identify
+    context: true
+    see: "#self-finishing-polymers"
+    text: "A laser-cut acrylic sign has dull edges. Which method can give the edges a clear, glossy finish?"
+    options:
+      - text: "Flame polishing"
+      - text: "Galvanising"
+        why_wrong: "Galvanising is a zinc coating for steel."
+      - text: "Dip-treating"
+        why_wrong: "Dip-treating protects outdoor timber."
+      - text: "Perfect binding"
+        why_wrong: "Perfect binding glues pages into a book spine."
+    answer: 0
+    explanation: "Cut polymer edges are finished by draw filing, wet-and-dry paper, polishing compound, or, for acrylic, flame polishing."
+
+  - id: surface-013
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: folding
+    command: describe
+    scenario: restaurant-menu
+    see: "#folding-process"
+    text: "How should the card menu be prepared so that it folds cleanly in exactly the right place?"
+    options:
+      - text: "Apply a crease or score along the fold line"
+      - text: "Laminate it"
+        why_wrong: "Laminating adds layers for protection. It doesn't control where the fold goes."
+      - text: "UV varnish it"
+        why_wrong: "UV varnish adds gloss. It doesn't help the card fold."
+      - text: "Emboss it"
+        why_wrong: "Embossing raises a pattern. It doesn't make a clean fold."
+    answer: 0
+    explanation: "A crease lets card bend without breaking, and a score or perforated line makes the fold happen exactly where it should."
+
+  - id: surface-014
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: binding-choice
+    command: explain
+    scenario: restaurant-menu
+    see: "#binding-products"
+    text: "Which binding method best suits the drinks list?"
+    options:
+      - text: "Comb binding"
+      - text: "Perfect binding"
+        why_wrong: "Perfect binding glues pages permanently into a card spine, so pages can't be added or swapped."
+      - text: "Hand stitching"
+        why_wrong: "Hand stitching is skilled, time-consuming and permanent: not something to redo whenever the drinks change."
+      - text: "Stapling"
+        why_wrong: "Staples hold pages but are awkward to undo and redo every time the list changes."
+    answer: 0
+    reason:
+      text: "Why does it suit the restaurant?"
+      options:
+        - text: "Pages are held by a plastic comb through punched holes, and it's common and less specialist"
+        - text: "Page edges are glued into the spine of a card cover"
+          why_wrong: "That's perfect binding, used for paperbacks and magazines."
+        - text: "Pages are fixed together permanently by hand"
+          why_wrong: "That's hand stitching."
+        - text: "Pages are fused together with heat"
+          why_wrong: "None of the binding methods works that way."
+      answer: 0
+    explanation: "Comb binding holds punched pages on a plastic comb. It's common and less specialist, so it suits a booklet updated in-house."
+
+  - id: surface-015
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: perforation
+    command: identify
+    context: true
+    see: "#folding-process"
+    text: "Raffle tickets tear off cleanly along a straight line. What has been added to the card?"
+    options:
+      - text: "A perforated line"
+      - text: "A crease"
+        why_wrong: "A crease helps card bend without breaking. Tearing cleanly needs perforations."
+      - text: "Embossing"
+        why_wrong: "Embossing raises a pattern above the surface."
+      - text: "A laminate"
+        why_wrong: "Laminating makes card stronger, which would make tearing harder."
+    answer: 0
+    explanation: "A perforated line, a row of small cuts, makes the card separate or fold in exactly the right place."
+
+  - id: surface-016
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: dip-coating-technique
+    command: explain
+    scenario: garden-products
+    see: "#metal-surface-treatments"
+    exam_question:
+      text: "Explain why plastic dip coating is suitable for the arms of the garden chair."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It looks nice and colourful."
+        marks_awarded: 0
+        why_wrong: "'Looks nice' is vague, and the outdoor use and comfort aren't mentioned."
+      - text: "It protects the steel from corrosion."
+        marks_awarded: 1
+        why_wrong: "One relevant point earns 1 mark, but it isn't linked to the chair or its user."
+      - text: "It protects the steel from corrosion and gives a soft grip, so the arms won't rust outdoors and are comfortable to hold."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks: relevant properties plus what they mean for this product and its user."
+
+  - id: surface-017
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: preparation-technique
+    command: describe
+    see: "#metal-surface-treatments"
+    exam_question:
+      text: "Describe why a metal surface must be prepared before a finish is applied."
+      marks: 2
+    sample_answer: "To remove dirt from it."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that grease and rust are removed too, so the finish grips and doesn't peel off"
+      - text: "Adding that it can then be galvanised"
+        why_wrong: "Naming a finish doesn't describe why preparation matters."
+      - text: "Adding that metal is magnetic"
+        why_wrong: "Magnetism has nothing to do with surface preparation."
+      - text: "Adding that it makes the metal lighter"
+        why_wrong: "Cleaning doesn't change the weight in any useful way, and that isn't the reason."
+    answer: 0
+    explanation: "The missing detail is the consequence: a clean, keyed surface lets the finish grip instead of peeling."
+
+  - id: surface-018
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 surface treatments"
+    concept: evaluate-technique
+    command: evaluate
+    context: true
+    see: "#surface-treatment-of-timbers"
+    exam_question:
+      text: "Evaluate the use of paint as the only finish for a softwood garden fence."
+      marks: 4
+    text: "Which answer actually evaluates?"
+    options:
+      - text: "Paint is colourful."
+        why_wrong: "A single point, with nothing weighed up."
+      - text: "Paint comes in gloss, matt or silk."
+        why_wrong: "This describes paint but doesn't judge it for a fence."
+      - text: "Paint adds colour and some protection, but a preservative or pressure treatment protects outdoor timber for longer, so the fence should be treated first."
+      - text: "Paint is the best finish."
+        why_wrong: "A judgement with no reasons isn't an evaluation."
+    answer: 2
+    explanation: "Evaluate means weigh up strengths and weaknesses and reach a justified judgement."

@@ -1,0 +1,472 @@
+# Specialist Techniques & Processes (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-specialist-techniques
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Specialist Techniques & Processes"
+page: /gcse/unit2/specialist-techniques/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: steel-bracket
+    text: "A student is making a mild steel bracket to hold a shelf. The parts must be marked out, drilled and permanently joined, and one joint can only be reached from one side."
+  - id: beech-chair
+    text: "A furniture maker is designing a chair in solid beech, with a curved back and strong joints between the legs and rails."
+
+questions:
+
+  - id: tech-001
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: wastage-vs-additive
+    command: state
+    see: "#wastage-and-addition"
+    text: "What is a wastage process?"
+    options:
+      - text: "Cutting and removing material from a stock form, so some material is lost"
+      - text: "Building up a shape layer by layer"
+        why_wrong: "Building up layers is an additive process, such as 3D printing."
+      - text: "Joining parts with adhesive"
+        why_wrong: "Joining doesn't remove material, so it isn't wastage."
+      - text: "Heating a material so it can be bent"
+        why_wrong: "Bending reshapes material without removing any."
+    answer: 0
+    explanation: "Wastage processes, such as sawing, drilling and laser cutting, remove material from stock forms, and that material is lost."
+
+  - id: tech-002
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: wastage-vs-additive
+    command: identify
+    see: "#wastage-and-addition"
+    text: "Which of these is an additive process?"
+    options:
+      - text: "3D printing"
+      - text: "Laser cutting"
+        why_wrong: "A laser cuts material away from a sheet, so it's a wastage process."
+      - text: "Sawing"
+        why_wrong: "Sawing removes material, so it's wastage."
+      - text: "Milling"
+        why_wrong: "Milling cuts slots and faces off metal, removing material: wastage."
+    answer: 0
+    explanation: "3D printing builds the shape up layer by layer from a filament, with very little waste."
+
+  - id: tech-003
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: marking-tools
+    command: identify
+    scenario: steel-bracket
+    see: "#marking-out-and-cutting"
+    text: "Which tool scratches a fine, accurate line on the steel?"
+    options:
+      - text: "A scriber"
+      - text: "A centre punch"
+        why_wrong: "A centre punch makes a small dent to locate a drill, not a line."
+      - text: "Dividers"
+        why_wrong: "Dividers mark circles and arcs, and step out equal distances."
+      - text: "Odd-leg callipers"
+        why_wrong: "Odd-leg callipers mark lines parallel to an edge. They aren't for marking any line you need."
+    answer: 0
+    explanation: "A scriber has a hardened point that scratches a fine, accurate line into metal."
+
+  - id: tech-004
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: marking-tools
+    command: identify
+    scenario: steel-bracket
+    see: "#marking-out-and-cutting"
+    text: "Scribed lines are hard to see on the bright steel. What should the student apply first?"
+    options:
+      - text: "Marking blue"
+      - text: "Flux"
+        why_wrong: "Flux is used in brazing to stop oxides forming. It doesn't help you see lines."
+      - text: "PVA glue"
+        why_wrong: "PVA is a wood adhesive."
+      - text: "Brass spelter"
+        why_wrong: "Spelter is the filler rod used in brazing."
+    answer: 0
+    explanation: "Marking blue (engineer's blue) is a dye painted on bright metal so that scribed lines show up clearly."
+
+  - id: tech-005
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: datum
+    command: state
+    see: "#marking-out-and-cutting"
+    text: "Why should marking out always start from a datum edge?"
+    options:
+      - text: "It is a straight, true reference, so measurements stay accurate and less material is wasted"
+      - text: "It makes the metal softer to cut"
+        why_wrong: "A datum is a reference edge. It has nothing to do with how hard the material is."
+      - text: "It stops the metal rusting"
+        why_wrong: "Rust protection comes from finishes, not marking out."
+      - text: "It is always the edge that gets drilled"
+        why_wrong: "A datum is where you measure from. It isn't necessarily where any hole goes."
+    answer: 0
+    explanation: "Measuring every line from one straight, true datum edge or face keeps the measurements accurate and reduces waste."
+
+  - id: tech-006
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: centre-punch
+    command: describe
+    scenario: steel-bracket
+    see: "#marking-out-and-cutting"
+    text: "Before drilling the bracket, why does the student use a centre punch?"
+    options:
+      - text: "It makes a small dent that locates the drill bit at the centre of the hole"
+      - text: "It marks out circles and arcs"
+        why_wrong: "That's what dividers do."
+      - text: "It marks lines parallel to an edge"
+        why_wrong: "That's odd-leg callipers."
+      - text: "It scratches a fine line"
+        why_wrong: "That's a scriber."
+    answer: 0
+    explanation: "The dent from a centre punch stops the drill bit wandering, so the hole is drilled exactly where it's marked."
+
+  - id: tech-007
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: hole-types
+    command: identify
+    context: true
+    see: "#drilling"
+    text: "A cupboard door needs its screw heads to sit flush with the surface. Which type of hole is needed?"
+    options:
+      - text: "A countersunk hole"
+      - text: "A pilot hole"
+        why_wrong: "A pilot hole is a small hole that guides a screw and prevents splitting. It doesn't recess the head."
+      - text: "A clearance hole"
+        why_wrong: "A clearance hole lets the screw pass through without its thread biting. It doesn't recess the head."
+      - text: "A counterbore hole"
+        why_wrong: "A counterbore is a flat-bottomed hole. The flared shape for a countersunk screw head is a countersink."
+    answer: 0
+    explanation: "A countersunk hole has its top flared to match a countersunk screw head, so the head sits flush."
+
+  - id: tech-008
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: hole-types
+    command: state
+    see: "#drilling"
+    text: "Why is a pilot hole drilled before a screw is driven into timber?"
+    options:
+      - text: "To guide the screw and stop the timber splitting"
+      - text: "So the screw passes through without its thread engaging"
+        why_wrong: "That describes a clearance hole."
+      - text: "So the screw head sits flush with the surface"
+        why_wrong: "That's a countersunk hole."
+      - text: "To remove waste material quickly"
+        why_wrong: "A pilot hole is small, to guide the screw, not to remove waste."
+    answer: 0
+    explanation: "A pilot hole is a small-diameter hole that guides the screw in straight and prevents the timber splitting."
+
+  - id: tech-009
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: pop-rivet
+    command: explain
+    scenario: steel-bracket
+    see: "#joining-and-reforming-metals"
+    text: "How should the student permanently join the parts where only one side of the joint can be reached?"
+    options:
+      - text: "With pop rivets"
+      - text: "With nuts and bolts"
+        why_wrong: "Nuts and bolts are a temporary joint, and you need to reach both sides to fit the nut."
+      - text: "With self-tapping screws"
+        why_wrong: "Self-tapping screws are a temporary fixing, not a permanent joint."
+      - text: "With PVA glue"
+        why_wrong: "PVA is a wood adhesive. It won't make a strong joint between steel parts."
+    answer: 0
+    reason:
+      text: "Why does this suit a joint that can only be reached from one side?"
+      options:
+        - text: "The rivet gun pulls the mandrel, expanding the rivet on the far side"
+        - text: "It is a temporary joint that can be undone"
+          why_wrong: "Pop rivets are permanent: they have to be drilled out to remove them."
+        - text: "It melts the parent metal so the parts fuse together"
+          why_wrong: "That's welding."
+        - text: "It uses a brass spelter that flows into the joint"
+          why_wrong: "That's brazing."
+      answer: 0
+    explanation: "A pop rivet is pushed in from one side; the gun pulls the mandrel, expanding the rivet behind the parts until the mandrel snaps off."
+
+  - id: tech-010
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: brazing-flux
+    command: state
+    see: "#joining-and-reforming-metals"
+    text: "Why is flux applied to a joint before brazing?"
+    options:
+      - text: "To stop oxides forming and help the filler flow into the joint"
+      - text: "To make the scribed lines visible"
+        why_wrong: "That's marking blue."
+      - text: "To cool the joint quickly"
+        why_wrong: "Flux doesn't cool anything. The joint is left to cool after brazing."
+      - text: "To melt the parent metal"
+        why_wrong: "Brazing doesn't melt the parent metal. Only the brass spelter melts."
+    answer: 0
+    explanation: "Flux stops oxides forming on the hot metal and helps the brass spelter flow into the joint by capillary action."
+
+  - id: tech-011
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: metal-joining-methods
+    command: identify
+    see: "#joining-and-reforming-metals"
+    text: "Which process melts the edges of two metal parts so they fuse together, usually with a filler rod?"
+    options:
+      - text: "Welding"
+      - text: "Brazing"
+        why_wrong: "Brazing uses a brass filler at bright red heat without melting the parent metal."
+      - text: "Soldering"
+        why_wrong: "Soldering uses a lower-temperature filler metal. The parts themselves don't melt."
+      - text: "Riveting"
+        why_wrong: "Riveting clamps parts together with a deformed rivet. Nothing melts."
+    answer: 0
+    explanation: "Welding melts the edges of the metals so they fuse, usually with a filler rod. It's permanent."
+
+  - id: tech-012
+    type: multi
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: temporary-vs-permanent
+    command: identify
+    see: "#joining-and-reforming-metals"
+    text: "Select TWO temporary methods of joining metal parts."
+    options:
+      - text: "Nuts and bolts"
+      - text: "Machine screws"
+      - text: "Welding"
+        why_wrong: "Welding fuses the metal, so it's permanent."
+      - text: "Riveting"
+        why_wrong: "A rivet has to be drilled out to remove it, so it's a permanent joint."
+    answer: [0, 1]
+    explanation: "Nuts, bolts, washers, machine screws, self-tapping screws, hinges and catches can be undone, so they're temporary."
+
+  - id: tech-013
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: steam-bending
+    command: explain
+    scenario: beech-chair
+    see: "#producing-wood-products-veneering-laminating-and-steam-bending"
+    text: "How should the curved back of the chair be made from solid beech?"
+    options:
+      - text: "Steam bending"
+      - text: "Veneering"
+        why_wrong: "Veneering glues a thin decorative slice onto a cheaper base. It doesn't bend solid timber."
+      - text: "Line bending"
+        why_wrong: "Line bending uses a strip heater on thermoforming polymers such as acrylic, not timber."
+      - text: "Laser cutting the curve from a thick board"
+        why_wrong: "Cutting a curve from a board wastes timber, and the short grain on the curve would be weak."
+    answer: 0
+    reason:
+      text: "How does this process work?"
+      options:
+        - text: "Steam softens the fibres, so the timber can be bent around a former and keeps its shape when dry"
+        - text: "A strip heater softens a narrow line across the sheet"
+          why_wrong: "That's line bending, used for polymers."
+        - text: "A thin decorative layer is glued onto MDF"
+          why_wrong: "That's veneering."
+        - text: "The shape is built up in layers from a filament"
+          why_wrong: "That's 3D printing."
+      answer: 0
+    explanation: "In steam bending, solid timber such as beech is softened in a steam box, bent around a former and clamped until dry, keeping its new shape."
+
+  - id: tech-014
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: frame-joint
+    command: identify
+    scenario: beech-chair
+    see: "#wood-joining"
+    text: "Which joint is the best choice for joining the chair's legs to its rails?"
+    options:
+      - text: "Mortise and tenon"
+      - text: "Butt joint"
+        why_wrong: "A butt joint simply glues two edges together. It's too weak for a chair."
+      - text: "Mitre joint"
+        why_wrong: "A mitre makes a neat 90° corner from two 45° cuts, as in picture frames, but it's weak on its own."
+      - text: "Comb joint"
+        why_wrong: "A comb joint is a box or carcass joint, for corners of boxes, not leg-to-rail frame joints."
+    answer: 0
+    explanation: "A mortise and tenon, a square tenon glued into a square mortise, is a very strong frame joint, so it suits chairs."
+
+  - id: tech-015
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: box-joint
+    command: identify
+    context: true
+    see: "#wood-joining"
+    text: "A drawer needs a very strong, decorative joint at its front corners. Which joint is best?"
+    options:
+      - text: "Dovetail"
+      - text: "Butt"
+        why_wrong: "A butt joint is simple but weak, and it isn't decorative."
+      - text: "Housing"
+        why_wrong: "A housing slots one piece into a groove. It isn't as strong at a drawer corner, which is pulled constantly."
+      - text: "Dowel"
+        why_wrong: "Dowels reinforce frame joints but don't give a strong, decorative drawer corner."
+    answer: 0
+    explanation: "A dovetail's flared 'fingers' lock together, making a very strong, attractive joint. That's ideal for drawer fronts."
+
+  - id: tech-016
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: veneering
+    command: describe
+    context: true
+    see: "#producing-wood-products-veneering-laminating-and-steam-bending"
+    text: "Why is a table top often made from oak veneer on MDF, rather than solid oak?"
+    options:
+      - text: "It gives a high-quality look at lower cost, and makes better use of rare hardwood"
+      - text: "Veneer is stronger than solid oak"
+        why_wrong: "Veneering is chosen for appearance and cost, not because it's stronger than solid timber."
+      - text: "Veneer lets the top be bent into a curve"
+        why_wrong: "Curves are made by steam bending or laminating."
+      - text: "Veneer makes the top waterproof"
+        why_wrong: "Waterproofing comes from a finish, not from veneering."
+    answer: 0
+    explanation: "A very thin slice of attractive hardwood on a cheaper, stable base looks like solid oak, costs less and uses less rare timber."
+
+  - id: tech-017
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: line-bending
+    command: identify
+    context: true
+    see: "#bending-and-forming-polymers"
+    text: "A student needs to put a 90° bend in an acrylic phone stand. What equipment should they use?"
+    options:
+      - text: "A strip heater (line bender) and a bending jig"
+      - text: "A steam box and a former"
+        why_wrong: "Steam bending is for timber, not acrylic."
+      - text: "A brazing hearth and gas torch"
+        why_wrong: "Brazing joins metals. A torch would burn acrylic."
+      - text: "A vacuum former"
+        why_wrong: "Vacuum forming shapes a sheet over a mould. A single straight bend is done on a strip heater."
+    answer: 0
+    explanation: "A strip heater softens a narrow line across the acrylic; it's bent to the angle and held in a jig until it cools."
+
+  - id: tech-018
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: joining-polymers
+    command: describe
+    see: "#joining-polymers"
+    text: "How does solvent cement, such as Tensol, join two pieces of acrylic?"
+    options:
+      - text: "It dissolves the surfaces so they fuse as the solvent evaporates"
+      - text: "Hot air softens the surfaces until they fuse"
+        why_wrong: "That's plastic welding with a hot-air gun."
+      - text: "It clamps the parts with a mechanical fixing"
+        why_wrong: "Mechanical fixings are nuts, bolts, screws and rivets."
+      - text: "It flows into the joint like brazing spelter"
+        why_wrong: "Brazing joins metals with a brass filler at red heat."
+    answer: 0
+    explanation: "Solvent cement dissolves the acrylic surfaces; as the solvent evaporates they fuse into one."
+
+  - id: tech-019
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: 3d-printing-limits
+    command: state
+    see: "#3d-printing"
+    text: "What is a disadvantage of 3D printing?"
+    options:
+      - text: "It is slow, leaves layer lines, and parts are weaker than moulded ones"
+      - text: "It needs very expensive tooling"
+        why_wrong: "3D printing has no tooling costs, which is why it suits prototypes."
+      - text: "It wastes a lot of material"
+        why_wrong: "3D printing is additive, so there's very little waste."
+      - text: "It can't make complex shapes"
+        why_wrong: "Complex shapes in one piece are one of its main advantages."
+    answer: 0
+    explanation: "3D printing is slow, leaves visible layer lines that may need finishing, and parts are less strong than moulded ones."
+
+  - id: tech-020
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: mortise-technique
+    command: explain
+    scenario: beech-chair
+    see: "#wood-joining"
+    exam_question:
+      text: "Explain why a mortise and tenon joint is suitable for joining the chair's legs and rails."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is a good joint for furniture."
+        marks_awarded: 0
+        why_wrong: "'Good' gives no reason, and nothing is linked to the chair."
+      - text: "It is a very strong joint."
+        marks_awarded: 1
+        why_wrong: "One relevant property earns 1 mark, but it isn't linked to how the chair is used."
+      - text: "It is very strong because the tenon is glued into the mortise, so the joint can take a person's weight without breaking."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks need the property and why it matters for the product. Linking strength to taking a person's weight earns the second mark."
+
+  - id: tech-021
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: pop-rivet-technique
+    command: describe
+    scenario: steel-bracket
+    see: "#joining-and-reforming-metals"
+    exam_question:
+      text: "Describe how a pop rivet joins the two parts of the bracket."
+      marks: 2
+    sample_answer: "A hole is drilled through both parts and the rivet is pushed in."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that the rivet gun pulls the mandrel, expanding the rivet behind the parts until the mandrel snaps off"
+      - text: "Adding that the rivet is made of brass spelter"
+        why_wrong: "Spelter is brazing filler, so this is wrong."
+      - text: "Adding that flux is applied first"
+        why_wrong: "Flux is used in brazing, not riveting."
+      - text: "Adding that it makes a temporary joint"
+        why_wrong: "Pop rivets make a permanent joint, so this would be wrong."
+    answer: 0
+    explanation: "The description is only complete once it says how the rivet holds: the mandrel is pulled and the rivet expands on the far side."
+
+  - id: tech-022
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 specialist techniques"
+    concept: compare-technique
+    command: compare
+    context: true
+    see: "#3d-printing"
+    exam_question:
+      text: "Compare 3D printing and injection moulding for making 10 prototype parts."
+      marks: 4
+    text: "Which answer actually compares the two processes?"
+    options:
+      - text: "3D printing builds parts layer by layer."
+        why_wrong: "This describes one process only."
+      - text: "Injection moulding has very fast cycle times."
+        why_wrong: "This describes one process only."
+      - text: "3D printing is slower per part, but it needs no expensive mould, so for 10 prototypes it costs far less than injection moulding."
+      - text: "Both are used to make polymer parts."
+        why_wrong: "A similarity alone, with no differences weighed up for this job, is too thin for 4 marks."
+    answer: 2
+    explanation: "Compare means set the two against each other: '…is slower, but… so for 10 prototypes it's cheaper' does that."

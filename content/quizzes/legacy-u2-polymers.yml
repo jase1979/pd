@@ -1,0 +1,378 @@
+# Thermoforming & Thermosetting Polymers (legacy GCSE, 2.1.2).
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent.
+#
+# TO CHECK: spec_point values are placeholders (unit plus topic). Replace them
+# with the real WJEC specification references.
+
+id: legacy-u2-polymers
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Thermoforming & Thermosetting Polymers"
+page: /gcse/unit2/polymers/
+questions_per_attempt: 10
+exam_skills_per_attempt: 2
+
+scenarios:
+  - id: games-console
+    text: "A company is designing a handheld games console. It needs a tough casing, a clear protective cover for the screen, and a mains plug for its charger."
+  - id: desk-tidy
+    text: "Students are making a desk tidy in the school workshop. The sides are cut from a sheet of acrylic, and a small tray is vacuum formed to sit inside it."
+
+questions:
+
+  - id: polymers-001
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: thermoset-identify
+    command: identify
+    see: "#thermosetting-polymers"
+    text: "Which of these is a thermosetting polymer?"
+    options:
+      - text: "Melamine formaldehyde"
+      - text: "Acrylic"
+        why_wrong: "Acrylic softens when heated and can be reshaped, so it is a thermoforming polymer."
+      - text: "PVC"
+        why_wrong: "PVC is a thermoforming polymer: it can be heated and shaped again."
+      - text: "HDPE"
+        why_wrong: "HDPE is thermoforming. It's used for bottles and buckets because it can be heated and moulded."
+    answer: 0
+    explanation: "Melamine formaldehyde is a thermoset: once set it can't be reheated or remoulded, which makes it heat resistant for worktops and tableware."
+
+  - id: polymers-002
+    type: multi
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: thermoforming-identify
+    command: identify
+    see: "#thermoforming-polymers"
+    text: "Select TWO thermoforming polymers."
+    options:
+      - text: "Polypropylene"
+      - text: "ABS"
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy resin is a two-part thermoset: once it has set it can't be softened again."
+      - text: "Urea formaldehyde"
+        why_wrong: "Urea formaldehyde is a thermoset used for plugs and switches. It can't be remoulded."
+    answer: [0, 1]
+    explanation: "Polypropylene and ABS are thermoforming: they can be heated and shaped again and again, and recycled."
+
+  - id: polymers-003
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: cross-links
+    command: describe
+    see: "#differences-between-thermoforming-and-thermosetting"
+    text: "Why can't a thermosetting polymer be reheated and reshaped?"
+    options:
+      - text: "Permanent cross-links form between its molecule chains when it first sets"
+      - text: "It melts away completely when heated"
+        why_wrong: "Thermosets don't melt when reheated, which is why they suit hot surfaces. The cross-links stop them softening."
+      - text: "It is made from natural materials"
+        why_wrong: "Most thermosets are synthetic. Where a polymer comes from doesn't decide whether it can be reshaped."
+      - text: "It has no molecule chains"
+        why_wrong: "All polymers are made of long molecule chains. In a thermoset they're locked together by cross-links."
+    answer: 0
+    explanation: "When a thermoset first sets, a chemical change locks its chains together with permanent cross-links, so it can't soften again."
+
+  - id: polymers-004
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: cross-links
+    command: state
+    see: "#differences-between-thermoforming-and-thermosetting"
+    text: "What allows a thermoforming polymer to be reshaped many times?"
+    options:
+      - text: "It has no cross-links, so its chains slide past each other when heated"
+      - text: "It is thinner than a thermoset"
+        why_wrong: "Thickness doesn't matter. What matters is whether the molecule chains are cross-linked."
+      - text: "It contains metal"
+        why_wrong: "Polymers aren't metals. They can be reshaped because their chains aren't cross-linked."
+      - text: "It is self-finishing"
+        why_wrong: "Self-finishing is about the surface left by a mould, not whether a polymer can be reshaped."
+    answer: 0
+    explanation: "Thermoforming polymers have no cross-links, so heat lets their chains slide past each other and the material can be reshaped and recycled."
+
+  - id: polymers-005
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: recyclability
+    command: state
+    see: "#differences-between-thermoforming-and-thermosetting"
+    text: "Which statement about recycling polymers is correct?"
+    options:
+      - text: "Thermoforming polymers can be recycled; thermosetting polymers cannot"
+      - text: "Both types can be melted down and recycled"
+        why_wrong: "Thermosets can't be remoulded once set, so they can't be melted down and recycled."
+      - text: "Neither type can be recycled"
+        why_wrong: "Thermoforming polymers can be heated and reshaped, so they can be recycled."
+      - text: "Thermosetting polymers can be recycled; thermoforming polymers cannot"
+        why_wrong: "That's the wrong way round. It's thermoforming polymers that can be reheated and recycled."
+    answer: 0
+    explanation: "Because thermoforming polymers can be reheated and reshaped, they can be recycled. Thermosets are formed once."
+
+  - id: polymers-006
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: casing-material
+    command: compare
+    scenario: games-console
+    see: "#thermoforming-polymers"
+    text: "Which polymer is the best choice for the console's casing?"
+    options:
+      - text: "ABS"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is easy to scratch and can be brittle, so a dropped console could crack."
+      - text: "LDPE"
+        why_wrong: "LDPE is flexible, which suits carrier bags and squeezy bottles, not a rigid casing."
+      - text: "Expanded polystyrene"
+        why_wrong: "Expanded polystyrene is a lightweight foam for packaging and insulation, far too weak for a casing."
+    answer: 0
+    reason:
+      text: "Why is it the best choice?"
+      options:
+        - text: "It is strong, tough and impact resistant"
+        - text: "It is transparent"
+          why_wrong: "ABS isn't chosen for being clear. Polycarbonate is the tough transparent polymer."
+        - text: "It is self-lubricating"
+          why_wrong: "Self-lubricating describes nylon, used for gears and bearings."
+        - text: "It is a thermoset, so it can't melt"
+          why_wrong: "ABS is a thermoforming polymer. It's chosen because it's tough and impact resistant."
+      answer: 0
+    explanation: "ABS is strong, tough and impact resistant, so it's used for electronics casings, helmets and LEGO: things that get knocked and dropped."
+
+  - id: polymers-007
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: screen-cover-material
+    command: identify
+    scenario: games-console
+    see: "#thermoforming-polymers"
+    text: "Which polymer is the best choice for the clear screen cover?"
+    options:
+      - text: "Polycarbonate"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is clear but easy to scratch and can be brittle. Polycarbonate is far tougher."
+      - text: "Polystyrene"
+        why_wrong: "Polystyrene is inexpensive and can be clear, but it isn't tough enough to protect a screen."
+      - text: "PVC"
+        why_wrong: "PVC is used for window frames, guttering and cladding. It isn't chosen for clarity and toughness."
+    answer: 0
+    explanation: "Polycarbonate is transparent and extremely tough and impact resistant, far tougher than acrylic, so it protects the screen."
+
+  - id: polymers-008
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: plug-material
+    command: identify
+    scenario: games-console
+    see: "#thermosetting-polymers"
+    text: "Which polymer is the best choice for the charger's mains plug?"
+    options:
+      - text: "Urea formaldehyde"
+      - text: "Nylon"
+        why_wrong: "Nylon is tough and self-lubricating, so it suits gears and bearings rather than electrical fittings."
+      - text: "Polypropylene"
+        why_wrong: "Polypropylene is used for chairs, toys and food film. Plugs need a hard, heat-resistant electrical insulator."
+      - text: "Acrylic"
+        why_wrong: "Acrylic is brittle and used for signs and headlights, not electrical fittings."
+    answer: 0
+    explanation: "Urea formaldehyde is a hard, stiff thermoset and an excellent electrical insulator, which is why it's used for plugs and switches."
+
+  - id: polymers-009
+    type: two_tier
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: vacuum-forming-material
+    command: explain
+    scenario: desk-tidy
+    see: "#thermoforming-polymers"
+    text: "Which polymer should the students use to vacuum form the tray?"
+    options:
+      - text: "Polystyrene"
+      - text: "Melamine formaldehyde"
+        why_wrong: "Melamine formaldehyde is a thermoset, so it can't be heated and formed over a mould."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy resin is a two-part thermoset, used as an adhesive or for casting, not supplied as sheet for forming."
+      - text: "Nylon"
+        why_wrong: "Nylon is used for gears and bearings. Polystyrene is the inexpensive sheet schools vacuum form."
+    answer: 0
+    reason:
+      text: "Why can it be vacuum formed?"
+      options:
+        - text: "It is thermoforming, so it softens when heated and can be shaped over a mould"
+        - text: "It is a thermoset, so it keeps its shape when heated"
+          why_wrong: "Thermosets can't be softened by heat at all, so they can't be vacuum formed."
+        - text: "It is self-lubricating"
+          why_wrong: "Self-lubricating describes nylon. Vacuum forming needs a polymer that softens with heat."
+        - text: "It is an excellent electrical insulator"
+          why_wrong: "Being an insulator doesn't help with forming. The polymer has to soften when heated."
+      answer: 0
+    explanation: "Polystyrene is an inexpensive thermoforming polymer: heated sheet softens and is sucked down over a mould. That's why schools vacuum form it."
+
+  - id: polymers-010
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: finishing-cut-edges
+    command: state
+    scenario: desk-tidy
+    see: "#finishing-of-polymers"
+    text: "The acrylic sides have been cut from a sheet with a saw. Why will the edges need finishing?"
+    options:
+      - text: "Edges cut from stock are rough"
+      - text: "They won't: acrylic is self-finishing"
+        why_wrong: "Only parts formed in a mould are self-finishing. Acrylic cut from a sheet has rough edges."
+      - text: "Acrylic rusts at the cut edges"
+        why_wrong: "Polymers don't rust. The edges just need smoothing after cutting."
+      - text: "Finishing the edges makes the acrylic recyclable"
+        why_wrong: "Acrylic is thermoforming and recyclable anyway. The edges are finished because they're rough."
+    answer: 0
+    explanation: "When a polymer is cut from stock, such as a sheet of acrylic, the cut edges are rough and need finishing. Moulded parts usually don't."
+
+  - id: polymers-011
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: self-finishing
+    command: state
+    see: "#finishing-of-polymers"
+    text: "What does 'self-finishing' mean for a moulded polymer product?"
+    options:
+      - text: "The surface of the mould gives the finish, so no further treatment is needed"
+      - text: "The polymer slowly hardens into a finish over time"
+        why_wrong: "Self-finishing isn't a slow change. The mould's surface gives the finish straight away."
+      - text: "The product must be painted after moulding"
+        why_wrong: "That's the opposite. A self-finishing product needs no further treatment."
+      - text: "The product can be recycled"
+        why_wrong: "Recyclability depends on whether it's thermoforming, not on how it's finished."
+    answer: 0
+    explanation: "A product formed in a mould takes the mould's surface, smooth, textured or glossy, so it needs no further finishing."
+
+  - id: polymers-012
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: polymer-sources
+    command: state
+    see: "#sources-of-polymers"
+    text: "What are synthetic polymers made from?"
+    options:
+      - text: "Crude oil"
+      - text: "Silk and wool"
+        why_wrong: "Silk and wool are sources of natural polymers, not synthetic ones."
+      - text: "Cellulose from plants"
+        why_wrong: "Cellulose is a natural polymer source. Synthetic polymers come from crude oil."
+      - text: "Metal ores"
+        why_wrong: "Metal ores are where metals come from, not polymers."
+    answer: 0
+    explanation: "Synthetic polymers are made from crude oil. Natural polymers come from materials such as silk, wool, cellulose and proteins."
+
+  - id: polymers-013
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: polypropylene-uses
+    command: identify
+    context: true
+    see: "#thermoforming-polymers"
+    text: "A patio chair must be lightweight, strong and tough. Which polymer is it most likely to be made from?"
+    options:
+      - text: "Polypropylene"
+      - text: "Acrylic"
+        why_wrong: "Acrylic is weather resistant but can be brittle and scratches easily, so a chair could crack."
+      - text: "Expanded polystyrene"
+        why_wrong: "Expanded polystyrene is a foam for packaging and insulation. It couldn't take a person's weight."
+      - text: "Epoxy resin"
+        why_wrong: "Epoxy resin is an adhesive and casting resin, not a material for moulding chairs."
+    answer: 0
+    explanation: "Polypropylene is lightweight, strong and tough, so it's used for patio chairs, toys and game cases."
+
+  - id: polymers-014
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: polymer-forms
+    command: identify
+    context: true
+    see: "#availability-of-polymers"
+    text: "In injection moulding, polymer is melted and forced into a mould. In what form is it usually supplied?"
+    options:
+      - text: "Pellets or granules"
+      - text: "Sheets"
+        why_wrong: "Sheets are a stock form for cutting, or for vacuum forming. Melting into a mould starts with pellets or granules."
+      - text: "Foams"
+        why_wrong: "Foams are blown, not melted into a mould."
+      - text: "Films"
+        why_wrong: "Films are blown or rolled, such as cling film."
+    answer: 0
+    explanation: "Pellets, granules and powder are melted and formed into shapes; sheets, rods and bars are stock forms."
+
+  - id: polymers-015
+    type: exam_skill
+    format: best_answer
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: plug-explain-technique
+    command: explain
+    scenario: games-console
+    see: "#thermosetting-polymers"
+    exam_question:
+      text: "Explain why urea formaldehyde is a suitable material for the charger's plug."
+      marks: 2
+    text: "Which answer would get full marks?"
+    options:
+      - text: "It is a plastic so it is safe to use."
+        marks_awarded: 0
+        why_wrong: "'Safe' is vague and no property is given. Not every plastic would be suitable."
+      - text: "It is an excellent electrical insulator."
+        marks_awarded: 1
+        why_wrong: "A relevant property earns 1 mark, but it isn't linked to the user, so the second mark is missed."
+      - text: "It is an excellent electrical insulator, so the user won't get an electric shock when they hold the plug."
+        marks_awarded: 2
+    answer: 2
+    explanation: "Full marks need the property and why it matters for the product. 'So the user won't get a shock' makes the link."
+
+  - id: polymers-016
+    type: exam_skill
+    format: missing_point
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: difference-technique
+    command: describe
+    see: "#differences-between-thermoforming-and-thermosetting"
+    exam_question:
+      text: "Describe one difference between thermoforming and thermosetting polymers."
+      marks: 2
+    sample_answer: "Thermoforming polymers can be reheated and reshaped."
+    text: "This answer gets 1 mark. Which point would earn the missing mark?"
+    options:
+      - text: "Adding that thermosetting polymers can't be reheated or reshaped once they've set"
+      - text: "Adding that thermoforming polymers are used for car headlights"
+        why_wrong: "An example use doesn't describe a difference between the two types."
+      - text: "Adding that both are polymers made of long molecule chains"
+        why_wrong: "That's a similarity, not a difference."
+      - text: "Adding that thermosetting polymers are hard"
+        why_wrong: "Some thermoforming polymers are hard too, so this isn't a clear difference."
+    answer: 0
+    explanation: "A difference needs both sides. Saying what thermosets do, compared with thermoforming polymers, completes it."
+
+  - id: polymers-017
+    type: exam_skill
+    format: command_word
+    status: draft
+    spec_point: "2.1.2 polymers"
+    concept: compare-technique
+    command: compare
+    context: true
+    see: "#thermoforming-polymers"
+    exam_question:
+      text: "Compare acrylic and polycarbonate as materials for a pair of safety glasses."
+      marks: 2
+    text: "Which of these answers actually compares the two materials?"
+    options:
+      - text: "Acrylic is hard and transparent."
+        why_wrong: "This only describes one material, so nothing is compared."
+      - text: "Polycarbonate is used for riot shields and roof sheeting."
+        why_wrong: "This gives uses of one material, not a comparison."
+      - text: "Both are transparent, but polycarbonate is far tougher and more impact resistant, so it's safer for safety glasses."
+      - text: "Polycarbonate is extremely tough."
+        why_wrong: "This describes polycarbonate alone. A comparison needs both materials."
+    answer: 2
+    explanation: "Compare means say how the two are alike or different. Words like 'both', 'but' and 'tougher than' show a comparison."
