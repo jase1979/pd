@@ -75,5 +75,5 @@ Making a prototype involves more costs than just materials:
 
 New materials are constantly being developed. For example:
 
-- **3D printing PLA** — inexpensive, biodegradable, sourced from nature, melts at 210°C, available in many colours and finishes
+- **3D printing PLA (polylactic acid)** — inexpensive, made from plant starch (e.g. corn or sugar cane) rather than oil, and compostable in industrial composting facilities. It is printed at around 190–220°C and is available in many colours and finishes.
 - New **biodegradable and compostable polymers** are being developed as alternatives to oil-based plastics
