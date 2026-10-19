@@ -66,3 +66,5 @@ Materials that **change shape when heated** and return to their original shape.
 ### Polymorph
 
 A polymer that becomes **malleable at 62°C**. Can be moulded by hand when warm, sets rigid when cooled, and can be reheated and reshaped repeatedly.
+
+**See also:** [Modern & Smart Materials (2.1.1 Core Knowledge)](/gcse/unit1/modern-smart-materials/)

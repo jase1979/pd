@@ -74,3 +74,5 @@ Smart fibres are fibres or fabrics that incorporate smart material properties.
 - **Thermochromic dyes** in fabric change the colour of clothing with temperature — used in fashion and sportswear.
 - **Photochromic dyes** in fabric change colour in UV light.
 - **Shape memory fibres** can be woven into garments that change shape or tighten in response to temperature or moisture.
+
+**See also:** [Modern & Smart Materials (2.1.2 In-depth Knowledge)](/gcse/unit2/smart-materials/)
