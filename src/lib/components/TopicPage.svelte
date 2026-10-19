@@ -10,6 +10,7 @@
 		unit_name: string;
 		unit_url: string;
 		html: string;
+		subtopics?: string[];
 	}
 	interface NavLink {
 		url: string;
@@ -78,6 +79,14 @@
 	</div>
 
 	{#if topic.html.trim() === ''}
+		{#if topic.subtopics?.length}
+			<nav class="section-nav">
+				<h2>Sections</h2>
+				<ol>
+					{#each topic.subtopics as item, i (i)}<li>{item}</li>{/each}
+				</ol>
+			</nav>
+		{/if}
 		<div class="content-placeholder">
 			<h2>Content Coming Soon</h2>
 			<p>Detailed revision notes for each section above will be added here.</p>

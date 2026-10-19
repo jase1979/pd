@@ -1,0 +1,112 @@
+[
+  {
+    "id": "gcse-unit2-metals-1",
+    "front": "Ferrous metals",
+    "back": "Metals that contain iron. They are magnetic and rust, so need a protective finish."
+  },
+  {
+    "id": "gcse-unit2-metals-2",
+    "front": "Non-ferrous metals",
+    "back": "Metals that do not contain iron. They are not magnetic and do not rust."
+  },
+  {
+    "id": "gcse-unit2-metals-3",
+    "front": "Mild steel",
+    "back": "Low carbon steel (0.15–0.35% carbon). Ductile, tough and easy to braze and weld, but corrodes easily — nuts and bolts, bicycle frames, car parts."
+  },
+  {
+    "id": "gcse-unit2-metals-4",
+    "front": "Medium carbon steel",
+    "back": "0.35–0.7% carbon. Stronger and harder than mild steel but less ductile; can be hardened and tempered — garden tools, springs, hammer heads."
+  },
+  {
+    "id": "gcse-unit2-metals-5",
+    "front": "High carbon steel",
+    "back": "Tool steel (0.7–1.4% carbon). Hard but brittle — tools, screwdrivers and chisels."
+  },
+  {
+    "id": "gcse-unit2-metals-6",
+    "front": "Effect of carbon content on steel",
+    "back": "More carbon makes steel harder but more brittle."
+  },
+  {
+    "id": "gcse-unit2-metals-7",
+    "front": "Cast iron",
+    "back": "Strong in compression but brittle if thin, with poor corrosion resistance — gates, manhole covers, vices."
+  },
+  {
+    "id": "gcse-unit2-metals-8",
+    "front": "Aluminium",
+    "back": "Lightweight, malleable, strong and a good conductor — drinks cans, cycle frames, saucepans. Melts at about 660°C."
+  },
+  {
+    "id": "gcse-unit2-metals-9",
+    "front": "Copper",
+    "back": "Very malleable, excellent conductor of heat and electricity, oxidises green — plumbing and electrical wiring."
+  },
+  {
+    "id": "gcse-unit2-metals-10",
+    "front": "Alloy",
+    "back": "A mixture of metals, or a metal with another element, to improve working properties or aesthetics."
+  },
+  {
+    "id": "gcse-unit2-metals-11",
+    "front": "Brass",
+    "back": "Copper + zinc. Golden, strong and ductile — taps, door fittings, hinges, musical instruments."
+  },
+  {
+    "id": "gcse-unit2-metals-12",
+    "front": "Bronze",
+    "back": "Copper + tin. Hard, corrosion resistant, low friction — bearings, monuments and nautical parts."
+  },
+  {
+    "id": "gcse-unit2-metals-13",
+    "front": "Stainless steel",
+    "back": "Iron + chromium + nickel. Hard, tough and resists stains and corrosion — sinks, cutlery, hospital equipment."
+  },
+  {
+    "id": "gcse-unit2-metals-14",
+    "front": "Pewter",
+    "back": "Mainly tin with small amounts of copper and antimony. Melts at about 170–230°C, so ideal for casting in school."
+  },
+  {
+    "id": "gcse-unit2-metals-15",
+    "front": "Why is pewter cast in MDF moulds?",
+    "back": "MDF resists the heat, is easy to cut and has no grain."
+  },
+  {
+    "id": "gcse-unit2-metals-16",
+    "front": "Casting pewter — hazards",
+    "back": "Burns from molten metal (gloves, leather apron, face shield); moisture making metal spit (keep everything dry); fumes (ventilation); spills (pour over a sand tray)."
+  },
+  {
+    "id": "gcse-unit2-metals-17",
+    "front": "Hardness",
+    "back": "A metal's ability to withstand friction and abrasion."
+  },
+  {
+    "id": "gcse-unit2-metals-18",
+    "front": "Toughness",
+    "back": "How well a metal resists fracturing when a force is applied."
+  },
+  {
+    "id": "gcse-unit2-metals-19",
+    "front": "Elasticity",
+    "back": "The ability to bend or stretch under a force and return to the original shape when the force is removed."
+  },
+  {
+    "id": "gcse-unit2-metals-20",
+    "front": "Plasticity",
+    "back": "The ability to be permanently changed in shape without cracking, keeping the new shape once the force is removed."
+  },
+  {
+    "id": "gcse-unit2-metals-21",
+    "front": "Ductility",
+    "back": "The ability to be drawn or deformed without fracture."
+  },
+  {
+    "id": "gcse-unit2-metals-22",
+    "front": "Malleability",
+    "back": "The ability to be bent or shaped easily."
+  }
+]

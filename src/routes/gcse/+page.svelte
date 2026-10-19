@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { pageTitle } from '$lib/site';
+	import LevelUnits from '$lib/components/LevelUnits.svelte';
 
 	let { data } = $props();
 </script>
@@ -17,18 +18,7 @@
 <div class="level-header">
 	<h1>{data.level.display} Product Design</h1>
 	<p>{data.level.subtitle}</p>
+	<p>Unit 1 is the written exam (2.1.1 and 2.1.2 below). Unit 2 is the NEA (design and make task).</p>
 </div>
 
-<div class="units-grid">
-	{#each data.units as unit (unit.url)}
-		<div class="unit-card">
-			<h2><a href={unit.url}>{unit.label}</a></h2>
-			<p class="unit-desc">{unit.description}</p>
-			<ul class="topic-list">
-				{#each unit.topics as topic, i (topic.url)}
-					<li><a href={topic.url}>{i + 1}. {topic.title}</a></li>
-				{/each}
-			</ul>
-		</div>
-	{/each}
-</div>
+<LevelUnits units={data.units} />

@@ -11,7 +11,7 @@ export const load = () => {
 		return x < y ? -1 : x > y ? 1 : 0;
 	});
 
-	const sections: { letter: string; entries: { term: string; slug: string; level: string; source: string; definitionHtml: string }[] }[] = [];
+	const sections: { letter: string; entries: { term: string; slug: string; level: string; level_id?: string; source: string; definitionHtml: string }[] }[] = [];
 	for (const entry of sorted) {
 		const letter = entry.term.slice(0, 1).toUpperCase();
 		if (sections.at(-1)?.letter !== letter) sections.push({ letter, entries: [] });
@@ -19,6 +19,7 @@ export const load = () => {
 			term: entry.term,
 			slug: glossarySlug(entry.term),
 			level: entry.level,
+			...(entry.level_id && { level_id: entry.level_id }),
 			source: entry.source,
 			definitionHtml: renderMarkdown(entry.definition).html.replace(/<\/?p>/g, '').trim()
 		});

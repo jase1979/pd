@@ -15,6 +15,8 @@ Papers and boards are made from **wood pulp** which originates from trees. Wood 
 - Paper comes in standard sizes — **A0** is the largest, down to **A10** (postal stamp size). In schools, A4 and A3 are most common
 - Board thickness is measured in **microns** (1 micron = 1/1000th of a mm)
 
+As a rule of thumb, paper and card above about **200 gsm** is classed as **board**.
+
 ## Types of paper
 
 | Paper | GSM | Properties | Uses |
@@ -23,6 +25,7 @@ Papers and boards are made from **wood pulp** which originates from trees. Wood 
 | Layout paper | 50 gsm | Smooth, translucent, cheap | Designing, sketching, developing ideas |
 | Copier paper | 80 gsm | Smooth, opaque, clean white, uncoated | Printing, photocopying |
 | Cartridge paper | 80–140 gsm | Thick, textured, creamy off-white | Paints, watercolours, pastels, inks |
+| Bleed proof paper | 70–100 gsm | Smooth, coated so marker ink does not spread ("bleed") | Marker pen renderings, design work |
 
 ## Types of board
 
@@ -31,6 +34,13 @@ Papers and boards are made from **wood pulp** which originates from trees. Wood 
 | Corrugated cardboard | ~3000 microns | Strong, lightweight, wavy fluted layers, recyclable, not water-resistant | Packaging |
 | Mounting board | ~1400 microns | Rigid, smooth surface, black/white | Framing, architectural modelling |
 | Folding boxboard | 300–1699 microns | Stiff, scores and folds well without splitting | Supermarket food packaging |
+| Solid white board | ~300–1000 microns | Bleached all the way through, high-quality white surface, prints very well | Premium packaging, e.g. cosmetics and perfume |
+| Duplex board | ~300–600 microns | White coated top layer, grey (often recycled) back; cheaper | Food packaging, e.g. cereal boxes |
+| Foam board | 3–10 mm | Polystyrene foam core between card faces; very light and rigid | Architectural and display models, mounting work |
+
+Corrugated card comes with different **cores**: single-wall (one fluted layer), double-wall and triple-wall, getting stronger as layers are added.
+
+Foam board is also covered as a modern material — see [Modelling foam board](/gcse/unit2/smart-materials/#modelling-foam-board).
 
 ## Laminating papers, cards and boards
 

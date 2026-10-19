@@ -1,0 +1,62 @@
+[
+  {
+    "id": "gcse-unit2-smart-materials-1",
+    "front": "Modern materials",
+    "back": "Materials developed to have specific properties that improve on existing materials."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-2",
+    "front": "Smart materials",
+    "back": "Materials that react to an external stimulus such as temperature, light or pressure."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-3",
+    "front": "Carbon fibre",
+    "back": "Very stiff, high tensile strength and lightweight; usually used in a composite — racing bikes, F1 cars, aerospace."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-4",
+    "front": "Kevlar",
+    "back": "A strong, heat-resistant synthetic fibre, about five times stronger than steel for its weight — protective vests."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-5",
+    "front": "GRP (glass reinforced polymer)",
+    "back": "Glass fibres in a polymer resin, giving high compressive and tensile strength — boats, car body panels, water slides."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-6",
+    "front": "Styrofoam",
+    "back": "Trade name for extruded polystyrene foam (blue modelling foam) — easy to cut and shape. Not the same as white expanded polystyrene."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-7",
+    "front": "Modelling foam board",
+    "back": "A dense foam layer between two thin card faces — used for mounting and architectural models; can be laser cut."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-8",
+    "front": "QTC (quantum tunnelling composite)",
+    "back": "A rubbery material that is an electrical insulator normally but becomes a conductor when compressed — used as switches."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-9",
+    "front": "Photochromic materials",
+    "back": "Change colour in UV light — self-darkening spectacles and glazing on tall buildings."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-10",
+    "front": "Thermochromic materials",
+    "back": "Change colour with temperature — baby spoons, bottles and bath toys."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-11",
+    "front": "Shape memory alloy (Nitinol)",
+    "back": "Nickel-titanium alloy that returns to its original shape when heated — spectacle frames and dental braces."
+  },
+  {
+    "id": "gcse-unit2-smart-materials-12",
+    "front": "Polymorph",
+    "back": "A polymer that becomes malleable at 62°C, can be shaped by hand and reheated many times."
+  }
+]

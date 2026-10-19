@@ -23,14 +23,7 @@ Designers need to build this kind of thinking into products.
 
 ## Life Cycle Analysis (LCA)
 
-**Life Cycle Analysis** considers a product's impact at every stage of its existence. Before purchasing a product, think about its LCA:
-
-- The **source of materials** for the product or component
-- The **energy used and pollution caused** when manufacturing
-- The **energy used and pollution caused** during a product's useful life
-- The **disposal** of the product at the end of its useful life
-
-Designers and consumers consider these factors before purchasing a product. These factors can often influence purchasing decisions.
+**Life Cycle Analysis** considers a product's environmental impact at every stage, from the source of its materials through manufacture and use to disposal. See [Critical Evaluation of Technologies](/gcse/unit1/critical-evaluation/#life-cycle-analysis-lca).
 
 ## Ecological footprint
 
@@ -42,26 +35,15 @@ The **footprint of a product** is a measurement of the environmental impact from
 
 ## The Six Rs of Sustainability
 
-Designers can improve products by using the Six Rs:
-
-| R | Meaning |
-|---|---|
-| **Reduce** | Use fewer materials and less energy in manufacture and use |
-| **Reuse** | Design products or components to be used again |
-| **Recycle** | Use materials that can be recycled at end of life |
-| **Repair** | Design products to be easy to service, maintain and fix |
-| **Rethink** | Question whether the product is necessary or could be improved |
-| **Refuse** | Decline to use harmful materials or unsustainable processes |
-
-Better build quality can improve a product's performance during its expected life.
+Designers can improve products by using the Six Rs — **Reduce, Reuse, Recycle, Repair, Rethink and Refuse**. See [Critical Evaluation of Technologies](/gcse/unit1/critical-evaluation/#the-six-rs).
 
 ### Planned obsolescence
 
-**Planned obsolescence** is producing a product that is intended to last for a specific time span. This allows newer products to be introduced to succeed previous versions.
+**Planned obsolescence** is designing a product to last only for a set time, so that newer versions can replace it. See [Critical Evaluation of Technologies](/gcse/unit1/critical-evaluation/#planned-obsolescence).
 
 ### Cradle to cradle
 
-**'Cradle to cradle'** is a concept of taking a product from start to finish and putting it to good use at the end of its life to create a new product.
+**'Cradle to cradle'** means designing a product so that, at the end of its life, its materials are put to good use in a new product. See [Critical Evaluation of Technologies](/gcse/unit1/critical-evaluation/#cradle-to-cradle).
 
 ## Recycling
 

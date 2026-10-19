@@ -10,11 +10,13 @@ time.
 ## Project layout
 
 ```
-content/gcse/**/index.md      the revision notes, one Markdown file per topic;
+content/gcse/**/index.md      the revision notes, one Markdown file per topic
+content/gcse-2026/**          (and the 2026 specification's);
                               content/gcse/unit2/timber/index.md is served at
                               /gcse/unit2/timber/
 src/lib/data/                 nav.yml (units and topic order), levels.yml,
-                              glossary.yml, past_papers.json
+                              glossary.yml, past_papers.json, and
+                              flashcards/<topic-url>.json (one deck per topic)
 src/lib/styles/               the site's SCSS, one partial per section
 src/lib/server/markdown.ts    Markdown → HTML for the notes (heading ids,
                               key-term boxes, glossary tooltips)

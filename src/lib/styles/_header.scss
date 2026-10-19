@@ -21,14 +21,17 @@
   }
 
   nav a {
-    margin-left: 1.5rem;
+    margin-left: 0.6rem;
     font-size: 0.9rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
     border-radius: 6px;
     transition: background 0.2s;
 
     &:hover { background: var(--surface-hover); }
+    &.dt2026  { color: var(--dt2026); }
     &.gcse    { color: var(--gcse); }
+    &.flashcards { color: var(--gcse); }
     &.glossary { color: var(--accent); }
   }
 }
@@ -51,8 +54,8 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    margin-left: 1.5rem;
-    padding-left: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
     border-left: 1px solid var(--border);
     font-size: 0.85rem;
     min-width: 4.5rem;

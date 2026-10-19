@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gcse-unit2-specialist-techniques-1",
+    "front": "Wastage",
+    "back": "Cutting and removing material from stock form — material is lost."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-2",
+    "front": "Additive processes",
+    "back": "Building up a shape by adding material, e.g. 3D printing, with very little waste."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-3",
+    "front": "Scriber",
+    "back": "Scratches a fine, accurate line on metal."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-4",
+    "front": "Odd-leg callipers",
+    "back": "Mark lines parallel to an edge."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-5",
+    "front": "Centre punch",
+    "back": "Makes a small dent to locate a drill bit at the centre of a hole."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-6",
+    "front": "Datum edge",
+    "back": "A straight, true reference edge that all marking out is measured from."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-7",
+    "front": "Pilot hole vs clearance hole",
+    "back": "Pilot hole: small hole to guide a screw and stop splitting. Clearance hole: large enough for the screw to pass through without the thread gripping."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-8",
+    "front": "Countersunk hole",
+    "back": "A hole flared at the top so a screw head sits flush with the surface."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-9",
+    "front": "Permanent ways of joining metal",
+    "back": "Welding, brazing, soldering, riveting and epoxy resin adhesives."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-10",
+    "front": "Temporary ways of joining metal",
+    "back": "Nuts, bolts and washers, machine screws, self-tapping screws, hinges and catches."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-11",
+    "front": "Brazing",
+    "back": "Joining with a brass spelter at bright red heat, using flux, without melting the parent metal; the filler flows in by capillary action."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-12",
+    "front": "Pop riveting",
+    "back": "Drill a clearance hole, insert the rivet, squeeze the rivet gun to pull the mandrel until it snaps. Useful when only one side of the joint can be reached."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-13",
+    "front": "Lathe vs milling machine",
+    "back": "A lathe turns metal to make round parts; a milling machine cuts slots and faces off edges."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-14",
+    "front": "Knock-down (KD) fittings",
+    "back": "Temporary fittings such as cam locks, corner blocks and scan fittings, used in flat-pack furniture."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-15",
+    "front": "Dovetail joint",
+    "back": "A very strong box joint where flared 'fingers' fit into matching shapes cut in the other piece."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-16",
+    "front": "Mortise and tenon",
+    "back": "A very strong frame joint where a square tenon is glued into a square mortise."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-17",
+    "front": "Veneering",
+    "back": "Gluing a thin slice of attractive timber onto a cheaper, stable base such as MDF."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-18",
+    "front": "Laminating (wood)",
+    "back": "Gluing thin strips with the grain the same way and clamping them around a former until set, giving a strong curve."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-19",
+    "front": "Steam bending",
+    "back": "Heating solid timber in a steam box, bending it around a former and clamping until dry."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-20",
+    "front": "Line bending",
+    "back": "Heating a narrow line across thermoforming sheet on a strip heater, bending it and holding it in a jig until cool."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-21",
+    "front": "Solvent cement (Tensol)",
+    "back": "Dissolves the surfaces of acrylic so they fuse as the solvent evaporates."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-22",
+    "front": "3D printing (FDM)",
+    "back": "A CAD model is sliced into layers and filament (PLA, ABS) is melted through a nozzle layer by layer. Good for prototypes; slow with visible layer lines."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-23",
+    "front": "Embossing and debossing",
+    "back": "Pressing a shape into card so it is raised (embossed) or sunken (debossed)."
+  },
+  {
+    "id": "gcse-unit2-specialist-techniques-24",
+    "front": "Cropping",
+    "back": "Trimming printed sheets to final size along the crop marks, removing the bleed."
+  }
+]

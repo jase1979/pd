@@ -51,7 +51,7 @@
 					<div class="glossary-entry" id="term-{entry.slug}" style:display={matches(entry) ? null : 'none'}>
 						<div class="glossary-term-row">
 							<strong class="glossary-term-name">{entry.term}</strong>
-							<span class="glossary-badge glossary-badge--{entry.level.toLowerCase()}">{entry.level}</span>
+							<span class="glossary-badge glossary-badge--{entry.level_id ?? entry.level.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">{entry.level}</span>
 						</div>
 						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						<p class="glossary-definition">{@html entry.definitionHtml}</p>

@@ -123,13 +123,34 @@ function keyTermExtension(glossary: GlossaryDefs): TokenizerAndRendererExtension
 	};
 }
 
+/**
+ * Any other <div class="..." markdown="1"> box, e.g. an exam tip: its
+ * contents are rendered as Markdown, as kramdown did. (Key terms have their
+ * own extension above, because of the glossary link.)
+ */
+const markdownBoxExtension: TokenizerAndRendererExtension = {
+	name: 'markdownBox',
+	level: 'block',
+	start(src) {
+		return src.match(/^<div class="(?!key-term")[\w -]+" markdown="1">/m)?.index;
+	},
+	tokenizer(src) {
+		const match = /^<div class="((?!key-term")[\w -]+)" markdown="1">\n([\s\S]*?)\n<\/div>[^\S\n]*(?:\n+|$)/.exec(src);
+		if (!match) return undefined;
+		return { type: 'markdownBox', raw: match[0], className: match[1], tokens: this.lexer.blockTokens(match[2].trim(), []) };
+	},
+	renderer(token) {
+		return `<div class="${escapeAttr(token.className)}">\n${this.parser.parse(token.tokens ?? [])}</div>\n`;
+	}
+};
+
 export function renderMarkdown(source: string, glossary: GlossaryDefs = new Map()): Rendered {
 	const headings: Heading[] = [];
 	const used = new Map<string, number>();
 
 	const marked = new Marked({ gfm: true });
 	marked.use({
-		extensions: [keyTermExtension(glossary)],
+		extensions: [keyTermExtension(glossary), markdownBoxExtension],
 		walkTokens(token) {
 			// Only plain text, not code or text already escaped by a backslash.
 			if (token.type === 'text' && !('tokens' in token && token.tokens)) {

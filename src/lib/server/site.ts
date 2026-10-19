@@ -37,6 +37,8 @@ export interface GlossaryEntry {
 	term: string;
 	definition: string;
 	level: string;
+	/** Which level's badge colour to use, e.g. dt2026 (defaults to the level's name). */
+	level_id?: string;
 	source: string;
 }
 
@@ -71,6 +73,8 @@ export interface TopicPage {
 	unit_url: string;
 	html: string;
 	headings: Heading[];
+	/** For a page with no notes yet: the sections it will cover. */
+	subtopics: string[];
 }
 
 export const levels = yaml.load(levelsYml) as Level[];
@@ -95,10 +99,16 @@ const files = import.meta.glob('/content/**/index.md', {
 }) as Record<string, string>;
 
 export const topicPages = new Map<string, TopicPage>();
+/** Intro text shown under a unit's topic cards (a content file with layout: unit). */
+export const unitIntros = new Map<string, string>();
 for (const [path, raw] of Object.entries(files)) {
 	const url = path.replace(/^\/content/, '').replace(/index\.md$/, '');
 	const { data, body } = parseFrontMatter(raw);
 	const { html, headings } = renderMarkdown(body, glossaryDefs);
+	if (data.layout === 'unit') {
+		unitIntros.set(url, html);
+		continue;
+	}
 	topicPages.set(url, {
 		url,
 		title: String(data.title ?? ''),
@@ -107,9 +117,17 @@ for (const [path, raw] of Object.entries(files)) {
 		unit_name: String(data.unit_name ?? ''),
 		unit_url: String(data.unit_url ?? ''),
 		html,
-		headings
+		headings,
+		subtopics: Array.isArray(data.subtopics) ? data.subtopics.map(String) : []
 	});
 }
 
-/** Every topic in nav order, for the previous / next links. */
-export const allTopics: NavTopic[] = units.flatMap((u) => u.topics);
+/**
+ * The topics around this one, in nav order, for the previous / next links.
+ * Only this topic's level, so the links never cross from one specification
+ * to the other.
+ */
+export function levelTopics(url: string): NavTopic[] {
+	const level = units.find((u) => u.topics.some((t) => t.url === url))?.level;
+	return level ? units.filter((u) => u.level === level).flatMap((u) => u.topics) : [];
+}

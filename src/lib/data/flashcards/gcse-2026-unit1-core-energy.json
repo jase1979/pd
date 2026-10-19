@@ -1,0 +1,97 @@
+[
+  {
+    "id": "gcse-2026-unit1-core-energy-1",
+    "front": "Renewable energy",
+    "back": "Energy from a source naturally replaced as fast as it is used, so it will not run out."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-2",
+    "front": "Non-renewable energy",
+    "back": "Energy from a finite source that cannot be replaced within a human timescale."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-3",
+    "front": "Hydrogen fuel cells",
+    "back": "Hydrogen reacts with oxygen to produce electricity, with water as the only emission at the point of use."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-4",
+    "front": "Hydrogen fuel cells — disadvantages",
+    "back": "Most hydrogen is currently made from fossil fuels, it is hard to store and transport, and there are very few refuelling stations."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-5",
+    "front": "Nuclear power",
+    "back": "Not a fossil fuel and produces almost no CO₂ in operation, but the fuel is finite and radioactive waste stays dangerous for thousands of years."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-6",
+    "front": "Issues with fossil fuels",
+    "back": "Greenhouse gases, air pollution and acid rain, finite and unstable supply, extraction damage and political dependence on imports."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-7",
+    "front": "Wind — advantages and disadvantages",
+    "back": "No fuel cost or emissions, can be offshore, quick to build — but only works when windy, visually intrusive, noise and risk to birds."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-8",
+    "front": "Solar / PV — advantages and disadvantages",
+    "back": "Free energy once installed, little maintenance, any scale — but expensive to install, nothing at night, needs a large area for large output."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-9",
+    "front": "Geothermal — advantages and disadvantages",
+    "back": "Constant output day and night with a small footprint — but only viable in certain places, high drilling costs, can trigger minor tremors."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-10",
+    "front": "Wave and tidal — advantages and disadvantages",
+    "back": "Tides are entirely predictable with high energy density — but very high set-up cost, salt water corrosion and disturbed coastal habitats."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-11",
+    "front": "Why move manufacturing onto renewables?",
+    "back": "Lower running costs, protection from fuel price swings, lower product carbon footprint, and meeting legal and customer environmental targets."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-12",
+    "front": "Why is energy storage needed?",
+    "back": "Renewable sources produce power when conditions allow, not when it is needed."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-13",
+    "front": "Pumped storage",
+    "back": "Surplus electricity pumps water uphill; releasing it drives turbines when demand rises — used for national grid balancing."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-14",
+    "front": "Alkaline vs rechargeable batteries",
+    "back": "Alkaline: cheap but single use. Rechargeable (NiMH, lithium-ion): higher initial cost but used hundreds of times, so cheaper and greener overall."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-15",
+    "front": "Why lithium-ion dominates phones and electric cars",
+    "back": "It holds more energy for its weight."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-16",
+    "front": "Electric vehicles — pros and cons",
+    "back": "No emissions at point of use, cheap to run, few moving parts — but slower to recharge, limited range and resource-intensive batteries."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-17",
+    "front": "Hybrid vehicles",
+    "back": "A small engine plus battery and motor, recovering energy by regenerative braking — lower emissions without range anxiety, but more complex and heavier."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-18",
+    "front": "Mains vs battery vs solar in household products",
+    "back": "Mains: constant high power but tied to a socket. Battery: portable and low voltage but limited capacity. Solar: no wiring but depends on light, usually paired with a rechargeable cell."
+  },
+  {
+    "id": "gcse-2026-unit1-core-energy-19",
+    "front": "Kinetic charging",
+    "back": "Using the wearer's movement to keep a watch or wearable charged."
+  }
+]

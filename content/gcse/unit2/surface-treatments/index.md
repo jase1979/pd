@@ -25,6 +25,10 @@ Before applying any finish, the metal surface must be prepared — dust, grease 
 | Oil and wax finishing | Protective and enhancing finish |
 | Primer and paint | Colourful protective coating; primer applied first |
 | Electroplating | Depositing a thin layer of metal onto the surface (e.g. chrome plating) |
+| Plastic dip coating | Metal is heated (about 200°C), dipped into a fluidised bed of polythene powder that melts onto it, then returned to the oven to cure. Used on tool handles, dish racks and garden furniture for grip, comfort, colour and corrosion protection |
+| Hot blackening (black steel / oil finish) | Mild steel is heated and dipped in oil, leaving a thin black protective layer — an inexpensive finish for tools and small steel parts |
+
+Galvanising is used on steel; non-ferrous metals such as aluminium are often **anodised** instead.
 
 ## Surface treatment of timbers
 
@@ -38,6 +42,9 @@ Timber finishes are varied and include both functional and aesthetic application
 | Varnish | Shiny coat applied in layers for durability; glossy or matt |
 | Dip-treating | Protects surface; outdoor timber fences often use pressure-treated timber for longevity |
 | Preservative | Long-lasting protection, especially for outdoor wood |
+| Sealants | A sanding sealer seals the pores of the wood before varnish or polish, so fewer coats are needed |
+| Primer | Seals bare wood (especially MDF edges) so paint does not soak in, and helps the top coat stick |
+| Polishes | Wax polish or French polish gives a smooth, lustrous surface and enhances the grain |
 
 ## Self-finishing polymers
 
@@ -48,7 +55,9 @@ Timber finishes are varied and include both functional and aesthetic application
 - **Vacuum forming** allows a flat, glossy sheet to take the shape of the mould — the outcome duplicates the surface of the mould used
 - This means no additional finishing is required if the mould surface is smooth
 
-If a polymer has been cut from stock form (e.g. acrylic from a sheet), cut edges will be rough and need to be sanded or flame-polished.
+**Textured finishes** — textures such as grip patterns, leather-effect or matt surfaces can be built into the surface of a mould, so every injection-moulded or vacuum-formed product comes out already textured.
+
+If a polymer is cut from stock, the edges are finished by draw filing, wet-and-dry paper, polishing compound or **flame polishing** (acrylic).
 
 ## Finishing processes for papers, cards and boards
 
@@ -73,4 +82,5 @@ When binding a book or pamphlet, pages must be held securely so they don't fall 
 
 - **Hand stitching** — skilled and time-consuming; fixes pages together permanently
 - **Comb binding** — holes punched in pages; a plastic comb holds pages in order; common and less specialist
+- **Perfect binding** — page edges are glued into the spine of a card cover, as in paperback books and magazines
 - **Stapling** and **split pins** — other common binding methods

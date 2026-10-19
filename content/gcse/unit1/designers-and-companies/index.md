@@ -39,8 +39,8 @@ Welsh furniture designer Bethan Gray is known for using luxurious materials such
 
 Innovation and design are important factors in Apple's success. Designs are sleek, with consistent colours, shapes and materials that are easily recognisable. Aesthetics plays an important role in the company's design philosophy.
 
-- **Jonathon Ive** was the designer responsible for the styling of the first iPod and iMac.
-- Apple pioneered the use of **graphical user interfaces (GUIs)**. Apple computers were the first to use icons to represent files/folders and a cursor controlled by a mouse — still in use today.
+- **Jonathan (Jony) Ive** was the designer responsible for the styling of the first iPod and iMac.
+- Apple **popularised the graphical user interface (GUI)**. The idea was developed at Xerox PARC, but Apple's Lisa and Macintosh computers brought icons for files and folders, and a mouse-controlled cursor, to the mass market. This approach is still used today.
 - Apple are often criticised for developing products with **planned obsolescence** in mind and software updates that do not work on older devices.
 
 ### Shigeru Miyamoto
@@ -48,7 +48,7 @@ Innovation and design are important factors in Apple's success. Designs are slee
 Shigeru Miyamoto created some of the best-known video game characters including Donkey Kong and Mario and Luigi when working at Nintendo.
 
 - He created a better **user experience** by allowing greater control over characters in the games, for example in *The Legend of Zelda*.
-- He is responsible for developments in game controllers — **shoulder buttons** on the NES controller and the **thumb-operated joystick** on the N64.
+- He is responsible for developments in game controllers — **shoulder buttons** on the SNES (Super Nintendo) controller and the **thumb-operated joystick** on the N64.
 
 ## Fashion and textiles
 

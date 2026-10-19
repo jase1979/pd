@@ -1,0 +1,132 @@
+[
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-1",
+    "front": "Wastage",
+    "back": "Shaping a material by removing parts of it — cutting, drilling, sawing, filing or machining."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-2",
+    "front": "Addition",
+    "back": "Shaping or building a product by adding material or joining parts — 3D printing, welding, gluing, screwing."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-3",
+    "front": "Datum edge",
+    "back": "A straight reference edge that all measurements are marked out from."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-4",
+    "front": "Jig",
+    "back": "A device that holds the work and/or guides the tool so an operation can be repeated accurately without marking out each part."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-5",
+    "front": "Former",
+    "back": "A solid shape that material is bent, laminated or formed around so every part takes the same shape."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-6",
+    "front": "Why use jigs and formers?",
+    "back": "Faster production, fewer mistakes and less waste, and interchangeable parts — essential for batch production."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-7",
+    "front": "Pilot hole",
+    "back": "A small hole drilled first to guide a screw or larger drill and stop timber splitting."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-8",
+    "front": "Clearance hole",
+    "back": "A hole just larger than the screw or bolt so it passes through without its thread gripping, pulling the parts together."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-9",
+    "front": "Tapping hole",
+    "back": "A hole drilled to the right size for a thread to be cut inside it with a tap — e.g. 5 mm for an M6 thread."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-10",
+    "front": "Countersunk vs counterbored hole",
+    "back": "Countersunk: cone-shaped recess so a screw head sits flush. Counterbored: flat-bottomed recess so a bolt head sits below the surface."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-11",
+    "front": "Tap and die",
+    "back": "A tap cuts an internal thread in a hole (taper, second, then plug tap); a die cuts an external thread on a rod."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-12",
+    "front": "Deforming vs reforming",
+    "back": "Deforming changes shape without removing or adding material (bending, pressing). Reforming melts or softens it into a new shape (casting, moulding)."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-13",
+    "front": "Soldering",
+    "back": "Permanent joining of metals with a lower-melting filler metal — soft solder for electronics and plumbing, silver solder for jewellery. Flux keeps the joint clean."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-14",
+    "front": "Riveting",
+    "back": "Permanent fixing where the rivet is deformed to clamp parts. Pop rivets are fitted from one side with a rivet gun."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-15",
+    "front": "Lathe turning",
+    "back": "A wastage process where the work spins and a cutting tool removes material to make round parts — cylinders, tapers, grooves."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-16",
+    "front": "Mitre joint",
+    "back": "Both ends cut at 45° to form a neat 90° corner with no end grain showing — weak unless reinforced. Used for picture frames."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-17",
+    "front": "Dowel joint",
+    "back": "Round wooden pegs glued into matching holes in both parts — strong and hidden; a dowelling jig lines up the holes."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-18",
+    "front": "Butt vs lap joint",
+    "back": "Butt: one end glued against the other face — quick but weakest. Lap: one piece sits in a rebate — larger gluing area, so stronger."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-19",
+    "front": "Never laser cut this polymer",
+    "back": "PVC — it gives off toxic fumes."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-20",
+    "front": "Permanent ways to join plastics",
+    "back": "Solvent cement (e.g. Tensol for acrylic), epoxy resin and plastic welding."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-21",
+    "front": "Temporary ways to join plastics",
+    "back": "Nuts and bolts, self-tapping screws into moulded bosses, snap fits and clips, hinges and knock-down fittings."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-22",
+    "front": "PVA",
+    "back": "Adhesive for wood, boards, paper and card. Dries clear; joints must be clamped while it sets."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-23",
+    "front": "Contact adhesive",
+    "back": "Spread on both surfaces, left touch-dry, then pressed together — bonds instantly. For laminates, rubber, leather and fabric."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-24",
+    "front": "Epoxy resin adhesive",
+    "back": "Two-part (resin + hardener) adhesive that bonds almost anything, including different materials. Strong, waterproof, gap-filling but slow and expensive."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-25",
+    "front": "Industrial processes for metals",
+    "back": "Die casting, sand casting, press forming and stamping, extrusion and CNC machining."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-specialist-techniques-26",
+    "front": "Industrial processes for plastics",
+    "back": "Injection moulding, blow moulding, vacuum forming and extrusion."
+  }
+]

@@ -71,7 +71,13 @@
 
 	<div class="pp-header">
 		<h1>Past Paper Questions</h1>
-		<p>WJEC GCSE Design and Technology – Product Design (Unit 1: 3603U10-1)</p>
+		<p>Legacy specification — WJEC GCSE Design and Technology, Product Design (Unit 1: 3603U10-1)</p>
+		<p class="pp-note">
+			These papers are from the <a href="/gcse/">legacy specification</a>. The <a href="/gcse-2026/">2026 specification</a> has no
+			past papers yet — its first award is 2028, and its Unit 1 is a digital exam with a different question style. Much of the
+			material still overlaps, so these remain useful practice, but check the content against the new specification before relying
+			on a question.
+		</p>
 	</div>
 
 	<div class="pp-controls">

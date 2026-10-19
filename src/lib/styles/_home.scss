@@ -45,7 +45,8 @@
     border-radius: 4px;
     margin-bottom: 0.8rem;
 
-    &.gcse { background: rgba(78,205,196,0.15); color: var(--gcse); }
+    &.gcse   { background: rgba(78,205,196,0.15); color: var(--gcse); }
+    &.dt2026 { background: rgba(167,139,250,0.15); color: var(--dt2026); }
   }
 
   p { color: var(--text-muted); font-size: 0.9rem; }

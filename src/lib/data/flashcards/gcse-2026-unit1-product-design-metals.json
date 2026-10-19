@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gcse-2026-unit1-product-design-metals-1",
+    "front": "Ferrous metal",
+    "back": "A metal that contains iron. Most are magnetic and will rust unless they are protected."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-2",
+    "front": "Non-ferrous metal",
+    "back": "A metal that contains no iron. Not magnetic and does not rust, although many tarnish or oxidise."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-3",
+    "front": "Mild steel",
+    "back": "Iron with about 0.15–0.35% carbon. Tough, ductile, cheap and easy to weld and bend, but corrodes easily — car bodies, bicycle frames, nuts and bolts."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-4",
+    "front": "Stainless steel",
+    "back": "Iron + chromium + nickel. Shiny, hard, tough and hygienic, resisting rust and staining — cutlery, sinks, surgical instruments."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-5",
+    "front": "Why doesn't stainless steel rust?",
+    "back": "The chromium forms a thin, invisible oxide layer that re-forms if the surface is scratched."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-6",
+    "front": "High carbon steel",
+    "back": "Iron with about 0.7–1.4% carbon. Very hard and keeps a sharp edge but brittle; can be hardened and tempered — chisels, saw blades, springs."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-7",
+    "front": "Effect of adding carbon to steel",
+    "back": "Harder and stronger, but more brittle and less ductile."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-8",
+    "front": "Titanium",
+    "back": "Very high strength-to-weight ratio, excellent corrosion resistance and biocompatible, but expensive — aircraft parts, medical implants, watch cases."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-9",
+    "front": "Aluminium",
+    "back": "Light (low density), corrosion resistant, good conductor, malleable and easy to recycle — drinks cans, laptop casings, window frames."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-10",
+    "front": "Copper",
+    "back": "Reddish-orange, excellent conductor of heat and electricity, very ductile — electrical wiring, water pipes, PCBs."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-11",
+    "front": "Brass",
+    "back": "Copper + zinc. Bright gold, harder than copper, casts and machines well, low friction — door handles, taps, musical instruments."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-12",
+    "front": "Alloy",
+    "back": "A mixture of a metal with one or more other elements to improve its properties, e.g. brass, stainless steel."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-13",
+    "front": "Melting point",
+    "back": "The temperature at which a solid turns to a liquid. Aluminium melts at about 660°C; mild steel at about 1450°C."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-14",
+    "front": "Why is aluminium widely die-cast?",
+    "back": "Its low melting point makes it easier and cheaper to cast."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-15",
+    "front": "Thermal conductivity",
+    "back": "How well a material lets heat pass through it. Copper and aluminium are excellent; stainless steel is poor."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-16",
+    "front": "Electrical conductivity",
+    "back": "How well a material lets an electric current flow. Copper is the most widely used conductor; aluminium is used for overhead power cables."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-17",
+    "front": "Tensile strength",
+    "back": "The ability to resist being pulled apart without breaking — e.g. steel bridge cables."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-18",
+    "front": "Toughness",
+    "back": "The ability to absorb energy and withstand impact without breaking or cracking."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-19",
+    "front": "Density",
+    "back": "Mass per unit volume. Aluminium (about 2.7 g/cm³) is roughly a third as dense as steel (about 7.8 g/cm³)."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-20",
+    "front": "Plasticity",
+    "back": "The ability to be permanently changed in shape without cracking, keeping the new shape once the force is removed."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-21",
+    "front": "Malleability",
+    "back": "The ability to be hammered, pressed or rolled into shape without cracking — e.g. aluminium foil."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-22",
+    "front": "Hardness",
+    "back": "The ability to resist scratching, wear, cutting and indentation."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-23",
+    "front": "Hardness vs toughness",
+    "back": "High carbon steel is hard (resists scratching) but not tough (can shatter); mild steel is tough but not especially hard."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-metals-24",
+    "front": "Strength-to-weight ratio",
+    "back": "How strong a material is compared with how heavy it is. Titanium and aluminium are high, so they are used in aircraft."
+  }
+]

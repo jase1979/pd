@@ -60,3 +60,12 @@ describe('glossarySlug', () => {
 		expect(glossarySlug('Input/Output')).toBe('input-output');
 	});
 });
+
+describe('other markdown="1" boxes', () => {
+	it('renders the Markdown inside an exam tip', () => {
+		const { html } = renderMarkdown('<div class="exam-tip" markdown="1">\nAlways show your **working**.\n</div>\n');
+		expect(html).toContain('<div class="exam-tip">');
+		expect(html).toContain('<strong>working</strong>');
+		expect(html).not.toContain('markdown="1"');
+	});
+});
