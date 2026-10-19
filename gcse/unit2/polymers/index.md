@@ -17,7 +17,7 @@ unit_url: "/gcse/unit2/"
 **Thermosetting polymer (thermoset)** — materials that are formed once and cannot be reheated, remoulded or recycled.
 </div>
 
-The main difference: a thermosetting polymer **strengthens** when heated and cannot be remoulded. A thermoplastic can be reheated, remoulded and cooled repeatedly without a chemical change.
+The main difference: when a thermosetting polymer is first heated and set, a chemical change forms permanent **cross-links** between its molecule chains, so it cannot be softened or remoulded again. Thermoforming polymers have no cross-links, so their chains can slide past each other when heated, letting them be reshaped many times.
 
 ## Thermoforming polymers
 
@@ -38,7 +38,7 @@ The main difference: a thermosetting polymer **strengthens** when heated and can
 | Melamine formaldehyde | Excellent resistance to heat, moisture, scratching and staining | Kitchen worktops, tableware |
 | Epoxy resin | Two-part (resin + hardener), very strong adhesive, good chemical and heat resistance | Adhesive, casting, composites |
 | Urea formaldehyde | Hard, stiff, excellent electrical insulation | Switches, plugs, electrical fittings |
-| Polyester resin | Forms with reaction of acids and alcohol | Sheet moulding compound, laser printer toner |
+| Polyester resin | Hard, stiff, good chemical and weather resistance when set; two-part (resin + catalyst) | Glass reinforced polymer (GRP) boat hulls and car body panels, casting |
 
 ## Sources of polymers
 
