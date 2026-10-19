@@ -30,6 +30,9 @@ The main difference: when a thermosetting polymer is first heated and set, a che
 | Polystyrene (PS) | Inexpensive, available in opaque colours and transparent | Vacuum forming in schools, packaging |
 | Nylon | Tough, self-lubricating, resistant to wear | Gears, bearings, clothing |
 | ABS | Strong, tough, impact resistant | Casings for electronics, helmets, LEGO |
+| Polycarbonate (PC) | Transparent, extremely tough and impact resistant (far tougher than acrylic), good heat resistance; injection mouldable | Safety glasses, riot shields, roof sheeting, clear casings |
+| LDPE (Low density polythene) | Flexible, tough, good chemical resistance, low cost | Carrier bags, squeezy bottles, cling film, toys |
+| Expanded polystyrene (EPS) | Lightweight white beaded foam, excellent insulator, absorbs shock | Protective packaging, disposable cups, insulation |
 
 ## Thermosetting polymers
 
