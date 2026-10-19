@@ -29,3 +29,13 @@ footer {
 @media (max-width: 600px) {
   .container { padding: 1rem; }
 }
+
+// Read by screen readers but not shown on screen.
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { Heading } from '$lib/server/markdown';
+	import Quiz from './Quiz.svelte';
 
 	interface Topic {
 		title: string;
@@ -19,8 +20,15 @@
 		topic,
 		toc,
 		prev,
-		next
-	}: { topic: Topic; toc: Heading[]; prev: NavLink | null; next: NavLink | null } = $props();
+		next,
+		quizId = null
+	}: {
+		topic: Topic;
+		toc: Heading[];
+		prev: NavLink | null;
+		next: NavLink | null;
+		quizId?: string | null;
+	} = $props();
 
 	// With fewer than two sections the contents list isn't worth showing.
 	const showToc = $derived(toc.length >= 2);
@@ -111,6 +119,10 @@
 				{@html topic.html}
 			</div>
 		</div>
+	{/if}
+
+	{#if quizId}
+		<Quiz id={quizId} />
 	{/if}
 
 	<div class="nav-links">

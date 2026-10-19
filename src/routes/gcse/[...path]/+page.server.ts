@@ -4,6 +4,7 @@
 
 import { error } from '@sveltejs/kit';
 import { allTopics, levels, topicPages, units } from '$lib/server/site';
+import { quizIdForPage } from '$lib/server/quiz/bank';
 import type { EntryGenerator, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = ({ url }) => {
@@ -20,6 +21,9 @@ export const load: PageServerLoad = ({ url }) => {
 	return {
 		kind: 'topic' as const,
 		topic,
+		// Whether the quiz is actually shown is decided in the browser, by asking
+		// the API: it depends on ENVIRONMENT, which a prerendered page can't know.
+		quizId: quizIdForPage(topic.url),
 		// Only h2s go in the "On this page" list, as before.
 		toc: topic.headings.filter((h) => h.depth === 2),
 		prev: index > 0 ? allTopics[index - 1] : null,

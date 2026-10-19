@@ -1,8 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { quizBank } from './src/lib/server/quiz/vite-plugin';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	// quizBank() validates content/quizzes/*.yml and fails the build on any error.
+	plugins: [quizBank(), sveltekit()],
 	css: {
 		preprocessorOptions: {
 			// The partials still use Sass @import, which works but is deprecated.

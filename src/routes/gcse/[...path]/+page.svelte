@@ -31,5 +31,5 @@
 		{/each}
 	</div>
 {:else}
-	<TopicPage topic={data.topic} toc={data.toc} prev={data.prev} next={data.next} />
+	<TopicPage topic={data.topic} toc={data.toc} prev={data.prev} next={data.next} quizId={data.quizId} />
 {/if}

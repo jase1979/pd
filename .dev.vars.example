@@ -1,0 +1,4 @@
+# Local-only settings for `npm run dev` and `wrangler pages dev`.
+# Copy this file to .dev.vars (which git ignores).
+ENVIRONMENT=dev
+QUIZ_SIGNING_SECRET=local-development-secret-not-for-production

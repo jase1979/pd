@@ -19,6 +19,12 @@ src/lib/styles/               the site's SCSS, one partial per section
 src/lib/server/markdown.ts    Markdown → HTML for the notes (heading ids,
                               key-term boxes, glossary tooltips)
 src/lib/server/site.ts        loads the data files and notes at build time
+content/quizzes/*.yml         the quizzes, one file per topic (see below)
+src/lib/server/quiz/          quiz validation, question selection, tokens and
+                              marking; the answers never leave the server
+src/lib/server/config.ts      every quiz threshold and tunable number
+src/routes/api/               the quiz API (start, submit, meta)
+migrations/                   D1 database schema
 src/routes/                   the pages: home, /gcse/, units and topics
                               (gcse/[...path]), /glossary/, /past-papers/
 static/assets/                images and past paper PDFs, served as-is
@@ -53,12 +59,34 @@ unit_url: "/gcse/unit2/"
 
 The build fails if any page links to a page or `#anchor` that doesn't exist.
 
+## Quizzes
+
+Each topic's quiz is a YAML file in `content/quizzes/`, named after its id
+(`legacy-u2-timber.yml`). Its `page` field says which topic page it appears on.
+The format is described in the build spec; `legacy-u2-timber.yml` is a worked
+example.
+
+- Every question starts as `status: draft`. Drafts are served in local
+  development and on preview deployments, never on the live site. Change a
+  question to `status: reviewed` once you've checked it.
+- A quiz is only shown if it can serve at least 5 questions with different
+  concepts, so the live site shows nothing until 5 concepts are reviewed.
+- The build checks every quiz file and **fails with a list of problems** if
+  anything is wrong (a missing `why_wrong`, an answer out of range, a typo in a
+  field name, ...). `npm run dev` shows the same list on screen.
+- Question ids are permanent. Never reuse or renumber them.
+
 ## Local development
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173, reloads as you edit
+cp .dev.vars.example .dev.vars   # ENVIRONMENT=dev and a local signing secret
+npm run migrate:local            # create the local D1 database
+npm run dev                      # http://localhost:5173, reloads as you edit
 ```
+
+`npm run dev` and `wrangler pages dev` both read `wrangler.toml` and
+`.dev.vars`, and use a local D1 database under `.wrangler/`.
 
 To run the production build the way Cloudflare serves it:
 

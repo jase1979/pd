@@ -2,3 +2,38 @@ name = "pd"
 compatibility_date = "2026-05-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".svelte-kit/cloudflare"
+
+# D1 database, created with `npx wrangler d1 create pd` (region WEUR).
+# Local development (npm run dev / wrangler pages dev) uses a local copy under
+# .wrangler/, so it works before the real database exists.
+[[d1_databases]]
+binding = "DB"
+database_name = "pd"
+database_id = "5b83d4c3-e14e-453a-993a-10d57501c39b"
+migrations_dir = "migrations"
+
+# Production. ENVIRONMENT decides whether draft quiz questions are served
+# (see DRAFTS_SERVED_IN in src/lib/server/config.ts).
+[vars]
+ENVIRONMENT = "production"
+
+# Preview deployments (every branch except main). Cloudflare doesn't inherit
+# vars or d1_databases into an environment, so overriding vars here means the
+# D1 binding has to be repeated too. It points at the same database.
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "pd"
+database_id = "5b83d4c3-e14e-453a-993a-10d57501c39b"
+migrations_dir = "migrations"
+
+[env.preview.vars]
+ENVIRONMENT = "preview"
+
+# Secrets (never put real values here; set them with
+# `npx wrangler pages secret put QUIZ_SIGNING_SECRET`, once for production and
+# once with --env preview):
+#   QUIZ_SIGNING_SECRET  signs anonymous quiz attempt tokens. Any long random
+#                        string, e.g. from `openssl rand -base64 32`. Without it
+#                        the quiz API answers 500.
+#
+# For local development, copy .dev.vars.example to .dev.vars.

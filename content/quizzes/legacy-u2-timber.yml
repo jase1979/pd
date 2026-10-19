@@ -1,0 +1,126 @@
+# Pilot quiz for Natural & Manufactured Timber.
+# Every question is a draft until reviewed: change `status: draft` to
+# `status: reviewed` once you've checked it. Question ids are permanent:
+# never reuse or renumber them.
+#
+# TO CHECK: the spec_point values are placeholders taken from the examples in
+# the build spec. Replace them with the real WJEC specification references.
+
+id: legacy-u2-timber
+spec: gcse-legacy
+unit: "2.1.2"
+topic: "Natural & Manufactured Timber"
+page: /gcse/unit2/timber/
+questions_per_attempt: 10
+
+questions:
+
+  - id: timber-001
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: hardwood-vs-softwood
+    command: identify
+    see: "#hardwoods"
+    text: "Which of these timbers is a hardwood?"
+    options:
+      - text: "Scots pine"
+        why_wrong: "Pine comes from an evergreen conifer, so it is a softwood."
+      - text: "Larch"
+        why_wrong: "Larch is a conifer with cones and needles, so it is a softwood, even though it is durable and water resistant."
+      - text: "Balsa"
+      - text: "Parana pine"
+        why_wrong: "Parana pine is unusually hard for a softwood, but it still comes from a conifer, so it is a softwood."
+    answer: 2
+    explanation: "Balsa is very soft and light, but it comes from a broadleaf tree, so it is a hardwood. Hardwood and softwood describe the type of tree, not how hard the wood is."
+
+  # Same concept as timber-001, worded differently, so the two never appear
+  # in the same attempt.
+  - id: timber-002
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: hardwood-vs-softwood
+    command: state
+    see: "#hardwoods"
+    text: "What decides whether a timber is classed as a hardwood or a softwood?"
+    options:
+      - text: "How hard the wood is"
+        why_wrong: "This is the most common mix-up. Balsa is one of the softest woods there is, but it is a hardwood."
+      - text: "The type of tree it comes from"
+      - text: "How long it takes to season"
+        why_wrong: "All natural timber has to be seasoned. How long it takes doesn't decide its class."
+      - text: "Whether it is used indoors or outdoors"
+        why_wrong: "Both kinds are used indoors and outdoors; cedar and larch are softwoods that are good outside."
+    answer: 1
+    explanation: "Hardwoods come from deciduous broadleaf trees that lose their leaves in autumn. Softwoods come from evergreen conifers with cones and needles."
+
+  - id: timber-003
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: softwood-availability-cost
+    command: state
+    see: "#softwoods"
+    text: "A furniture company chooses pine rather than oak to keep its prices low. Why are softwoods like pine usually cheaper than hardwoods?"
+    options:
+      - text: "Softwoods are always lower quality timber"
+        why_wrong: "Price isn't a measure of quality. Parana pine, for example, is almost knot-free and gives a smooth finish."
+      - text: "Softwood trees grow faster and in more places, so more timber is available"
+      - text: "Softwoods don't need to be seasoned before use"
+        why_wrong: "All natural timber, softwood or hardwood, must be seasoned to remove moisture before it is used."
+      - text: "Softwoods are made from recycled wood fibres"
+        why_wrong: "That describes manufactured boards like MDF. Softwoods are natural timber cut from trees."
+    answer: 1
+    explanation: "Softwood trees grow quickly and in many locations, so the timber is readily available and less expensive. Slow-growing hardwoods are scarcer, so they cost more."
+
+  - id: timber-004
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: board-selection
+    command: identify
+    see: "#manufactured-boards"
+    text: "A designer needs a thin, low-cost back panel for a bookcase. Only one side will be seen, and it should be smooth. Which material is the best choice?"
+    options:
+      - text: "Hardboard"
+      - text: "Chipboard"
+        why_wrong: "Chipboard is a thick, dense sheet that can look unattractive. It suits worktops covered with a veneer, not thin panels."
+      - text: "Oak"
+        why_wrong: "Oak is an expensive natural hardwood used for high-quality furniture. It would be wasteful for a hidden back panel."
+      - text: "Plywood with a quality face veneer"
+        why_wrong: "Plywood is strong and rigid, but a quality veneer adds cost that a back panel doesn't need. Hardboard is thinner and cheaper."
+    answer: 0
+    explanation: "Hardboard is made of compressed wood fibres. It is thin and hard with one smooth face, which is why it is used for back panels and drawer bases."
+
+  - id: timber-005
+    status: draft
+    spec_point: "2.1.2.6"
+    concept: mdf-finishing
+    command: describe
+    see: "#finishes-for-manufactured-boards"
+    text: "A student is painting an MDF shelf. Why should they seal the exposed edges before painting?"
+    options:
+      - text: "MDF is very porous, so the edges would soak up the paint"
+      - text: "MDF has a strong grain that needs to be filled"
+        why_wrong: "MDF is made from fine fibres, so it has no grain at all. That's one reason it is easy to work."
+      - text: "Sealing stops the shelf from rotting outdoors"
+        why_wrong: "MDF is used for indoor furniture. The edges are sealed because they are porous, not to protect against the weather."
+      - text: "Paint won't stick to MDF unless it has a melamine layer"
+        why_wrong: "A melamine layer is used on chipboard kitchen worktops. MDF can be painted or stained directly once it is sealed."
+    answer: 0
+    explanation: "MDF is very porous, especially at its cut edges, so they are sealed first. Otherwise they soak up the paint and give an uneven finish."
+
+  - id: timber-006
+    status: draft
+    spec_point: "2.1.2.2"
+    concept: seasoning
+    command: state
+    see: "#natural-timber-availability"
+    text: "Why must natural timber be seasoned before it is used?"
+    options:
+      - text: "To make the grain more visible"
+        why_wrong: "Waxes and oils bring out the grain. Seasoning is about removing water."
+      - text: "To protect it from rot when used outdoors"
+        why_wrong: "That's the job of a preservative finish. Seasoned timber still needs protecting outdoors."
+      - text: "To remove moisture, so it doesn't shrink later"
+      - text: "To bond the fibres together into sheets"
+        why_wrong: "Bonding fibres with resin is how manufactured boards are made, not how natural timber is prepared."
+    answer: 2
+    explanation: "Freshly cut timber is full of water. Seasoning, by air drying or kiln drying, removes moisture so the wood doesn't shrink, warp or split after it has been made into a product."

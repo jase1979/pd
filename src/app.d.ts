@@ -1,7 +1,14 @@
 declare global {
 	namespace App {
 		interface Platform {
-			env: Record<string, never>;
+			env: {
+				DB: D1Database;
+				// dev | preview | production. Decides whether draft questions are
+				// served (see DRAFTS_SERVED_IN in lib/server/config.ts).
+				ENVIRONMENT: string;
+				// Signs anonymous quiz attempt tokens. Unset == the quiz API answers 500.
+				QUIZ_SIGNING_SECRET?: string;
+			};
 		}
 		// interface Locals {}
 		// interface Error {}
