@@ -23,8 +23,10 @@ Metals can be conditioned using heat treatments to change their properties:
 | Annealing | Heat then slowly cool the metal | Removes stress, makes softer, refines structure |
 | Normalising | Heat then cool at room temperature | Reduces hardness, increases ductility |
 | Hardening | Heat then rapidly cool by submerging in liquid or oil | Increases hardness |
-| Tempering | Heat to high temperature then air-cool (applied to steel/cast iron) | Increases toughness, reduces hardness and brittleness |
+| Tempering | Hardened steel is cleaned, then reheated to a lower temperature (judged by the oxide colour, e.g. straw to blue) and quenched | Reduces brittleness and increases toughness, while keeping most of the hardness |
 | Case hardening | Add carbon to surface, heat and quench | Hardens the surface of an alloy while keeping a tough core |
+
+> **Exam tip:** Hardening and tempering go together. Hardening makes high carbon steel very hard but brittle; tempering then removes some of that brittleness. Mild steel does not contain enough carbon to be hardened in this way.
 
 ## Natural and manufactured timber — sources
 
