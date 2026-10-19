@@ -115,3 +115,26 @@ export const MAX_STUDENTS_PER_PASTE = 200;
 export const TEACHER_PASSWORD_MAX_FAILURES = 10;
 /** PBKDF2 rounds for the teacher password hash (100,000 is the most Cloudflare Workers allow). */
 export const PASSWORD_HASH_ITERATIONS = 100_000;
+
+// ---- Teacher analysis ------------------------------------------------------------
+
+/** A student with no attempts and no notes-page views in this many days is "inactive". */
+export const INACTIVE_DAYS = 14;
+/** Overconfident on a topic: at least this many "Sure" answers... */
+export const OVERCONFIDENT_MIN_SURE = 5;
+/** ...of which at least this share were wrong. */
+export const OVERCONFIDENT_WRONG_SHARE = 0.3;
+/** Question health flags, only for questions with at least min_answers answers. */
+export const QUESTION_HEALTH = {
+	min_answers: 30,
+	/** A wrong option chosen in fewer than this share of answers isn't drawing out a misconception. */
+	option_min_rate: 0.05,
+	/** More than this share correct: too easy. */
+	too_easy: 0.9,
+	/** Top third's correct rate minus the bottom third's below this: poor discrimination. */
+	min_discrimination: 0.1,
+	/** More than this share "I don't know". */
+	high_dont_know: 0.4
+};
+/** Lesson starter: questions shown when the teacher doesn't choose. */
+export const STARTER_DEFAULT_QUESTIONS = 5;

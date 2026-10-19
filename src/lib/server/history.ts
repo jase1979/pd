@@ -114,3 +114,75 @@ export async function trackPage(db: D1Database, studentId: number, path: string,
 		.bind(studentId, path, at)
 		.run();
 }
+
+// ---- Groups (teacher analysis) -----------------------------------------------------
+
+export interface ChoiceRow extends AnswerRow {
+	student_id: number;
+	/** JSON, as saved: an index, a list of indexes, or {answer, reason}; null for "I don't know" / not reached. */
+	chosen: string | null;
+}
+
+export interface GroupStudentInfo {
+	id: number;
+	username: string;
+	group_id: number;
+	last_active_at: string | null;
+}
+
+export interface GroupHistory {
+	students: GroupStudentInfo[];
+	/** Each student's history, as loadHistory() would give it. */
+	histories: Map<number, History>;
+	/** Every saved answer, with the options chosen, for the question analysis. */
+	choices: ChoiceRow[];
+}
+
+/** The saved history of every student in these groups. The caller checks the teacher can see them. */
+export async function loadGroupHistory(db: D1Database, groupIds: number[]): Promise<GroupHistory> {
+	const empty = { students: [], histories: new Map(), choices: [] };
+	if (groupIds.length === 0) return empty;
+	const ids = groupIds.map(() => '?').join(',');
+	const [students, answers, attempts, pages] = await Promise.all([
+		db
+			.prepare(`SELECT id, username, group_id, last_active_at FROM students WHERE group_id IN (${ids}) ORDER BY username COLLATE NOCASE`)
+			.bind(...groupIds)
+			.all<GroupStudentInfo>(),
+		db
+			.prepare(
+				`SELECT a.student_id, aa.attempt_id, a.mode, a.completed_at AS answered_at, aa.question_id, aa.quiz_id,
+				        aa.spec_point, aa.concept, aa.command, aa.qtype, aa.skill_format, aa.dont_know, aa.not_reached,
+				        aa.confidence, aa.marks, aa.max_marks, aa.correct, aa.chosen
+				 FROM attempt_answers aa
+				 JOIN attempts a ON a.id = aa.attempt_id
+				 JOIN students s ON s.id = a.student_id
+				 WHERE s.group_id IN (${ids}) AND a.completed_at IS NOT NULL
+				 ORDER BY a.completed_at, aa.rowid`
+			)
+			.bind(...groupIds)
+			.all<ChoiceRow>(),
+		db
+			.prepare(
+				`SELECT a.student_id, a.id, a.mode, a.quiz_id, a.score, a.max_score, json_array_length(a.question_ids) AS question_count,
+				        a.time_limit_s, a.time_taken_s, a.overtime, a.started_at, a.completed_at
+				 FROM attempts a JOIN students s ON s.id = a.student_id
+				 WHERE s.group_id IN (${ids}) AND a.completed_at IS NOT NULL
+				 ORDER BY a.completed_at`
+			)
+			.bind(...groupIds)
+			.all<AttemptRow & { student_id: number }>(),
+		db
+			.prepare(
+				`SELECT p.student_id, p.page_path, p.first_viewed, p.last_viewed, p.view_count
+				 FROM page_activity p JOIN students s ON s.id = p.student_id WHERE s.group_id IN (${ids})`
+			)
+			.bind(...groupIds)
+			.all<PageRow & { student_id: number }>()
+	]);
+
+	const histories = new Map<number, History>(students.results.map((s) => [s.id, { answers: [], attempts: [], pages: [] }]));
+	for (const { student_id, chosen: _chosen, ...a } of answers.results) histories.get(student_id)?.answers.push(a);
+	for (const { student_id, ...a } of attempts.results) histories.get(student_id)?.attempts.push(a);
+	for (const { student_id, ...p } of pages.results) histories.get(student_id)?.pages.push(p);
+	return { students: students.results, histories, choices: answers.results };
+}

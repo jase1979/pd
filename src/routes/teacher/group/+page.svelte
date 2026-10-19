@@ -5,6 +5,10 @@
 	import { onMount, tick } from 'svelte';
 	import { pageTitle } from '$lib/site';
 	import TeacherBar from '$lib/components/teacher/TeacherBar.svelte';
+	import Heatmap from '$lib/components/teacher/Heatmap.svelte';
+	import GroupSummary from '$lib/components/teacher/GroupSummary.svelte';
+	import QuestionTable from '$lib/components/teacher/QuestionTable.svelte';
+	import type { GroupSummary as Summary, Heatmap as HeatmapData, HeatmapBy, QuestionStat } from '$lib/server/analysis';
 	import { SPEC_NAMES, idFromQuery, shortDate, teacherApi, type Group, type GroupStudent } from '$lib/teacher';
 
 	interface Preview {
@@ -43,6 +47,30 @@
 	let typedName = $state('');
 	let deleteMessage = $state('');
 
+	// Analysis
+	type Tab = 'progress' | 'questions' | 'students' | 'settings';
+	let tab = $state<Tab>('progress');
+	let by = $state<HeatmapBy>('topic');
+	let progress = $state<{ heatmap: HeatmapData; summary: Summary } | null>(null);
+	let questionStats = $state<QuestionStat[] | null>(null);
+
+	async function loadProgress() {
+		progress = null;
+		progress = await teacherApi('GET', `/api/teacher/groups/${id}/progress?by=${by}`);
+	}
+
+	async function show(t: Tab) {
+		tab = t;
+		history.replaceState(history.state, '', `?id=${id}#${t}`);
+		if (t === 'progress' && !progress) await loadProgress();
+		if (t === 'questions' && !questionStats) questionStats = (await teacherApi<{ questions: QuestionStat[] }>('GET', `/api/teacher/groups/${id}/questions`)).questions;
+	}
+
+	async function switchBy(next: HeatmapBy) {
+		by = next;
+		await loadProgress();
+	}
+
 	async function load() {
 		if (id === null) return;
 		try {
@@ -61,10 +89,13 @@
 		}
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		id = idFromQuery();
 		if (id === null) loadError = 'Group not found.';
-		load();
+		await load();
+		const wanted = location.hash.slice(1) as Tab;
+		const start: Tab = ['progress', 'questions', 'students', 'settings'].includes(wanted) ? wanted : students.length ? 'progress' : 'students';
+		await show(start);
 	});
 
 	function flash(text: string) {
@@ -196,10 +227,45 @@
 		{#if group.needs_deleting}
 			<p class="quiz-notice">
 				{group.archived ? 'This group is archived.' : 'This group is more than a year old.'} Students' data should only be kept until the
-				end of their course: <a href="#delete">export and delete it</a> when you're done.
+				end of their course: <button type="button" class="quiz-link-btn" onclick={() => show('settings')}>export and delete it</button> when you're done.
 			</p>
 		{/if}
 
+		<div class="practice-tabs" role="group" aria-label="Group pages">
+			{#each [['progress', 'Progress'], ['questions', 'Questions'], ['students', 'Students and codes'], ['settings', 'Settings']] as [key, label] (key)}
+				<button type="button" class="practice-tab" class:active={tab === key} aria-pressed={tab === key} onclick={() => show(key as Tab)}>{label}</button>
+			{/each}
+			<a class="practice-tab" href="/teacher/starter/?group={group.id}">Lesson starter</a>
+		</div>
+
+		{#if tab === 'progress'}
+			<section class="teacher-section" aria-labelledby="progress-heading">
+				<div class="teacher-section-head">
+					<h2 id="progress-heading">Progress</h2>
+					<a class="quiz-btn" href="/api/teacher/groups/{group.id}/export.csv" download>Download markbook (CSV)</a>
+				</div>
+				<div class="practice-source" role="group" aria-label="Show progress by">
+					{#each [['topic', 'Topics'], ['spec_point', 'Spec points'], ['command', 'Command words']] as [key, label] (key)}
+						<button type="button" class="quiz-chip" class:selected={by === key} aria-pressed={by === key} onclick={() => switchBy(key as HeatmapBy)}>{label}</button>
+					{/each}
+				</div>
+				{#if progress}<Heatmap data={progress.heatmap} />{:else}<p class="account-intro" aria-live="polite">Loading…</p>{/if}
+			</section>
+			{#if progress}
+				<section class="teacher-section" aria-labelledby="summary-heading">
+					<h2 id="summary-heading">Summary</h2>
+					<GroupSummary summary={progress.summary} />
+				</section>
+			{/if}
+		{:else if tab === 'questions'}
+			<section class="teacher-section" aria-labelledby="questions-heading">
+				<div class="teacher-section-head">
+					<h2 id="questions-heading">Questions</h2>
+					<a class="quiz-btn" href="/teacher/questions/">Question health (all groups)</a>
+				</div>
+				{#if questionStats}<QuestionTable questions={questionStats} />{:else}<p class="account-intro" aria-live="polite">Loading…</p>{/if}
+			</section>
+		{:else if tab === 'students'}
 		<!-- Students -->
 		<section class="teacher-section" aria-labelledby="students-heading">
 			<div class="teacher-section-head">
@@ -312,6 +378,7 @@
 			{#if addMessage}<p class="quiz-error" role="alert">{addMessage}</p>{/if}
 		</section>
 
+		{:else}
 		<!-- Settings -->
 		<section class="teacher-section" aria-labelledby="settings-heading">
 			<h2 id="settings-heading">Settings</h2>
@@ -355,5 +422,6 @@
 				Delete {group.name} permanently
 			</button>
 		</section>
+		{/if}
 	{/if}
 </div>

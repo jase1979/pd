@@ -21,6 +21,8 @@
 
 <div class="teacher-bar">
 	<a href="/teacher/" class="teacher-bar-home">Teacher area</a>
+	<a href="/teacher/questions/">Question health</a>
+	<a href="/teacher/starter/">Lesson starter</a>
 	{#if email}
 		<span class="teacher-bar-who">Signed in as <strong>{email}</strong></span>
 		<button type="button" class="quiz-link-btn" onclick={signOut}>Sign out</button>

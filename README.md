@@ -139,6 +139,15 @@ Running it again replaces the test group and everything its students did.
   from a pasted list (preview, then confirm), shows and resets codes, moves and
   removes students, and deletes the group (type its name to confirm).
   `/teacher/group/print/?id=` prints login slips, 10 to an A4 page.
+- Each group page also has **Progress** (a heatmap of students against topics,
+  spec points or command words, and a summary), **Questions** (per-question
+  analysis, most confidently-wrong first) and a markbook CSV.
+  `/teacher/student/?id=` is one student's full profile, `/teacher/questions/`
+  is question health across all your groups (with a CSV), and
+  `/teacher/starter/` is the lesson-starter board view.
+- `npm run seed:dev -- --fake` fills the local test group with 24 students and
+  three weeks of made-up history, including a few deliberately broken
+  questions, so all of this can be tried locally.
 
 ## Students and practice
 

@@ -14,7 +14,7 @@
 
 // Everything inside it. The account and teacher pages use the
 // same buttons, hints and options.
-.quiz, .account-page, .teacher-page, .slips-page {
+.quiz, .account-page, .teacher-page, .slips-page, .starter-board {
   h2:focus { outline: none; }
 
   .quiz-title {

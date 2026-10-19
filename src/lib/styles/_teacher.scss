@@ -184,3 +184,174 @@
   .slip { border-color: #999; height: 55mm; color: #000; }
   .slip:nth-child(10n) { break-after: page; }
 }
+
+// ---- Teacher bar links ----------------------------------------------------------------
+.teacher-bar a:not(.teacher-bar-home) { color: var(--text-muted); &:hover { color: var(--accent); } }
+
+// ---- Heatmap --------------------------------------------------------------------------
+.heatmap-scroll { overflow-x: auto; margin-top: 0.8rem; }
+
+.heatmap {
+  border-collapse: separate;
+  border-spacing: 3px;
+  font-size: 0.8rem;
+
+  th { font-weight: 600; text-align: left; padding: 0.3rem 0.5rem; white-space: nowrap; }
+  thead th { font-size: 0.75rem; color: var(--text-muted); max-width: 9rem; white-space: normal; vertical-align: bottom; }
+  tbody th { position: sticky; left: 0; background: var(--surface); z-index: 1; }
+}
+
+.heatmap-cell {
+  min-width: 6.5rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  background: var(--bg);
+  border-left: 4px solid var(--border);
+  vertical-align: top;
+
+  span { display: block; }
+  .heatmap-label { font-weight: 700; }
+  .heatmap-value { color: var(--text-muted); }
+  .heatmap-note { font-size: 0.7rem; color: var(--text-muted); }
+
+  &.status-secure { border-left-color: var(--status-secure); background: rgba(95, 211, 141, 0.12); }
+  &.status-getting_there { border-left-color: var(--status-getting-there); background: rgba(255, 181, 71, 0.12); }
+  &.status-not_secure { border-left-color: var(--status-not-secure); background: rgba(255, 107, 107, 0.12); }
+  &.status-not_started { color: var(--text-muted); }
+}
+
+.heatmap-flag { font-size: 0.7rem; font-weight: 700; color: var(--status-getting-there); }
+
+// ---- Summary cards ----------------------------------------------------------------------
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.summary-card {
+  background: var(--bg);
+  border: 1px solid var(--border-inner);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+
+  h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+  p { margin-bottom: 0.3rem; }
+  ol { padding-left: 1.2rem; }
+
+  &.summary-card--wide { grid-column: 1 / -1; }
+}
+
+.teacher-page > .summary-grid .summary-card { background: var(--surface); border-color: var(--border); }
+
+.summary-bars {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+
+  li { display: grid; grid-template-columns: minmax(6rem, 9rem) 1fr 3rem; gap: 0.5rem; align-items: center; }
+}
+
+.summary-bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.summary-bar {
+  height: 0.6rem;
+  background: var(--border-inner);
+  border-radius: 3px;
+  overflow: hidden;
+
+  span { display: block; height: 100%; background: var(--accent); }
+}
+
+.summary-list { padding-left: 1.2rem; font-size: 0.9rem; margin: 0.5rem 0; li { margin-bottom: 0.3rem; } }
+
+.question-table td:first-child { min-width: 16rem; }
+
+// ---- Lesson starter board ---------------------------------------------------------------
+.starter-n { max-width: 6rem; }
+.starter-topic { margin-left: 1.6rem; }
+
+.starter-board {
+  background: var(--bg);
+  min-height: 80vh;
+  padding: 1.5rem 2rem 2rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  &:focus { outline: none; }
+  &:fullscreen { overflow-y: auto; padding: 3rem 4rem; }
+
+  .quiz-exam-paper { font-size: 1.3rem; }
+  .quiz-select { font-size: 1rem; }
+}
+
+.starter-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.starter-scenario {
+  border-left: 4px solid var(--gcse);
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.starter-question { font-size: 2.1rem; line-height: 1.3; margin-bottom: 1.2rem; }
+.starter-image { max-height: 35vh; max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+
+.starter-options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+  }
+
+  img { display: block; max-height: 20vh; border-radius: 6px; }
+
+  .starter-right { border-color: var(--status-secure); background: rgba(95, 211, 141, 0.12); }
+  .starter-wrong { opacity: 0.85; }
+}
+
+.starter-letter { font-weight: 800; color: var(--accent); min-width: 1.5rem; }
+.starter-why { display: block; font-size: 1.1rem; color: var(--text-muted); margin-top: 0.2rem; }
+.starter-right .starter-why { color: var(--status-secure); font-weight: 700; }
+.starter-reason-label { font-weight: 700; margin: 1.2rem 0 0.6rem; }
+
+.starter-explanation {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: var(--surface-raised);
+  border-radius: 10px;
+
+  .starter-working { white-space: pre-line; color: var(--text-muted); margin-top: 0.5rem; }
+}
+
+.starter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+
+  .quiz-btn { font-size: 1rem; padding: 0.6rem 1.3rem; }
+}
+
+// Chips used as buttons (e.g. Topics / Spec points / Command words)
+button.quiz-chip { color: var(--text); font: inherit; font-size: 0.9rem; &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } }

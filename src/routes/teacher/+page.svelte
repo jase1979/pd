@@ -54,7 +54,7 @@
 				{#each reminders as g (g.id)}
 					<li>
 						<strong>{g.name}</strong> — {g.archived ? 'archived' : `created ${shortDate(g.created_at)}`}
-						<a href="/teacher/group/?id={g.id}#delete">Export or delete →</a>
+						<a href="/teacher/group/?id={g.id}#settings">Export or delete →</a>
 					</li>
 				{/each}
 			</ul>
