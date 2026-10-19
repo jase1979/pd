@@ -145,6 +145,13 @@ Running it again replaces the test group and everything its students did.
   `/teacher/student/?id=` is one student's full profile, `/teacher/questions/`
   is question health across all your groups (with a CSV), and
   `/teacher/starter/` is the lesson-starter board view.
+- **Set work** (group page → Set work): a topic quiz, a mixed quiz on chosen
+  topics, or one click for a review of the group's weakest spec points, each
+  with a due date. An **assessment** allows one attempt with no "Try again";
+  leaving part-way resumes the same questions. Students see their set work at
+  the top of `/progress/` and do it at `/review/?assignment=`.
+- **Sharing a group** (group page → Settings): add another teacher by email.
+  Only the owner can remove other teachers; anyone can remove themselves.
 - `npm run seed:dev -- --fake` fills the local test group with 24 students and
   three weeks of made-up history, including a few deliberately broken
   questions, so all of this can be tried locally.

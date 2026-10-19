@@ -9,6 +9,9 @@
 	import GroupSummary from '$lib/components/teacher/GroupSummary.svelte';
 	import QuestionTable from '$lib/components/teacher/QuestionTable.svelte';
 	import type { GroupSummary as Summary, Heatmap as HeatmapData, HeatmapBy, QuestionStat } from '$lib/server/analysis';
+	import type { TeacherAssignment } from '$lib/server/assignments';
+	import type { GroupTeacher } from '$lib/server/groups';
+	import { dueLabel, type QuizSummary } from '$lib/quiz/public';
 	import { SPEC_NAMES, idFromQuery, shortDate, teacherApi, type Group, type GroupStudent } from '$lib/teacher';
 
 	interface Preview {
@@ -47,8 +50,96 @@
 	let typedName = $state('');
 	let deleteMessage = $state('');
 
+	// Set work
+	let work = $state<TeacherAssignment[] | null>(null);
+	let topicChoices = $state<QuizSummary[]>([]);
+	const inAWeek = () => new Date(Date.now() + 7 * 864e5).toISOString().slice(0, 10);
+	const today = () => new Date().toISOString().slice(0, 10);
+	let workKind = $state<'topic' | 'mixed'>('topic');
+	let workQuiz = $state('');
+	let workTopics = $state<string[]>([]);
+	let workDue = $state(inAWeek());
+	let workAssessment = $state(false);
+	let workMessage = $state('');
+	let weakDue = $state(inAWeek());
+	let weakAssessment = $state(false);
+	let weakMessage = $state('');
+	let deletingWork = $state<number | null>(null);
+
+	async function loadWork() {
+		const [w, q] = await Promise.all([
+			teacherApi<{ assignments: TeacherAssignment[] }>('GET', `/api/teacher/groups/${id}/assignments`),
+			topicChoices.length ? Promise.resolve(topicChoices) : fetch('/api/quizzes').then((r): Promise<QuizSummary[]> => (r.ok ? r.json() : Promise.resolve([])))
+		]);
+		work = w.assignments;
+		topicChoices = q.filter((x) => x.available);
+		if (!workQuiz && topicChoices[0]) workQuiz = topicChoices[0].id;
+	}
+
+	async function setWork(body: Record<string, unknown>, onError: (m: string) => void) {
+		try {
+			await teacherApi('POST', `/api/teacher/groups/${id}/assignments`, body);
+			await loadWork();
+			flash('Work set. Students will see it on their progress page.');
+			return true;
+		} catch (e) {
+			onError((e as Error).message);
+			return false;
+		}
+	}
+
+	async function setChosenWork(event: SubmitEvent) {
+		event.preventDefault();
+		workMessage = '';
+		await setWork(
+			{ kind: workKind, due_date: workDue, assessment: workAssessment, ...(workKind === 'topic' ? { quiz_id: workQuiz } : { topics: workTopics }) },
+			(m) => (workMessage = m)
+		);
+	}
+
+	async function setWeakReview() {
+		weakMessage = '';
+		await setWork({ kind: 'weak_spec_points', due_date: weakDue, assessment: weakAssessment }, (m) => (weakMessage = m));
+	}
+
+	async function deleteWork(a: TeacherAssignment) {
+		deletingWork = null;
+		await teacherApi('DELETE', `/api/teacher/assignments/${a.id}`);
+		await loadWork();
+		flash(`"${a.title}" removed. Students' answers are kept.`);
+	}
+
+	// Sharing
+	let teachers = $state<GroupTeacher[]>([]);
+	let shareEmail = $state('');
+	let shareMessage = $state('');
+
+	async function loadTeachers() {
+		teachers = (await teacherApi<{ teachers: GroupTeacher[] }>('GET', `/api/teacher/groups/${id}/teachers`)).teachers;
+	}
+
+	async function share(event: SubmitEvent) {
+		event.preventDefault();
+		shareMessage = '';
+		try {
+			const r = await teacherApi<{ teachers: GroupTeacher[]; can_sign_in: boolean }>('POST', `/api/teacher/groups/${id}/teachers`, { email: shareEmail });
+			teachers = r.teachers;
+			shareMessage = r.can_sign_in
+				? `Shared with ${shareEmail}.`
+				: `Shared with ${shareEmail}, but they can't sign in yet: add them to TEACHER_EMAILS first.`;
+			shareEmail = '';
+		} catch (e) {
+			shareMessage = (e as Error).message;
+		}
+	}
+
+	async function unshare(t: GroupTeacher) {
+		await teacherApi('DELETE', `/api/teacher/groups/${id}/teachers/${t.id}`);
+		await loadTeachers();
+	}
+
 	// Analysis
-	type Tab = 'progress' | 'questions' | 'students' | 'settings';
+	type Tab = 'progress' | 'questions' | 'work' | 'students' | 'settings';
 	let tab = $state<Tab>('progress');
 	let by = $state<HeatmapBy>('topic');
 	let progress = $state<{ heatmap: HeatmapData; summary: Summary } | null>(null);
@@ -64,6 +155,8 @@
 		history.replaceState(history.state, '', `?id=${id}#${t}`);
 		if (t === 'progress' && !progress) await loadProgress();
 		if (t === 'questions' && !questionStats) questionStats = (await teacherApi<{ questions: QuestionStat[] }>('GET', `/api/teacher/groups/${id}/questions`)).questions;
+		if (t === 'work' && !work) await loadWork();
+		if (t === 'settings' && !teachers.length) await loadTeachers();
 	}
 
 	async function switchBy(next: HeatmapBy) {
@@ -94,7 +187,7 @@
 		if (id === null) loadError = 'Group not found.';
 		await load();
 		const wanted = location.hash.slice(1) as Tab;
-		const start: Tab = ['progress', 'questions', 'students', 'settings'].includes(wanted) ? wanted : students.length ? 'progress' : 'students';
+		const start: Tab = ['progress', 'questions', 'work', 'students', 'settings'].includes(wanted) ? wanted : students.length ? 'progress' : 'students';
 		await show(start);
 	});
 
@@ -232,7 +325,7 @@
 		{/if}
 
 		<div class="practice-tabs" role="group" aria-label="Group pages">
-			{#each [['progress', 'Progress'], ['questions', 'Questions'], ['students', 'Students and codes'], ['settings', 'Settings']] as [key, label] (key)}
+			{#each [['progress', 'Progress'], ['questions', 'Questions'], ['work', 'Set work'], ['students', 'Students and codes'], ['settings', 'Settings']] as [key, label] (key)}
 				<button type="button" class="practice-tab" class:active={tab === key} aria-pressed={tab === key} onclick={() => show(key as Tab)}>{label}</button>
 			{/each}
 			<a class="practice-tab" href="/teacher/starter/?group={group.id}">Lesson starter</a>
@@ -264,6 +357,92 @@
 					<a class="quiz-btn" href="/teacher/questions/">Question health (all groups)</a>
 				</div>
 				{#if questionStats}<QuestionTable questions={questionStats} />{:else}<p class="account-intro" aria-live="polite">Loading…</p>{/if}
+			</section>
+		{:else if tab === 'work'}
+			<section class="teacher-section" aria-labelledby="weak-heading">
+				<h2 id="weak-heading">Review this group's weakest spec points</h2>
+				<p class="account-intro">One click: a mixed quiz on the three spec points the group is weakest on right now. They're fixed when you set it.</p>
+				<div class="work-form">
+					<label for="weak-due">Due</label>
+					<input id="weak-due" class="account-input work-date" type="date" min={today()} bind:value={weakDue} />
+					<label class="account-check"><input type="checkbox" bind:checked={weakAssessment} /> Assessment (one go, no "Try again")</label>
+					<button type="button" class="quiz-btn quiz-btn--primary" onclick={setWeakReview}>Set the review</button>
+				</div>
+				{#if weakMessage}<p class="quiz-error" role="alert">{weakMessage}</p>{/if}
+			</section>
+
+			<section class="teacher-section" aria-labelledby="setwork-heading">
+				<h2 id="setwork-heading">Set a quiz</h2>
+				<form onsubmit={setChosenWork}>
+					<div class="practice-source" role="radiogroup" aria-label="Kind of quiz">
+						<label class="quiz-chip" class:selected={workKind === 'topic'}><input type="radio" name="work-kind" checked={workKind === 'topic'} onchange={() => (workKind = 'topic')} /> One topic</label>
+						<label class="quiz-chip" class:selected={workKind === 'mixed'}><input type="radio" name="work-kind" checked={workKind === 'mixed'} onchange={() => (workKind = 'mixed')} /> Mixed topics</label>
+					</div>
+					{#if workKind === 'topic'}
+						<label for="work-quiz">Topic</label>
+						<select id="work-quiz" class="account-input" bind:value={workQuiz}>
+							{#each topicChoices as t (t.id)}<option value={t.id}>{t.title}</option>{/each}
+						</select>
+					{:else}
+						<fieldset class="practice-topics">
+							<legend>Topics</legend>
+							{#each topicChoices as t (t.id)}
+								<label class="quiz-option" class:selected={workTopics.includes(t.id)}>
+									<input type="checkbox" checked={workTopics.includes(t.id)} onchange={() => (workTopics = workTopics.includes(t.id) ? workTopics.filter((x) => x !== t.id) : [...workTopics, t.id])} />
+									<span>{t.title}</span>
+								</label>
+							{/each}
+						</fieldset>
+					{/if}
+					<div class="work-form">
+						<label for="work-due">Due</label>
+						<input id="work-due" class="account-input work-date" type="date" min={today()} bind:value={workDue} required />
+						<label class="account-check"><input type="checkbox" bind:checked={workAssessment} /> Assessment (one go, no "Try again")</label>
+						<button type="submit" class="quiz-btn quiz-btn--primary" disabled={workKind === 'mixed' && workTopics.length === 0}>Set work</button>
+					</div>
+					{#if workMessage}<p class="quiz-error" role="alert">{workMessage}</p>{/if}
+				</form>
+			</section>
+
+			<section class="teacher-section" aria-labelledby="work-list-heading">
+				<h2 id="work-list-heading">Work set</h2>
+				{#if work === null}
+					<p class="account-intro" aria-live="polite">Loading…</p>
+				{:else if work.length === 0}
+					<p class="account-intro">Nothing set yet.</p>
+				{:else}
+					{#each work as a (a.id)}
+						<details class="work-item">
+							<summary>
+								<strong>{a.title}</strong>
+								<span class="quiz-hint">due {dueLabel(a.due_date)}{a.assessment ? ' · assessment' : ''}</span>
+								<span class="work-count">{a.done} of {a.students.length} done</span>
+							</summary>
+							<table class="teacher-table">
+								<thead><tr><th scope="col">Student</th><th scope="col">Status</th><th scope="col">Best score</th><th scope="col">Attempts</th></tr></thead>
+								<tbody>
+									{#each a.students as s (s.id)}
+										<tr>
+											<td><a href="/teacher/student/?id={s.id}">{s.username}</a></td>
+											<td><span class="status-badge work-{s.status}">{s.label}</span></td>
+											<td>{s.best === null ? '—' : `${Math.round(s.best * 100)}%`}</td>
+											<td>{s.attempts}</td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
+							<p class="teacher-archive">
+								{#if deletingWork === a.id}
+									<span>Remove this work? Students' answers are kept.</span>
+									<button type="button" class="quiz-btn quiz-btn--danger" onclick={() => deleteWork(a)}>Yes, remove</button>
+									<button type="button" class="quiz-btn" onclick={() => (deletingWork = null)}>Cancel</button>
+								{:else}
+									<button type="button" class="quiz-btn" onclick={() => (deletingWork = a.id)}>Remove</button>
+								{/if}
+							</p>
+						</details>
+					{/each}
+				{/if}
 			</section>
 		{:else if tab === 'students'}
 		<!-- Students -->
@@ -406,6 +585,26 @@
 					<span class="quiz-hint">Archiving hides it from your list. It doesn't delete anything.</span>
 				{/if}
 			</p>
+		</section>
+
+		<!-- Sharing -->
+		<section class="teacher-section" aria-labelledby="share-heading">
+			<h2 id="share-heading">Shared with</h2>
+			<ul class="summary-list">
+				{#each teachers as t (t.id)}
+					<li>
+						{t.email}{#if t.owner} <span class="quiz-hint">(owner)</span>{/if}
+						{#if !t.owner}<button type="button" class="quiz-link-btn" onclick={() => unshare(t)}>Remove</button>{/if}
+					</li>
+				{/each}
+			</ul>
+			<form class="work-form" onsubmit={share}>
+				<label for="share-email">Share with another teacher</label>
+				<input id="share-email" class="account-input" type="email" bind:value={shareEmail} placeholder="their school email" required />
+				<button type="submit" class="quiz-btn">Share</button>
+			</form>
+			<p class="quiz-hint">They'll see the group, its students and their progress. Only the owner can remove other teachers.</p>
+			{#if shareMessage}<p class="quiz-notice" role="status">{shareMessage}</p>{/if}
 		</section>
 
 		<!-- Deleting -->

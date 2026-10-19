@@ -42,6 +42,8 @@ export interface PlanRequest {
 	quiz_id?: string;
 	/** mixed / technique / timed: the topics to draw from. Required when not logged in. */
 	topics?: string[];
+	/** mixed: only questions on these spec points (set work reviewing weak spec points). */
+	spec_points?: string[];
 }
 
 export interface Plan {
@@ -174,8 +176,9 @@ export function planAttempt(req: PlanRequest, ctx: PlanContext): Plan {
 		case 'mixed': {
 			const quizzes = topicsFor(req, ctx);
 			const used = new Set<string>();
-			const knowledge = drawWeighted(weightedPools(quizzes, ctx, (q) => !isSkill(q)), MIXED_PER_ATTEMPT, { recent, used, random });
-			const skills = drawWeighted(weightedPools(quizzes, ctx, isSkill), DEFAULT_EXAM_SKILLS_PER_ATTEMPT, { recent, used, random });
+			const onSpec = (q: Question) => !req.spec_points || req.spec_points.includes(q.spec_point);
+			const knowledge = drawWeighted(weightedPools(quizzes, ctx, (q) => !isSkill(q) && onSpec(q)), MIXED_PER_ATTEMPT, { recent, used, random });
+			const skills = drawWeighted(weightedPools(quizzes, ctx, (q) => isSkill(q) && onSpec(q)), DEFAULT_EXAM_SKILLS_PER_ATTEMPT, { recent, used, random });
 			return plan('mixed', [...groupByScenario(minimum(knowledge, 'questions in those topics')), ...skills]);
 		}
 

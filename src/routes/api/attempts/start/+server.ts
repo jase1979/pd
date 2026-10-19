@@ -12,7 +12,12 @@ export const prerender = false;
 export const POST: RequestHandler = api(async ({ request, platform, locals }) => {
 	const body = await readJson(request);
 	return startAttempt(
-		{ mode: body.mode as never, quiz_id: body.quiz_id as string | undefined, topics: body.topics as string[] | undefined },
+		{
+			mode: body.mode as never,
+			quiz_id: body.quiz_id as string | undefined,
+			topics: body.topics as string[] | undefined,
+			...(body.assignment_id !== undefined && { assignment_id: body.assignment_id })
+		},
 		{
 			quizzes,
 			environment: environmentOf(platform),

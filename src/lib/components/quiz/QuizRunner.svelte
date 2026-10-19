@@ -20,7 +20,7 @@
 		onExit,
 		onSubmitted
 	}: {
-		request: { mode: Mode; quiz_id?: string; topics?: string[] };
+		request: { mode: Mode; quiz_id?: string; topics?: string[]; assignment_id?: number };
 		/** Unique on the page, for element ids. */
 		name: string;
 		/** Leave the quiz (e.g. back to the intro). */
@@ -257,7 +257,9 @@
 		You scored {result.score} out of {result.max_score}
 	</h2>
 	{@render savingAs()}
-	{#if toRetry.length}
+	{#if result.assessment}
+		<p class="quiz-notice">This was an assessment, so there's only one go. Your teacher can see how you got on.</p>
+	{:else if toRetry.length}
 		<div class="quiz-nav quiz-nav--top">
 			<button type="button" class="quiz-btn quiz-btn--primary" onclick={() => (phase = 'retry')}>
 				Try the ones you got wrong again now
@@ -334,7 +336,7 @@
 	{/if}
 
 	<div class="quiz-nav">
-		<button type="button" class="quiz-btn" onclick={start}>Try a new set of questions</button>
+		{#if !result.assessment}<button type="button" class="quiz-btn" onclick={start}>Try a new set of questions</button>{/if}
 		{#if onExit}<button type="button" class="quiz-btn" onclick={onExit}>Done</button>{/if}
 	</div>
 {:else if phase === 'retry' && result}

@@ -117,6 +117,8 @@ export interface StartResult {
 	time_limit_s?: number;
 	/** Logged in: whose record this attempt will be saved to. */
 	saving_as?: string;
+	/** Set work. An assessment has one attempt and no "Try again now". */
+	assignment?: { id: number; title: string; assessment: boolean; due_date: string };
 }
 
 export interface SubmitResult {
@@ -130,6 +132,8 @@ export interface SubmitResult {
 	pace?: AttemptPace;
 	/** True if this attempt was saved to a student's record. */
 	saved: boolean;
+	/** Set work with one attempt: no "Try again now" or new set of questions. */
+	assessment?: boolean;
 }
 
 // ---- Practice modes and progress (Phase 2) ---------------------------------------
@@ -240,4 +244,23 @@ export interface QuizSummary {
 	available: boolean;
 	/** exam_skill questions servable here, for the "Exam technique" picker. */
 	exam_skills: number;
+}
+
+/** A piece of set work, as a student sees it. */
+export interface StudentWork {
+	id: number;
+	title: string;
+	kind: 'topic' | 'mixed' | 'weak_spec_points';
+	assessment: boolean;
+	/** YYYY-MM-DD, due by the end of that day. */
+	due_date: string;
+	status: 'done' | 'late' | 'overdue' | 'to_do';
+	label: string;
+	best: number | null;
+	can_start: boolean;
+}
+
+/** "Fri 23 Oct" from "2026-10-23". */
+export function dueLabel(date: string): string {
+	return new Date(`${date}T12:00:00Z`).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
 }

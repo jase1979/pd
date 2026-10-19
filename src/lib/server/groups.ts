@@ -330,3 +330,50 @@ export function csvField(value: string): string {
 export function csv(rows: string[][]): string {
 	return rows.map((r) => r.map(csvField).join(',')).join('\r\n') + '\r\n';
 }
+
+// ---- Sharing a group between teachers ------------------------------------------------
+
+export interface GroupTeacher {
+	id: number;
+	email: string;
+	owner: boolean;
+}
+
+export async function groupTeachers(db: D1Database, teacher: Teacher, groupId: unknown): Promise<GroupTeacher[]> {
+	const group = await groupFor(db, teacher, groupId);
+	const { results } = await db
+		.prepare(
+			`SELECT t.id, t.email FROM teachers t
+			 WHERE t.id = ? OR t.id IN (SELECT teacher_id FROM group_teachers WHERE group_id = ?)
+			 ORDER BY t.email`
+		)
+		.bind(group.owner_teacher_id, group.id)
+		.all<{ id: number; email: string }>();
+	return results.map((t) => ({ ...t, owner: t.id === group.owner_teacher_id }));
+}
+
+/**
+ * Give another teacher access to the group. They see it when they sign in
+ * (their address still has to be allowed to sign in). Anyone with access can
+ * share a group.
+ */
+export async function shareGroup(db: D1Database, teacher: Teacher, groupId: unknown, email: string, now = Date.now()) {
+	const group = await groupFor(db, teacher, groupId);
+	await db.prepare('INSERT INTO teachers (email, created_at) VALUES (?, ?) ON CONFLICT (email) DO NOTHING').bind(email, new Date(now).toISOString()).run();
+	await db
+		.prepare('INSERT INTO group_teachers (group_id, teacher_id) SELECT ?, id FROM teachers WHERE email = ? ON CONFLICT DO NOTHING')
+		.bind(group.id, email)
+		.run();
+	return groupTeachers(db, teacher, group.id);
+}
+
+/** Take a teacher's access away. The owner can remove anyone else; others can only remove themselves. */
+export async function unshareGroup(db: D1Database, teacher: Teacher, groupId: unknown, teacherId: unknown) {
+	const group = await groupFor(db, teacher, groupId);
+	const target = Number(teacherId);
+	if (target === group.owner_teacher_id) throw new QuizError(400, "The group's owner can't be removed. Delete the group instead.");
+	if (teacher.id !== group.owner_teacher_id && target !== teacher.id) {
+		throw new QuizError(403, "Only the group's owner can remove other teachers.");
+	}
+	await db.prepare('DELETE FROM group_teachers WHERE group_id = ? AND teacher_id = ?').bind(group.id, target).run();
+}

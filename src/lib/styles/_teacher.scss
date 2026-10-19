@@ -355,3 +355,25 @@
 
 // Chips used as buttons (e.g. Topics / Spec points / Command words)
 button.quiz-chip { color: var(--text); font: inherit; font-size: 0.9rem; &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; } }
+
+// ---- Set work and sharing ------------------------------------------------------------
+.work-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-top: 0.6rem;
+
+  label { margin: 0 !important; }
+  .account-input { width: auto; }
+}
+
+.work-date { max-width: 11rem; }
+
+.work-item {
+  border-top: 1px solid var(--border-inner);
+  padding: 0.6rem 0;
+
+  summary { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; align-items: baseline; cursor: pointer; }
+  .work-count { margin-left: auto; font-weight: 600; }
+}

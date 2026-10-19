@@ -6,7 +6,7 @@
 	// Logged-in students can go straight in: the server draws from the topics
 	// they've practised. Anonymous users tick the topics to include.
 	import { onMount } from 'svelte';
-	import type { MistakeCounts, Mode, QuizSummary } from '$lib/quiz/public';
+	import { dueLabel, type MistakeCounts, type Mode, type QuizSummary, type StudentWork } from '$lib/quiz/public';
 	import { logOut, refreshSession, session } from '$lib/session.svelte';
 	import QuizRunner from './QuizRunner.svelte';
 
@@ -45,12 +45,15 @@
 	let usePractised = $state(true);
 	let mistakeCount = $state<number | null>(null);
 	let running = $state(false);
+	/** /review/?assignment=ID: a piece of set work. */
+	let work = $state<StudentWork | null>(null);
+	let workMissing = $state(false);
 	let runKey = $state(0);
 	let heading = $state<HTMLElement>();
 
 	const choosable = $derived(quizzes.filter((q) => (mode === 'technique' ? q.exam_skills > 0 : q.available)));
 	const needsTopics = $derived(mode !== 'mistakes' && (!session.username || !usePractised));
-	const request = $derived({
+	const request = $derived(work ? { mode, assignment_id: work.id } : {
 		mode,
 		...(mode === 'mistakes' && quizFilter && { quiz_id: quizFilter }),
 		...(needsTopics && { topics: chosen })
@@ -63,6 +66,15 @@
 		const wanted = params.get('mode') as Mode | null;
 		if (wanted && modes.includes(wanted)) mode = wanted;
 		quizFilter = params.get('quiz');
+		const workId = Number(params.get('assignment'));
+		if (workId && session.username) {
+			const res = await fetch('/api/student/assignments').catch(() => null);
+			const list: StudentWork[] = res?.ok ? ((await res.json()) as { assignments: StudentWork[] }).assignments : [];
+			work = list.find((a) => a.id === workId) ?? null;
+			workMissing = !work;
+		} else if (workId) {
+			workMissing = true;
+		}
 		const [list, counts] = await Promise.all([
 			fetch('/api/quizzes').then((r): Promise<QuizSummary[]> => (r.ok ? r.json() : Promise.resolve([]))).catch(() => []),
 			session.username
@@ -97,6 +109,44 @@
 	const titleFor = (id: string | null) => quizzes.find((q) => q.id === id)?.title;
 </script>
 
+{#if work || workMissing}
+	<section class="quiz" aria-label="Set work">
+		{#if running && work}
+			{#key runKey}
+				<QuizRunner {request} name="work" onExit={() => location.assign('/progress/')} />
+			{/key}
+		{:else if work}
+			<h2 class="quiz-title" tabindex="-1">{work.title}</h2>
+			<p class="quiz-intro">Set by your teacher · due {dueLabel(work.due_date)} · <span class="status-badge work-{work.status}">{work.label}</span></p>
+			<p class="quiz-saving">
+				Saving as <strong>{session.username}</strong>.
+				<button type="button" class="quiz-link-btn" onclick={logOut}>Not you? Log out</button>
+			</p>
+			{#if work.assessment}
+				<p class="quiz-notice">
+					This is an assessment: you get <strong>one go</strong>. You'll see your feedback at the end, but you can't try it again.
+					If you leave part-way through, you'll come back to the same questions.
+				</p>
+			{/if}
+			{#if work.can_start}
+				<div class="quiz-nav">
+					<button type="button" class="quiz-btn quiz-btn--primary" onclick={start}>{work.status === 'done' || work.status === 'late' ? 'Do it again' : 'Start'}</button>
+					<a class="quiz-btn" href="/progress/">Back</a>
+				</div>
+			{:else}
+				<p class="account-intro">You've done this one{work.best !== null ? `: you scored ${Math.round(work.best * 100)}%` : ''}. <a href="/progress/">Back to your progress</a></p>
+			{/if}
+		{:else}
+			<h2 class="quiz-title">Set work</h2>
+			<p class="quiz-notice">
+				{session.username ? "That work wasn't found. It may have been removed: ask your teacher." : 'Log in to do the work your teacher has set.'}
+			</p>
+			<a class="quiz-btn quiz-btn--primary" href={session.username ? '/progress/' : `/login/?next=${encodeURIComponent('/review/' + location.search)}`}>
+				{session.username ? 'Back to your progress' : 'Log in'}
+			</a>
+		{/if}
+	</section>
+{:else}
 {#if modes.length > 1 && !running}
 	<div class="practice-tabs" role="group" aria-label="Practice mode">
 		{#each modes as m (m)}
@@ -186,3 +236,4 @@
 		{/if}
 	{/if}
 </section>
+{/if}

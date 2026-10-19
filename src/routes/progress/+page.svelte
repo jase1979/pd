@@ -5,9 +5,10 @@
 	import { onMount } from 'svelte';
 	import { pageTitle } from '$lib/site';
 	import { logOut, refreshSession, session } from '$lib/session.svelte';
-	import type { ProgressData, TopicProgress } from '$lib/quiz/public';
+	import { dueLabel, type ProgressData, type StudentWork, type TopicProgress } from '$lib/quiz/public';
 
 	let data = $state<ProgressData>();
+	let work = $state<StudentWork[]>([]);
 	let status = $state<'loading' | 'ready' | 'logged-out' | 'error'>('loading');
 
 	onMount(async () => {
@@ -21,6 +22,8 @@
 			if (!res.ok) throw new Error();
 			data = await res.json();
 			status = 'ready';
+			const w = await fetch('/api/student/assignments').catch(() => null);
+			work = w?.ok ? ((await w.json()) as { assignments: StudentWork[] }).assignments : [];
 		} catch {
 			status = 'error';
 		}
@@ -65,6 +68,23 @@
 			Showing progress for <strong>{data.username}</strong>.
 			<button type="button" class="quiz-link-btn" onclick={logOut}>Not you? Log out</button>
 		</p>
+
+		<!-- Set work, when there is any: the most urgent thing on the page -->
+		{#if work.length}
+			<section class="progress-section" aria-labelledby="work-heading">
+				<h2 id="work-heading">Set work</h2>
+				<ul class="work-list">
+					{#each work as w (w.id)}
+						<li>
+							<a href="/review/?assignment={w.id}" class="work-title">{w.title}</a>
+							{#if w.assessment}<span class="quiz-hint">Assessment</span>{/if}
+							<span class="quiz-hint">Due {dueLabel(w.due_date)}</span>
+							<span class="status-badge work-{w.status}">{w.label}{#if w.best !== null} · {Math.round(w.best * 100)}%{/if}</span>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 
 		<!-- 1. Improvement comes first -->
 		<section class="progress-section">

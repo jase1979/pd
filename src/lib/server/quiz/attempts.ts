@@ -11,6 +11,7 @@
 
 import { ANON_TOKEN_TTL_S } from '../config';
 import { cooldownUntil, loadHistory } from '../history';
+import { assignmentForStudent, planRequestFor, type Assignment } from '../assignments';
 import { attemptPace } from '../progress';
 import type { Student } from '../students';
 import { answerShapeError, mark } from '$lib/quiz/marking';
@@ -41,12 +42,29 @@ function indexQuestions(quizzes: readonly Quiz[]) {
 const loggedIn = (ctx: AttemptContext): ctx is AttemptContext & { db: D1Database; student: Student } =>
 	!!ctx.db && !!ctx.student;
 
-export async function startAttempt(req: PlanRequest, ctx: AttemptContext): Promise<StartResult> {
+/**
+ * Start an attempt. `assignment_id` starts a piece of set work instead: the
+ * work decides what's drawn, the group's cooldown doesn't apply, and an
+ * assessment allows one attempt. An unfinished assessment is resumed with the
+ * same questions, so starting again can't be used to see a different set.
+ */
+export async function startAttempt(req: PlanRequest & { assignment_id?: unknown }, ctx: AttemptContext): Promise<StartResult> {
 	const now = ctx.now ?? Date.now();
+	let assignment: Assignment | null = null;
+	if (req.assignment_id !== undefined) {
+		if (!loggedIn(ctx)) throw new QuizError(401, 'Log in to do the work your teacher has set.');
+		assignment = await assignmentForStudent(ctx.db, ctx.student, req.assignment_id);
+		if (assignment.assessment) {
+			const resumed = await resumeAssessment(ctx as AttemptContext & { db: D1Database; student: Student }, assignment);
+			if (resumed) return resumed;
+		}
+		const group = await ctx.db.prepare('SELECT spec FROM teaching_groups WHERE id = ?').bind(ctx.student.group_id).first<{ spec: string }>();
+		req = planRequestFor(assignment, ctx.quizzes.filter((q) => q.spec === group?.spec).map((q) => q.id));
+	}
 	const history = loggedIn(ctx) ? await loadHistory(ctx.db, ctx.student.id) : null;
 
-	// The group's cooldown only applies to retrying the same topic quiz.
-	if (loggedIn(ctx) && req.mode === 'topic' && typeof req.quiz_id === 'string') {
+	// The group's cooldown only applies to retrying the same topic quiz (not set work).
+	if (loggedIn(ctx) && !assignment && req.mode === 'topic' && typeof req.quiz_id === 'string') {
 		const until = await cooldownUntil(ctx.db, ctx.student.id, ctx.student.group_id, req.quiz_id, now);
 		if (until) {
 			throw new QuizError(
@@ -63,10 +81,17 @@ export async function startAttempt(req: PlanRequest, ctx: AttemptContext): Promi
 
 	if (loggedIn(ctx)) {
 		const r = await ctx.db
-			.prepare('INSERT INTO attempts (student_id, mode, quiz_id, question_ids, time_limit_s, started_at) VALUES (?, ?, ?, ?, ?, ?)')
-			.bind(ctx.student.id, plan.mode, plan.quiz_id, JSON.stringify(plan.questions.map((q) => q.id)), plan.time_limit_s, new Date(now).toISOString())
+			.prepare('INSERT INTO attempts (student_id, mode, quiz_id, question_ids, time_limit_s, started_at, assignment_id) VALUES (?, ?, ?, ?, ?, ?, ?)')
+			.bind(ctx.student.id, plan.mode, plan.quiz_id, JSON.stringify(plan.questions.map((q) => q.id)), plan.time_limit_s, new Date(now).toISOString(), assignment?.id ?? null)
 			.run();
-		return { mode: plan.mode, attempt_id: r.meta.last_row_id, questions, ...timed, saving_as: ctx.student.username };
+		return {
+			mode: plan.mode,
+			attempt_id: r.meta.last_row_id,
+			questions,
+			...timed,
+			saving_as: ctx.student.username,
+			...(assignment && { assignment: { id: assignment.id, title: assignment.title, assessment: assignment.assessment, due_date: assignment.due_date } })
+		};
 	}
 
 	const token = await signToken(
@@ -81,6 +106,27 @@ export async function startAttempt(req: PlanRequest, ctx: AttemptContext): Promi
 		ctx.secret
 	);
 	return { mode: plan.mode, token, questions, ...timed };
+}
+
+/** An assessment allows one completed attempt; an unfinished one is resumed as it was. */
+async function resumeAssessment(ctx: AttemptContext & { db: D1Database; student: Student }, a: Assignment): Promise<StartResult | null> {
+	const { results } = await ctx.db
+		.prepare('SELECT id, mode, question_ids, completed_at FROM attempts WHERE assignment_id = ? AND student_id = ? ORDER BY id')
+		.bind(a.id, ctx.student.id)
+		.all<{ id: number; mode: Mode; question_ids: string; completed_at: string | null }>();
+	if (results.some((r) => r.completed_at)) throw new QuizError(409, "You've already done this assessment. Your teacher can see how you got on.");
+	const open = results.at(-1);
+	if (!open) return null;
+	const index = indexQuestions(ctx.quizzes);
+	const ids: string[] = JSON.parse(open.question_ids);
+	if (ids.some((id) => !index.has(id))) return null; // the questions have changed: draw afresh
+	return {
+		mode: open.mode,
+		attempt_id: open.id,
+		questions: ids.map((id) => toPublic(index.get(id)!.q, index.get(id)!.quiz)),
+		saving_as: ctx.student.username,
+		assignment: { id: a.id, title: a.title, assessment: true, due_date: a.due_date }
+	};
 }
 
 /**
@@ -150,6 +196,8 @@ interface AttemptRecord {
 	time_limit_s: number | null;
 	/** Set if the attempt is stored and must be saved on submit. */
 	stored?: { id: number; student: Student; db: D1Database };
+	/** Set work that only allows one attempt. */
+	assessment?: boolean;
 }
 
 /** The attempt being submitted, from the database (logged in) or its token (anonymous). */
@@ -157,9 +205,13 @@ async function findAttempt(body: { token?: unknown; attempt_id?: unknown }, ctx:
 	if (body.attempt_id !== undefined) {
 		if (!loggedIn(ctx)) throw new QuizError(401, "You've been logged out. Log in again, then start the quiz again.");
 		const row = await ctx.db
-			.prepare('SELECT id, mode, quiz_id, question_ids, time_limit_s, started_at, completed_at FROM attempts WHERE id = ? AND student_id = ?')
+			.prepare(
+				`SELECT a.id, a.mode, a.quiz_id, a.question_ids, a.time_limit_s, a.started_at, a.completed_at, w.assessment
+				 FROM attempts a LEFT JOIN assignments w ON w.id = a.assignment_id
+				 WHERE a.id = ? AND a.student_id = ?`
+			)
 			.bind(body.attempt_id, ctx.student.id)
-			.first<{ id: number; mode: Mode; quiz_id: string | null; question_ids: string; time_limit_s: number | null; started_at: string; completed_at: string | null }>();
+			.first<{ id: number; mode: Mode; quiz_id: string | null; question_ids: string; time_limit_s: number | null; started_at: string; completed_at: string | null; assessment: number | null }>();
 		if (!row) throw new QuizError(404, 'That attempt was not found. Please start the quiz again.');
 		if (row.completed_at) throw new QuizError(409, 'This attempt has already been submitted.');
 		return {
@@ -168,7 +220,8 @@ async function findAttempt(body: { token?: unknown; attempt_id?: unknown }, ctx:
 			question_ids: JSON.parse(row.question_ids),
 			started: Date.parse(row.started_at),
 			time_limit_s: row.time_limit_s,
-			stored: { id: row.id, student: ctx.student, db: ctx.db }
+			stored: { id: row.id, student: ctx.student, db: ctx.db },
+			assessment: row.assessment === 1
 		};
 	}
 	const token = await verifyToken(body.token, ctx.secret, now);
@@ -251,7 +304,8 @@ export async function submitAttempt(
 		results,
 		past_papers: quiz?.past_papers ?? [],
 		...(pace && { pace }),
-		saved: !!attempt.stored
+		saved: !!attempt.stored,
+		...(attempt.assessment && { assessment: true })
 	};
 }
 
