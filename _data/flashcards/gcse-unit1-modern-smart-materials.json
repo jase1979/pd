@@ -1,0 +1,77 @@
+[
+  {
+    "id": "gcse-unit1-modern-smart-materials-1",
+    "front": "Smart material",
+    "back": "A material whose properties change in response to an external stimulus such as temperature, light, pressure or electrical current."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-2",
+    "front": "Shape memory alloy (SMA)",
+    "back": "An alloy that returns to a pre-set shape when heated after being deformed. The most common is Nitinol (nickel + titanium)."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-3",
+    "front": "Uses of Nitinol",
+    "back": "Spectacle frames that return to shape when warmed, dental braces that gently move teeth at body temperature, and medical stents that expand inside the body."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-4",
+    "front": "Polymorph",
+    "back": "A thermoplastic that softens and becomes mouldable at about 62°C (in hot water), sets rigid when cool, and can be reheated and reshaped many times."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-5",
+    "front": "Uses of polymorph",
+    "back": "Custom handles and grips, small prototypes, prosthetic components and model-making in D&T."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-6",
+    "front": "Photochromic materials",
+    "back": "Change colour when exposed to ultraviolet (UV) light and return to their original colour when the UV is removed."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-7",
+    "front": "Uses of photochromic materials",
+    "back": "Transition spectacle lenses, security printing on banknotes and documents, and UV-reactive inks."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-8",
+    "front": "Thermochromic materials",
+    "back": "Change colour in response to temperature; the change is reversible."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-9",
+    "front": "Uses of thermochromic materials",
+    "back": "Baby spoons, bottles and bath thermometers that show a safe temperature, mood rings, and food and drink packaging that shows serving temperature."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-10",
+    "front": "Micro-encapsulation",
+    "back": "Enclosing tiny particles or droplets in a coating that releases its contents when broken by pressure, heat or friction."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-11",
+    "front": "Uses of micro-encapsulation",
+    "back": "Scratch-and-sniff products, phase-change textiles that regulate body temperature, antibacterial fabrics and self-healing materials."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-12",
+    "front": "Biometrics",
+    "back": "Technology that identifies or authenticates people using unique biological characteristics — fingerprints, face, iris or voice."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-13",
+    "front": "Ethical issue with biometrics",
+    "back": "Personal biological data is highly sensitive, so its storage and use must be carefully regulated."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-14",
+    "front": "Conductive fibres",
+    "back": "Fibres woven into fabric that carry electrical signals — used in heated jackets, wearable technology and sports performance monitoring."
+  },
+  {
+    "id": "gcse-unit1-modern-smart-materials-15",
+    "front": "Shape memory fibres",
+    "back": "Fibres woven into garments that change shape or tighten in response to temperature or moisture."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "gcse-unit2-timber-1",
+    "front": "Hardwood",
+    "back": "Timber from deciduous trees that lose their leaves in autumn. Slow-growing, so less available and more expensive."
+  },
+  {
+    "id": "gcse-unit2-timber-2",
+    "front": "Softwood",
+    "back": "Timber from evergreen coniferous trees with cones and needles. Faster-growing, readily available and cheaper."
+  },
+  {
+    "id": "gcse-unit2-timber-3",
+    "front": "Oak",
+    "back": "Hardwood; moderate brown with close, straight grain. Tough, durable and polishes well — high-quality furniture, doors and staircases."
+  },
+  {
+    "id": "gcse-unit2-timber-4",
+    "front": "Beech",
+    "back": "Hardwood; pink-tinted and closely grained. Very tough with a smooth finish — workbenches and hard-wearing products."
+  },
+  {
+    "id": "gcse-unit2-timber-5",
+    "front": "Mahogany",
+    "back": "Hardwood; dark red-brown, very close grain. Cuts and polishes easily — furniture and cabinet making."
+  },
+  {
+    "id": "gcse-unit2-timber-6",
+    "front": "Balsa",
+    "back": "A fast-growing hardwood that is soft and very lightweight — used for modelling."
+  },
+  {
+    "id": "gcse-unit2-timber-7",
+    "front": "Jelutong",
+    "back": "Hardwood; pale, fine grain, easy to work and lightweight — used for modelling and pattern making."
+  },
+  {
+    "id": "gcse-unit2-timber-8",
+    "front": "Scots pine",
+    "back": "Softwood; pale yellow with darker brown grain, lightweight and easy to work — construction and furniture."
+  },
+  {
+    "id": "gcse-unit2-timber-9",
+    "front": "Western red cedar",
+    "back": "Softwood; lightweight, pale and even-textured, good outdoors — fencing, decking and sheds."
+  },
+  {
+    "id": "gcse-unit2-timber-10",
+    "front": "Larch",
+    "back": "Softwood; darker with brown grain, water resistant and durable — exterior cladding and boats."
+  },
+  {
+    "id": "gcse-unit2-timber-11",
+    "front": "Parana pine",
+    "back": "Softwood; pale, fine grain, almost knot-free and hard for a softwood — interior joinery and stairs."
+  },
+  {
+    "id": "gcse-unit2-timber-12",
+    "front": "Seasoning",
+    "back": "Kiln drying or air drying natural timber to remove moisture and prevent shrinkage before use."
+  },
+  {
+    "id": "gcse-unit2-timber-13",
+    "front": "Manufactured boards",
+    "back": "Man-made boards made from wood fibres (usually recycled) bonded with resins into sheets."
+  },
+  {
+    "id": "gcse-unit2-timber-14",
+    "front": "MDF",
+    "back": "Small fibres mixed with wax and resin, heated and compressed. No grain, easy to work but very porous — seal edges before finishing."
+  },
+  {
+    "id": "gcse-unit2-timber-15",
+    "front": "Chipboard",
+    "back": "Small chips of timber bonded together into a dense sheet. Usually veneered or given a melamine layer, e.g. kitchen worktops."
+  },
+  {
+    "id": "gcse-unit2-timber-16",
+    "front": "Plywood",
+    "back": "Layers of wood bonded with grain at 90° to each other — strong and rigid; used for furniture and construction."
+  },
+  {
+    "id": "gcse-unit2-timber-17",
+    "front": "Hardboard",
+    "back": "Compressed wood fibres with one smooth face; thin and hard — back panels and drawer bases."
+  },
+  {
+    "id": "gcse-unit2-timber-18",
+    "front": "Standard sheet size of manufactured boards",
+    "back": "2440 mm × 1220 mm, or a half sheet of 1220 mm × 610 mm."
+  }
+]

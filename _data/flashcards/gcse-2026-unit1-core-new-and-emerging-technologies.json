@@ -1,0 +1,97 @@
+[
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-1",
+    "front": "Market pull",
+    "back": "A new or improved product developed because consumers demand it — the need comes first. Lower risk, e.g. reusable water bottles."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-2",
+    "front": "Technology push",
+    "back": "A development in technology, materials or manufacturing creates a product consumers did not know they wanted. Higher risk, e.g. touchscreens."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-3",
+    "front": "Effects of automation and robotics on industry",
+    "back": "Higher output, consistency and quality and fewer dangerous jobs — but fewer manual roles and large upfront investment."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-4",
+    "front": "Flexible manufacturing",
+    "back": "CNC and CAM equipment can be reprogrammed for a different product, so factories respond quickly to changes in demand."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-5",
+    "front": "On-demand production",
+    "back": "Making products only when ordered — reduces the cost of holding stock and waste from unsold goods."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-6",
+    "front": "How new technology helps small enterprises",
+    "back": "Cheap 3D printers, subscription CAD and online manufacturing lower barriers to entry; crowdfunding proves demand; selling direct reaches a global market."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-7",
+    "front": "Crowdfunding",
+    "back": "Proving demand and raising money from the public before committing to production, reducing financial risk."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-8",
+    "front": "Augmented reality (AR)",
+    "back": "Overlays computer-generated images onto a view of the real world, e.g. placing a virtual product in your home before buying."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-9",
+    "front": "Virtual reality (VR)",
+    "back": "Replaces the real world with a computer-generated environment viewed through a headset — walking through products before they exist, virtual ergonomic testing, safe training."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-10",
+    "front": "Generative design",
+    "back": "The designer enters constraints (loads, materials, size, process) and AI-driven CAD produces many possible solutions, often lighter and more efficient."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-11",
+    "front": "Concerns about AI in design",
+    "back": "Who owns an AI-generated design, and designers becoming too reliant on the software's judgement."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-12",
+    "front": "CAD — advantages",
+    "back": "Quick modification and re-testing, simulation reduces physical prototypes, professional 3D presentation, direct transfer to CAM, cloud collaboration."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-13",
+    "front": "CAD — disadvantages",
+    "back": "Expensive software and hardware, significant training, early ideas often quicker by hand, files can be lost, hacked or copied, over-reliance limits originality."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-14",
+    "front": "Laser cutting",
+    "back": "A focused beam cuts or engraves sheet material very accurately with little waste. Suits acrylic, plywood, MDF and card; needs extraction; PVC must never be cut (toxic fumes)."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-15",
+    "front": "3D printing (additive manufacturing)",
+    "back": "Builds products in layers — complex shapes and one-offs, rapid prototyping, little waste — but slow for volume and weaker along layer lines."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-16",
+    "front": "4D printing",
+    "back": "3D printing with smart or programmable materials so the object changes shape or function over time in response to a stimulus. The fourth dimension is time."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-17",
+    "front": "Uses and limits of 4D printing",
+    "back": "Being developed for stents, pipes that change diameter and self-adjusting textiles; still experimental, expensive and unproven long term."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-18",
+    "front": "CAM — advantages",
+    "back": "Identical quality, continuous running, accurate repeats of complex shapes, quick changeover, efficient use of material."
+  },
+  {
+    "id": "gcse-2026-unit1-core-new-and-emerging-technologies-19",
+    "front": "CAM — disadvantages",
+    "back": "High purchase and maintenance costs, fewer skilled manual jobs, needs trained programmers, errors repeat across a batch, small runs may not justify set-up."
+  }
+]
