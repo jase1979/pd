@@ -3,7 +3,7 @@ import { signToken, verifyToken, type AttemptToken } from './token';
 
 const secret = 'test-secret';
 const now = Date.UTC(2026, 9, 19, 12);
-const payload: AttemptToken = { v: 1, mode: 'topic', quiz_id: 'legacy-u2-timber', q: ['timber-001', 'timber-003'], exp: now + 60_000 };
+const payload: AttemptToken = { v: 2, mode: 'topic', quiz_id: 'legacy-u2-timber', q: ['timber-001', 'timber-003'], exp: now + 60_000 };
 
 describe('attempt tokens', () => {
 	it('round-trips a valid token', async () => {

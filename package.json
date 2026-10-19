@@ -12,7 +12,8 @@
     "test": "vitest run",
     "migrate:local": "wrangler d1 migrations apply pd --local",
     "migrate:remote": "wrangler d1 migrations apply pd --remote",
-    "migrate:list": "wrangler d1 migrations list pd --remote"
+    "migrate:list": "wrangler d1 migrations list pd --remote",
+    "seed:dev": "node scripts/seed-dev.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260617.1",

@@ -1,13 +1,24 @@
 import { describe, expect, it } from 'vitest';
-import { QuizError, quizMeta, startAttempt, submitAttempt, servableQuestions } from './attempts';
+import { QuizError, quizMeta, startAttempt, submitAttempt, servableQuestions, type AttemptContext } from './attempts';
 import { bestAnswer, multi, question, quiz, seeded, twoTier } from './fixtures';
 import type { Quiz } from './types';
 
 const secret = 'test-secret';
 const now = Date.UTC(2026, 9, 19, 12);
 
+/** The context an endpoint would pass, for an anonymous user. */
+const ctx = (quizzes: Quiz | Quiz[], extra: Partial<AttemptContext> = {}): AttemptContext => ({
+	quizzes: Array.isArray(quizzes) ? quizzes : [quizzes],
+	environment: 'production',
+	secret,
+	random: seeded(),
+	now,
+	...extra
+});
+
 async function begin(q: Quiz, environment = 'production') {
-	return startAttempt(q, environment, secret, { random: seeded(), now });
+	const r = await startAttempt({ mode: 'topic', quiz_id: q.id }, ctx(q, { environment }));
+	return { token: r.token!, questions: r.questions };
 }
 
 /** Answer every served question with the given option (or "I don't know" for null). */
@@ -39,7 +50,7 @@ describe('draft questions', () => {
 		const live = quiz(10);
 		live.questions.slice(0, 4).forEach((q) => (q.status = 'draft'));
 		for (let seed = 1; seed <= 20; seed++) {
-			const { questions } = await startAttempt(live, 'production', secret, { random: seeded(seed), now });
+			const { questions } = await startAttempt({ mode: 'topic', quiz_id: live.id }, ctx(live, { random: seeded(seed) }));
 			expect(questions.map((q) => q.id)).not.toContain('q-1');
 			expect(questions.every((q) => !['q-1', 'q-2', 'q-3', 'q-4'].includes(q.id))).toBe(true);
 		}
@@ -102,14 +113,13 @@ describe('startAttempt', () => {
 
 describe('submitAttempt', () => {
 	const q = quiz(10);
-	const lookup = (id: string) => (id === q.id ? q : undefined);
 
 	it('marks every answer and totals the score', async () => {
 		const { token, questions } = await begin(q);
 		const answers = answerAll(questions, 0);
 		answers[0] = { question_id: questions[0].id, chosen: 1, dont_know: false, confidence: 'guess' };
 		answers[1] = { question_id: questions[1].id, chosen: null, dont_know: true, confidence: null };
-		const res = await submitAttempt({ token, answers }, secret, lookup, now);
+		const res = await submitAttempt({ token, answers }, ctx(q));
 		expect(res.max_score).toBe(10);
 		expect(res.score).toBe(8);
 		expect(res.results.map((r) => r.question_id)).toEqual(questions.map((x) => x.id));
@@ -119,7 +129,7 @@ describe('submitAttempt', () => {
 
 	it('includes why_wrong for every option of a question not answered correctly', async () => {
 		const { token, questions } = await begin(q);
-		const res = await submitAttempt({ token, answers: answerAll(questions, 1) }, secret, lookup, now);
+		const res = await submitAttempt({ token, answers: answerAll(questions, 1) }, ctx(q));
 		for (const r of res.results) {
 			expect(r.why_wrong).toEqual([null, 'Because A.', 'Because B.']);
 			expect(r.explanation).toBe('Right is right.');
@@ -129,26 +139,26 @@ describe('submitAttempt', () => {
 
 	it('includes why_wrong for "I don\'t know" answers too', async () => {
 		const { token, questions } = await begin(q);
-		const res = await submitAttempt({ token, answers: answerAll(questions, null) }, secret, lookup, now);
+		const res = await submitAttempt({ token, answers: answerAll(questions, null) }, ctx(q));
 		expect(res.results.every((r) => r.why_wrong?.length === 3)).toBe(true);
 	});
 
 	it('leaves why_wrong out for correct answers', async () => {
 		const { token, questions } = await begin(q);
-		const res = await submitAttempt({ token, answers: answerAll(questions, 0) }, secret, lookup, now);
+		const res = await submitAttempt({ token, answers: answerAll(questions, 0) }, ctx(q));
 		expect(res.results.every((r) => r.why_wrong === undefined)).toBe(true);
 	});
 
 	it('rejects a modified token', async () => {
 		const { token, questions } = await begin(q);
 		const tampered = token.replace(/.$/, (c) => (c === 'A' ? 'B' : 'A'));
-		await expect(submitAttempt({ token: tampered, answers: answerAll(questions, 0) }, secret, lookup, now)).rejects.toMatchObject({ status: 400 });
+		await expect(submitAttempt({ token: tampered, answers: answerAll(questions, 0) }, ctx(q))).rejects.toMatchObject({ status: 400 });
 	});
 
 	it('rejects an expired token', async () => {
 		const { token, questions } = await begin(q);
 		const later = now + 2 * 60 * 60 * 1000 + 1;
-		await expect(submitAttempt({ token, answers: answerAll(questions, 0) }, secret, lookup, later)).rejects.toMatchObject({ status: 400 });
+		await expect(submitAttempt({ token, answers: answerAll(questions, 0) }, ctx(q, { now: later }))).rejects.toMatchObject({ status: 400 });
 	});
 
 	it('rejects answers that don\'t match the served questions', async () => {
@@ -160,7 +170,7 @@ describe('submitAttempt', () => {
 			[...all.slice(1), { ...all[0], question_id: 'q-999' }] // a swapped-in question
 		];
 		for (const answers of cases) {
-			await expect(submitAttempt({ token, answers }, secret, lookup, now)).rejects.toMatchObject({ status: 400 });
+			await expect(submitAttempt({ token, answers }, ctx(q))).rejects.toMatchObject({ status: 400 });
 		}
 	});
 
@@ -174,7 +184,7 @@ describe('submitAttempt', () => {
 			{ question_id: id, chosen: 7, dont_know: false, confidence: 'sure' }, // no such option
 			{ question_id: id, chosen: '0', dont_know: false, confidence: 'sure' }
 		]) {
-			await expect(submitAttempt({ token, answers: [bad, ...rest] }, secret, lookup, now)).rejects.toMatchObject({ status: 400 });
+			await expect(submitAttempt({ token, answers: [bad, ...rest] }, ctx(q))).rejects.toMatchObject({ status: 400 });
 		}
 	});
 
@@ -182,7 +192,7 @@ describe('submitAttempt', () => {
 		const { token, questions } = await begin(q);
 		const smaller = { ...q, questions: q.questions.filter((x) => x.id !== questions[0].id) };
 		await expect(
-			submitAttempt({ token, answers: answerAll(questions, 0) }, secret, () => smaller, now)
+			submitAttempt({ token, answers: answerAll(questions, 0) }, ctx(smaller))
 		).rejects.toMatchObject({ status: 409 });
 	});
 
@@ -206,7 +216,7 @@ describe('submitAttempt', () => {
 				dont_know: false,
 				confidence
 			}));
-			return submitAttempt({ token, answers }, secret, () => mixed, now);
+			return submitAttempt({ token, answers }, ctx(mixed));
 		}
 
 		it('marks each type and totals the marks', async () => {
@@ -268,7 +278,7 @@ describe('submitAttempt', () => {
 		one.questions[0] = question('q-1', 'concept-1', { answer: 2, options: [{ text: 'A', why_wrong: 'x' }, { text: 'B', why_wrong: 'y' }, { text: 'C' }] });
 		const { token, questions } = await begin(one);
 		const answers = answerAll(questions, 0).map((a) => (a.question_id === 'q-1' ? { ...a, chosen: 2 } : a));
-		const res = await submitAttempt({ token, answers }, secret, () => one, now);
+		const res = await submitAttempt({ token, answers }, ctx(one));
 		expect(res.results.find((r) => r.question_id === 'q-1')).toMatchObject({ correct: true, answer: 2 });
 	});
 });

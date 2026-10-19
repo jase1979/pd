@@ -26,7 +26,12 @@ src/lib/quiz/                 marking and the API's data shapes, shared with the
                               browser (no answers in here)
 src/lib/components/quiz/      the quiz screens
 src/lib/server/config.ts      every quiz threshold and tunable number
-src/routes/api/               the quiz API (start, submit, meta)
+src/routes/api/               the API: quizzes, attempts, student login,
+                              progress and page tracking
+src/lib/server/students.ts    login codes, sessions and the login rate limit
+src/lib/server/progress.ts    every progress figure (mastery, statuses,
+                              mistakes, pace, calibration)
+src/lib/server/quiz/modes.ts  which questions each practice mode serves
 migrations/                   D1 database schema
 src/routes/                   the pages: home, /gcse/, units and topics
                               (gcse/[...path]), /glossary/, /past-papers/
@@ -105,6 +110,27 @@ npm run dev                      # http://localhost:5173, reloads as you edit
 
 `npm run dev` and `wrangler pages dev` both read `wrangler.toml` and
 `.dev.vars`, and use a local D1 database under `.wrangler/`.
+
+To try student logins before the teacher pages exist:
+
+```bash
+npm run seed:dev     # creates "Test group (dev)" locally and prints 5 login codes
+```
+
+Running it again replaces the test group and everything its students did.
+
+## Students and practice
+
+- Students log in at `/login/` with only their code. The session ends when the
+  browser closes (12 hours at most), or lasts 7 days with "Remember me".
+- Pages: `/progress/` (the student's dashboard), `/review/` (Mixed review,
+  Timed practice and Practise my mistakes) and `/exam-technique/`.
+- Every page is still static. Login status in the header comes from a
+  readable `pd_user` cookie holding the username only; the API checks the
+  HttpOnly `pd_session` cookie for anything that matters.
+- Progress figures are worked out in `src/lib/server/progress.ts` from the
+  saved answers each time; there are no summary tables. All the thresholds are
+  in `src/lib/server/config.ts`.
 
 To run the production build the way Cloudflare serves it:
 

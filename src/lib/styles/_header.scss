@@ -40,3 +40,56 @@
     nav a { margin-left: 0.8rem; font-size: 0.8rem; }
   }
 }
+
+// Login status. Hidden until the browser has read the cookie, so a logged-in
+// student never sees "Log in" flash up first.
+.site-header {
+  nav { flex: 1; text-align: right; }
+  nav a.progress { color: var(--gcse); }
+
+  .account {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--border);
+    font-size: 0.85rem;
+    min-width: 4.5rem;
+
+    &.hidden { visibility: hidden; }
+  }
+
+  .account-name { font-weight: 600; }
+
+  .account-logout {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover { color: var(--accent); }
+    &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  }
+
+  .account-login {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+
+    &:hover { border-color: var(--accent); color: var(--accent); }
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    nav { flex-basis: 100%; order: 3; text-align: left; margin-top: 0.4rem; }
+    nav a:first-child { margin-left: 0; }
+    .account { margin-left: auto; padding-left: 0; border-left: none; }
+  }
+}

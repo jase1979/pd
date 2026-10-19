@@ -20,6 +20,19 @@ export function signingSecret(platform: App.Platform | undefined): string {
 	return secret;
 }
 
+/** The D1 database; every student route needs it. */
+export function database(platform: App.Platform | undefined): D1Database {
+	const db = platform?.env.DB;
+	if (!db) throw new QuizError(500, 'The database is not set up on this server.');
+	return db;
+}
+
+/** The logged-in student, or a 401. */
+export function requireStudent(locals: App.Locals) {
+	if (!locals.student) throw new QuizError(401, 'Please log in first.');
+	return locals.student;
+}
+
 /** The request body as an object, or a 400. */
 export async function readJson(request: Request): Promise<Record<string, unknown>> {
 	try {

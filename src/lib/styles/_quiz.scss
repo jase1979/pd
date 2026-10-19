@@ -1,15 +1,20 @@
-// The quiz at the bottom of a topic page (components/Quiz.svelte).
+// The quiz (components/quiz/), on topic pages and the practice pages.
 // Colours follow the past papers page: teal for correct, red for incorrect.
 // Every status also has a text label and a ✓ / ✗ / ? mark, so colour is
 // never the only signal.
 
+// The quiz box itself.
 .quiz {
   margin-top: 2.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.5rem;
+}
 
+// Everything inside it. The account pages (login, progress, review) use the
+// same buttons, hints and options.
+.quiz, .account-page {
   h2:focus { outline: none; }
 
   .quiz-title {

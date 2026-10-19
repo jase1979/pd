@@ -10,7 +10,10 @@ declare global {
 				QUIZ_SIGNING_SECRET?: string;
 			};
 		}
-		// interface Locals {}
+		interface Locals {
+			/** The logged-in student, resolved from the session cookie (API requests only). */
+			student: import('$lib/server/students').Student | null;
+		}
 		// interface Error {}
 		// interface PageData {}
 		// interface PageState {}

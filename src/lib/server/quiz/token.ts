@@ -9,13 +9,17 @@
 // Format: base64url(JSON payload) + "." + base64url(signature)
 
 export interface AttemptToken {
-	v: 1;
-	mode: 'topic';
-	quiz_id: string;
+	v: 2;
+	mode: 'topic' | 'mixed' | 'technique' | 'timed';
+	/** Topic mode only. */
+	quiz_id?: string;
 	/** Question ids, in the order they were served. */
 	q: string[];
 	/** Expiry, in milliseconds since 1970. */
 	exp: number;
+	/** Timed mode: when the attempt started (ms since 1970) and its time limit (seconds). */
+	started?: number;
+	limit_s?: number;
 }
 
 const encoder = new TextEncoder();
@@ -66,6 +70,6 @@ export async function verifyToken(token: unknown, secret: string, now = Date.now
 	} catch {
 		return null;
 	}
-	if (payload?.v !== 1 || typeof payload.exp !== 'number' || payload.exp <= now) return null;
+	if (payload?.v !== 2 || typeof payload.exp !== 'number' || payload.exp <= now) return null;
 	return payload;
 }
