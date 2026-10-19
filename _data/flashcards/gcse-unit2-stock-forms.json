@@ -1,0 +1,67 @@
+[
+  {
+    "id": "gcse-unit2-stock-forms-1",
+    "front": "Stock forms of metal",
+    "back": "Round, square and hexagonal rods, strips, sheets, round and square tubes, angle and channel."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-2",
+    "front": "Stock forms of timber",
+    "back": "Plank, board, strip, square and dowel; sawn or planed; and shaped mouldings such as skirting."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-3",
+    "front": "PSE",
+    "back": "Planed with squared edge — timber planed smooth on all faces with square edges."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-4",
+    "front": "Standard thicknesses of MDF",
+    "back": "4, 6, 9, 12, 15, 18, 22 and 25 mm."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-5",
+    "front": "Hardboard thickness",
+    "back": "3.2 mm."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-6",
+    "front": "Stock forms of polymers",
+    "back": "Sheets, rods and tubes; granules, pellets and powder; foam; film."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-7",
+    "front": "Ply (papers and boards)",
+    "back": "The number of layers in a board."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-8",
+    "front": "Knock-down (KD) fittings",
+    "back": "Standard components for assembling products, e.g. cam locks, corner blocks, scan fittings and dowels."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-9",
+    "front": "Paper and board fittings",
+    "back": "Drawing pins, Velcro pads, treasury tags, staples and fasteners, and book bindings."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-10",
+    "front": "Calculating parts per sheet",
+    "back": "Divide each sheet dimension by the part dimension, round each answer down, then multiply. E.g. 1220 ÷ 200 = 6 and 610 ÷ 150 = 4, so 24 parts."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-11",
+    "front": "Why round down when calculating parts?",
+    "back": "You cannot use part of a part — an incomplete piece is waste."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-12",
+    "front": "Kerf",
+    "back": "The width of material removed by a saw cut. Add it to each piece length when working out how many pieces fit."
+  },
+  {
+    "id": "gcse-unit2-stock-forms-13",
+    "front": "True cost of a product",
+    "back": "Materials plus labour, energy, machine time, packaging and profit."
+  }
+]

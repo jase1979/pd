@@ -1,0 +1,97 @@
+[
+  {
+    "id": "gcse-unit2-scales-of-production-1",
+    "front": "One-off production",
+    "back": "Single bespoke products or prototypes. The user gets an original product, but it needs lots of manual labour."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-2",
+    "front": "Batch production",
+    "back": "Limited numbers of similar items made at one time, possibly repeated. There may be a delay until the next batch."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-3",
+    "front": "Mass production",
+    "back": "Identical products made in large volume with automated machinery. More profit, but high set-up costs and little flexibility."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-4",
+    "front": "Continuous flow production",
+    "back": "Identical products made 24/7 on heavily automated lines — huge numbers efficiently, but one fault can stop the whole process."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-5",
+    "front": "Products suited to continuous production",
+    "back": "Drinks cans, plastic bottles, bottle caps, screws and fixings, newspapers and food packaging."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-6",
+    "front": "Jig",
+    "back": "A device that holds material and guides cutting or drilling tools for accuracy and repeatability."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-7",
+    "front": "Template",
+    "back": "A tool for marking out the same shape repeatedly."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-8",
+    "front": "Benefits of CAM",
+    "back": "Faster and more accurate than by hand, consistent repeats, multiple items at once, less waste, and can work without supervision."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-9",
+    "front": "Injection moulding — the process",
+    "back": "Granules from a hopper are carried by a screw through a heated barrel and melted; the screw rams the polymer into a closed, cooled mould; it cools under pressure; ejector pins push the product out."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-10",
+    "front": "Injection moulding — advantages",
+    "back": "Very fast cycles, complex 3D shapes in one piece, identical accurate products, self-finishing, little waste."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-11",
+    "front": "Injection moulding — disadvantages",
+    "back": "Very expensive moulds (only economical in large quantities), design changes need a new mould, walls must be even, draft angles needed."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-12",
+    "front": "How to spot an injection-moulded product",
+    "back": "Circular ejector pin marks, a sprue mark, tapered sides (draft angles) and strengthening ribs inside."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-13",
+    "front": "Blow moulding",
+    "back": "A soft plastic tube is inflated to fill a mould cavity — used for bottles."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-14",
+    "front": "Vacuum forming",
+    "back": "A heated sheet of HIPS or acrylic is pulled over a mould by sucking the air out."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-15",
+    "front": "Compression moulding",
+    "back": "Polymer is placed in a heated mould cavity, then compressed by a plug in a hydraulic press."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-16",
+    "front": "Offset lithography",
+    "back": "High-volume printing where oil-based ink sticks to the image area of a plate and water to the rest; the image is offset onto a rubber blanket, then the paper."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-17",
+    "front": "CMYK",
+    "back": "Cyan, magenta, yellow and key (black) — the four inks used to build up colour images."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-18",
+    "front": "Offset lithography vs digital printing",
+    "back": "Offset: high quality and cheap per item for long runs, but slow and expensive to set up. Digital printing is used for short runs."
+  },
+  {
+    "id": "gcse-unit2-scales-of-production-19",
+    "front": "Die cutting",
+    "back": "Metal cutters stamp the required shape (e.g. a package net) out of card."
+  }
+]

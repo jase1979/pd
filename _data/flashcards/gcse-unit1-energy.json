@@ -1,0 +1,87 @@
+[
+  {
+    "id": "gcse-unit1-energy-1",
+    "front": "Renewable energy sources",
+    "back": "Wind, solar, tidal, wave, geothermal, biomass and hydroelectric — they come from a natural supply that is continuously replaced."
+  },
+  {
+    "id": "gcse-unit1-energy-2",
+    "front": "Non-renewable energy sources",
+    "back": "Coal, oil, gas and nuclear — available in limited amounts and often extracted from the earth."
+  },
+  {
+    "id": "gcse-unit1-energy-3",
+    "front": "Wind power — advantages and disadvantages",
+    "back": "Advantages: little impact on the environment; reliable when windy. Disadvantages: visual pollution, expensive to install, can harm birds."
+  },
+  {
+    "id": "gcse-unit1-energy-4",
+    "front": "Solar energy — advantages and disadvantages",
+    "back": "Advantages: clean and free once set up; works even on cloudy days. Disadvantages: expensive set-up, depends on sunshine, panels take space, storage is difficult and expensive."
+  },
+  {
+    "id": "gcse-unit1-energy-5",
+    "front": "Tidal energy — advantages and disadvantages",
+    "back": "Advantages: around 80% efficient; generates power for about 10 hours a day. Disadvantages: expensive to set up; can damage coastlines and harm marine life."
+  },
+  {
+    "id": "gcse-unit1-energy-6",
+    "front": "Geothermal energy",
+    "back": "Uses 'hot spots' where molten rock near the earth's crust heats water. Very high cost, risks triggering earthquakes and limited to specific locations."
+  },
+  {
+    "id": "gcse-unit1-energy-7",
+    "front": "Wave energy — advantages and disadvantages",
+    "back": "Advantages: renewable, fairly predictable, no fuel costs. Disadvantages: expensive, storm damage, affects marine life and shipping, only some coastlines suit it."
+  },
+  {
+    "id": "gcse-unit1-energy-8",
+    "front": "Hydroelectric energy",
+    "back": "Water stored behind a dam flows through turbines. Reliable and quick to start; pumped storage can store energy. But very expensive and flooding valleys destroys habitats and homes."
+  },
+  {
+    "id": "gcse-unit1-energy-9",
+    "front": "Pumped storage",
+    "back": "A hydroelectric scheme that stores energy by pumping water back uphill, then releasing it through turbines when demand rises."
+  },
+  {
+    "id": "gcse-unit1-energy-10",
+    "front": "Wood and biomass",
+    "back": "Organic material (wood, crops, food and animal waste) burned or turned into biofuel. Renewable if replanted, but releases CO₂ and smoke, needs land and can cause deforestation."
+  },
+  {
+    "id": "gcse-unit1-energy-11",
+    "front": "Nuclear energy — advantages and disadvantages",
+    "back": "Advantages: large, reliable output and no CO₂ while generating. Disadvantages: radioactive waste stored for thousands of years, risk of serious accidents, very expensive to build and decommission."
+  },
+  {
+    "id": "gcse-unit1-energy-12",
+    "front": "Issues with fossil fuels",
+    "back": "Burning releases CO₂ (global warming) and sulphur dioxide (acid rain); they are finite and will run out; extraction damages landscapes."
+  },
+  {
+    "id": "gcse-unit1-energy-13",
+    "front": "UK net zero target",
+    "back": "The UK has committed to net zero emissions by 2050, including more offshore wind and cutting carbon emissions."
+  },
+  {
+    "id": "gcse-unit1-energy-14",
+    "front": "2030 and 2035 vehicle deadlines",
+    "back": "From 2030 the sale of new petrol and diesel cars is banned in the UK; some new hybrids can still be sold until 2035."
+  },
+  {
+    "id": "gcse-unit1-energy-15",
+    "front": "Photovoltaic (PV) cells in products",
+    "back": "Convert free sunlight into electricity as a power supply or trickle charger — used in calculators, garden lights and solar chargers."
+  },
+  {
+    "id": "gcse-unit1-energy-16",
+    "front": "Wind-up technology",
+    "back": "Uses mechanical movement, e.g. turning a handle, to generate and store energy without batteries — as in a wind-up torch."
+  },
+  {
+    "id": "gcse-unit1-energy-17",
+    "front": "Disposable vs rechargeable batteries",
+    "back": "Disposable (e.g. alkaline): cheap and convenient but create waste and contain harmful chemicals. Rechargeable (e.g. lithium-ion, NiMH): cost more at first but reused hundreds of times."
+  }
+]
