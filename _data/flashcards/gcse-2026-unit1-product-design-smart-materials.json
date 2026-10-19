@@ -1,0 +1,117 @@
+[
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-1",
+    "front": "Smart material",
+    "back": "A material whose properties change in a controlled, usually reversible way in response to a stimulus such as heat, light, pressure, moisture or electricity."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-2",
+    "front": "Modern material",
+    "back": "A material developed through new or improved processes to give properties traditional materials cannot."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-3",
+    "front": "Photochromic materials",
+    "back": "Change colour in UV light and reverse when it is removed — self-darkening lenses, UV security inks."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-4",
+    "front": "Thermochromic materials",
+    "back": "Change colour with temperature — baby spoons, mugs, battery test strips, food packaging."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-5",
+    "front": "Micro-encapsulation",
+    "back": "Tiny droplets trapped in a coating that bursts when rubbed, pressed or heated — scratch-and-sniff, fragranced textiles."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-6",
+    "front": "Shape memory alloy (SMA)",
+    "back": "A metal alloy that can be deformed when cool and returns to its pre-set shape when heated."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-7",
+    "front": "Nitinol",
+    "back": "An alloy of nickel and titanium — the most widely used SMA. Used in spectacle frames, dental braces and medical stents."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-8",
+    "front": "Polymorph",
+    "back": "A thermoforming polymer that softens at about 62°C in hot water, is moulded by hand and can be reshaped many times."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-9",
+    "front": "Conductive polymer",
+    "back": "A polymer that conducts electricity — used in flexible circuits, touch surfaces, anti-static packaging and wearables."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-10",
+    "front": "Biometrics — design concern",
+    "back": "A fingerprint cannot be changed if it is stolen, so data storage must be secure and the system must work for all users."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-11",
+    "front": "Phase changing material (PCM)",
+    "back": "Absorbs heat as it melts and releases it as it solidifies, holding a temperature steady — clothing, bedding, cool packs."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-12",
+    "front": "Composite material",
+    "back": "Two or more materials combined for better properties, usually fibres for strength in a matrix such as resin."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-13",
+    "front": "Carbon fibre",
+    "back": "Carbon fibres in epoxy resin. Extremely strong and stiff for its weight but very expensive — racing bikes, F1 cars, aircraft."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-14",
+    "front": "Glass reinforced plastic (GRP)",
+    "back": "Glass fibres in polyester resin. Strong, light, waterproof, moulds into large shapes, cheaper than carbon fibre — boat hulls, car panels."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-15",
+    "front": "Fibreglass",
+    "back": "The common name for GRP, and for the glass fibres themselves, which are also used as loft insulation."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-16",
+    "front": "Lay-up",
+    "back": "Laying fibre mat or cloth into a mould and brushing or rolling in resin with a hardener or catalyst, which cures into a rigid shell."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-17",
+    "front": "Bluetooth",
+    "back": "Short-range (about 10 m), low-power wireless technology connecting devices directly, e.g. earbuds to a phone."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-18",
+    "front": "Wi-Fi",
+    "back": "Wireless technology connecting devices to a local network and the internet through a router — longer range and faster than Bluetooth."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-19",
+    "front": "Internet of Things (IoT)",
+    "back": "Everyday products with sensors, processors and wireless connections that collect data, communicate and can be controlled remotely."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-20",
+    "front": "IoT — benefits and drawbacks",
+    "back": "Remote control, products that adapt, energy saving, useful data — but hacking, privacy concerns, obsolescence if support ends, cost and e-waste."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-21",
+    "front": "Machine learning",
+    "back": "A type of AI in which software improves at a task by finding patterns in large amounts of data, rather than following fixed instructions."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-22",
+    "front": "How AI is used in product development",
+    "back": "Generative design, predicting performance, analysing user data, smarter products (voice assistants, robot vacuums) and inspecting products on production lines."
+  },
+  {
+    "id": "gcse-2026-unit1-product-design-smart-materials-23",
+    "front": "Emerging technology as a driving force",
+    "back": "Technology push — new components, materials, processes and connectivity make new products possible, e.g. tiny sensors enabling fitness trackers."
+  }
+]
