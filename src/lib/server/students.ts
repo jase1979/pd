@@ -50,14 +50,19 @@ export function newToken(): string {
 /** How long a session lasts, in milliseconds. */
 export const sessionLength = (remember: boolean) => (remember ? REMEMBER_DAYS * 24 * HOUR : SESSION_HOURS * HOUR);
 
-export async function createSession(db: D1Database, studentId: number, remember: boolean, now = Date.now()) {
+/** A new session for a student (or, with userType, a teacher). Returns the raw token for the cookie. */
+export async function createSession(
+	db: D1Database,
+	userId: number,
+	remember: boolean,
+	now = Date.now(),
+	userType: 'student' | 'teacher' = 'student'
+) {
 	const token = newToken();
 	const expires = new Date(now + sessionLength(remember));
 	await db
-		.prepare(
-			"INSERT INTO sessions (token_hash, user_type, user_id, remember, created_at, expires_at) VALUES (?, 'student', ?, ?, ?, ?)"
-		)
-		.bind(await sha256Hex(token), studentId, remember ? 1 : 0, new Date(now).toISOString(), expires.toISOString())
+		.prepare('INSERT INTO sessions (token_hash, user_type, user_id, remember, created_at, expires_at) VALUES (?, ?, ?, ?, ?, ?)')
+		.bind(await sha256Hex(token), userType, userId, remember ? 1 : 0, new Date(now).toISOString(), expires.toISOString())
 		.run();
 	return { token, expires };
 }

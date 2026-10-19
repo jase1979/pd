@@ -119,6 +119,20 @@ npm run seed:dev     # creates "Test group (dev)" locally and prints 5 login cod
 
 Running it again replaces the test group and everything its students did.
 
+## Teachers
+
+- Teachers sign in at `/teacher/login/` with a link emailed to them, if their
+  address is in the `TEACHER_EMAILS` secret. Opening the link only shows a
+  "Sign in" button, so mail scanners can't use it up.
+- Locally, with no `RESEND_API_KEY`, the link is printed in the terminal and
+  shown on screen. `DEV_TEACHER_EMAIL` in `.dev.vars` skips signing in
+  altogether; it only works when `ENVIRONMENT=dev`.
+- `/teacher/` lists the teacher's groups, with a reminder to delete any that
+  are archived or more than a year old. `/teacher/group/?id=` adds students
+  from a pasted list (preview, then confirm), shows and resets codes, moves and
+  removes students, and deletes the group (type its name to confirm).
+  `/teacher/group/print/?id=` prints login slips, 10 to an A4 page.
+
 ## Students and practice
 
 - Students log in at `/login/` with only their code. The session ends when the

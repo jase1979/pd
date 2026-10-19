@@ -1,0 +1,186 @@
+// Teacher pages, and the printable login slips.
+
+.teacher-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: -1rem 0 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-inner);
+
+  .teacher-bar-home { font-weight: 700; color: var(--gcse); }
+  .teacher-bar-who { margin-left: auto; }
+}
+
+.teacher-page {
+  max-width: 960px;
+  margin: 0 auto;
+
+  h1 { font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem; }
+  h2 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+}
+
+// Shared form controls (also used on the login pages)
+.account-input {
+  font: inherit;
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  &:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+}
+
+.quiz-btn.quiz-btn--danger {
+  background: transparent;
+  border-color: var(--status-not-secure);
+  color: var(--status-not-secure);
+
+  &:hover:not(:disabled) { background: rgba(255, 107, 107, 0.12); }
+}
+
+.teacher-reminder {
+  background: rgba(255, 181, 71, 0.1);
+  border: 1px solid rgba(255, 181, 71, 0.4);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.5rem;
+
+  ul { margin-top: 0.5rem; padding-left: 1.2rem; }
+  li { margin-top: 0.3rem; }
+  a { margin-left: 0.4rem; }
+}
+
+.teacher-groups {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+  }
+}
+
+.teacher-group-name { font-weight: 700; font-size: 1.05rem; }
+.teacher-archived { margin: 1rem 0; summary { cursor: pointer; color: var(--text-muted); } }
+.teacher-create { margin-top: 2rem; h2 { margin-bottom: 0.4rem; } }
+
+.teacher-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 1.2rem;
+
+  label { display: block; font-weight: 600; margin: 0.6rem 0 0.3rem; }
+  label.account-check, label.quiz-btn { display: inline-flex; font-weight: 400; margin: 0; }
+  details { margin: 0.5rem 0; summary { cursor: pointer; font-weight: 600; } }
+  .quiz-notice h3 { font-size: 1rem; margin-bottom: 0.2rem; &:focus { outline: none; } }
+}
+
+.teacher-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teacher-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0.6rem 0;
+
+  th { text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); padding: 0.4rem 0.5rem; }
+  td { padding: 0.5rem; border-top: 1px solid var(--border-inner); vertical-align: middle; }
+  .quiz-btn { padding: 0.3rem 0.7rem; font-size: 0.8rem; }
+}
+
+.teacher-code {
+  white-space: nowrap;
+  code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.95rem; letter-spacing: 0.05em; }
+  .quiz-link-btn { margin-left: 0.5rem; font-size: 0.8rem; }
+}
+
+.teacher-code-hidden { color: var(--text-muted); letter-spacing: 0.1em; }
+
+.teacher-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  .quiz-hint { flex-basis: 100%; margin: 0.2rem 0 0; }
+}
+
+.teacher-move { width: auto; padding: 0.25rem 0.4rem; font-size: 0.8rem; }
+.teacher-paste { max-width: none; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.9rem; }
+.teacher-file { cursor: pointer; }
+.teacher-preview { columns: 3 12rem; padding-left: 1.2rem; font-size: 0.9rem; margin: 0.4rem 0; }
+.teacher-settings { display: flex; flex-direction: column; align-items: flex-start; .quiz-btn { margin-top: 0.8rem; } }
+.teacher-archive { margin-top: 1rem; display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+.teacher-danger { border-color: rgba(255, 107, 107, 0.4); .quiz-btn { margin-top: 0.8rem; } }
+
+@media (max-width: 700px) {
+  .teacher-table thead { display: none; }
+  .teacher-table tr { display: block; border-top: 1px solid var(--border-inner); padding: 0.4rem 0; }
+  .teacher-table td { display: block; border: none; padding: 0.2rem 0; }
+}
+
+// ---- Login slips ----------------------------------------------------------------------
+
+.slips-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.slips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 190mm;
+}
+
+.slip {
+  border: 1px dashed var(--border-hover);
+  padding: 5mm 6mm;
+  height: 54mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  break-inside: avoid;
+
+  p { margin: 0; }
+  .slip-site { font-size: 0.8rem; }
+  .slip-name { font-size: 1.1rem; font-weight: 700; margin-top: 2mm; }
+  .slip-code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 1.8rem; font-weight: 700; letter-spacing: 0.12em; margin: 1mm 0 2mm; }
+  .slip-note { font-size: 0.75rem; }
+}
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+
+  // Only the slips: no header, footer, controls or dark theme.
+  .site-header, footer, .slips-controls { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .container { padding: 0 !important; max-width: none !important; }
+  .slips { max-width: none; }
+  // 2 × 5 slips fill one A4 page (277mm of printable height).
+  .slip { border-color: #999; height: 55mm; color: #000; }
+  .slip:nth-child(10n) { break-after: page; }
+}

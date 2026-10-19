@@ -33,6 +33,17 @@ export function requireStudent(locals: App.Locals) {
 	return locals.student;
 }
 
+/** The signed-in teacher, or a 401. */
+export function requireTeacher(locals: App.Locals) {
+	if (!locals.teacher) throw new QuizError(401, 'Please sign in as a teacher.');
+	return locals.teacher;
+}
+
+/** The visitor's IP address (Cloudflare puts the real one in this header). */
+export function clientIp(request: Request, getClientAddress: () => string): string {
+	return request.headers.get('cf-connecting-ip') ?? getClientAddress();
+}
+
 /** The request body as an object, or a 400. */
 export async function readJson(request: Request): Promise<Record<string, unknown>> {
 	try {

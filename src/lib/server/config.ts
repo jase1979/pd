@@ -93,3 +93,21 @@ export const CALIBRATION_SURE_POOR = 0.7;
 export const CALIBRATION_GUESS_MIN = 10;
 /** ...and at least this share of them right. */
 export const CALIBRATION_GUESS_GOOD = 0.6;
+
+// ---- Teachers -------------------------------------------------------------------
+
+/** A sign-in link emailed to a teacher works for this many minutes, once. */
+export const MAGIC_LINK_MINUTES = 15;
+/** Sign-in emails per address, and per IP address, within LINK_LIMIT_MINUTES. */
+export const LINK_LIMIT_PER_EMAIL = 3;
+export const LINK_LIMIT_PER_IP = 20;
+export const LINK_LIMIT_MINUTES = 15;
+/** Teacher sessions follow the student rules: SESSION_HOURS, or REMEMBER_DAYS with "Remember me". */
+
+/** The year-end reminder shows any group created at least this many months ago (and every archived group). */
+export const DELETE_REMINDER_MONTHS = 12;
+/** Pasted usernames must be this many characters long. */
+export const USERNAME_MIN = 1;
+export const USERNAME_MAX = 50;
+/** Most students that can be added in one paste. */
+export const MAX_STUDENTS_PER_PASTE = 200;

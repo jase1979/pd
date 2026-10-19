@@ -2,3 +2,8 @@
 # Copy this file to .dev.vars (which git ignores).
 ENVIRONMENT=dev
 QUIZ_SIGNING_SECRET=local-development-secret-not-for-production
+# Teachers who can sign in (comma-separated). With no RESEND_API_KEY the
+# sign-in link is printed in the terminal and shown on screen instead of emailed.
+TEACHER_EMAILS=teacher@example.com
+# Optional, dev only: be signed in as this teacher without any link.
+# DEV_TEACHER_EMAIL=teacher@example.com

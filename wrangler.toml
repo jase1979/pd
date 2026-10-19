@@ -29,11 +29,21 @@ migrations_dir = "migrations"
 [env.preview.vars]
 ENVIRONMENT = "preview"
 
-# Secrets (never put real values here; set them with
-# `npx wrangler pages secret put QUIZ_SIGNING_SECRET`, once for production and
-# once with --env preview):
+# Secrets (never put real values here; set each with
+# `npx wrangler pages secret put NAME`, once for production and once with
+# --env preview):
 #   QUIZ_SIGNING_SECRET  signs anonymous quiz attempt tokens. Any long random
 #                        string, e.g. from `openssl rand -base64 32`. Without it
 #                        the quiz API answers 500.
+#   TEACHER_EMAILS       comma-separated addresses that may sign in as teachers.
+#                        A secret rather than a var, so staff addresses stay out
+#                        of this repo. Unset == nobody can sign in. Taking an
+#                        address off ends its sessions straight away.
+#   RESEND_API_KEY       from https://resend.com → API Keys (sending access).
+#                        Sends the teacher sign-in emails.
+#   MAIL_FROM            the sender, on a domain verified in Resend, e.g.
+#                        "PD Revision <revision@example.com>". pages.dev
+#                        addresses can't be verified, so this needs a domain
+#                        you control. Both unset == links are only logged.
 #
 # For local development, copy .dev.vars.example to .dev.vars.

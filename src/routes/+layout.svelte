@@ -20,5 +20,5 @@
 	{@render children()}
 </main>
 <footer>
-	<p>WJEC Product Design Revision Guide · <a href="/privacy/">Privacy</a></p>
+	<p>WJEC Product Design Revision Guide · <a href="/privacy/">Privacy</a> · <a href="/teacher/">Teachers</a></p>
 </footer>

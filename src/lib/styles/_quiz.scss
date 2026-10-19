@@ -12,9 +12,9 @@
   padding: 1.5rem;
 }
 
-// Everything inside it. The account pages (login, progress, review) use the
+// Everything inside it. The account and teacher pages use the
 // same buttons, hints and options.
-.quiz, .account-page {
+.quiz, .account-page, .teacher-page, .slips-page {
   h2:focus { outline: none; }
 
   .quiz-title {
