@@ -40,8 +40,10 @@ unit_url: "/gcse/unit2/"
 | Alloy | Composition | Properties | Uses |
 |---|---|---|---|
 | Brass | Copper + zinc | Strong, ductile, good heat conductor, golden colour, darkens with age | Taps, door fittings, hinges, locks, musical instruments |
-| Bronze | Copper + aluminium and/or nickel | Hard, corrosion resistant, low friction, reddish-brown | Bearings, outdoor components, monuments, nautical |
-| Stainless steel | Iron + chromium, nickel and magnesium | Hard, tough, good resistance to stains and corrosion, shiny silver | Kitchen sinks, cutlery, hospital equipment, architecture |
+| Bronze | Copper + tin | Hard, corrosion resistant, low friction, reddish-brown | Bearings, outdoor components, monuments, nautical |
+| Stainless steel | Iron + chromium + nickel | Hard, tough, good resistance to stains and corrosion, shiny silver | Kitchen sinks, cutlery, hospital equipment, architecture |
+
+Some bronzes also contain aluminium (aluminium bronze), but the standard answer is copper and tin.
 
 ## Properties of metals
 
@@ -49,21 +51,24 @@ unit_url: "/gcse/unit2/"
 |---|---|
 | Hardness | A metal's ability to withstand friction and abrasion |
 | Toughness | How well a metal can resist fracturing when force is applied |
-| Elasticity | The rate at which a metal distorts in size and shape under stress |
+| Elasticity | The ability of a material to bend or stretch under a force and return to its original shape when the force is removed |
 | Conductivity | How well a metal allows electricity or heat to flow through it |
 | Ductility | The ability of the metal to be drawn or deformed without fracture |
 | Tensile strength | The amount of load a metal can withstand before failure |
 | Malleability | The metal's ability to be bent or shaped easily |
+| Plasticity | The ability of a material to be permanently changed in shape without cracking, keeping its new shape once the force is removed |
 
 ## Melting points
 
 | Metal | Melting point |
 |---|---|
-| Mild steel | 1300°C |
+| Mild steel | about 1450°C |
 | Cast iron | 1200°C |
 | Copper | 1100°C |
 | Brass | 900°C |
 | Aluminium | 660°C |
+
+Values are approximate and vary with the exact composition.
 
 ## Finishing metals
 
