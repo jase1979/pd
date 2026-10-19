@@ -53,7 +53,7 @@ This includes:
 
 ## Fossil fuel powered road vehicles
 
-By **2030**, the UK will ban the production of petrol- and diesel-powered cars. Some hybrid vehicles that use both electricity and petrol or diesel will still be allowed to be produced until **2035**.
+From **2030**, the sale of new petrol- and diesel-powered cars will be banned in the UK. Some new hybrid vehicles that use both electricity and petrol or diesel can still be sold until **2035**.
 
 In addition to some cities having congestion charges to help reduce congestion and pollution:
 
