@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: polymers-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: thermoset-identify
     command: identify
@@ -41,7 +41,7 @@ questions:
 
   - id: polymers-002
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: thermoforming-identify
     command: identify
@@ -58,7 +58,7 @@ questions:
     explanation: "Polypropylene and ABS are thermoforming: they can be heated and shaped again and again, and recycled."
 
   - id: polymers-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: cross-links
     command: describe
@@ -76,7 +76,7 @@ questions:
     explanation: "When a thermoset first sets, a chemical change locks its chains together with permanent cross-links, so it can't soften again."
 
   - id: polymers-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: cross-links
     command: state
@@ -94,7 +94,7 @@ questions:
     explanation: "Thermoforming polymers have no cross-links, so heat lets their chains slide past each other and the material can be reshaped and recycled."
 
   - id: polymers-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: recyclability
     command: state
@@ -113,7 +113,7 @@ questions:
 
   - id: polymers-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: casing-material
     command: compare
@@ -143,7 +143,7 @@ questions:
     explanation: "ABS is strong, tough and impact resistant, so it's used for electronics casings, helmets and LEGO: things that get knocked and dropped."
 
   - id: polymers-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: screen-cover-material
     command: identify
@@ -162,7 +162,7 @@ questions:
     explanation: "Polycarbonate is transparent and extremely tough and impact resistant, far tougher than acrylic, so it protects the screen."
 
   - id: polymers-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: plug-material
     command: identify
@@ -182,7 +182,7 @@ questions:
 
   - id: polymers-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: vacuum-forming-material
     command: explain
@@ -212,7 +212,7 @@ questions:
     explanation: "Polystyrene is an inexpensive thermoforming polymer: heated sheet softens and is sucked down over a mould. That's why schools vacuum form it."
 
   - id: polymers-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: finishing-cut-edges
     command: state
@@ -231,7 +231,7 @@ questions:
     explanation: "When a polymer is cut from stock, such as a sheet of acrylic, the cut edges are rough and need finishing. Moulded parts usually don't."
 
   - id: polymers-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: self-finishing
     command: state
@@ -249,7 +249,7 @@ questions:
     explanation: "A product formed in a mould takes the mould's surface, smooth, textured or glossy, so it needs no further finishing."
 
   - id: polymers-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: polymer-sources
     command: state
@@ -267,7 +267,7 @@ questions:
     explanation: "Synthetic polymers are made from crude oil. Natural polymers come from materials such as silk, wool, cellulose and proteins."
 
   - id: polymers-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: polypropylene-uses
     command: identify
@@ -286,7 +286,7 @@ questions:
     explanation: "Polypropylene is lightweight, strong and tough, so it's used for patio chairs, toys and game cases."
 
   - id: polymers-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: polymer-forms
     command: identify
@@ -307,7 +307,7 @@ questions:
   - id: polymers-015
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: plug-explain-technique
     command: explain
@@ -332,7 +332,7 @@ questions:
   - id: polymers-016
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: difference-technique
     command: describe
@@ -356,7 +356,7 @@ questions:
   - id: polymers-017
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 polymers"
     concept: compare-technique
     command: compare

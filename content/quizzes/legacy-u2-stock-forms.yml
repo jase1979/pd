@@ -23,7 +23,7 @@ questions:
 
   - id: stock-001
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: metal-stock-forms
     command: identify
@@ -40,7 +40,7 @@ questions:
     explanation: "Metals come as round, square and hexagonal rods, strips, sheets, round and square tubes, angle and channel."
 
   - id: stock-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: pse
     command: state
@@ -58,7 +58,7 @@ questions:
     explanation: "PSE means planed with squared edge: smooth faces and square edges, ready to use."
 
   - id: stock-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: sawn-vs-planed
     command: describe
@@ -76,7 +76,7 @@ questions:
     explanation: "Timber can be bought sawn (rough from the saw) or planed (smoothed), for example PSE, which saves time when making."
 
   - id: stock-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: sheet-size
     command: state
@@ -95,7 +95,7 @@ questions:
     explanation: "Manufactured boards come in standard sheets of 2440 mm × 1220 mm, or half sheets of 1220 mm × 610 mm."
 
   - id: stock-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: board-thickness
     command: identify
@@ -114,7 +114,7 @@ questions:
     explanation: "Hardboard is a thin board, usually 3.2 mm. MDF and plywood come in thicknesses from 4 mm up to about 25 mm."
 
   - id: stock-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: parts-per-sheet
     command: calculate
@@ -137,7 +137,7 @@ questions:
     explanation: "Divide each side separately and round each down: you can't use part of a part. Then multiply."
 
   - id: stock-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: cost-per-part
     command: calculate
@@ -159,7 +159,7 @@ questions:
     explanation: "Divide the cost of the sheet by the number of parts it makes."
 
   - id: stock-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: kerf-calc
     command: calculate
@@ -181,7 +181,7 @@ questions:
     explanation: "Add the kerf to each piece before dividing, then round down."
 
   - id: stock-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: waste-calc
     command: calculate
@@ -204,7 +204,7 @@ questions:
 
   - id: stock-010
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: kd-fitting-choice
     command: explain
@@ -234,7 +234,7 @@ questions:
     explanation: "Cam locks are knock-down fittings: customers can assemble the shelves at home and take them apart again."
 
   - id: stock-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: kd-identify
     command: identify
@@ -253,7 +253,7 @@ questions:
     explanation: "KD fittings include cam locks, scan fittings, corner blocks, brackets, dowels, screws, nuts and bolts."
 
   - id: stock-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: paper-fittings
     command: identify
@@ -272,7 +272,7 @@ questions:
     explanation: "Velcro pads or dots are used for mounting work: they hold firmly and can be removed without damage."
 
   - id: stock-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: polymer-forms
     command: state
@@ -290,7 +290,7 @@ questions:
     explanation: "Polymers come as sheets, rods and tubes; granules, pellets and powder; foam (blown); and film (heated and rolled)."
 
   - id: stock-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: ply
     command: state
@@ -310,7 +310,7 @@ questions:
   - id: stock-015
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: round-down-technique
     command: explain
@@ -335,7 +335,7 @@ questions:
   - id: stock-016
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: kerf-technique
     command: describe
@@ -360,7 +360,7 @@ questions:
   - id: stock-017
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 stock forms"
     concept: calculate-technique
     command: calculate

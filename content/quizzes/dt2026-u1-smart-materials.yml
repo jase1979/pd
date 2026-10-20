@@ -25,7 +25,7 @@ scenarios:
 questions:
 
   - id: dt26-msm-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: no-electronics
     command: describe
@@ -44,7 +44,7 @@ questions:
     explanation: "Smart materials sense and react on their own: the pigment changes colour as the temperature rises."
 
   - id: dt26-msm-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: thermochromic-manufacture
     command: describe
@@ -62,7 +62,7 @@ questions:
     explanation: "Thermochromic pigments are added to polymers before moulding, or printed as inks onto packaging."
 
   - id: dt26-msm-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: sma-stent
     command: describe
@@ -81,7 +81,7 @@ questions:
     explanation: "Nitinol remembers a pre-set shape and returns to it when warmed, so the stent opens inside the vessel."
 
   - id: dt26-msm-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: conductive-polymer
     command: describe
@@ -100,7 +100,7 @@ questions:
 
   - id: dt26-msm-005
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: conductive-uses
     command: identify
@@ -118,7 +118,7 @@ questions:
 
   - id: dt26-msm-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: pcm
     command: explain
@@ -148,7 +148,7 @@ questions:
     explanation: "PCMs absorb heat as they melt and release it as they solidify, holding a temperature steady."
 
   - id: dt26-msm-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: composite-definition
     command: describe
@@ -167,7 +167,7 @@ questions:
 
   - id: dt26-msm-008
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: grp-vs-carbon
     command: explain
@@ -197,7 +197,7 @@ questions:
     explanation: "GRP is strong, light, waterproof and easily moulded into large shapes, at much lower cost than carbon fibre."
 
   - id: dt26-msm-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: lay-up
     command: describe
@@ -216,7 +216,7 @@ questions:
     explanation: "In lay-up, fibre mat is laid in a mould and resin with hardener is brushed in. The mould surface gives the smooth face."
 
   - id: dt26-msm-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: carbon-fibre-uses
     command: identify
@@ -235,7 +235,7 @@ questions:
     explanation: "Carbon fibre is extremely strong and stiff for its weight and resists corrosion, but it's expensive."
 
   - id: dt26-msm-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: bluetooth-vs-wifi
     command: identify
@@ -254,7 +254,7 @@ questions:
     explanation: "Bluetooth is short-range (about 10 m), low-power wireless connecting devices directly to each other."
 
   - id: dt26-msm-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: iot
     command: identify
@@ -274,7 +274,7 @@ questions:
 
   - id: dt26-msm-013
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: iot-drawbacks
     command: identify
@@ -292,7 +292,7 @@ questions:
     explanation: "IoT drawbacks include security, privacy, obsolescence when support ends, higher cost and more e-waste."
 
   - id: dt26-msm-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: machine-learning
     command: describe
@@ -311,7 +311,7 @@ questions:
     explanation: "Machine learning software gets better at a task by finding patterns in data instead of following fixed instructions."
 
   - id: dt26-msm-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: ai-manufacture
     command: identify
@@ -329,7 +329,7 @@ questions:
     explanation: "AI vision inspects products on the line, and predictive maintenance spots when machines will need attention."
 
   - id: dt26-msm-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: tech-push
     command: identify
@@ -350,7 +350,7 @@ questions:
   - id: dt26-msm-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: grp-technique
     command: explain
@@ -375,7 +375,7 @@ questions:
   - id: dt26-msm-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: composite-technique
     command: describe
@@ -399,7 +399,7 @@ questions:
   - id: dt26-msm-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.25"
     concept: evaluate-technique
     command: evaluate

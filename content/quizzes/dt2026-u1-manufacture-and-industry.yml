@@ -23,7 +23,7 @@ questions:
 
   - id: dt26-mfg-001
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: economies-of-scale
     command: explain
@@ -52,7 +52,7 @@ questions:
     explanation: "Economies of scale: fixed costs are spread across more items, and bulk buying lowers material prices."
 
   - id: dt26-mfg-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: flexibility
     command: describe
@@ -70,7 +70,7 @@ questions:
     explanation: "High-volume production depends on dedicated moulds and lines, so design changes are slow and costly."
 
   - id: dt26-mfg-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: job-production
     command: identify
@@ -90,7 +90,7 @@ questions:
 
   - id: dt26-mfg-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: batch-production
     command: explain
@@ -120,7 +120,7 @@ questions:
     explanation: "Batch production makes a set quantity of identical items and switches to other designs between batches."
 
   - id: dt26-mfg-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: batch-drawback
     command: identify
@@ -140,7 +140,7 @@ questions:
 
   - id: dt26-mfg-006
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: mass-production
     command: identify
@@ -159,7 +159,7 @@ questions:
 
   - id: dt26-mfg-007
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: jit
     command: explain
@@ -189,7 +189,7 @@ questions:
     explanation: "JIT cuts stock and waste, but relies on very reliable suppliers. A late delivery stops the line."
 
   - id: dt26-mfg-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: jit-origin
     command: state
@@ -207,7 +207,7 @@ questions:
     explanation: "JIT was developed by Toyota and is used widely in mass production, especially cars."
 
   - id: dt26-mfg-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: continuous-flow
     command: identify
@@ -226,7 +226,7 @@ questions:
     explanation: "Continuous flow runs 24/7 for products with enormous, constant demand, such as cans, bottles and screws."
 
   - id: dt26-mfg-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: continuous-why
     command: describe
@@ -245,7 +245,7 @@ questions:
 
   - id: dt26-mfg-011
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: cam-high-volume
     command: identify
@@ -263,7 +263,7 @@ questions:
     explanation: "CAM brings consistency, speed, complex shapes, flexibility, less waste and safety."
 
   - id: dt26-mfg-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: percentiles
     command: identify
@@ -282,7 +282,7 @@ questions:
     explanation: "For reach, design for the shorter extreme. For clearance, such as doorways, design for the taller extreme."
 
   - id: dt26-mfg-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: adjustability
     command: describe
@@ -301,7 +301,7 @@ questions:
     explanation: "Where users vary a lot, products such as office chairs, car seats and saddles are made adjustable."
 
   - id: dt26-mfg-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: double-diamond
     command: identify
@@ -319,7 +319,7 @@ questions:
     explanation: "The Design Council's Double Diamond (Discover, Define, Develop, Deliver) is used by designers worldwide."
 
   - id: dt26-mfg-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: design-council
     command: describe
@@ -337,7 +337,7 @@ questions:
     explanation: "The Design Council champions good design for business, public services, the environment and people's lives."
 
   - id: dt26-mfg-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: cell-production
     command: describe
@@ -355,7 +355,7 @@ questions:
     explanation: "In cell production, a team in a cell makes a complete product and shares responsibility for quality."
 
   - id: dt26-mfg-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: lean
     command: describe
@@ -375,7 +375,7 @@ questions:
   - id: dt26-mfg-018
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: scale-technique
     command: explain
@@ -400,7 +400,7 @@ questions:
   - id: dt26-mfg-019
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: jit-technique
     command: explain
@@ -425,7 +425,7 @@ questions:
   - id: dt26-mfg-020
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.29"
     concept: evaluate-technique
     command: evaluate

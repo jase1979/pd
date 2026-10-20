@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: crit-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: sustainability-definition
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Sustainability means meeting the needs of the present without compromising the ability of future generations to meet their own."
 
   - id: crit-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: six-rs
     command: identify
@@ -59,7 +59,7 @@ questions:
     explanation: "Refuse: avoid harmful or unsustainable materials altogether."
 
   - id: crit-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: six-rs
     command: identify
@@ -77,7 +77,7 @@ questions:
     explanation: "Repair: is the product designed to be easily serviced and fixed, so it lasts longer?"
 
   - id: crit-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: lca-purpose
     command: state
@@ -96,7 +96,7 @@ questions:
 
   - id: crit-005
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: lca-stages
     command: identify
@@ -114,7 +114,7 @@ questions:
 
   - id: crit-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: lca-biggest-stage
     command: explain
@@ -144,7 +144,7 @@ questions:
     explanation: "LCA helps designers find the stage with the greatest impact. For a kettle, that's the electricity it uses, again and again, in use."
 
   - id: crit-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: carbon-reduction
     command: describe
@@ -163,7 +163,7 @@ questions:
     explanation: "Distribution adds to a carbon footprint. Sourcing and making things locally reduces transport emissions."
 
   - id: crit-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: carbon-footprint-definition
     command: state
@@ -181,7 +181,7 @@ questions:
     explanation: "A carbon footprint is the total greenhouse gases produced directly and indirectly, at every stage from raw materials to disposal."
 
   - id: crit-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: cradle-to-cradle
     command: describe
@@ -199,7 +199,7 @@ questions:
     explanation: "Cradle to cradle extends LCA thinking: products are designed so that all materials can be recovered and used again."
 
   - id: crit-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: obsolescence-types
     command: identify
@@ -218,7 +218,7 @@ questions:
     explanation: "Planned obsolescence is a deliberate strategy to give a product a limited useful life, so people buy a replacement."
 
   - id: crit-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: obsolescence-types
     command: identify
@@ -238,7 +238,7 @@ questions:
 
   - id: crit-012
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: obsolescence-who-benefits
     command: explain
@@ -269,7 +269,7 @@ questions:
 
   - id: crit-013
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: obsolescence-disadvantages
     command: state
@@ -286,7 +286,7 @@ questions:
     explanation: "For consumers and the environment, planned obsolescence means more waste, higher costs and a throwaway culture."
 
   - id: crit-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: carbon-reduction
     command: describe
@@ -305,7 +305,7 @@ questions:
     explanation: "Less material means less energy to produce, and a lighter product takes less energy to transport."
 
   - id: crit-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: responsibilities
     command: identify
@@ -325,7 +325,7 @@ questions:
   - id: crit-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: obsolescence-technique
     command: explain
@@ -350,7 +350,7 @@ questions:
   - id: crit-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: lca-use-technique
     command: describe
@@ -374,7 +374,7 @@ questions:
   - id: crit-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 critical evaluation"
     concept: evaluate-technique
     command: evaluate

@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: papers-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: paper-source
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Papers and boards are made from wood pulp from trees, rolled into thin sheets at a papermill."
 
   - id: papers-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: paper-measures
     command: identify
@@ -58,7 +58,7 @@ questions:
     explanation: "Paper weight is given in grams per square metre (gsm). Copier paper is about 80 gsm; over about 200 gsm counts as board."
 
   - id: papers-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: micron-conversion
     command: calculate
@@ -80,7 +80,7 @@ questions:
     explanation: "A micron is one thousandth of a millimetre, so divide microns by 1000 to get millimetres."
 
   - id: papers-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: paper-vs-board
     command: identify
@@ -99,7 +99,7 @@ questions:
 
   - id: papers-005
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: translucent-papers
     command: identify
@@ -118,7 +118,7 @@ questions:
 
   - id: papers-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: marker-paper
     command: explain
@@ -148,7 +148,7 @@ questions:
     explanation: "Bleed proof paper is smooth and coated, so marker ink stays where it's put and renderings have crisp edges."
 
   - id: papers-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: mounting-board
     command: identify
@@ -168,7 +168,7 @@ questions:
 
   - id: papers-008
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: premium-board
     command: compare
@@ -198,7 +198,7 @@ questions:
     explanation: "Solid white board is bleached through, with a high-quality white surface that prints very well, so it's used for premium packaging such as perfume."
 
   - id: papers-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: surface-finish-board
     command: identify
@@ -217,7 +217,7 @@ questions:
     explanation: "Embossing creates raised patterns or shapes. It's popular for perfume boxes, greetings cards and invitations."
 
   - id: papers-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: surface-finish-board
     command: identify
@@ -236,7 +236,7 @@ questions:
     explanation: "UV varnishing produces a high-gloss finish, which is why it's used for business cards and marketing materials."
 
   - id: papers-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: laminating
     command: state
@@ -255,7 +255,7 @@ questions:
     explanation: "Laminating adds a coating layer. On food and drinks cartons it holds the liquid hygienically and keeps the contents fresh."
 
   - id: papers-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: scoring
     command: describe
@@ -273,7 +273,7 @@ questions:
     explanation: "Paper and card must be scored before bending so that the fold is clean and in the right place."
 
   - id: papers-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: corrugated-cores
     command: identify
@@ -292,7 +292,7 @@ questions:
     explanation: "Corrugated card comes as single-wall, double-wall or triple-wall. Each extra fluted layer makes it stronger."
 
   - id: papers-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: recycling-paper
     command: describe
@@ -312,7 +312,7 @@ questions:
   - id: papers-015
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: premium-board-technique
     command: explain
@@ -337,7 +337,7 @@ questions:
   - id: papers-016
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: waxing-technique
     command: describe
@@ -362,7 +362,7 @@ questions:
   - id: papers-017
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 papers and boards"
     concept: describe-technique
     command: describe

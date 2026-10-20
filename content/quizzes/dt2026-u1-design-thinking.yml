@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-think-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: history-materials
     command: describe
@@ -41,7 +41,7 @@ questions:
     explanation: "Available materials and processes shape design: what can be made shapes what is designed."
 
   - id: dt26-think-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: reaction
     command: describe
@@ -59,7 +59,7 @@ questions:
     explanation: "Design often reacts against what came before: plain modern design rejected Victorian ornament."
 
   - id: dt26-think-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: culture
     command: describe
@@ -77,7 +77,7 @@ questions:
     explanation: "A product that ignores local meanings can offend or simply fail to sell."
 
   - id: dt26-think-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: organic-architecture
     command: describe
@@ -96,7 +96,7 @@ questions:
 
   - id: dt26-think-005
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: fallingwater
     command: explain
@@ -126,7 +126,7 @@ questions:
     explanation: "Fallingwater's cantilevered concrete terraces and local stone merge the house with the waterfall and landscape."
 
   - id: dt26-think-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: total-design
     command: describe
@@ -144,7 +144,7 @@ questions:
     explanation: "Wright's 'total design' approach treats a building and its contents as a single product."
 
   - id: dt26-think-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: alessi-style
     command: describe
@@ -163,7 +163,7 @@ questions:
 
   - id: dt26-think-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: alessi-products
     command: identify
@@ -182,7 +182,7 @@ questions:
 
   - id: dt26-think-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: emotional-appeal
     command: explain
@@ -212,7 +212,7 @@ questions:
     explanation: "Alessi shows people buy objects for how they look and how owning them feels, and collaborates with named designers."
 
   - id: dt26-think-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: cyclic-process
     command: describe
@@ -230,7 +230,7 @@ questions:
     explanation: "Testing sends you back to redesign, feedback to the specification, and production informs the next model."
 
   - id: dt26-think-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: measurable-spec
     command: identify
@@ -249,7 +249,7 @@ questions:
     explanation: "Good specification points are measurable, so the product can be tested against them."
 
   - id: dt26-think-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: brief-vs-spec
     command: describe
@@ -267,7 +267,7 @@ questions:
     explanation: "The brief sets the problem without dictating the solution. The specification then lists measurable criteria."
 
   - id: dt26-think-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: user-centred
     command: describe
@@ -286,7 +286,7 @@ questions:
     explanation: "Involving users throughout means problems surface while they're still cheap to fix."
 
   - id: dt26-think-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: qc-vs-qa
     command: describe
@@ -305,7 +305,7 @@ questions:
 
   - id: dt26-think-015
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: percentiles
     command: explain
@@ -335,7 +335,7 @@ questions:
     explanation: "Designing for the 5th to 95th percentile of the actual users covers most people."
 
   - id: dt26-think-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: biomimicry
     command: identify
@@ -354,7 +354,7 @@ questions:
     explanation: "Biomimicry copies forms and systems from nature, here the kingfisher's beak."
 
   - id: dt26-think-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: honeycomb
     command: describe
@@ -375,7 +375,7 @@ questions:
   - id: dt26-think-018
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: ergonomics-technique
     command: explain
@@ -400,7 +400,7 @@ questions:
   - id: dt26-think-019
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: modelling-technique
     command: explain
@@ -424,7 +424,7 @@ questions:
   - id: dt26-think-020
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.5"
     concept: discuss-technique
     command: discuss

@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: scale-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: scale-identify
     command: identify
@@ -41,7 +41,7 @@ questions:
     explanation: "One-off production makes single, bespoke items, so the customer gets a product unlike any other."
 
   - id: scale-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: scale-identify
     command: identify
@@ -60,7 +60,7 @@ questions:
     explanation: "Batch production makes a limited number of similar items at a time, and the batch may be repeated later."
 
   - id: scale-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: continuous-disadvantage
     command: state
@@ -79,7 +79,7 @@ questions:
 
   - id: scale-004
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: continuous-products
     command: identify
@@ -96,7 +96,7 @@ questions:
     explanation: "Drinks cans, bottles, bottle caps, screws and fixings, newspapers and food packaging are needed in huge, identical numbers."
 
   - id: scale-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: mass-profit
     command: describe
@@ -114,7 +114,7 @@ questions:
     explanation: "Buying materials in bulk and using automated machinery with fewer workers lowers the cost of each product."
 
   - id: scale-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: jig-template-pattern
     command: identify
@@ -133,7 +133,7 @@ questions:
     explanation: "A jig holds the material and guides cutting or drilling tools, so every repeat is accurate and identical."
 
   - id: scale-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: jig-template-pattern
     command: state
@@ -152,7 +152,7 @@ questions:
 
   - id: scale-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: cam-benefits
     command: state
@@ -170,7 +170,7 @@ questions:
 
   - id: scale-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: injection-moulding-choice
     command: compare
@@ -200,7 +200,7 @@ questions:
     explanation: "Injection moulding makes complex, accurate shapes with clips and ribs in one piece, quickly. It suits 50,000 identical cases."
 
   - id: scale-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: injection-parts
     command: identify
@@ -219,7 +219,7 @@ questions:
     explanation: "When the polymer has cooled, the mould opens and ejector pins push the product out, leaving small circular marks."
 
   - id: scale-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: injection-economics
     command: state
@@ -238,7 +238,7 @@ questions:
     explanation: "A mould is very expensive to make, so it only pays when its cost is shared across a very large number of products."
 
   - id: scale-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: spot-injection-moulding
     command: identify
@@ -257,7 +257,7 @@ questions:
     explanation: "Signs of injection moulding: small circular ejector pin marks, a sprue mark, tapered sides (draft angles) and ribs inside."
 
   - id: scale-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: litho-principle
     command: state
@@ -276,7 +276,7 @@ questions:
     explanation: "The plate's image area attracts oil-based ink and the rest attracts water. The image is offset onto a rubber blanket, then the paper."
 
   - id: scale-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: cmyk
     command: state
@@ -296,7 +296,7 @@ questions:
 
   - id: scale-015
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: digital-vs-litho
     command: explain
@@ -326,7 +326,7 @@ questions:
     explanation: "Digital printing needs no plates, so it's used for short runs. Offset lithography only becomes cheaper for long runs."
 
   - id: scale-016
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: emboss-deboss
     command: identify
@@ -347,7 +347,7 @@ questions:
   - id: scale-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: injection-technique
     command: explain
@@ -372,7 +372,7 @@ questions:
   - id: scale-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: mass-disadvantage-technique
     command: describe
@@ -396,7 +396,7 @@ questions:
   - id: scale-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 scales of production"
     concept: discuss-technique
     command: discuss

@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: tech1-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: push-vs-pull
     command: identify
@@ -41,7 +41,7 @@ questions:
     explanation: "Technology push: developments in technology, such as smaller components, lead to new products like wearable tech."
 
   - id: tech1-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: push-vs-pull
     command: identify
@@ -60,7 +60,7 @@ questions:
     explanation: "Market pull: a new or improved product is developed because consumers demand it."
 
   - id: tech1-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: life-cycle-stages
     command: state
@@ -78,7 +78,7 @@ questions:
     explanation: "The four stages: introduction (launch), growth (sales rise), maturity (sales peak), decline (sales drop)."
 
   - id: tech1-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: life-cycle-stages
     command: identify
@@ -97,7 +97,7 @@ questions:
     explanation: "In the growth stage, sales steadily increase after the launch."
 
   - id: tech1-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: planned-obsolescence
     command: describe
@@ -115,7 +115,7 @@ questions:
     explanation: "Manufacturers can build in obsolescence: they intend to replace a product with an upgraded or new one in a set time frame."
 
   - id: tech1-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: life-cycle-purpose
     command: describe
@@ -133,7 +133,7 @@ questions:
     explanation: "The product life cycle is a marketing tool for deciding when to make more, stop, or bring out a new or revitalised product."
 
   - id: tech1-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: consumer-rights
     command: state
@@ -153,7 +153,7 @@ questions:
 
   - id: tech1-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: consumer-rights-requirements
     command: state
@@ -170,7 +170,7 @@ questions:
     explanation: "Goods must be of a satisfactory standard, as described and seen when purchased, and fit for purpose."
 
   - id: tech1-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: trade-descriptions
     command: identify
@@ -189,7 +189,7 @@ questions:
     explanation: "The Trade Descriptions Act makes it illegal to apply a false description to goods that misleads consumers."
 
   - id: tech1-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: bsi-iso
     command: identify
@@ -207,7 +207,7 @@ questions:
     explanation: "Products meeting BSI standards carry the Kitemark, giving consumers confidence they've been independently tested."
 
   - id: tech1-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: bsi-iso
     command: state
@@ -226,7 +226,7 @@ questions:
 
   - id: tech1-012
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: cad-collaboration
     command: explain
@@ -257,7 +257,7 @@ questions:
 
   - id: tech1-013
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: cam-disadvantages
     command: state
@@ -274,7 +274,7 @@ questions:
     explanation: "CAM machinery is expensive, needs regular maintenance and can lead to job losses, but it gives consistent, efficient production."
 
   - id: tech1-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: globalisation
     command: describe
@@ -292,7 +292,7 @@ questions:
     explanation: "Globalisation drives prices down and widens choice, but it can lead to exploitation abroad and job losses in Western countries."
 
   - id: tech1-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: cfcs
     command: state
@@ -310,7 +310,7 @@ questions:
     explanation: "CFCs (chlorofluorocarbons) damage the ozone layer, so they've been banned. Avoiding harmful substances is part of sustainability."
 
   - id: tech1-016
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: self-repairing
     command: identify
@@ -329,7 +329,7 @@ questions:
     explanation: "It's a self-repairing material: the liquid hardens on contact with air, repairing the puncture and extending the product's life."
 
   - id: tech1-017
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: responsibilities
     command: identify
@@ -350,7 +350,7 @@ questions:
   - id: tech1-018
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: consumer-rights-technique
     command: explain
@@ -375,7 +375,7 @@ questions:
   - id: tech1-019
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: decline-technique
     command: describe
@@ -399,7 +399,7 @@ questions:
   - id: tech1-020
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 new and emerging technologies"
     concept: explain-technique
     command: explain

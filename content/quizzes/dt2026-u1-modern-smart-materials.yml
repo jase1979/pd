@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-smart-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: smart-vs-modern
     command: identify
@@ -41,7 +41,7 @@ questions:
     explanation: "A modern material is valued for the properties it has. A smart material is valued for how its properties change."
 
   - id: dt26-smart-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: smart-definition
     command: describe
@@ -59,7 +59,7 @@ questions:
     explanation: "Smart materials respond to heat, light, pressure, moisture or electricity, usually reversibly."
 
   - id: dt26-smart-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: stimulus
     command: identify
@@ -78,7 +78,7 @@ questions:
 
   - id: dt26-smart-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: thermochromic-use
     command: explain
@@ -108,7 +108,7 @@ questions:
     explanation: "Thermochromic pigment changes colour with temperature, showing parents at a glance when something is too hot to be safe."
 
   - id: dt26-smart-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: thermochromic-battery
     command: describe
@@ -127,7 +127,7 @@ questions:
     explanation: "Resistance in the strip turns current into heat, and the thermochromic colour change shows the charge."
 
   - id: dt26-smart-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: photochromic-use
     command: identify
@@ -146,7 +146,7 @@ questions:
     explanation: "Photochromic indicators change colour in strong UV, warning the wearer before their skin burns."
 
   - id: dt26-smart-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: photochromic-fade
     command: state
@@ -164,7 +164,7 @@ questions:
     explanation: "Photochromic change can be repeated many times, but the pigment fades with long exposure."
 
   - id: dt26-smart-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: nitinol
     command: state
@@ -183,7 +183,7 @@ questions:
 
   - id: dt26-smart-009
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: sma-uses
     command: identify
@@ -200,7 +200,7 @@ questions:
     explanation: "SMAs return to a pre-set shape when heated: spectacle frames, braces, stents and thermal safety devices."
 
   - id: dt26-smart-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: polymorph
     command: identify
@@ -219,7 +219,7 @@ questions:
     explanation: "Polymorph softens at about 62°C in hot water, is shaped by hand, sets tough, and can be reshaped if needed."
 
   - id: dt26-smart-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: polymorph-reuse
     command: describe
@@ -237,7 +237,7 @@ questions:
     explanation: "As a thermoplastic, polymorph can be reheated and reshaped many times, so mistakes are recoverable."
 
   - id: dt26-smart-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: self-healing
     command: describe
@@ -256,7 +256,7 @@ questions:
 
   - id: dt26-smart-013
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: micro-encapsulation-uses
     command: identify
@@ -274,7 +274,7 @@ questions:
 
   - id: dt26-smart-014
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: biometric-risk
     command: explain
@@ -304,7 +304,7 @@ questions:
     explanation: "Unlike a password, biometric data can't be changed if stolen, so designers must protect it and make sure the system works for everyone."
 
   - id: dt26-smart-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: conductive-fibres
     command: identify
@@ -324,7 +324,7 @@ questions:
   - id: dt26-smart-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: thermochromic-technique
     command: explain
@@ -349,7 +349,7 @@ questions:
   - id: dt26-smart-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: sma-technique
     command: describe
@@ -374,7 +374,7 @@ questions:
   - id: dt26-smart-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.2"
     concept: discuss-technique
     command: discuss

@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-sust-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: sustainability-definition
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Sustainability is meeting the needs of the present without compromising the ability of future generations to meet their own."
 
   - id: dt26-sust-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: early-decisions
     command: describe
@@ -60,7 +60,7 @@ questions:
 
   - id: dt26-sust-003
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: consumer-rights
     command: explain
@@ -91,7 +91,7 @@ questions:
 
   - id: dt26-sust-004
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: consumer-rights-act
     command: identify
@@ -108,7 +108,7 @@ questions:
     explanation: "Goods must be of satisfactory quality, fit for purpose and as described."
 
   - id: dt26-sust-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: kitemark
     command: describe
@@ -127,7 +127,7 @@ questions:
     explanation: "The Kitemark shows a product meets a BSI standard and has been independently tested, which reassures buyers."
 
   - id: dt26-sust-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: trade-descriptions
     command: identify
@@ -146,7 +146,7 @@ questions:
     explanation: "The Trade Descriptions Act makes it illegal to describe goods falsely or misleadingly."
 
   - id: dt26-sust-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: lca-stages
     command: identify
@@ -165,7 +165,7 @@ questions:
     explanation: "The use stage covers energy consumption, consumables, servicing and how long the product lasts."
 
   - id: dt26-sust-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: lca-value
     command: describe
@@ -185,7 +185,7 @@ questions:
 
   - id: dt26-sust-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: life-cycle-confusion
     command: explain
@@ -214,7 +214,7 @@ questions:
     explanation: "At maturity, sales peak and level off. The Product Life Cycle is about sales; LCA is about the environment."
 
   - id: dt26-sust-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: cradle-to-cradle
     command: describe
@@ -233,7 +233,7 @@ questions:
 
   - id: dt26-sust-011
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: circular-design
     command: identify
@@ -251,7 +251,7 @@ questions:
     explanation: "Circular design means products can be taken apart and materials separated cleanly, so they stay in use."
 
   - id: dt26-sust-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: six-rs-order
     command: describe
@@ -269,7 +269,7 @@ questions:
     explanation: "Work through them in order: preventing waste is better than dealing with it afterwards."
 
   - id: dt26-sust-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: rethink
     command: identify
@@ -288,7 +288,7 @@ questions:
 
   - id: dt26-sust-014
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: carbon-footprint
     command: identify
@@ -306,7 +306,7 @@ questions:
     explanation: "Recycled materials need less energy, and local sourcing cuts transport emissions."
 
   - id: dt26-sust-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: planned-obsolescence
     command: identify
@@ -325,7 +325,7 @@ questions:
     explanation: "Deliberately limiting a product's useful life, for example by sealing in parts that can't be replaced, is planned obsolescence."
 
   - id: dt26-sust-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: obsolescence-types
     command: identify
@@ -344,7 +344,7 @@ questions:
     explanation: "Technological obsolescence is when newer technology replaces a product that still works."
 
   - id: dt26-sust-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: fair-trade
     command: describe
@@ -362,7 +362,7 @@ questions:
     explanation: "Fair Trade gives producers a fair, stable price and better trading conditions, plus a premium for the community."
 
   - id: dt26-sust-018
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: supply-chains
     command: describe
@@ -382,7 +382,7 @@ questions:
   - id: dt26-sust-019
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: repair-technique
     command: explain
@@ -407,7 +407,7 @@ questions:
   - id: dt26-sust-020
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: carbon-technique
     command: explain
@@ -432,7 +432,7 @@ questions:
   - id: dt26-sust-021
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.3"
     concept: evaluate-technique
     command: evaluate

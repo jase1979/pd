@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: design1-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: dyson-iteration
     command: state
@@ -41,7 +41,7 @@ questions:
     explanation: "The DC01 went through 5,127 iterations with rigorous testing over 10 years before it gained market approval."
 
   - id: design1-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: dyson-cyclone
     command: identify
@@ -60,7 +60,7 @@ questions:
     explanation: "Dyson replaced the dust bag with cyclonic technology that spins dust out of the air."
 
   - id: design1-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: ball-barrow
     command: describe
@@ -80,7 +80,7 @@ questions:
 
   - id: design1-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: biomimicry
     command: explain
@@ -110,7 +110,7 @@ questions:
     explanation: "Biomimicry is nature solving design problems: the A380's wing shape copies the structure of eagles' wings."
 
   - id: design1-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: airbus-materials
     command: describe
@@ -129,7 +129,7 @@ questions:
     explanation: "Aircraft need to be strong but light, and titanium has an excellent strength to weight ratio."
 
   - id: design1-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: airbus-composites
     command: state
@@ -148,7 +148,7 @@ questions:
     explanation: "The A380 was built using lightweight composite materials to overcome weight issues."
 
   - id: design1-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: bethan-gray
     command: describe
@@ -166,7 +166,7 @@ questions:
     explanation: "Bethan Gray uses brass, marble, solid wood and leather, mixing traditional craft with modern techniques."
 
   - id: design1-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: ruby-tree
     command: identify
@@ -184,7 +184,7 @@ questions:
     explanation: "Bethan Gray is a founder-member of the Ruby Tree Collection, which supports traditional Islamic craft skills."
 
   - id: design1-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: apple-gui
     command: identify
@@ -203,7 +203,7 @@ questions:
     explanation: "The GUI was developed at Xerox PARC, but Apple's Lisa and Macintosh brought icons, folders and a mouse-controlled cursor to the mass market."
 
   - id: design1-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: jony-ive
     command: identify
@@ -223,7 +223,7 @@ questions:
 
   - id: design1-011
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: apple-identity
     command: identify
@@ -241,7 +241,7 @@ questions:
     explanation: "Apple products are sleek, with consistent colours, shapes and materials that make them easily recognisable."
 
   - id: design1-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: miyamoto
     command: identify
@@ -261,7 +261,7 @@ questions:
 
   - id: design1-013
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: mccartney
     command: explain
@@ -291,7 +291,7 @@ questions:
     explanation: "Stella McCartney has shown high fashion is possible with much-reduced environmental impact: no fur or leather, and recycled materials."
 
   - id: design1-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: kiely
     command: identify
@@ -309,7 +309,7 @@ questions:
     explanation: "'Stem' is Kiely's most iconic print: simple, clean, measured and bold."
 
   - id: design1-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: kiely-cad
     command: describe
@@ -327,7 +327,7 @@ questions:
     explanation: "Repeating patterns are easy to create and edit with CAD, though her original work was hand painted in gouache."
 
   - id: design1-016
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: laura-ashley
     command: identify
@@ -347,7 +347,7 @@ questions:
   - id: design1-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: iteration-technique
     command: explain
@@ -371,7 +371,7 @@ questions:
   - id: design1-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: biomimicry-technique
     command: describe
@@ -395,7 +395,7 @@ questions:
   - id: design1-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 designers and companies"
     concept: discuss-technique
     command: discuss

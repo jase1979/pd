@@ -23,7 +23,7 @@ questions:
 
   - id: dt26-finish-001
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: why-finish
     command: identify
@@ -40,7 +40,7 @@ questions:
     explanation: "Finishes protect materials and improve appearance, and a good choice usually does both."
 
   - id: dt26-finish-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: rust
     command: describe
@@ -59,7 +59,7 @@ questions:
     explanation: "Ferrous metals rust in air and moisture, and a finish stops the oxygen and water reaching the surface."
 
   - id: dt26-finish-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: preparation
     command: describe
@@ -78,7 +78,7 @@ questions:
 
   - id: dt26-finish-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: powder-coating
     command: explain
@@ -108,7 +108,7 @@ questions:
     explanation: "Powder coating is sprayed electrostatically and baked into a hard, durable, chip-resistant coat."
 
   - id: dt26-finish-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: powder-process
     command: describe
@@ -126,7 +126,7 @@ questions:
     explanation: "The charge makes the powder cling, and baking melts it into a hard, even coat. Overspray can be reused."
 
   - id: dt26-finish-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: dip-coating
     command: identify
@@ -145,7 +145,7 @@ questions:
     explanation: "Dip coating gives a thick, soft, warm, grippy layer with good electrical and thermal insulation."
 
   - id: dt26-finish-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: primer
     command: describe
@@ -164,7 +164,7 @@ questions:
 
   - id: dt26-finish-008
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: varnish-outdoor
     command: explain
@@ -194,7 +194,7 @@ questions:
     explanation: "Outdoor timber needs a preservative or exterior-grade finish to resist water, rot and insects."
 
   - id: dt26-finish-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: wax
     command: describe
@@ -213,7 +213,7 @@ questions:
     explanation: "Wax brings out the grain with a soft sheen and is easy to apply, but offers little protection."
 
   - id: dt26-finish-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: sanding-sealer
     command: describe
@@ -232,7 +232,7 @@ questions:
 
   - id: dt26-finish-011
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: mdf-finish
     command: explain
@@ -262,7 +262,7 @@ questions:
     explanation: "MDF is usually painted. Its absorbent edges need sealing or priming so the paint doesn't soak in."
 
   - id: dt26-finish-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: laminate
     command: identify
@@ -281,7 +281,7 @@ questions:
     explanation: "Manufactured boards are often laminated, for example with melamine on kitchen worktops."
 
   - id: dt26-finish-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: self-finishing
     command: describe
@@ -300,7 +300,7 @@ questions:
     explanation: "Pigment is added before moulding, so the colour runs right through the polymer."
 
   - id: dt26-finish-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: mould-texture
     command: describe
@@ -318,7 +318,7 @@ questions:
     explanation: "A polished mould gives gloss and a textured mould gives a matt or grip pattern, on every product it makes."
 
   - id: dt26-finish-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: acrylic-edges
     command: identify
@@ -339,7 +339,7 @@ questions:
   - id: dt26-finish-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: powder-technique
     command: explain
@@ -364,7 +364,7 @@ questions:
   - id: dt26-finish-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: stages-technique
     command: describe
@@ -388,7 +388,7 @@ questions:
   - id: dt26-finish-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.27"
     concept: compare-technique
     command: compare

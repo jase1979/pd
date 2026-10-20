@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: energy1-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: renewable-identify
     command: identify
@@ -41,7 +41,7 @@ questions:
 
   - id: energy1-002
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: non-renewable-identify
     command: identify
@@ -58,7 +58,7 @@ questions:
     explanation: "Coal, oil, gas and nuclear are non-renewable. Nuclear is a common trap: it's clean while generating, but non-renewable."
 
   - id: energy1-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: renewable-meaning
     command: state
@@ -76,7 +76,7 @@ questions:
     explanation: "Renewable energy comes from a natural supply that's continuously replaced, and usually causes less pollution."
 
   - id: energy1-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: fossil-fuel-issues
     command: state
@@ -94,7 +94,7 @@ questions:
     explanation: "Burning coal, oil and gas releases CO₂, which contributes to global warming."
 
   - id: energy1-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: fossil-fuel-issues
     command: identify
@@ -113,7 +113,7 @@ questions:
 
   - id: energy1-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: tidal-choice
     command: compare
@@ -143,7 +143,7 @@ questions:
     explanation: "Tidal energy is around 80% efficient, better than solar or wind, and generates power for about 10 hours a day."
 
   - id: energy1-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: tidal-disadvantage
     command: state
@@ -162,7 +162,7 @@ questions:
     explanation: "Tidal energy is expensive to set up and can damage ecological coastlines and harm marine life."
 
   - id: energy1-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: wind-disadvantage
     command: identify
@@ -181,7 +181,7 @@ questions:
     explanation: "Wind has little environmental impact, but turbines can be seen as visual pollution, are expensive to install and can harm birds."
 
   - id: energy1-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: geothermal
     command: state
@@ -200,7 +200,7 @@ questions:
     explanation: "Geothermal uses hot water from near molten rock, but it's very costly, limited to certain locations, and risks triggering earthquakes."
 
   - id: energy1-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: nuclear
     command: state
@@ -218,7 +218,7 @@ questions:
     explanation: "Nuclear gives large, reliable output with no CO₂, but its radioactive waste lasts thousands of years and accidents can be serious."
 
   - id: energy1-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: uk-targets
     command: state
@@ -236,7 +236,7 @@ questions:
     explanation: "The UK has committed to net zero emissions by 2050, including more wind energy and cutting carbon emissions."
 
   - id: energy1-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: vehicle-ban
     command: state
@@ -255,7 +255,7 @@ questions:
 
   - id: energy1-013
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: camping-charger-power
     command: explain
@@ -285,7 +285,7 @@ questions:
     explanation: "PV cells convert free sunlight into electricity, often to charge a built-in battery, so energy collected by day can be used at night."
 
   - id: energy1-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: wind-up
     command: describe
@@ -304,7 +304,7 @@ questions:
     explanation: "Wind-up technology uses the mechanical movement of turning the handle to generate and store energy."
 
   - id: energy1-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: battery-types
     command: describe
@@ -323,7 +323,7 @@ questions:
     explanation: "Rechargeable batteries, such as lithium-ion, cost more at first but can be reused hundreds of times, cutting waste and cost."
 
   - id: energy1-016
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: energy-percentage-calc
     command: calculate
@@ -347,7 +347,7 @@ questions:
   - id: energy1-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: pv-technique
     command: explain
@@ -372,7 +372,7 @@ questions:
   - id: energy1-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: solar-disadvantage-technique
     command: describe
@@ -396,7 +396,7 @@ questions:
   - id: energy1-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 energy"
     concept: compare-technique
     command: compare

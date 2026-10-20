@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-stock-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: stock-form
     command: describe
@@ -40,7 +40,7 @@ questions:
     explanation: "Standard sizes keep materials cheaper and easier to obtain, and let designers plan for little waste."
 
   - id: dt26-stock-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: sectional-forms
     command: identify
@@ -59,7 +59,7 @@ questions:
     explanation: "Dowel is a long round section, roughly 6–25 mm in diameter, used for rails, pegs, handles and axles."
 
   - id: dt26-stock-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: size-notation
     command: describe
@@ -77,7 +77,7 @@ questions:
     explanation: "Timber sizes are given as width × thickness, with the length stated separately."
 
   - id: dt26-stock-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: standard-lengths
     command: state
@@ -96,7 +96,7 @@ questions:
 
   - id: dt26-stock-005
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: sawn-vs-planed
     command: explain
@@ -126,7 +126,7 @@ questions:
     explanation: "Planed timber is smooth on all faces and used for furniture and visible woodwork. It costs more than sawn."
 
   - id: dt26-stock-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: nominal-size
     command: describe
@@ -145,7 +145,7 @@ questions:
     explanation: "Planed timber is smaller than its nominal sawn size, so check the actual size when designing joints."
 
   - id: dt26-stock-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: par
     command: state
@@ -163,7 +163,7 @@ questions:
     explanation: "PAR is timber planed smooth on all four faces."
 
   - id: dt26-stock-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: sheet-size
     command: state
@@ -183,7 +183,7 @@ questions:
 
   - id: dt26-stock-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: nesting
     command: explain
@@ -213,7 +213,7 @@ questions:
     explanation: "Nesting lays parts out to fill the sheet. Allowing for the kerf stops parts coming out undersized."
 
   - id: dt26-stock-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: board-grades
     command: identify
@@ -233,7 +233,7 @@ questions:
 
   - id: dt26-stock-011
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: standard-components
     command: identify
@@ -250,7 +250,7 @@ questions:
     explanation: "Standard components are cheaper, reliable, made to BSI or ISO sizes, easy to replace, and save design time."
 
   - id: dt26-stock-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: kdf
     command: describe
@@ -269,7 +269,7 @@ questions:
     explanation: "KDFs let products be assembled and dismantled with simple tools. They're the basis of flat-pack furniture."
 
   - id: dt26-stock-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: cam-lock
     command: identify
@@ -289,7 +289,7 @@ questions:
 
   - id: dt26-stock-014
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: kdf-pros-cons
     command: identify
@@ -307,7 +307,7 @@ questions:
     explanation: "Flat-packing cuts transport and storage costs, and the user can assemble and dismantle the product."
 
   - id: dt26-stock-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: granules
     command: identify
@@ -326,7 +326,7 @@ questions:
     explanation: "Granules (pellets) are fed from a hopper and melted in injection moulding, blow moulding and extrusion."
 
   - id: dt26-stock-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: powders
     command: identify
@@ -345,7 +345,7 @@ questions:
     explanation: "Powders are used for rotational moulding, compression moulding of thermosets, and powder and dip coating."
 
   - id: dt26-stock-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: masterbatch
     command: describe
@@ -365,7 +365,7 @@ questions:
   - id: dt26-stock-018
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: kdf-technique
     command: explain
@@ -390,7 +390,7 @@ questions:
   - id: dt26-stock-019
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: standard-technique
     command: explain
@@ -414,7 +414,7 @@ questions:
   - id: dt26-stock-020
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.28"
     concept: compare-technique
     command: compare

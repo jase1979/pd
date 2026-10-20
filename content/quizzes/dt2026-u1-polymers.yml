@@ -23,7 +23,7 @@ questions:
 
   - id: dt26-poly-001
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: abs-casing
     command: explain
@@ -53,7 +53,7 @@ questions:
     explanation: "ABS is tough, impact resistant and injection moulds well, so it's used for electronic casings."
 
   - id: dt26-poly-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: acrylic
     command: identify
@@ -72,7 +72,7 @@ questions:
     explanation: "Acrylic has glass-like clarity and laser cuts cleanly with polished edges."
 
   - id: dt26-poly-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: nylon
     command: identify
@@ -91,7 +91,7 @@ questions:
     explanation: "Nylon is tough, hard-wearing and low friction, ideal for gears and bearings."
 
   - id: dt26-poly-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: styrofoam
     command: identify
@@ -110,7 +110,7 @@ questions:
     explanation: "Styrofoam is very light and easy to cut, carve and sand, so it's ideal for block models."
 
   - id: dt26-poly-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: styrofoam-safety
     command: describe
@@ -128,7 +128,7 @@ questions:
     explanation: "Melting Styrofoam gives off fumes, so ventilation is needed."
 
   - id: dt26-poly-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: epoxy
     command: identify
@@ -148,7 +148,7 @@ questions:
 
   - id: dt26-poly-007
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: thermo-difference
     command: explain
@@ -177,7 +177,7 @@ questions:
     explanation: "Cross-links bond the chains together when a thermoset first sets, so it can't be softened or reshaped again."
 
   - id: dt26-poly-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: plug-thermoset
     command: describe
@@ -197,7 +197,7 @@ questions:
 
   - id: dt26-poly-009
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: thermoforming-examples
     command: identify
@@ -214,7 +214,7 @@ questions:
     explanation: "Acrylic, ABS, nylon, HDPE, polypropylene and PVC are thermoforming plastics."
 
   - id: dt26-poly-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: thermal-insulation
     command: describe
@@ -233,7 +233,7 @@ questions:
     explanation: "Foamed polymers trap air in tiny cells, so they're excellent thermal insulators."
 
   - id: dt26-poly-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: elasticity
     command: identify
@@ -252,7 +252,7 @@ questions:
     explanation: "Elasticity is bending or stretching and returning to the original shape when the force is removed."
 
   - id: dt26-poly-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: pla
     command: identify
@@ -272,7 +272,7 @@ questions:
 
   - id: dt26-poly-013
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: biopolymer-drawbacks
     command: identify
@@ -289,7 +289,7 @@ questions:
     explanation: "PLA softens at about 60°C, many biopolymers need industrial composting, they cost more, and the crops use farmland."
 
   - id: dt26-poly-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: biodegradable-myth
     command: describe
@@ -309,7 +309,7 @@ questions:
 
   - id: dt26-poly-015
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: uv-protection
     command: explain
@@ -339,7 +339,7 @@ questions:
     explanation: "UV light makes many polymers fade and become brittle. UV stabilisers and coatings slow this down."
 
   - id: dt26-poly-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: self-finishing
     command: describe
@@ -360,7 +360,7 @@ questions:
   - id: dt26-poly-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: abs-technique
     command: explain
@@ -385,7 +385,7 @@ questions:
   - id: dt26-poly-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: thermoset-technique
     command: explain
@@ -409,7 +409,7 @@ questions:
   - id: dt26-poly-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.24"
     concept: evaluate-technique
     command: evaluate

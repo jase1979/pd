@@ -25,7 +25,7 @@ scenarios:
 questions:
 
   - id: smart1-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: micro-encapsulation
     command: describe
@@ -43,7 +43,7 @@ questions:
     explanation: "Micro-encapsulation encloses tiny particles or droplets in capsules that release their contents when broken by pressure, heat or friction."
 
   - id: smart1-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: micro-encapsulation
     command: identify
@@ -63,7 +63,7 @@ questions:
 
   - id: smart1-003
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: phase-change-textiles
     command: explain
@@ -93,7 +93,7 @@ questions:
     explanation: "Phase-change materials in micro-capsules absorb heat when the runner is hot and release it as they cool, regulating body temperature."
 
   - id: smart1-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: smart-fibres
     command: identify
@@ -112,7 +112,7 @@ questions:
     explanation: "Conductive fibres woven into fabric carry electrical signals or current, so they're used in heated jackets and wearable technology."
 
   - id: smart1-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: photo-vs-thermo
     command: identify
@@ -131,7 +131,7 @@ questions:
     explanation: "Photochromic dyes change colour when exposed to UV light, as in sunlight, and change back when it's removed."
 
   - id: smart1-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: photo-vs-thermo
     command: identify
@@ -150,7 +150,7 @@ questions:
     explanation: "Thermochromic materials change colour in response to temperature, which is how mood rings work."
 
   - id: smart1-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: sma-uses
     command: describe
@@ -170,7 +170,7 @@ questions:
 
   - id: smart1-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: sma-uses
     command: identify
@@ -187,7 +187,7 @@ questions:
     explanation: "SMAs such as Nitinol are used for spectacle frames, dental braces and medical stents, which expand back to shape inside the body."
 
   - id: smart1-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: polymorph
     command: state
@@ -205,7 +205,7 @@ questions:
     explanation: "Polymorph softens at about 62°C, can be shaped by hand, sets rigid, and can be reheated and reshaped many times."
 
   - id: smart1-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: biometrics
     command: identify
@@ -225,7 +225,7 @@ questions:
 
   - id: smart1-011
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: biometric-examples
     command: identify
@@ -243,7 +243,7 @@ questions:
     explanation: "Biometrics use biological features: fingerprints, faces, irises and voices."
 
   - id: smart1-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: biometric-ethics
     command: describe
@@ -262,7 +262,7 @@ questions:
     explanation: "Biometric data is highly sensitive and can't be changed like a password, so storing and using it raises social and ethical issues."
 
   - id: smart1-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: photochromic-uses
     command: identify
@@ -281,7 +281,7 @@ questions:
     explanation: "Photochromic materials react to UV light, so they're used in security printing on banknotes and documents."
 
   - id: smart1-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: thermochromic-reversible
     command: state
@@ -299,7 +299,7 @@ questions:
     explanation: "The colour change is reversible: when the temperature returns to normal, so does the colour."
 
   - id: smart1-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: smart-definition
     command: state
@@ -319,7 +319,7 @@ questions:
   - id: smart1-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: phase-change-technique
     command: explain
@@ -344,7 +344,7 @@ questions:
   - id: smart1-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: stent-technique
     command: describe
@@ -369,7 +369,7 @@ questions:
   - id: smart1-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 modern and smart materials"
     concept: discuss-technique
     command: discuss

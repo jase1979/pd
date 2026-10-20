@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-tech-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: market-pull
     command: identify
@@ -42,7 +42,7 @@ questions:
 
   - id: dt26-tech-002
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: technology-push
     command: explain
@@ -73,7 +73,7 @@ questions:
 
   - id: dt26-tech-003
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: impact-on-industry
     command: identify
@@ -90,7 +90,7 @@ questions:
     explanation: "Automation raises output and consistency and removes dangerous work, but reduces manual roles and costs a lot upfront."
 
   - id: dt26-tech-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: flexible-manufacturing
     command: describe
@@ -108,7 +108,7 @@ questions:
     explanation: "Reprogrammable CNC and CAM equipment lets a factory switch products quickly as demand changes."
 
   - id: dt26-tech-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: crowdfunding
     command: identify
@@ -128,7 +128,7 @@ questions:
 
   - id: dt26-tech-006
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: barriers-to-entry
     command: identify
@@ -146,7 +146,7 @@ questions:
     explanation: "Cheap 3D printers, subscription CAD, online manufacturing and direct selling lower the barriers to entry for small businesses."
 
   - id: dt26-tech-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: on-demand
     command: describe
@@ -166,7 +166,7 @@ questions:
 
   - id: dt26-tech-008
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: ar-vs-vr
     command: explain
@@ -196,7 +196,7 @@ questions:
     explanation: "AR keeps the real environment visible and adds the virtual product, so customers can check size, colour and style at home."
 
   - id: dt26-tech-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: vr-uses
     command: identify
@@ -214,7 +214,7 @@ questions:
     explanation: "VR lets designers and clients test ergonomics and walk around a product before it exists."
 
   - id: dt26-tech-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: generative-design
     command: describe
@@ -232,7 +232,7 @@ questions:
     explanation: "With generative design, the designer sets loads, materials, size and process, and the software generates many, often lighter, solutions."
 
   - id: dt26-tech-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: ai-concerns
     command: identify
@@ -251,7 +251,7 @@ questions:
 
   - id: dt26-tech-012
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: cad-pros-cons
     command: identify
@@ -268,7 +268,7 @@ questions:
     explanation: "CAD's disadvantages include cost, training, and the risk of files being lost, corrupted, hacked or copied."
 
   - id: dt26-tech-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: laser-safety
     command: identify
@@ -287,7 +287,7 @@ questions:
     explanation: "PVC gives off toxic fumes when laser cut, so it must never be used."
 
   - id: dt26-tech-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: additive
     command: state
@@ -305,7 +305,7 @@ questions:
     explanation: "Additive manufacturing builds the product up layer by layer, putting material only where it's needed."
 
   - id: dt26-tech-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: 4d-printing
     command: describe
@@ -324,7 +324,7 @@ questions:
     explanation: "4D printing uses smart materials so the object changes shape over time in response to a stimulus. The fourth dimension is time."
 
   - id: dt26-tech-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: cam-error
     command: describe
@@ -345,7 +345,7 @@ questions:
   - id: dt26-tech-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: 3d-printing-technique
     command: explain
@@ -370,7 +370,7 @@ questions:
   - id: dt26-tech-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: cam-technique
     command: explain
@@ -394,7 +394,7 @@ questions:
   - id: dt26-tech-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.1"
     concept: evaluate-technique
     command: evaluate

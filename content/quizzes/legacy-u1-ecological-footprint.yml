@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: eco1-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: circular-economy
     command: describe
@@ -40,7 +40,7 @@ questions:
     explanation: "In the circular economy, waste is put back to good use and the cycle continues, saving resources and reducing waste."
 
   - id: eco1-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: product-footprint
     command: state
@@ -58,7 +58,7 @@ questions:
     explanation: "A product's footprint measures its environmental impact across its whole life, from cradle to grave."
 
   - id: eco1-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: eco-efficiency
     command: describe
@@ -76,7 +76,7 @@ questions:
     explanation: "Eco-efficiency is creating goods and services that satisfy needs and wants while reducing ecological impacts and resource depletion."
 
   - id: eco1-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: cradle-to-cradle
     command: describe
@@ -94,7 +94,7 @@ questions:
     explanation: "Cradle to cradle means the end of one product's life becomes the start of another's, so materials are never wasted."
 
   - id: eco1-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: recycling-statistics
     command: state
@@ -113,7 +113,7 @@ questions:
 
   - id: eco1-006
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: waste-problems
     command: identify
@@ -130,7 +130,7 @@ questions:
     explanation: "Poorly managed waste contaminates the oceans, clogs drains, causes flooding, spreads disease and harms wildlife."
 
   - id: eco1-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: fair-trade
     command: describe
@@ -150,7 +150,7 @@ questions:
 
   - id: eco1-008
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: greener-power
     command: explain
@@ -180,7 +180,7 @@ questions:
     explanation: "Wind-up and PV power use free energy and need no disposable batteries, so the radio is independent of mains power and lower impact."
 
   - id: eco1-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: pv-cells
     command: describe
@@ -199,7 +199,7 @@ questions:
     explanation: "PV cells turn free sunlight into electricity and can be used as power supplies or trickle chargers."
 
   - id: eco1-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: incremental-development
     command: identify
@@ -219,7 +219,7 @@ questions:
 
   - id: eco1-011
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: planned-obsolescence
     command: explain
@@ -250,7 +250,7 @@ questions:
 
   - id: eco1-012
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: greener-living
     command: identify
@@ -267,7 +267,7 @@ questions:
     explanation: "Repairing instead of upgrading and cutting packaging both reduce waste and the use of new resources."
 
   - id: eco1-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: six-rs
     command: identify
@@ -286,7 +286,7 @@ questions:
     explanation: "Refuse means not accepting a product you don't need, especially if it's unsustainable."
 
   - id: eco1-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: ecological-design
     command: describe
@@ -304,7 +304,7 @@ questions:
     explanation: "Ecological design solves problems alongside minimising environmental damage, so designers don't create other problems."
 
   - id: eco1-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: lca
     command: describe
@@ -325,7 +325,7 @@ questions:
   - id: eco1-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: wind-up-technique
     command: explain
@@ -350,7 +350,7 @@ questions:
   - id: eco1-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: circular-technique
     command: explain
@@ -374,7 +374,7 @@ questions:
   - id: eco1-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.1 ecological footprint"
     concept: evaluate-technique
     command: evaluate

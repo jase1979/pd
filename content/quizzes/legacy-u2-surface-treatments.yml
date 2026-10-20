@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: surface-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: finish-purpose
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Finishes are applied for functional reasons (performance, such as protection) and aesthetic reasons (appearance)."
 
   - id: surface-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: metal-preparation
     command: state
@@ -59,7 +59,7 @@ questions:
 
   - id: surface-003
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: dip-coating-choice
     command: compare
@@ -89,7 +89,7 @@ questions:
     explanation: "Plastic dip coating gives a soft, colourful polythene layer: grip and comfort for the user, plus corrosion protection outdoors."
 
   - id: surface-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: dip-coating-process
     command: state
@@ -108,7 +108,7 @@ questions:
     explanation: "The metal is heated to about 200°C, dipped into a fluidised bed of polythene powder that melts onto it, then cured in the oven."
 
   - id: surface-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: outdoor-timber-finish
     command: identify
@@ -127,7 +127,7 @@ questions:
     explanation: "Preservatives give long-lasting protection outdoors, and fence timber is often pressure treated for longevity."
 
   - id: surface-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: anodising
     command: identify
@@ -146,7 +146,7 @@ questions:
     explanation: "Non-ferrous metals such as aluminium are often anodised, which builds a protective oxide layer."
 
   - id: surface-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: galvanising
     command: state
@@ -164,7 +164,7 @@ questions:
     explanation: "Galvanising coats steel with zinc to stop it rusting."
 
   - id: surface-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: primer
     command: describe
@@ -183,7 +183,7 @@ questions:
     explanation: "Primer seals bare wood, especially porous MDF edges, so paint doesn't soak in, and helps the top coat stick."
 
   - id: surface-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: sanding-sealer
     command: describe
@@ -202,7 +202,7 @@ questions:
 
   - id: surface-010
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: grain-finishes
     command: identify
@@ -219,7 +219,7 @@ questions:
     explanation: "Oils and wax soak in and enhance the timber's appearance; polishes give a lustrous surface that brings out the grain."
 
   - id: surface-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: textured-moulds
     command: describe
@@ -238,7 +238,7 @@ questions:
     explanation: "Polymers formed in a mould are self-finishing: textures such as grip patterns or leather-effect are built into the mould."
 
   - id: surface-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: polymer-edges
     command: identify
@@ -257,7 +257,7 @@ questions:
     explanation: "Cut polymer edges are finished by draw filing, wet-and-dry paper, polishing compound, or, for acrylic, flame polishing."
 
   - id: surface-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: folding
     command: describe
@@ -277,7 +277,7 @@ questions:
 
   - id: surface-014
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: binding-choice
     command: explain
@@ -307,7 +307,7 @@ questions:
     explanation: "Comb binding holds punched pages on a plastic comb. It's common and less specialist, so it suits a booklet updated in-house."
 
   - id: surface-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: perforation
     command: identify
@@ -328,7 +328,7 @@ questions:
   - id: surface-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: dip-coating-technique
     command: explain
@@ -353,7 +353,7 @@ questions:
   - id: surface-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: preparation-technique
     command: describe
@@ -377,7 +377,7 @@ questions:
   - id: surface-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 surface treatments"
     concept: evaluate-technique
     command: evaluate

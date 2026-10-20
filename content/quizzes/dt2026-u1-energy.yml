@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-energy-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: renewable-definition
     command: state
@@ -41,7 +41,7 @@ questions:
 
   - id: dt26-energy-002
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: nuclear
     command: explain
@@ -70,7 +70,7 @@ questions:
     explanation: "Nuclear isn't a fossil fuel and emits little CO₂, but its fuel is finite and its radioactive waste stays dangerous for thousands of years."
 
   - id: dt26-energy-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: hydrogen
     command: state
@@ -88,7 +88,7 @@ questions:
     explanation: "Hydrogen reacts with oxygen to make electricity, and the only emission is water."
 
   - id: dt26-energy-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: tidal
     command: identify
@@ -107,7 +107,7 @@ questions:
 
   - id: dt26-energy-005
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: fossil-issues
     command: identify
@@ -124,7 +124,7 @@ questions:
     explanation: "Fossil fuels release greenhouse gases and pollution, are finite, damage habitats, and create political dependence."
 
   - id: dt26-energy-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: solar-disadvantage
     command: identify
@@ -142,7 +142,7 @@ questions:
     explanation: "PV is expensive to install, produces nothing at night and less in poor weather, and needs a large area for big outputs."
 
   - id: dt26-energy-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: biomass
     command: describe
@@ -161,7 +161,7 @@ questions:
 
   - id: dt26-energy-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: renewable-manufacturing
     command: identify
@@ -179,7 +179,7 @@ questions:
     explanation: "Factories commonly fit roof PV, recover waste heat, or buy electricity on a renewable tariff."
 
   - id: dt26-energy-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: factory-mix
     command: describe
@@ -198,7 +198,7 @@ questions:
     explanation: "A factory that runs continuously needs supply when the wind drops or it's dark, so most use a mix of sources."
 
   - id: dt26-energy-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: storage-why
     command: describe
@@ -216,7 +216,7 @@ questions:
     explanation: "Storage lets energy generated when the sun shines or the wind blows be used later, when it's needed."
 
   - id: dt26-energy-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: pumped-storage
     command: identify
@@ -235,7 +235,7 @@ questions:
 
   - id: dt26-energy-012
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: rechargeable
     command: explain
@@ -265,7 +265,7 @@ questions:
     explanation: "Rechargeables are used hundreds of times, so they save money and waste over time."
 
   - id: dt26-energy-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: lithium-ion
     command: describe
@@ -284,7 +284,7 @@ questions:
     explanation: "Lithium-ion holds more energy for its weight, which matters most in portable devices and vehicles."
 
   - id: dt26-energy-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: hybrid
     command: describe
@@ -303,7 +303,7 @@ questions:
     explanation: "Hybrids combine a small engine with a battery and motor, recovering energy through regenerative braking."
 
   - id: dt26-energy-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: electric-vehicles
     command: identify
@@ -323,7 +323,7 @@ questions:
 
   - id: dt26-energy-016
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: wind-up
     command: explain
@@ -353,7 +353,7 @@ questions:
     explanation: "Wind-up torches and radios are used where electricity is unreliable, because they avoid the cost and waste of batteries."
 
   - id: dt26-energy-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: household-solar
     command: describe
@@ -374,7 +374,7 @@ questions:
   - id: dt26-energy-018
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: renewable-factory-technique
     command: explain
@@ -399,7 +399,7 @@ questions:
   - id: dt26-energy-019
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: battery-recycling-technique
     command: explain
@@ -423,7 +423,7 @@ questions:
   - id: dt26-energy-020
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.4"
     concept: evaluate-technique
     command: evaluate

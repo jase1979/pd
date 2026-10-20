@@ -25,7 +25,7 @@ scenarios:
 questions:
 
   - id: props-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: metal-source
     command: identify
@@ -43,7 +43,7 @@ questions:
     explanation: "Metals are extracted from ores, a natural resource that will eventually run out."
 
   - id: props-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: ores-finite
     command: state
@@ -62,7 +62,7 @@ questions:
 
   - id: props-003
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: hardening
     command: explain
@@ -92,7 +92,7 @@ questions:
     explanation: "Hardening means heating the steel then rapidly cooling it by quenching. That makes high carbon steel very hard, but brittle."
 
   - id: props-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: tempering
     command: identify
@@ -111,7 +111,7 @@ questions:
     explanation: "Hardening and tempering go together: tempering removes some of the brittleness while keeping most of the hardness."
 
   - id: props-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: tempering
     command: state
@@ -129,7 +129,7 @@ questions:
     explanation: "Tempering trades a little hardness for a lot less brittleness, so the tool is tough enough to use."
 
   - id: props-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: tempering-colours
     command: describe
@@ -148,7 +148,7 @@ questions:
     explanation: "The hardened steel is cleaned so the oxide colours show: straw for harder tools, through to blue for tougher ones. Then it's quenched."
 
   - id: props-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: annealing
     command: identify
@@ -167,7 +167,7 @@ questions:
     explanation: "Annealing removes stress and makes metal softer, so the jeweller can carry on shaping the bowl."
 
   - id: props-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: annealing-process
     command: describe
@@ -187,7 +187,7 @@ questions:
 
   - id: props-009
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: hardening-treatments
     command: identify
@@ -204,7 +204,7 @@ questions:
     explanation: "Hardening hardens the steel through; case hardening hardens just the surface. Annealing and normalising both reduce hardness."
 
   - id: props-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: case-hardening
     command: identify
@@ -223,7 +223,7 @@ questions:
     explanation: "Case hardening adds carbon to the surface, then heats and quenches it: a hard outside with a tough core."
 
   - id: props-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: mild-steel-hardening
     command: state
@@ -242,7 +242,7 @@ questions:
     explanation: "Hardening works on high carbon steel. Mild steel has too little carbon (about 0.15–0.35%) to harden by heating and quenching."
 
   - id: props-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: board-source
     command: describe
@@ -260,7 +260,7 @@ questions:
     explanation: "Manufactured boards are man-made from recycled wooden waste mixed with adhesive."
 
   - id: props-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: thermoset-pair
     command: identify
@@ -278,7 +278,7 @@ questions:
     explanation: "Melamine, urea formaldehyde and epoxy resins are thermosets: they can only be heated and shaped once."
 
   - id: props-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: corrugated-structure
     command: describe
@@ -299,7 +299,7 @@ questions:
   - id: props-015
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: tempering-technique
     command: explain
@@ -324,7 +324,7 @@ questions:
   - id: props-016
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: hardening-process-technique
     command: describe
@@ -349,7 +349,7 @@ questions:
   - id: props-017
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 material sources and properties"
     concept: compare-technique
     command: compare

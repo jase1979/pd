@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: metals-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: ferrous-vs-non-ferrous
     command: identify
@@ -40,7 +40,7 @@ questions:
     explanation: "Mild steel is mostly iron, so it is ferrous: it is magnetic and rusts without a protective finish."
 
   - id: metals-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: ferrous-vs-non-ferrous
     command: state
@@ -59,7 +59,7 @@ questions:
 
   - id: metals-003
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: ferrous-properties
     command: identify
@@ -76,7 +76,7 @@ questions:
     explanation: "Ferrous metals contain iron, so they are magnetic and rust unless they are protected."
 
   - id: metals-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: steel-choice-by-carbon
     command: identify
@@ -95,7 +95,7 @@ questions:
     explanation: "High carbon (tool) steel is very hard, so it keeps a sharp edge. It's used for chisels, screwdrivers and other tools."
 
   - id: metals-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: carbon-content-effect
     command: describe
@@ -114,7 +114,7 @@ questions:
 
   - id: metals-006
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: stainless-steel-choice
     command: compare
@@ -144,7 +144,7 @@ questions:
     explanation: "Stainless steel is hard, tough and resists stains and corrosion, which is why it's used for cutlery, sinks and hospital equipment."
 
   - id: metals-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: aluminium-properties
     command: identify
@@ -164,7 +164,7 @@ questions:
 
   - id: metals-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: alloys-identify
     command: identify
@@ -181,7 +181,7 @@ questions:
     explanation: "An alloy is a mixture of metals. Brass is copper and zinc; pewter is mainly tin with copper and antimony."
 
   - id: metals-009
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: alloy-composition
     command: state
@@ -200,7 +200,7 @@ questions:
 
   - id: metals-010
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: casting-metal-choice
     command: explain
@@ -226,7 +226,7 @@ questions:
     explanation: "Pewter melts at only about 170–230°C, so it can be melted and poured in school, into an MDF mould that withstands that heat."
 
   - id: metals-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: casting-safety
     command: state
@@ -245,7 +245,7 @@ questions:
     explanation: "Any moisture in the mould or tools turns to steam and makes molten metal spit violently, so everything must be dry."
 
   - id: metals-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: property-definitions
     command: identify
@@ -263,7 +263,7 @@ questions:
     explanation: "Toughness is how well a material resists fracturing when force is applied, for example when it's hit."
 
   - id: metals-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: property-definitions
     command: identify
@@ -282,7 +282,7 @@ questions:
     explanation: "Ductility is the ability to be drawn or deformed without fracturing, which is exactly what wire drawing needs."
 
   - id: metals-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: metal-finishes
     command: identify
@@ -303,7 +303,7 @@ questions:
   - id: metals-015
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: stainless-explain-technique
     command: explain
@@ -328,7 +328,7 @@ questions:
   - id: metals-016
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: copper-wiring-technique
     command: describe
@@ -353,7 +353,7 @@ questions:
   - id: metals-017
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 metals"
     concept: explain-vs-describe-technique
     command: explain

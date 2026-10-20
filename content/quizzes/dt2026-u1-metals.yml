@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-metals-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: ferrous-definition
     command: state
@@ -41,7 +41,7 @@ questions:
 
   - id: dt26-metals-002
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: aluminium-bike
     command: explain
@@ -71,7 +71,7 @@ questions:
     explanation: "Aluminium has low density and a good strength-to-weight ratio, and it resists corrosion, so it's ideal for an outdoor bicycle."
 
   - id: dt26-metals-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: stainless-pan
     command: identify
@@ -91,7 +91,7 @@ questions:
 
   - id: dt26-metals-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: pan-base
     command: explain
@@ -121,7 +121,7 @@ questions:
     explanation: "Stainless steel is a poor thermal conductor, so a copper or aluminium base spreads the heat evenly."
 
   - id: dt26-metals-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: stainless-rust
     command: describe
@@ -140,7 +140,7 @@ questions:
     explanation: "Chromium forms an invisible oxide layer. If scratched, it re-forms, so the steel underneath stays protected."
 
   - id: dt26-metals-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: carbon-effect
     command: describe
@@ -158,7 +158,7 @@ questions:
     explanation: "More carbon makes steel harder and stronger, but more brittle and less ductile. Mild steel bends; high carbon steel snaps."
 
   - id: dt26-metals-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: high-carbon-uses
     command: identify
@@ -177,7 +177,7 @@ questions:
     explanation: "High carbon steel is very hard and keeps a sharp edge, and it can be hardened and tempered."
 
   - id: dt26-metals-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: titanium
     command: identify
@@ -196,7 +196,7 @@ questions:
     explanation: "Titanium is biocompatible, has excellent corrosion resistance and a very high strength-to-weight ratio."
 
   - id: dt26-metals-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: brass
     command: identify
@@ -215,7 +215,7 @@ questions:
 
   - id: dt26-metals-010
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: brass-uses
     command: identify
@@ -232,7 +232,7 @@ questions:
     explanation: "Brass is used for door handles, hinges, taps, plumbing fittings, instruments and electrical pins."
 
   - id: dt26-metals-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: copper-wiring
     command: describe
@@ -251,7 +251,7 @@ questions:
     explanation: "Copper is an excellent conductor, ductile enough to draw into wire, and cheaper than silver."
 
   - id: dt26-metals-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: melting-point
     command: describe
@@ -270,7 +270,7 @@ questions:
     explanation: "Aluminium melts at about 660°C, so it's easier and cheaper to cast than metals like steel."
 
   - id: dt26-metals-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: density
     command: state
@@ -289,7 +289,7 @@ questions:
 
   - id: dt26-metals-014
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: hard-vs-tough
     command: explain
@@ -319,7 +319,7 @@ questions:
     explanation: "High carbon steel is hard but not tough, so it can shatter on impact. Don't confuse hardness and toughness."
 
   - id: dt26-metals-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: malleability
     command: identify
@@ -339,7 +339,7 @@ questions:
 
   - id: dt26-metals-016
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: selection-factors
     command: identify
@@ -359,7 +359,7 @@ questions:
   - id: dt26-metals-017
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: suitability-technique
     command: explain
@@ -384,7 +384,7 @@ questions:
   - id: dt26-metals-018
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: stainless-technique
     command: explain
@@ -409,7 +409,7 @@ questions:
   - id: dt26-metals-019
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.22"
     concept: compare-technique
     command: compare

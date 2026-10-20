@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: smart2-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: smart-definition
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Smart materials react to an external stimulus, such as temperature, light or pressure, and change in a useful way."
 
   - id: smart2-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: modern-vs-smart
     command: describe
@@ -59,7 +59,7 @@ questions:
 
   - id: smart2-003
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: smart-identify
     command: identify
@@ -77,7 +77,7 @@ questions:
 
   - id: smart2-004
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: modern-identify
     command: identify
@@ -95,7 +95,7 @@ questions:
 
   - id: smart2-005
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: bike-frame-material
     command: compare
@@ -125,7 +125,7 @@ questions:
     explanation: "Carbon fibre is very stiff and strong for its low weight, which is why racing bikes, Formula One cars and aircraft use it."
 
   - id: smart2-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: qtc
     command: identify
@@ -144,7 +144,7 @@ questions:
     explanation: "QTC is an insulator until it's squeezed, then it conducts, so pressing it completes the circuit. It's used as switches in clothing."
 
   - id: smart2-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: qtc
     command: state
@@ -162,7 +162,7 @@ questions:
     explanation: "QTC is a black rubbery insulator in its normal state. Under compression it becomes a conductor."
 
   - id: smart2-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: photochromic
     command: identify
@@ -182,7 +182,7 @@ questions:
 
   - id: smart2-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: thermochromic
     command: explain
@@ -212,7 +212,7 @@ questions:
     explanation: "Thermochromic pigments change colour with temperature, so they're used in baby spoons, bottles and bath toys to show when something's too hot."
 
   - id: smart2-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: shape-memory-alloy
     command: state
@@ -231,7 +231,7 @@ questions:
     explanation: "Nitinol is a shape memory alloy: when heated it returns to the shape it was set in, so bent frames can be restored."
 
   - id: smart2-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: nitinol-composition
     command: state
@@ -249,7 +249,7 @@ questions:
     explanation: "Nitinol is nickel and titanium (the name comes from Ni + Ti). It's a shape memory alloy used for glasses frames and dental braces."
 
   - id: smart2-012
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: polymorph
     command: identify
@@ -268,7 +268,7 @@ questions:
     explanation: "Polymorph becomes malleable at 62°C, can be moulded by hand, sets rigid when cool, and can be reheated and reshaped again."
 
   - id: smart2-013
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: polymorph-temperature
     command: state
@@ -286,7 +286,7 @@ questions:
     explanation: "Polymorph softens at 62°C, so it can be warmed in hot water and shaped by hand."
 
   - id: smart2-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: kevlar
     command: identify
@@ -305,7 +305,7 @@ questions:
     explanation: "Kevlar is a strong synthetic fibre that stops bullets and knives, yet stays lightweight and flexible: ideal for protective vests."
 
   - id: smart2-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: styrofoam
     command: identify
@@ -326,7 +326,7 @@ questions:
   - id: smart2-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: thermochromic-technique
     command: explain
@@ -351,7 +351,7 @@ questions:
   - id: smart2-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: qtc-technique
     command: describe
@@ -376,7 +376,7 @@ questions:
   - id: smart2-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 modern and smart materials"
     concept: explain-vs-describe-technique
     command: explain

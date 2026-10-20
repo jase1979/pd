@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-spec-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: wastage-addition
     command: identify
@@ -41,7 +41,7 @@ questions:
     explanation: "Wastage shapes a material by removing parts of it, by sawing, drilling, filing or machining."
 
   - id: dt26-spec-002
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: datum
     command: describe
@@ -60,7 +60,7 @@ questions:
 
   - id: dt26-spec-003
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: drilling-jig
     command: explain
@@ -90,7 +90,7 @@ questions:
     explanation: "A jig holds the work or guides the tool, so the same operation is repeated accurately without marking out each part."
 
   - id: dt26-spec-004
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: former
     command: identify
@@ -109,7 +109,7 @@ questions:
     explanation: "A former is a solid shape that material is bent or laminated around, so every part takes the same shape."
 
   - id: dt26-spec-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: pilot-hole
     command: describe
@@ -128,7 +128,7 @@ questions:
     explanation: "A pilot hole is a small hole drilled first to guide a screw and stop timber splitting."
 
   - id: dt26-spec-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: countersunk
     command: identify
@@ -147,7 +147,7 @@ questions:
     explanation: "A countersunk hole has a cone-shaped recess so a countersunk screw head sits flush."
 
   - id: dt26-spec-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: tapping
     command: state
@@ -165,7 +165,7 @@ questions:
     explanation: "A tapping hole is slightly smaller than the bolt: 5 mm for an M6 thread."
 
   - id: dt26-spec-008
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: tap-and-die
     command: describe
@@ -184,7 +184,7 @@ questions:
 
   - id: dt26-spec-009
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: permanent-fixings
     command: identify
@@ -201,7 +201,7 @@ questions:
     explanation: "Soldering and riveting are permanent. Nuts, bolts and screws can be undone."
 
   - id: dt26-spec-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: pop-rivet
     command: describe
@@ -220,7 +220,7 @@ questions:
     explanation: "Pop rivets are fitted from one side, so they suit joints with no access to the back."
 
   - id: dt26-spec-011
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: lathe
     command: identify
@@ -240,7 +240,7 @@ questions:
 
   - id: dt26-spec-012
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: mitre
     command: explain
@@ -270,7 +270,7 @@ questions:
     explanation: "Mitres are cut at 45° and look neat, but they're weak, so they're often reinforced with dowels, a spline or pins."
 
   - id: dt26-spec-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: lap-vs-butt
     command: describe
@@ -289,7 +289,7 @@ questions:
     explanation: "The lap's rebate increases the gluing area and partly hides the end grain."
 
   - id: dt26-spec-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: laser-settings
     command: describe
@@ -309,7 +309,7 @@ questions:
 
   - id: dt26-spec-015
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: snap-fit
     command: explain
@@ -339,7 +339,7 @@ questions:
     explanation: "Flexible moulded snap fits click together and apart, which is why they're common on battery covers."
 
   - id: dt26-spec-016
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: solvent-cement
     command: describe
@@ -357,7 +357,7 @@ questions:
     explanation: "Solvent cement dissolves the two surfaces, which fuse as the solvent evaporates, making a permanent joint."
 
   - id: dt26-spec-017
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: adhesive-choice
     command: identify
@@ -376,7 +376,7 @@ questions:
     explanation: "Epoxy resin bonds almost anything, including different materials such as metal and acrylic."
 
   - id: dt26-spec-018
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: contact-adhesive
     command: describe
@@ -394,7 +394,7 @@ questions:
     explanation: "Contact adhesive goes on both surfaces, is left touch-dry, then bonds instantly, so there's no repositioning."
 
   - id: dt26-spec-019
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: injection-moulding
     command: identify
@@ -414,7 +414,7 @@ questions:
 
   - id: dt26-spec-020
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: extrusion
     command: identify
@@ -433,7 +433,7 @@ questions:
   - id: dt26-spec-021
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: jig-technique
     command: explain
@@ -458,7 +458,7 @@ questions:
   - id: dt26-spec-022
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: adhesive-technique
     command: explain
@@ -482,7 +482,7 @@ questions:
   - id: dt26-spec-023
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.26"
     concept: compare-technique
     command: compare

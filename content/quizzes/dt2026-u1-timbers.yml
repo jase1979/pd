@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: dt26-timber-001
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: hardwood-definition
     command: state
@@ -41,7 +41,7 @@ questions:
 
   - id: dt26-timber-002
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: balsa-trap
     command: explain
@@ -71,7 +71,7 @@ questions:
     explanation: "Balsa is a favourite exam trap: it's a hardwood because of the tree it comes from."
 
   - id: dt26-timber-003
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: softwood-cost
     command: describe
@@ -90,7 +90,7 @@ questions:
 
   - id: dt26-timber-004
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: beech-toy
     command: explain
@@ -120,7 +120,7 @@ questions:
     explanation: "Beech is tough and hard-wearing with a smooth, fine finish, which is why it's used for children's toys."
 
   - id: dt26-timber-005
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: parana-pine
     command: identify
@@ -139,7 +139,7 @@ questions:
     explanation: "Parana pine is hard and strong for a softwood, straight grained with few knots and decorative streaks."
 
   - id: dt26-timber-006
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: scots-pine
     command: identify
@@ -158,7 +158,7 @@ questions:
     explanation: "Scots pine is fairly strong, light, cheap and widely available, so it's used for construction timber."
 
   - id: dt26-timber-007
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: seasoning
     command: describe
@@ -177,7 +177,7 @@ questions:
 
   - id: dt26-timber-008
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: boards-vs-natural
     command: identify
@@ -194,7 +194,7 @@ questions:
     explanation: "Boards come in large sheets (typically 2440 × 1220 mm) and are very stable, with no natural defects."
 
   - id: dt26-timber-009
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: plywood-structure
     command: describe
@@ -212,7 +212,7 @@ questions:
     explanation: "Plywood is made from veneers with the grain crossed at 90°, which makes it strong in all directions."
 
   - id: dt26-timber-010
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: plywood-odd
     command: describe
@@ -231,7 +231,7 @@ questions:
 
   - id: dt26-timber-011
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: mdf-use
     command: explain
@@ -261,7 +261,7 @@ questions:
     explanation: "MDF has a smooth, flat surface ideal for painting, no grain, and machines and cuts cleanly on a CNC router."
 
   - id: dt26-timber-012
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: mdf-weakness
     command: identify
@@ -280,7 +280,7 @@ questions:
     explanation: "MDF is very absorbent and swells badly when wet, so it must be sealed in kitchens and bathrooms."
 
   - id: dt26-timber-013
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: mdf-dust
     command: describe
@@ -299,7 +299,7 @@ questions:
     explanation: "Cutting MDF produces fine dust that is a health hazard, so extraction and a mask are needed."
 
   - id: dt26-timber-014
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: strength-grain
     command: state
@@ -317,7 +317,7 @@ questions:
     explanation: "Timber is strongest along the grain and weaker across it."
 
   - id: dt26-timber-015
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: absorbency
     command: identify
@@ -338,7 +338,7 @@ questions:
   - id: dt26-timber-016
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: beech-technique
     command: explain
@@ -363,7 +363,7 @@ questions:
   - id: dt26-timber-017
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: plywood-technique
     command: explain
@@ -387,7 +387,7 @@ questions:
   - id: dt26-timber-018
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "1.1.23"
     concept: compare-technique
     command: compare

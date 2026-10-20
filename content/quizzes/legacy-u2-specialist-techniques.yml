@@ -22,7 +22,7 @@ scenarios:
 questions:
 
   - id: tech-001
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: wastage-vs-additive
     command: state
@@ -40,7 +40,7 @@ questions:
     explanation: "Wastage processes, such as sawing, drilling and laser cutting, remove material from stock forms, and that material is lost."
 
   - id: tech-002
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: wastage-vs-additive
     command: identify
@@ -58,7 +58,7 @@ questions:
     explanation: "3D printing builds the shape up layer by layer from a filament, with very little waste."
 
   - id: tech-003
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: marking-tools
     command: identify
@@ -77,7 +77,7 @@ questions:
     explanation: "A scriber has a hardened point that scratches a fine, accurate line into metal."
 
   - id: tech-004
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: marking-tools
     command: identify
@@ -96,7 +96,7 @@ questions:
     explanation: "Marking blue (engineer's blue) is a dye painted on bright metal so that scribed lines show up clearly."
 
   - id: tech-005
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: datum
     command: state
@@ -114,7 +114,7 @@ questions:
     explanation: "Measuring every line from one straight, true datum edge or face keeps the measurements accurate and reduces waste."
 
   - id: tech-006
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: centre-punch
     command: describe
@@ -133,7 +133,7 @@ questions:
     explanation: "The dent from a centre punch stops the drill bit wandering, so the hole is drilled exactly where it's marked."
 
   - id: tech-007
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: hole-types
     command: identify
@@ -152,7 +152,7 @@ questions:
     explanation: "A countersunk hole has its top flared to match a countersunk screw head, so the head sits flush."
 
   - id: tech-008
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: hole-types
     command: state
@@ -171,7 +171,7 @@ questions:
 
   - id: tech-009
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: pop-rivet
     command: explain
@@ -201,7 +201,7 @@ questions:
     explanation: "A pop rivet is pushed in from one side; the gun pulls the mandrel, expanding the rivet behind the parts until the mandrel snaps off."
 
   - id: tech-010
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: brazing-flux
     command: state
@@ -219,7 +219,7 @@ questions:
     explanation: "Flux stops oxides forming on the hot metal and helps the brass spelter flow into the joint by capillary action."
 
   - id: tech-011
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: metal-joining-methods
     command: identify
@@ -238,7 +238,7 @@ questions:
 
   - id: tech-012
     type: multi
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: temporary-vs-permanent
     command: identify
@@ -256,7 +256,7 @@ questions:
 
   - id: tech-013
     type: two_tier
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: steam-bending
     command: explain
@@ -286,7 +286,7 @@ questions:
     explanation: "In steam bending, solid timber such as beech is softened in a steam box, bent around a former and clamped until dry, keeping its new shape."
 
   - id: tech-014
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: frame-joint
     command: identify
@@ -305,7 +305,7 @@ questions:
     explanation: "A mortise and tenon, a square tenon glued into a square mortise, is a very strong frame joint, so it suits chairs."
 
   - id: tech-015
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: box-joint
     command: identify
@@ -324,7 +324,7 @@ questions:
     explanation: "A dovetail's flared 'fingers' lock together, making a very strong, attractive joint. That's ideal for drawer fronts."
 
   - id: tech-016
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: veneering
     command: describe
@@ -343,7 +343,7 @@ questions:
     explanation: "A very thin slice of attractive hardwood on a cheaper, stable base looks like solid oak, costs less and uses less rare timber."
 
   - id: tech-017
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: line-bending
     command: identify
@@ -362,7 +362,7 @@ questions:
     explanation: "A strip heater softens a narrow line across the acrylic; it's bent to the angle and held in a jig until it cools."
 
   - id: tech-018
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: joining-polymers
     command: describe
@@ -380,7 +380,7 @@ questions:
     explanation: "Solvent cement dissolves the acrylic surfaces; as the solvent evaporates they fuse into one."
 
   - id: tech-019
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: 3d-printing-limits
     command: state
@@ -400,7 +400,7 @@ questions:
   - id: tech-020
     type: exam_skill
     format: best_answer
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: mortise-technique
     command: explain
@@ -425,7 +425,7 @@ questions:
   - id: tech-021
     type: exam_skill
     format: missing_point
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: pop-rivet-technique
     command: describe
@@ -450,7 +450,7 @@ questions:
   - id: tech-022
     type: exam_skill
     format: command_word
-    status: draft
+    status: reviewed
     spec_point: "2.1.2 specialist techniques"
     concept: compare-technique
     command: compare
